@@ -1,0 +1,15 @@
+.study-container {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  .study-header {
+    margin-bottom: 2rem;
+  }
+  
+  .study-content {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  

@@ -1,0 +1,24 @@
+<div class="login-container">
+    <div class="background-image"></div>
+    <div class="glass-morphism">
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <input
+          type="text"
+          name="username"
+          ngModel
+          placeholder="Username"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          ngModel
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="/signup">Sign up</a></p>
+    </div>
+  </div>
+  

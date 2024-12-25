@@ -1,0 +1,13 @@
+<div class="module-container">
+    <div class="module-card" *ngFor="let module of modules">
+      <div class="module-title" (click)="toggleSubModules(module)">
+        <h4>{{ module.name }}</h4>
+      </div>
+      <div class="sub-modules" *ngIf="module.showSubModules">
+        <ul>
+          <li *ngFor="let subModule of module.subModules">{{ subModule }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,28 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 2% 2.5%; /* Add padding for spacing */
+  }
+  
+  app-module {
+    width: 25%; /* 25% for the left Module section */
+  }
+  
+  app-study {
+    width: 70%; /* 70% for the Study area */
+    padding: 2.5%;
+    background-color: #f4f4f4; /* Optional: Add background color to Study area */
+    border-radius: 8px;
+  }
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+    }
+  
+    app-module, app-study {
+      width: 100%;
+    }
+  }
+  

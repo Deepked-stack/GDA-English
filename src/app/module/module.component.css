@@ -1,0 +1,33 @@
+.module-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .module-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .module-title {
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .sub-modules {
+    margin-top: 1rem;
+  }
+  
+  .sub-modules ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sub-modules li {
+    padding-left: 20px;
+    font-size: 1rem;
+  }
+  
