@@ -1,0 +1,15 @@
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px; /* Optional: set max width for the video */
+    margin: 20px auto; /* Center the video */
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: round corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for aesthetics */
+  }
+  
