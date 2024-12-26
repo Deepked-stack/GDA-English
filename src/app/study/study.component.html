@@ -1,10 +1,43 @@
 <div class="study-container">
-    <div class="study-header">
+    <div class="study-header" *ngIf="selectedSubmodule==null">
       <h2>Let's Study</h2>
     </div>
     <div class="study-content">
-      <p>Select a module to start learning!</p>
-      <!-- Content from the selected module will be displayed here -->
+      
+      <div *ngIf="selectedSubmodule=='Introduction Video'">
+      <app-introduction-video>
+
+      </app-introduction-video>
+
     </div>
+
+    <div *ngIf="selectedSubmodule=='Historical Perspective'">
+      <app-historical-perspective>
+
+      </app-historical-perspective>
+
+    </div>
+    <div *ngIf="selectedSubmodule=='Healthcare Delivery Systems'">
+      <app-healthcare-delivery-systems>
+
+      </app-healthcare-delivery-systems>
+
+    </div>
+
+    <div *ngIf="selectedSubmodule=='Basic Terminologies'">
+      <app-basic-terminologies>
+
+      </app-basic-terminologies>
+
+    </div>
+    <div *ngIf="selectedSubmodule=='Hospitals'">
+      <app-hospitals>
+
+      </app-hospitals>
+
+    </div>
+
+    </div>
+    
   </div>
   

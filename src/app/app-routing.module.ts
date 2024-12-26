@@ -6,6 +6,8 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MaincontentComponent } from './maincontent/maincontent.component';
 import { StudyComponent } from './study/study.component';
 import { ModuleComponent } from './module/module.component';
+import { IntroductionVideoComponent } from './introductiontotheprogram/introduction-video/introduction-video.component';
+// import { IntroductionVideoComponent } from './introductiontotheprogram/introduction-video/introduction-video.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -15,6 +17,7 @@ const routes: Routes = [
   {path:'main',component:MaincontentComponent},
   {path:'study',component:StudyComponent},
   {path:'module',component:ModuleComponent},
+  {path:'videointro',component:IntroductionVideoComponent}
 ];
 
 @NgModule({

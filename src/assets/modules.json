@@ -2,6 +2,7 @@
     "modules": [
       {
         "name": "Introduction to the Program",
+        
         "subModules": [
           "Introduction Video",
           "Historical Perspective",

@@ -11,6 +11,13 @@ import { MaincontentComponent } from './maincontent/maincontent.component';
 import { ModuleComponent } from './module/module.component';
 import { StudyComponent } from './study/study.component'
 import { HttpClientModule } from '@angular/common/http';
+import { IntroductiontotheprogramModule } from './introductiontotheprogram/introductiontotheprogram.module';
+import { IntroductionVideoComponent } from './introductiontotheprogram/introduction-video/introduction-video.component';
+import { HistoricalPerspectiveComponent } from './introductiontotheprogram/historical-perspective/historical-perspective.component';
+import { HealthcareDeliverySystemsComponent } from './introductiontotheprogram/healthcare-delivery-systems/healthcare-delivery-systems.component';
+import { HospitalsComponent } from './introductiontotheprogram/hospitals/hospitals.component';
+import { BasicTerminologiesComponent } from './introductiontotheprogram/basic-terminologies/basic-terminologies.component';
+// import { IntroductionVodeoComponent } from './Introduction_to_the_program/introduction-vodeo/introduction-vodeo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +26,21 @@ import { HttpClientModule } from '@angular/common/http';
     LandingpageComponent,
     MaincontentComponent,
     ModuleComponent,
-    StudyComponent
+    StudyComponent,
+    
+    // IntroductionVodeoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    IntroductiontotheprogramModule,
+    IntroductionVideoComponent,
+    HistoricalPerspectiveComponent,
+    HealthcareDeliverySystemsComponent,
+    HospitalsComponent,
+    BasicTerminologiesComponent
   ],
   providers: [
     provideClientHydration(withEventReplay())

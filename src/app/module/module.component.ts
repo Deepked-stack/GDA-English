@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ModuleDataService } from '../module-data.service';
-
+import { Router } from '@angular/router';
+// import {} from '../'
 @Component({
   selector: 'app-module',
   standalone: false,
@@ -15,7 +16,7 @@ export class ModuleComponent implements OnInit {
   isSmallScreen: boolean = false;  // Flag to check small screen size
   isMenuOpen: boolean = false;     // Flag to toggle menu visibility
 
-  constructor(private moduleDataService: ModuleDataService) {}
+  constructor(private moduleDataService: ModuleDataService,private router:Router) {}
 
   ngOnInit() {
     this.moduleDataService.getModules().subscribe((data) => {
@@ -31,6 +32,11 @@ export class ModuleComponent implements OnInit {
   selectSubModule(subModule: string, event: Event) {
     event.stopPropagation();
     console.log('Selected Sub-Module:', subModule);
+    // this..setSubmodule(submodule); // Update the service with the selected submodule
+    this.moduleDataService.setSubmodule(subModule);
+    // this.router.navigate(['study'])
+    
+
   }
 
   // toggleMenu() {

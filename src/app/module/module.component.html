@@ -7,7 +7,7 @@
     <div class="sub-modules" *ngIf="module.showSubModules">
       <ul>
         <li *ngFor="let subModule of module.subModules" (click)="selectSubModule(subModule, $event)">
-          {{ subModule }}
+          {{ subModule}}
         </li>
       </ul>
     </div>
