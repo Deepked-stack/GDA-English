@@ -8,7 +8,7 @@ import { StudyComponent } from './study/study.component';
 import { ModuleComponent } from './module/module.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'main',pathMatch:'full'},
+  {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'landingpage',component:LandingpageComponent},

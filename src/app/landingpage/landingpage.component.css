@@ -31,20 +31,23 @@
   padding: 5%;
 }
 
+
 /* Logos */
 .logos-container {
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: 5%;
+  right: 5%;
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  align-items: center;
 }
 
 .logo {
-  width: 10px;
-  height: 130px;
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
   object-fit: contain;
 }
+
 
 /* Content */
 .content {
@@ -79,4 +82,13 @@
 
 .get-started-button:hover {
   background-color: #0056b3;
+}
+
+.bottom-right-brand {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.7;
+  width: 80px;
+  height: auto;
 }

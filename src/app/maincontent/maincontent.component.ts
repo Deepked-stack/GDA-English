@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './maincontent.component.css'
 })
 export class MaincontentComponent {
+  selectedModuleName: string = 'Select a module to view details';
 
-}
+  displayModuleName(moduleName: string) {
+    this.selectedModuleName = moduleName;
+}}

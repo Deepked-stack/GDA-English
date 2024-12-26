@@ -1,6 +1,11 @@
 <div class="main-container">
     <!-- Module Component (left side) -->
-    <app-module></app-module>
+<!-- parent.component.html -->
+<app-module (moduleSelected)="displayModuleName($event)"></app-module>
+<div class="study-area">
+  <!-- <h2>{{ selectedModuleName }}</h2> -->
+  <!-- Additional content for the study area -->
+</div>
   
     <!-- Study Component (center area) -->
     <app-study></app-study>

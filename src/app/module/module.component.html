@@ -1,13 +1,15 @@
 <div class="module-container">
-    <div class="module-card" *ngFor="let module of modules">
-      <div class="module-title" (click)="toggleSubModules(module)">
-        <h4>{{ module.name }}</h4>
-      </div>
-      <div class="sub-modules" *ngIf="module.showSubModules">
-        <ul>
-          <li *ngFor="let subModule of module.subModules">{{ subModule }}</li>
-        </ul>
-      </div>
+  <div class="module-card" *ngFor="let module of modules" (click)="toggleSubModules(module)">
+    <div class="module-title">
+      <h6>{{ module.name }}</h6>
+      <span class="arrow" [class.open]="module.showSubModules">&#9654;</span>
+    </div>
+    <div class="sub-modules" *ngIf="module.showSubModules">
+      <ul>
+        <li *ngFor="let subModule of module.subModules" (click)="selectSubModule(subModule, $event)">
+          {{ subModule }}
+        </li>
+      </ul>
     </div>
   </div>
-  
+</div>
