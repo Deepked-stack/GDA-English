@@ -17,6 +17,11 @@ import { HistoricalPerspectiveComponent } from './introductiontotheprogram/histo
 import { HealthcareDeliverySystemsComponent } from './introductiontotheprogram/healthcare-delivery-systems/healthcare-delivery-systems.component';
 import { HospitalsComponent } from './introductiontotheprogram/hospitals/hospitals.component';
 import { BasicTerminologiesComponent } from './introductiontotheprogram/basic-terminologies/basic-terminologies.component';
+import { StudyNavComponent } from './study-nav/study-nav.component';
+import { StartItComponent } from './start-it/start-it.component';
+import { LearnItComponent } from './learn-it/learn-it.component';
+import { DoItComponent } from './do-it/do-it.component';
+import { MaincontentnavComponent } from './maincontentnav/maincontentnav.component';
 // import { IntroductionVodeoComponent } from './Introduction_to_the_program/introduction-vodeo/introduction-vodeo.component';
 @NgModule({
   declarations: [
@@ -27,6 +32,11 @@ import { BasicTerminologiesComponent } from './introductiontotheprogram/basic-te
     MaincontentComponent,
     ModuleComponent,
     StudyComponent,
+    StudyNavComponent,
+    StartItComponent,
+    LearnItComponent,
+    DoItComponent,
+    MaincontentnavComponent,
     
     // IntroductionVodeoComponent
   ],

@@ -7,10 +7,33 @@
   }
   
   app-module {
-    width: 25%; /* 25% for the left Module section */
+    width: 25%;
+    top: 10%;
+    position: relative; /* 25% for the left Module section */
   }
   
+  app-study-nav{
+    position: absolute;
+    padding: 2.5%;
+    left: 21.5%;
+    margin-bottom: 0%;
+    top: 10%;
+    
+  }
+
+  app-maincontentnav{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0%;
+    right: 0;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+
+  }
   app-study {
+    position: absolute;
+    top: 24%;
+    right: 2.5%;
     width: 70%; /* 70% for the Study area */
     padding: 2.5%;
     background-color: #f4f4f4; /* Optional: Add background color to Study area */

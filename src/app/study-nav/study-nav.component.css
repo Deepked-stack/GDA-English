@@ -1,0 +1,27 @@
+.container{
+    position: relative;
+}
+
+.container ul{
+    display: flex;
+}
+ul li{
+    margin: 2px;
+    list-style-type: none;
+    border: 1px solid black;
+    padding:6px;
+    border-radius: 8px;
+}
+
+ul li:hover{
+    background-color: rgb(250, 239, 227);
+    scale: 1.05;
+}
+
+.container .ul2{
+    display: flex;
+}
+
+#pre,#next{
+    right: 5%;
+}
