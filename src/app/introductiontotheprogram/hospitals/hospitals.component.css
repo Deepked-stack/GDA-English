@@ -1,0 +1,205 @@
+.answer-options button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+.videodiv{
+    margin: 15px;
+
+padding: 15px;
+border: 0.1px solid black;
+border-radius: 15px;
+    width: 100%;
+    height: 20em;
+    /* background-color: #adebbc; */
+
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.6);
+}
+  
+  .answer-options button:hover {
+    /* opacity: 0.8; */
+    scale: 1.03;
+    background-color: green;
+    color: aliceblue;
+  }
+  
+  .options label {
+    display: block;
+    padding: 10px;
+    background-color: #adebbc;
+    color: rgb(21, 6, 6);
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  
+  
+  .options input[type="checkbox"]:checked + span {
+    visibility: visible;
+  }
+  
+  .correct {
+    color: green;
+  }
+  
+  .incorrect {
+    color: red;
+  }
+  
+  .button-section button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-section button:hover {
+    background-color: #0056b3;
+  }
+
+  .changeonhover{
+    /* background-color: beige; */
+    border: 1px solid black;
+    padding: 5px;
+
+
+  }
+  
+
+  .hoverimage{
+    height: 25rem;
+    background-size: cover;
+    background-image: url('https://thumbs.dreamstime.com/b/indian-medicine-healthcare-concept-doctor-close-up-against-flag-india-background-272751775.jpg');
+  }
+
+  .hoverimage:hover{
+    height: 25rem;
+    background-size: cover;
+    background-image: url('https://media-cms.virohan.com/staging/ott_1f8b35aeec.webp');
+  }
+
+  
+
+
+
+
+
+input{
+    width: 100px;
+    background-color: rgb(213, 232, 248);
+    border-bottom: #0056b3;
+    border: 2px solid blue;
+
+}
+  
+/* General styles for content */
+.content {
+    display: block;
+    padding: 20px;
+}
+
+/* Flexbox container to place the list and image side by side */
+.ollist-and-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+    gap: 20px; /* Space between items */
+}
+
+/* Styles for the ordered list */
+.ollist {
+    width: 60%;
+}
+
+/* Styling for each list item */
+ol li {
+    list-style-type: upper-roman;
+    background-color: rgb(246, 246, 133);
+    margin: 5px;
+    border-radius: 6px;
+    border: 0.1px solid black;
+    padding: 0.5em;
+    font-size: medium;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Styles for the image */
+.content img {
+    width: 35%;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    height: 300px;
+    border: 0.1px solid black;
+
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .ollist-and-image {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center the items */
+    }
+
+    .ollist {
+        width: 100%; /* Take full width for the list on small screens */
+    }
+
+    .content img {
+        width: 80%; /* Increase image width on smaller screens */
+        margin-top: 20px; /* Add some space between the list and image */
+    }
+}
+
+
+.videofucoahospital{
+margin: 15px;
+
+padding: 15px;
+border: 0.1px solid black;
+border-radius: 15px;
+    width: 100%;
+    height: 20em;
+    /* background-color: #adebbc; */
+
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.mcqlist li{
+    background-color: #adebbc;
+    list-style-type: upper-roman;
+
+}
+
+.inlist li{
+    background-color: #d2efd9;
+    list-style-type: lower-alpha;
+    margin-left: 15%;
+}
+
+.division{
+    align-items: center;
+    background-color: rgb(160, 152, 152);
+    color: rgb(15, 16, 17);
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#injection{
+    height: auto;
+    width: 200px;
+    /* float: right; */
+}
+
+.injdiv{
+    display: flex;
+    float: left ;
+}
+

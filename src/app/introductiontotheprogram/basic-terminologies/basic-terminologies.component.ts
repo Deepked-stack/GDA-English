@@ -11,17 +11,10 @@ import { StudyNavComponent } from '../../study-nav/study-nav.component';
 })
 export class BasicTerminologiesComponent {
 
-  startCompleted = false;
-  learnCompleted = false;
+  currentSection: string = 'start';
 
-  markAsCompleted(section: string) {
-    if (section === 'start') {
-      this.startCompleted = true;
-    } else if (section === 'learn') {
-      this.learnCompleted = true;
-    } else if (section === 'do') {
-      console.log('All sections completed!');
-    }
+  onSectionChange(section: string) {
+    this.currentSection = section;
   }
 
 }

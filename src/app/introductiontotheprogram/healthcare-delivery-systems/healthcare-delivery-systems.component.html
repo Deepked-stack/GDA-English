@@ -1,1 +1,66 @@
-<app-study-nav></app-study-nav>
+<!-- <app-study-nav></app-study-nav> -->
+<div class="container">
+    <!-- Health is Wealth Section -->
+    <div class="health-section">
+      <h1>Welcome! Let us start your journey!</h1><br> <br>
+      <p>Health is Wealth.</p>
+      <p class="question">Do you agree with this statement? Click on your opinion.</p>
+      <div class="answer-options">
+        <button 
+          [ngClass]="{'correct-btn': userOpinion === 'Yes', 'incorrect-btn': userOpinion === 'No'}" 
+          (click)="checkOpinion('Yes')">Yes</button>
+        <button 
+          [ngClass]="{'correct-btn': userOpinion === 'No', 'incorrect-btn': userOpinion === 'Yes'}" 
+          (click)="checkOpinion('No')">No</button>
+      </div>
+      <p>Is health really considered important in a country where malnourishment is still a huge concern? The answer is – Yes. Let’s find out about healthcare delivery systems in India.</p>
+      <p>Did you know?</p>
+      <p>Malnourishment is recorded highest in Madhya Pradesh, Jharkhand, and Bihar while obesity is the highest in Punjab, Kerala, and Delhi.</p>
+      <div class="image-container">
+        <img src="https://kedskills.org/img/GDA_E/Unit1/LO2/Slide1.JPG" alt="Left Image" class="image-left">
+        <img src="https://kedskills.org/img/GDA_E/Unit1/LO2/Slide2.JPG" alt="Right Image" class="image-right">
+      </div>
+    </div>
+  
+    <!-- Striking Differences Section -->
+    <div class="difference-section">
+      <h2>What I Know Already...</h2>
+      <p>Before understanding about the healthcare delivery systems, let’s test your prior knowledge on it in ‘What I Know Already...’!</p>
+  
+      <div class="question-section">
+        <p class="question">Which of the following statements about healthcare are correct?</p>
+        <div class="options">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')">
+            There are private and public sectors in Healthcare.
+            <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">{{ feedback.option1 }}</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')">
+            Most doctors in India work in rural areas.
+            <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">{{ feedback.option2 }}</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')">
+            Healthcare is provided only in hospitals.
+            <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">{{ feedback.option3 }}</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')">
+            When you go to the doctor with a cold, you usually end up in the ICU.
+            <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">{{ feedback.option4 }}</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
+            There are enough doctors in India today.
+            <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
+          </label>
+        </div>
+      </div>
+  
+      <div class="button-section">
+        <button (click)="showAssessment()">How Will I Be Assessed?</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,1 +1,239 @@
-<app-study-nav></app-study-nav>
+<!-- <app-study-nav></app-study-nav> -->
+
+<div class="container">
+    <div class="videodiv">mbed that video here</div>
+
+Where will Noor's son be admitted?
+<br>
+<br>
+You must have seen this place at least once, either in real life or on TV . Patients come to this place, get admitted and treated and walk out healthy and happy. what place are we talking about?
+
+<br>
+<br>
+It is the H<input type="text" id="hblank"/>
+</div>
+
+<br>
+<br>
+<div class="difference-section">
+    <h2>What I Know Already...</h2>
+    <p>Before understanding about the healthcare delivery systems, let’s test your prior knowledge on it in ‘What I Know Already...’!</p>
+
+    <div class="question-section">
+      <p class="question">Which of the following statements about healthcare are correct?</p>
+      <div class="options">
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')">
+          Local hospitals are a part of tertiary level of healthcare.
+          <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">{{ feedback.option1 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')">
+          More Hospitals are present in urban areas as compared to rural areas
+          <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">{{ feedback.option2 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')">
+Rehabilatitation centres are synonymous to hospitals.
+          <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">{{ feedback.option3 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')">
+hospitals provide after treatment services as well.
+          <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">{{ feedback.option4 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
+Special institutions like rehabiliatation centres help people who are under substance abuse.          <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
+        </label>
+
+        <!-- <img src="" alt=""> -->
+         <div class="changeonhover">
+            <div class="h2">
+                <h2>This exercise tested your prior knowledge on basics of health care Systems in India</h2>
+            </div>
+            <div class="hoverimage">
+                
+            </div>
+         </div>
+      </div>
+      </div>
+<!-- learnit -->
+ 
+ <br>
+ <hr>
+ learn It
+ <hr>
+
+ <br>
+<div class="learnit">
+Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>'My Theory Task'</b><br>
+<br><div class="heading"><h2>My Resources</h2></div><br>
+
+<div class="content">
+    <p>Read The Definition given below and click on the correct statement.</p>
+    <div class="ollist-and-image">
+        <div class="ollist">
+            <ol>
+                <li>According to the World Health Organization, a hospital's function is to provide complete healthcare both preventive and curative to the population</li>
+                <li>According to the World Health Organization a hospital is a social organization, whose function is to provide mental support to the population.</li>
+                <li>According to the World Health Organization, a hospital is a medical organization available in cities, which provides healthcare and entertainment simultaneously.</li>
+            </ol>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTScVzkYHt256-z_1zDfuOygroTr3vIqdSTSQ&s" alt="Hospital Image">
+    </div>
+</div>
+<br>
+<br>
+In your class, discuss the meaningof hospitals and what it does according to your real-life expweriences.
+
+<br>
+<div class="content2">
+2. A hospital is a place which plays a very significant role in well being of a society. However, there is a lot more to hospitals. Let's understand it together.
+
+<div class="videofucoahospital">
+    video fuctions of a hospital
+</div>
+<b>Checkpoint!</b>
+
+</div>
+
+<div class="mcqlist">
+    <ol>
+        <li>
+          A hospital with less than 100 beds is considered a small hospital.
+          <div class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq1" (change)="checkMCQ(1, 'True')">
+                  True
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq1" (change)="checkMCQ(1, 'False')">
+                  False
+                </label>
+              </li>
+            </ol>
+          </div>
+          <span *ngIf="mcqFeedback[1]" [ngClass]="{'correct': mcqFeedback[1] === '✔️', 'incorrect': mcqFeedback[1] === '❌'}">{{ mcqFeedback[1] }}</span>
+        </li>
+      
+        <li>
+          OPD must be located
+          <div class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ(2, 'Near Entrance')">
+                  Near Entrance
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ(2, 'Near Operation Theatre')">
+                  Near operation theatre
+                </label>
+              </li>
+            </ol>
+          </div>
+          <span *ngIf="mcqFeedback[2]" [ngClass]="{'correct': mcqFeedback[2] === '✔️', 'incorrect': mcqFeedback[2] === '❌'}">{{ mcqFeedback[2] }}</span>
+        </li>
+      </ol>
+      
+
+<br><div class="heading"><h2><b>My Theory Task</b></h2></div>
+
+<div class="division">Part 1</div>
+
+<div class="difference-section">
+    <p><b>A</b>
+         .Define the term 'Hospital in you notebook.</p>
+    <p><b>B</b>. Read the statements given below and click on the correct statements.</p>
+    <div class="question-section">
+      <p class="question">Which of the following statements about healthcare are correct?</p>
+      <div class="options">
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')">
+          i. Aparna works as a nurse in a hospital,she gets time ti time training. 
+          <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">{{ feedback.option1 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')">
+            ii. A hospital can function without a Finance and Accounts department
+          <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">{{ feedback.option2 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')">
+iii. In district hospital, OPD has easy access to x-ray rooms and pharmacy.          <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">{{ feedback.option3 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')">
+          iv.Hospice care is available in every district in India.
+                    <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">{{ feedback.option4 }}</span>
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
+          v. Rajiv is a dietician in Take Care hospital, his work is to provide appropriate food and nutrient intake of patient<span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
+        </label>
+        <label>
+            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
+            vi. Suraksha hospital in the town is very small, it doesn’t require housekeeping department and staff.            <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
+	
+            vii. Vyas works in the purchasing department. He takes care of the medicine inventory.          </label>
+            
+
+<div class="division">Part 2</div>
+
+          <b>C</b>. Write the functions of the folllowing departments in your notebook.
+   <div class="part2ul">
+    <ol type="i">
+        <li>Dietary Department</li>
+        <li>Laundry Department</li>
+        <li>Administrative Department</li>
+        <li>Housekeeping Department</li>
+    </ol>
+
+    <br>
+    <b>D</b>. Get Well Hospital is a very busy hospital. Lately, people have begun to avoid going to this hospital. There have been complaints of people’s health condition getting worse after visiting the hospital. Doctors have been doing their job sincerely. What must have gone wrong according to you? Write down the possibilities in your notebook.
+   <br><br>
+  <b>E</b>. Rajni was advised to get her blood tested by her doctor. She went to the city to get her blood tested. By the time her reports came, she fell more ill and couldn’t even get up from her bed. How could this situation have been avoided?
+</div>
+
+<div class="division">Part 3</div>
+<div class="injdiv">
+<b>F</b>. Draw comparison between your experiences regarding hospitals and what you have studied. Did any hospital from your personal experience lack any department? Write the comparisons in detail. You can also use the internet for research.<img id="weigh" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw4T-tBl8DgF3QJ2iL5OOWmegV8Q8fZZfbTigLLrzqmEkSCtfypZc8mbBytwCbfTuF8do&usqp=CAU" alt="weight">
+</div>
+<div class="inmiddle"><br>
+   <b> <h2>Great!</h2>
+    <h3>Move on to 'Do It!'</h3></b>
+</div>
+
+<!--Do It-->
+<hr>
+Do it
+<hr>
+
+<div class="doit">
+Almost done! Let's finish this goal with your practical.<br>
+
+<h2><b>My Practical Task</b></h2>
+    Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.
+
+    <div class="doitvideo">
+        Mypractical task video
+    </div>
+
+
+    Assess yourself in the practical using 'Practical Assesment Checklist'
+
+    Based on your learning , can you justify why hospitals are an integral part of coomunity.<br>
+    Discuss in you class.
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmupPZu3ZlfGHZTVy5bHUZxZ0Tw50VeiydYMb4f0TK1eDBezJE6R2JqN_UkEjwkOJhECs&usqp=CAU" alt="">
+</div>
+</div>

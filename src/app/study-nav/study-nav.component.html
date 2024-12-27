@@ -1,8 +1,8 @@
 <div class="container">
     <ul>
-        <li routerLink="start"><button>Start It</button></li>
-        <li routerLink="learn"><button>Learn It</button></li>
-        <li routerLink="do"><button>Do It</button></li>
+        <li routerLink="start" (click)= "onNavigate('start')"><button>Start It</button></li>
+        <li routerLink="learn" (click)="onNavigate('learn')"><button>Learn It</button></li>
+        <li routerLink="do" (click)="onNavigate('do')"><button>Do It</button></li>
         <!-- <div class="divi"> -->
             <!-- <li id="pre">Previous</li> -->
         <!-- <li id="next">Next</li> -->
