@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-maincontentnav',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './maincontentnav.component.css'
 })
 export class MaincontentnavComponent {
-
+constructor(private router:Router){}
+gotohome(){
+this.router.navigate(['landingpage'])
+}
 }

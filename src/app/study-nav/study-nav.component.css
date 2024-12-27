@@ -1,16 +1,26 @@
 .container{
     position: relative;
+    right: 10%;
+    top: 10%;
+    /* left: 0%; */
 }
 
 .container ul{
     display: flex;
+    width: auto;
+    margin-left: 30px;
 }
-ul li{
+ul li {
+    list-style-type: none;
+}
+
+ul li button{
     margin: 2px;
     list-style-type: none;
     border: 1px solid black;
-    padding:6px;
+    padding:4px;
     border-radius: 8px;
+    font-size:small;
 }
 
 ul li:hover{
@@ -22,6 +32,3 @@ ul li:hover{
     display: flex;
 }
 
-#pre,#next{
-    right: 5%;
-}

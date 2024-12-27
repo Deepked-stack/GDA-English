@@ -32,7 +32,7 @@ import { MaincontentnavComponent } from './maincontentnav/maincontentnav.compone
     MaincontentComponent,
     ModuleComponent,
     StudyComponent,
-    StudyNavComponent,
+    // StudyNavComponent,
     StartItComponent,
     LearnItComponent,
     DoItComponent,

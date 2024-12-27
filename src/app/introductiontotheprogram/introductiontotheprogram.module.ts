@@ -6,6 +6,7 @@ import { HistoricalPerspectiveComponent } from './historical-perspective/histori
 import { HealthcareDeliverySystemsComponent } from './healthcare-delivery-systems/healthcare-delivery-systems.component';
 import { HospitalsComponent } from './hospitals/hospitals.component';
 import { BasicTerminologiesComponent } from './basic-terminologies/basic-terminologies.component';
+import { StudyNavComponent } from '../study-nav/study-nav.component';
 
 
 const routes: Routes = [
@@ -22,9 +23,11 @@ const routes: Routes = [
   
     // HospitalsComponent,
     // BasicTerminologiesComponent
+    // StudyNavComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    // StudyNavComponent
   ]
 })
 export class IntroductiontotheprogramModule { }

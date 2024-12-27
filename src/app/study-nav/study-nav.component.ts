@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-study-nav',
-  standalone: false,
+  standalone: true,
   
   templateUrl: './study-nav.component.html',
   styleUrl: './study-nav.component.css'

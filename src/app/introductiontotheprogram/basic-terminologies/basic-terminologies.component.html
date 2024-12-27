@@ -1,1 +1,24 @@
-<p>basic-terminologies works!</p>
+<app-study-nav></app-study-nav>
+
+<div class="tab-container">
+  <!-- "Start It" Section -->
+  <div *ngIf="!startCompleted">
+    <h2>Start It</h2>
+    <p>This is the "Start It" content for Introduction Video.</p>
+    <button (click)="markAsCompleted('start')">Complete "Start It"</button>
+  </div>
+
+  <!-- "Learn It" Section -->
+  <div *ngIf="startCompleted && !learnCompleted">
+    <h2>Learn It</h2>
+    <p>This is the "Learn It" content for Introduction Video.</p>
+    <button (click)="markAsCompleted('learn')">Complete "Learn It"</button>
+  </div>
+
+  <!-- "Do It" Section -->
+  <div *ngIf="learnCompleted">
+    <h2>Do It</h2>
+    <p>This is the "Do It" content for Introduction Video.</p>
+    <button (click)="markAsCompleted('do')">Complete "Do It"</button>
+  </div>
+</div>

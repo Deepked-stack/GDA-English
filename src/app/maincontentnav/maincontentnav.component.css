@@ -50,3 +50,10 @@ li p {
 }
 
 
+@media (max-width: 768px) {
+    app-maincontentnav {
+      width: 100%;
+      /* Additional responsive styles */
+    }
+  }
+  
