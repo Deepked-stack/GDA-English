@@ -1,25 +1,78 @@
-.answer-options button {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
+/* ...........................for checkbox questions.................................... */
 
-.videodiv{
-    margin: 15px;
-
-padding: 15px;
-border: 0.1px solid black;
-border-radius: 15px;
-    width: 100%;
-    height: 20em;
-    /* background-color: #adebbc; */
-
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.6);
+.question-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
-  
+
+.question {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
+.checkbox {
+  margin-top: 5px;
+}
+
+.statement {
+  flex-grow: 1;
+  display: inline-block;
+  max-width: 70%;
+}
+
+
+span.correct {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+span.incorrect {
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.options input[type="checkbox"]:checked + span {
+  visibility: visible;
+  display: inline-block;
+}
+
+.options label {
+  display: block;
+  padding: 10px;
+  background-color: #adebbc;
+  color: rgb(21, 6, 6);
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.answer-options button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+}
+
   .answer-options button:hover {
     /* opacity: 0.8; */
     scale: 1.03;
@@ -27,29 +80,13 @@ border-radius: 15px;
     color: aliceblue;
   }
   
-  .options label {
-    display: block;
-    padding: 10px;
-    background-color: #adebbc;
-    color: rgb(21, 6, 6);
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
+ /* ------------------------------------------------------------------------------------------------------- */
+  
+  
+ /* ........................................asesment button......................... */
+  
+  
 
-  
-  
-  .options input[type="checkbox"]:checked + span {
-    visibility: visible;
-  }
-  
-  .correct {
-    color: green;
-  }
-  
-  .incorrect {
-    color: red;
-  }
   
   .button-section button {
     background-color: #007bff;
@@ -61,8 +98,11 @@ border-radius: 15px;
   }
   
   .button-section button:hover {
-    background-color: #0056b3;
-  }
+    background-color: #0056b3;}
+  /* }------------------------------------------------------------------------------------------------------- */
+
+
+  /* .....................................image hover change.................................... */
 
   .changeonhover{
     /* background-color: beige; */
@@ -84,13 +124,8 @@ border-radius: 15px;
     background-size: cover;
     background-image: url('https://media-cms.virohan.com/staging/ott_1f8b35aeec.webp');
   }
-
-  
-
-
-
-
-
+/* ------------------------------------------------------------------------------------------------------------------- */
+  /* .....................hospital input ........................... */
 input{
     width: 100px;
     background-color: rgb(213, 232, 248);
@@ -98,14 +133,17 @@ input{
     border: 2px solid blue;
 
 }
-  
+/* ....................................for all content.............................. */
 /* General styles for content */
 .content {
     display: block;
     padding: 20px;
 }
 
-/* Flexbox container to place the list and image side by side */
+/* ---------------------------------------------------------------------------------------------- */
+
+
+/* Flexbox container to place the list and image side by side................................................ */
 .ollist-and-image {
     display: flex;
     justify-content: space-between;
@@ -130,7 +168,6 @@ ol li {
     font-size: medium;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
-
 /* Styles for the image */
 .content img {
     width: 35%;
@@ -158,20 +195,9 @@ ol li {
     }
 }
 
+/* ------------------------------------------------------------------------------------------------------------------ */
 
-.videofucoahospital{
-margin: 15px;
-
-padding: 15px;
-border: 0.1px solid black;
-border-radius: 15px;
-    width: 100%;
-    height: 20em;
-    /* background-color: #adebbc; */
-
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.6);
-}
-
+/* ..............................................mcq............................................. */
 .mcqlist li{
     background-color: #adebbc;
     list-style-type: upper-roman;
@@ -183,6 +209,8 @@ border-radius: 15px;
     list-style-type: lower-alpha;
     margin-left: 15%;
 }
+
+/* ----------------------------------------------------------------------------------------------------- */
 
 .division{
     align-items: center;
@@ -203,3 +231,35 @@ border-radius: 15px;
     float: left ;
 }
 
+
+
+
+
+
+/* .......................................................for video............................. */
+.videodiv{
+  margin: 15px;
+
+padding: 15px;
+border: 0.1px solid black;
+border-radius: 15px;
+  width: 100%;
+  height: 20em;
+  /* background-color: #adebbc; */
+
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.videofucoahospital{
+  margin: 15px;
+  
+  padding: 15px;
+  border: 0.1px solid black;
+  border-radius: 15px;
+      width: 100%;
+      height: 20em;
+      /* background-color: #adebbc; */
+  
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.6);
+  }
+  

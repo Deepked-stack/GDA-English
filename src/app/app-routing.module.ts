@@ -5,33 +5,30 @@ import { SignupComponent } from './signup/signup.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MaincontentComponent } from './maincontent/maincontent.component';
 import { StudyComponent } from './study/study.component';
-import { ModuleComponent } from './module/module.component';
-import { IntroductionVideoComponent } from './introductiontotheprogram/introduction-video/introduction-video.component';
-import { StartItComponent } from './start-it/start-it.component';
-import { LearnItComponent } from './learn-it/learn-it.component';
-import { DoItComponent } from './do-it/do-it.component';
-import { StudyNavComponent } from './study-nav/study-nav.component';
-import { MaincontentnavComponent } from './maincontentnav/maincontentnav.component';
-// import { IntroductionVideoComponent } from './introductiontotheprogram/introduction-video/introduction-video.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'login',pathMatch:'full'},
-  {path:'login',component:LoginComponent},
-  {path:'signup',component:SignupComponent},
-  {path:'landingpage',component:LandingpageComponent},
-  {path:'main',component:MaincontentComponent},
-  {path:'study',component:StudyComponent},
-  {path:'module',component:ModuleComponent},
-  {path:'videointro',component:IntroductionVideoComponent},
-  {path:'start',component:StartItComponent},
-  {path:'learn',component:LearnItComponent},
-  {path:'do',component:DoItComponent},
-  {path:'studynav',component:StudyNavComponent},
-  {path:'mainconnav',component:MaincontentnavComponent}
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'landingpage', component: LandingpageComponent},
+  { path: 'main', component: MaincontentComponent },
+  { path: 'study', component: StudyComponent },
+  {
+    path: 'intro', // Lazy load Introduction module
+    loadChildren: () =>
+      import('./introductiontotheprogram/introductiontotheprogram.module').then(
+        (m) => m.IntroductiontotheprogramModule
+      ),
+  },
+  {
+    path: 'module2', // Lazy load Module2
+    loadChildren: () =>
+      import('./module2/module2.module').then((m) => m.Module2Module),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

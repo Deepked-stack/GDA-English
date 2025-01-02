@@ -1,15 +1,31 @@
-<!-- submodule.component.html -->
-<app-study-nav (navigateTo)="onSectionChange($event)"></app-study-nav>
+<div class="mcq-section">
+  <div class="mcq-question">
+    I. A hospital with less than 100 beds is considered a small hospital.
+  </div>
+  <div class="mcq-options">
+    <label class="mcq-option">
+      <input type="radio" name="question1" value="True" />
+      True
+    </label>
+    <label class="mcq-option">
+      <input type="radio" name="question1" value="False" />
+      False
+    </label>
+  </div>
+</div>
 
-<div *ngIf="currentSection === 'start'">
-  <!-- Start It content -->
-   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores deleniti aliquam adipisci delectus, itaque quas voluptatem doloribus sapiente in reiciendis!
-</div>
-<div *ngIf="currentSection === 'learn'">
-  <!-- Learn It content -->
-   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed ex et reprehenderit illum aperiam debitis error. Ipsam beatae est eveniet?
-</div>
-<div *ngIf="currentSection === 'do'">
-  <!-- Do It content -->
-   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quam sed aut a consequuntur eaque harum cum natus ipsa. Delectus!
+<div class="mcq-section">
+  <div class="mcq-question">
+    II. OPD must be located:
+  </div>
+  <div class="mcq-options">
+    <label class="mcq-option">
+      <input type="radio" name="question2" value="Near Entrance" />
+      Near Entrance
+    </label>
+    <label class="mcq-option">
+      <input type="radio" name="question2" value="Near Operation Theatre" />
+      Near operation theatre
+    </label>
+  </div>
 </div>

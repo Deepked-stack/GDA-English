@@ -4,7 +4,7 @@
     border-radius: 8px;
     /* padding: 2px; */
     /* margin-left: 2px; */
-    height: 60em;
+    max-height: 60em;
     overflow: scroll;
   }
   

@@ -18,35 +18,59 @@ It is the H<input type="text" id="hblank"/>
 <div class="difference-section">
     <h2>What I Know Already...</h2>
     <p>Before understanding about the healthcare delivery systems, let’s test your prior knowledge on it in ‘What I Know Already...’!</p>
-
     <div class="question-section">
       <p class="question">Which of the following statements about healthcare are correct?</p>
       <div class="options">
-        <label>
-          <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')">
-          Local hospitals are a part of tertiary level of healthcare.
-          <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">{{ feedback.option1 }}</span>
-        </label>
-        <label>
-          <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')">
-          More Hospitals are present in urban areas as compared to rural areas
-          <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">{{ feedback.option2 }}</span>
-        </label>
-        <label>
-          <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')">
-Rehabilatitation centres are synonymous to hospitals.
-          <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">{{ feedback.option3 }}</span>
-        </label>
-        <label>
-          <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')">
-hospitals provide after treatment services as well.
-          <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">{{ feedback.option4 }}</span>
-        </label>
-        <label>
-          <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
-Special institutions like rehabiliatation centres help people who are under substance abuse.          <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
-        </label>
-
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')" class="checkbox">
+            <span class="statement">Local hospitals are a part of tertiary level of healthcare.</span>
+          </label>
+          <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
+            {{ feedback.option1 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')" class="checkbox">
+            <span class="statement">More Hospitals are present in urban areas as compared to rural areas.</span>
+          </label>
+          <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
+            {{ feedback.option2 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')" class="checkbox">
+            <span class="statement">Rehabilitation centres are synonymous to hospitals.</span>
+          </label>
+          <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
+            {{ feedback.option3 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')" class="checkbox">
+            <span class="statement">Hospitals provide after-treatment services as well.</span>
+          </label>
+          <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
+            {{ feedback.option4 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')" class="checkbox">
+            <span class="statement">Special institutions like rehabilitation centres help people who are under substance abuse.</span>
+          </label>
+          <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
+            {{ feedback.option5 }}
+          </span>
+        </div>
+      </div>
+    
+    
+    
+    
         <!-- <img src="" alt=""> -->
          <div class="changeonhover">
             <div class="h2">
@@ -69,20 +93,38 @@ Special institutions like rehabiliatation centres help people who are under subs
 <div class="learnit">
 Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>'My Theory Task'</b><br>
 <br><div class="heading"><h2>My Resources</h2></div><br>
-
 <div class="content">
     <p>Read The Definition given below and click on the correct statement.</p>
     <div class="ollist-and-image">
         <div class="ollist">
             <ol>
-                <li>According to the World Health Organization, a hospital's function is to provide complete healthcare both preventive and curative to the population</li>
-                <li>According to the World Health Organization a hospital is a social organization, whose function is to provide mental support to the population.</li>
-                <li>According to the World Health Organization, a hospital is a medical organization available in cities, which provides healthcare and entertainment simultaneously.</li>
+                <li>
+                    <label>
+                        <input type="checkbox" [(ngModel)]="isFirstOptionSelected" (change)="checkAnswerl()" />
+                       <div class="statement"> According to the World Health Organization, a hospital's function is to provide complete healthcare both preventive and curative to the population</div>
+                        <span *ngIf="isFirstOptionSelected" [ngClass]="{'correct': isFirstOptionSelected, 'incorrect': !isFirstOptionSelected}">✔️</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" [(ngModel)]="isSecondOptionSelected" (change)="checkAnswerl()" />
+                        <div class="statement">According to the World Health Organization, a hospital is a social organization, whose function is to provide mental support to the population.</div>
+                        <span *ngIf="isSecondOptionSelected" [ngClass]="{'incorrect': !isSecondOptionSelected}">❌</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" [(ngModel)]="isThirdOptionSelected" (change)="checkAnswerl()" />
+                        <div class="statement">According to the World Health Organization, a hospital is a medical organization available in cities, which provides healthcare and entertainment simultaneously.</div>
+                        <span *ngIf="isThirdOptionSelected" [ngClass]="{'incorrect': !isThirdOptionSelected}">❌</span>
+                    </label>
+                </li>
             </ol>
         </div>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTScVzkYHt256-z_1zDfuOygroTr3vIqdSTSQ&s" alt="Hospital Image">
     </div>
 </div>
+
 <br>
 <br>
 In your class, discuss the meaningof hospitals and what it does according to your real-life expweriences.
@@ -156,37 +198,45 @@ In your class, discuss the meaningof hospitals and what it does according to you
       <p class="question">Which of the following statements about healthcare are correct?</p>
       <div class="options">
         <label>
-          <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')">
-          i. Aparna works as a nurse in a hospital,she gets time ti time training. 
-          <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">{{ feedback.option1 }}</span>
+            <input type="checkbox" [(ngModel)]="answers2.option1" (change)="checkAnswer2('option1')" />
+            <div class="statement">i. Aparna works as a nurse in a hospital, she gets time-to-time training.</div>
+            <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">{{ feedback.option1 }}</span>
         </label>
         <label>
-          <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')">
-            ii. A hospital can function without a Finance and Accounts department
-          <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">{{ feedback.option2 }}</span>
+            <input type="checkbox" [(ngModel)]="answers2.option2" (change)="checkAnswer2('option2')" />
+           <div class="statement"> ii. A hospital can function without a Finance and Accounts department.</div>
+            <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">{{ feedback.option2 }}</span>
         </label>
         <label>
-          <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')">
-iii. In district hospital, OPD has easy access to x-ray rooms and pharmacy.          <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">{{ feedback.option3 }}</span>
+            <input type="checkbox" [(ngModel)]="answers2.option3" (change)="checkAnswer2('option3')" />
+            <div class="statement">iii. In district hospitals, OPD has easy access to x-ray rooms and pharmacy.</div>
+            <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">{{ feedback.option3 }}</span>
         </label>
         <label>
-          <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')">
-          iv.Hospice care is available in every district in India.
-                    <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">{{ feedback.option4 }}</span>
+            <input type="checkbox" [(ngModel)]="answers2.option4" (change)="checkAnswer2('option4')" />
+           <div class="statement"> iv. Hospice care is available in every district in India.</div>
+            <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">{{ feedback.option4 }}</span>
         </label>
         <label>
-          <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
-          v. Rajiv is a dietician in Take Care hospital, his work is to provide appropriate food and nutrient intake of patient<span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
+            <input type="checkbox" [(ngModel)]="answers2.option5" (change)="checkAnswer2('option5')" />
+            <div class="statement">v. Rajiv is a dietician in Take Care hospital, his work is to provide appropriate food and nutrient intake for patients.</div>
+            <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
         </label>
         <label>
-            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
-            vi. Suraksha hospital in the town is very small, it doesn’t require housekeeping department and staff.            <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
-          </label>
-          <label>
-            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
-	
-            vii. Vyas works in the purchasing department. He takes care of the medicine inventory.          </label>
-            
+            <input type="checkbox" [(ngModel)]="answers2.option6" (change)="checkAnswer2('option6')" />
+            <div class="statement">vi. Suraksha hospital in the town is very small, it doesn’t require a housekeeping department and staff.</div>
+            <span *ngIf="feedback.option6" [ngClass]="{'correct': feedback.option6 === '✔️', 'incorrect': feedback.option6 === '❌'}">{{ feedback.option6 }}</span>
+        </label>
+        <label>
+            <input type="checkbox" [(ngModel)]="answers2.option7" (change)="checkAnswer2('option7')" />
+            <div class="statement">vii. Community hospitals are equipped to provide surgical services for minor injuries.</div>
+            <span *ngIf="feedback.option7" [ngClass]="{'correct': feedback.option7 === '✔️', 'incorrect': feedback.option7 === '❌'}">{{ feedback.option7 }}</span>
+        </label>
+    </div>
+</div>
+</div>
+      </div>
+      
 
 <div class="division">Part 2</div>
 

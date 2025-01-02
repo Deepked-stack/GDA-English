@@ -36,42 +36,7 @@
     color: aliceblue;
   }
   
-  .options label {
-    display: block;
-    padding: 10px;
-    background-color: #adebbc;
-    color: rgb(21, 6, 6);
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
 
-  
-  
-  .options input[type="checkbox"]:checked + span {
-    visibility: visible;
-  }
-  
-  .correct {
-    color: green;
-  }
-  
-  .incorrect {
-    color: red;
-  }
-  
-  .button-section button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .button-section button:hover {
-    background-color: #0056b3;
-  }
 
   
   .image-container{
@@ -82,4 +47,88 @@
   .image-container img{
     width: 50%;
     height: 250px;
+  }
+
+
+  /* ------------------------------------------------------------------------------------------------------ */
+
+  
+.question-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
+.checkbox {
+  margin-top: 5px;
+}
+
+.statement {
+  flex-grow: 1;
+  display: inline-block;
+  max-width: 70%;
+}
+
+
+span.correct {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+span.incorrect {
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.options input[type="checkbox"]:checked + span {
+  visibility: visible;
+  display: inline-block;
+}
+
+.options label {
+  display: block;
+  padding: 10px;
+  background-color: #adebbc;
+  color: rgb(21, 6, 6);
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.answer-options button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+}
+
+  .answer-options button:hover {
+    /* opacity: 0.8; */
+    scale: 1.03;
+    background-color: green;
+    color: aliceblue;
   }

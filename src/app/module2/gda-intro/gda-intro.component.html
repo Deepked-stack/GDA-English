@@ -1,0 +1,518 @@
+
+
+<div class="content">
+    <div class="startit">
+<b>Welcome! Lets us start your Journey!</b>
+
+<div class="videodiv">
+    gda2.1 intro video eglish
+</div>
+
+<h2>What i know already</h2>
+
+<br>
+Before understanding about General Duty Assistant, let’s test your prior knowledge on it in <b>‘What I Know Already…’!</b><br><br>
+Look at the images given in the table. Click on the images you think are correct with respect to General Duty Assistant.
+
+<div class="siximages">
+  <div class="siximages">
+    <!-- Card 1 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[1] === true, 'picincorrect': cardStatus[1] === false}" 
+      (click)="checkAnswer(1, true)">
+      <img src="/assets/bp.webp" alt="Bloodpressure" loading="lazy">
+      <label><b>Record Blood Pressure</b></label>
+    </div>
+  
+    <!-- Card 2 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[2] === true, 'picincorrect': cardStatus[2] === false}" 
+      (click)="checkAnswer(2, true)">
+      <img src="/assets/goodcom.webp" alt="Good Communication" loading="lazy">
+      <label><b>Good Communication Skills</b></label>
+    </div>
+  
+    <!-- Card 3 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[3] === true, 'picincorrect': cardStatus[3] === false}" 
+      (click)="checkAnswer(3, false)">
+      <img src="assets/onlydesk.jpg" alt="Only desk" loading="lazy">
+      <label><b>Only desk job</b></label>
+    </div>
+  
+    <!-- Card 4 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[4] === true, 'picincorrect': cardStatus[4] === false}" 
+      (click)="checkAnswer(4, false)">
+      <img src="/assets/nocareer.png" alt="No career growth" loading="lazy">
+      <label><b>No Career Growth</b></label>
+    </div>
+  
+    <!-- Card 5 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[5] === true, 'picincorrect': cardStatus[5] === false}" 
+      (click)="checkAnswer(5, false)">
+      <img src="/assets/gettingangry.jpg" alt="Getting angry at patients" loading="lazy">
+      <label><b>Getting angry at Patients</b></label>
+    </div>
+  
+    <!-- Card 6 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[6] === true, 'picincorrect': cardStatus[6] === false}" 
+      (click)="checkAnswer(6, true)">
+      <img src="/assets/maintainpsafety.png" alt="Maintaining patient safety" loading="lazy">
+      <label><b>Maintaining Patient Safety</b></label>
+    </div>
+  </div>
+  
+  <!-- Repeat for other cards with unique IDs and correct/incorrect logic -->
+</div>
+Discuss in your class, why is it important to have good communication skills and maintaining patient safety for a General Duty Assistant? Are you correct? Find out in this learning objective!
+<b><br>Find out how you will be assessed on your theory skills from the button below.</b>
+
+<div class="assessbutton">
+    <button>How will I be Assessed?</button>
+</div>
+</div>
+
+<div class="learnit">
+    <hr>LearnIt<hr><br>
+
+Come, let us leaarn the theory of this learning outcome. Look at the resources below and then attempt the <b>'My Theory Task.</b>
+
+<h1><b>MY Resources</b></h1>
+
+<b>1.</b>Have you ever heard of the term- <b>General Duty Assistant</b> before?. If so, can you discuss it in your class? if not, lets find out about it here term-
+<br><br>
+<a href="https://kedskills.org/pdf/GDA_E/Unit2/LO1/What%20is%20a%20General%20Duty%20Assisstant.pdf">What is a General Duty Assistant?</a>
+<br><br>
+<b>Checkpoint!</b>
+<br><br>
+<!-- mcq1 -->
+<div class="mcqlist">
+    <ol>
+      <li>
+        A GDA spends ____ time with patients as compared to other healthcare providers.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'More')">
+                More
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'Less')">
+                Less
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[1]" [ngClass]="{'correct': mcqFeedback1[1] === '✔️', 'incorrect': mcqFeedback1[1] === '❌'}">{{ mcqFeedback1[1] }}</span>
+      </li>
+  
+      <li>
+        GDA means
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'General Duty Assistant')">
+                General Duty Assistant
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'General Diagnostic Assistant')">
+                General Diagnostic Assistant
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[2]" [ngClass]="{'correct': mcqFeedback1[2] === '✔️', 'incorrect': mcqFeedback1[2] === '❌'}">{{ mcqFeedback1[2] }}</span>
+      </li>
+    </ol>
+  </div>
+  
+<br>
+<b>2.</b> A GDA’s role is very important in any healthcare institute. Can any individual aspire to be a GDA? Yes! Are there any specific duties a GDA must fulfill? Yes! Let’s find out what they are.
+<div class="videodiv">
+    gda2.1 Duties of a GDA
+</div>
+
+<!-- mcq2 -->
+
+<div class="mcqlist">
+    <ol>
+      <li>
+        A GDA must only listen to a patient.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'True')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'False')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[1]" [ngClass]="{'correct': mcqFeedback2[1] === '✔️', 'incorrect': mcqFeedback2[1] === '❌'}">{{ mcqFeedback2[1] }}</span>
+      </li>
+  
+      <li>
+        DA can share patient´s confidential details with        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'Colleagues')">
+                Colleagues
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'Housekeepingstaff')">
+                Housekeeping staff    
+          </label>
+            </li>
+            <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'None')">
+                  None    
+            </label>
+              </li>
+
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[2]" [ngClass]="{'correct': mcqFeedback2[2] === '✔️', 'incorrect': mcqFeedback2[2] === '❌'}">{{ mcqFeedback2[2] }}</span>
+      </li>
+    </ol>
+  </div>
+
+  <br>
+  Make sure to attempt <b>My Theory Task</b> before moving on to <b>Do It!</b>
+<br>
+<br>
+<h2>My Theory Task</h2>
+
+<div class="division">Part 1</div>
+<b>A. Click on the correct answer from the given options.</b>
+
+<!-- mcq3 -->
+
+<div class="mcqlist">
+    <ol>
+      <!-- ---------------------- Question 1 --------------------------------- -->
+      <li>
+        A _____ provides support to doctors, nurses and other support staff to take personal care of patients.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'GDA')" />
+                GDA
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'nut')" />
+                Nutritionist
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'house')" />
+                Housekeeper
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'None')" />
+                None
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span
+          *ngIf="mcqFeedback3[1]"
+          [ngClass]="{'correct': mcqFeedback3[1] === '✔️', 'incorrect': mcqFeedback3[1] === '❌'}"
+          >{{ mcqFeedback3[1] }}</span
+        >
+      </li>
+  
+      <!-- ---------------------- Question 2 --------------------------------- -->
+      <li>
+        A GDA named Manu was transporting a patient suffering from a chronic disease. Manu understood the patient’s anxiety and answered his queries satisfactorily. Which ability of Manu, as an ideal GDA, is reflected in this?
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq2"
+                  (change)="checkMCQ3(2, 'distraction')"
+                />
+                Distraction
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq2"
+                  (change)="checkMCQ3(2, 'irritation')"
+                />
+                Irritation
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq2"
+                  (change)="checkMCQ3(2, 'Indifferent')"
+                />
+                Indifferent
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq2"
+                  (change)="checkMCQ3(2, 'poscomm')"
+                />
+                Positive Communication
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span
+          *ngIf="mcqFeedback3[2]"
+          [ngClass]="{'correct': mcqFeedback3[2] === '✔️', 'incorrect': mcqFeedback3[2] === '❌'}"
+          >{{ mcqFeedback3[2] }}</span
+        >
+      </li>
+  
+      <!-- ---------------------- Question 3 --------------------------------- -->
+      <li>
+        A stranger wanted to know about a patient’s medical reports. Arjun denied disclosing the reports to a stranger. Arjun understands the importance of:
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq3"
+                  (change)="checkMCQ3(3, 'Confidentiality')"
+                />
+                Confidentiality
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq3"
+                  (change)="checkMCQ3(3, 'negips')"
+                />
+                Negative interpersonal skill
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq3"
+                  (change)="checkMCQ3(3, 'unclear')"
+                />
+                Unclear Speech
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ3(3, 'All')" />
+                All
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span
+          *ngIf="mcqFeedback3[3]"
+          [ngClass]="{'correct': mcqFeedback3[3] === '✔️', 'incorrect': mcqFeedback3[3] === '❌'}"
+          >{{ mcqFeedback3[3] }}</span
+        >
+      </li>
+  
+      <!-- ---------------------- Question 4 --------------------------------- -->
+      <li>
+        Roles and responsibilities of a GDA include ___________.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq4"
+                  (change)="checkMCQ3(4, 'safety')"
+                />
+                Maintaining Patient Safety
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq4"
+                  (change)="checkMCQ3(4, 'assisthealthcare')"
+                />
+                Assisting Healthcare Staff
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq4"
+                  (change)="checkMCQ3(4, 'goodinterpersonal')"
+                />
+                Good Interpersonal Skill
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq4" (change)="checkMCQ3(4, 'All')" />
+                All of the Above
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span
+          *ngIf="mcqFeedback3[4]"
+          [ngClass]="{'correct': mcqFeedback3[4] === '✔️', 'incorrect': mcqFeedback3[4] === '❌'}"
+          >{{ mcqFeedback3[4] }}</span
+        >
+      </li>
+  
+      <!-- ---------------------- Question 5 --------------------------------- -->
+      <li>
+        Roles and responsibilities of a GDA include ___________.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq5"
+                  (change)="checkMCQ3(5, 'imanner')"
+                />
+                Individual Manner
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq5" (change)="checkMCQ3(5, 'Team')" />
+                Team
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="mcq5"
+                  (change)="checkMCQ3(5, 'personalway')"
+                />
+                Personal Way
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq5" (change)="checkMCQ3(5, 'All')" />
+                All
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span
+          *ngIf="mcqFeedback3[5]"
+          [ngClass]="{'correct': mcqFeedback3[5] === '✔️', 'incorrect': mcqFeedback3[5] === '❌'}"
+          >{{ mcqFeedback3[5] }}</span
+        >
+      </li>
+    </ol>
+  </div>
+  
+<br>
+<br>
+<b>B.</b> Complete the folowing sentence in your notebook
+
+<br>
+<ul>
+    <li>A General Duty Assistant is a healthcare profesional who provides ____________.</li>
+</ul>
+    <div class="division">Part 2</div>
+
+    <br>
+<b>C.</b><p style="text-align: justify;"> Arunima is working as a GDA in Wellstar Hospital. A patient was admitted before a week in a critical situation. Arunima took very good care of the patient. After a few days, the patient recovered from the illness and was getting discharged from the hospital. Patient’s mother was really happy with Arunima and was thanking her for all the care she took. While leaving the patient’s mother offered a few gift boxes to Arunima as a token of thanks. Should Arunima accept it or not? Give reasons for your answer.</p>
+<div class="fimage">
+    <p><b>F.</b> Avni is a GDA. She is currently attending a patient with stomach infection. Every time Avni enters the patient’s ward, she covers her nose to avoid foul smell. She advised the patient to have mouth freshners without the doctor’s consent. Next day, the doctor was furious at her. Can you tell why the doctor got furious? What mistake did Avni make? Write down answers in your notebook.</p>
+<img src="/assets/doctor.jpg" alt="" loading="lazy">
+</div>
+
+<div class="division">Part 3</div>
+See the slides given below and answer the question.<br>
+<div class="crousel">
+    crousel image here.
+</div>
+
+<div class="center">
+    <h4>GREAT!</h4>
+    
+    <H4>Move on to DO IT!</H4>
+</div>
+
+<div class="assessbutton">
+    <button>How will I be Assessed?</button>
+</div>
+</div>
+
+<div class="doit">
+    <hr>
+    Do It 
+    <hr>
+
+Almost done! Let's finished this goal with your practical.
+
+<br>
+<h2>My Practical Task</h2>
+<br>
+Time for your practical what is your practical activity? What  is the best way to do it? Explore it in video below.
+
+<div class="videodiv">
+    videohere
+</div>
+
+Assess yourself in the practical using the <a href="https://kedskills.org/pdf/GDA_E/Unit2/LO1/Practical%20Assessment%20Checklist%20eng.pdf">Practical Assessment CheckList</a>
+<br>
+<h2>Conclusion</h2>
+<p>Based on your learning, can you give a basic introduction and explain qualities of General Duty Assistant to Malini? Write down in your notebook. </p>
+<p><b>Congratulations! You have completed the goal.</b></p>
+<p><b>Findout how you will be accessed on your practical skills from button below</b></p>
+<div class="assessbutton">
+    <button>How will I be Assessed</button>
+</div>
+</div>
+
+</div>

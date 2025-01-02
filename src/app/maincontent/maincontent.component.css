@@ -22,7 +22,7 @@
     padding: 2%;
     left: 21.5%;
     margin-bottom: 0%;
-    top: 10%;
+    top: 0%;
     
   }
 
@@ -37,7 +37,7 @@
   }
   app-study {
     position: absolute;
-    top: 24%;
+    top: 15%;
     right: 2.5%;
     width: 70%; /* 70% for the Study area */
     padding: 2.5%;

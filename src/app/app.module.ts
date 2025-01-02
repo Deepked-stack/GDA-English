@@ -22,6 +22,10 @@ import { StartItComponent } from './start-it/start-it.component';
 import { LearnItComponent } from './learn-it/learn-it.component';
 import { DoItComponent } from './do-it/do-it.component';
 import { MaincontentnavComponent } from './maincontentnav/maincontentnav.component';
+import { GDAIntroComponent } from './module2/gda-intro/gda-intro.component';
+import { HealthAndIllHealthComponent } from './module2/health-and-ill-health/health-and-ill-health.component';
+import { PersonCenteredCareComponent } from './module2/person-centered-care/person-centered-care.component';
+import { EffectiveCommunicationComponent } from './module2/effective-communication/effective-communication.component';
 // import { IntroductionVodeoComponent } from './Introduction_to_the_program/introduction-vodeo/introduction-vodeo.component';
 @NgModule({
   declarations: [
@@ -50,7 +54,11 @@ import { MaincontentnavComponent } from './maincontentnav/maincontentnav.compone
     HistoricalPerspectiveComponent,
     HealthcareDeliverySystemsComponent,
     HospitalsComponent,
-    BasicTerminologiesComponent
+    BasicTerminologiesComponent,
+    GDAIntroComponent,
+    HealthAndIllHealthComponent,
+    PersonCenteredCareComponent,
+    EffectiveCommunicationComponent
   ],
   providers: [
     provideClientHydration(withEventReplay())

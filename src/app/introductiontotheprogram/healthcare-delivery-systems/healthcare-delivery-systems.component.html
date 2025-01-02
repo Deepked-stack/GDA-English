@@ -64,3 +64,215 @@
     </div>
   </div>
   
+
+  <hr>
+  learn it
+  <hr>
+  <div class="learnit">
+    Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>My Theory Task.</b>
+<br>
+    <h1>My Resources</h1>
+    <br>
+<b>1.</b> Lets get to know what healthcare deliver systems are<br>
+Look at the video below
+<div class="videodiv">
+  embedd video here
+</div>
+
+<b>Checkpoint!</b>
+
+<div class="mcqlist">
+  <ol>
+    <!-- Question 1 -->
+    <li>
+      Quaternary healthcare is available in rural areas.
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ(1, 'True')">
+              True
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ(1, 'False')">
+              False
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback[1]" [ngClass]="{'correct': mcqFeedback[1] === '✔️', 'incorrect': mcqFeedback[1] === '❌'}">{{ mcqFeedback[1] }}</span>
+    </li>
+
+    <!-- Question 2 -->
+    <li>
+       If you get a serious cold, you go to a
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ(2, 'Primary Health Care provider')">
+              Primary Health Care provider
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ(2, 'ICU')">
+              ICU
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback[2]" [ngClass]="{'correct': mcqFeedback[2] === '✔️', 'incorrect': mcqFeedback[2] === '❌'}">{{ mcqFeedback[2] }}</span>
+    </li>
+
+    <!-- Question 3 -->
+    <li>
+       Which level is the most efficient healthcare level?
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq3" (change)="checkMCQ(3, 'Primary')">
+              Primary
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq3" (change)="checkMCQ(3, 'Secondary')">
+              Secondary
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq3" (change)="checkMCQ(3, 'Tertiary')">
+              Tertiary
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq3" (change)="checkMCQ(3, 'Quaternary')">
+              Quaternary
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback[3]" [ngClass]="{'correct': mcqFeedback[3] === '✔️', 'incorrect': mcqFeedback[3] === '❌'}">{{ mcqFeedback[3] }}</span>
+    </li>
+
+    <!-- Question 4 -->
+    <li>
+       In India who is responsible for developing and monitoring national policies and regulations?
+
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq4" (change)="checkMCQ(4, 'The central Government')">
+              The central Government
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type="radio" name="mcq4" (change)="checkMCQ(4, 'The Hospitals')">
+              The Hospitals
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type="radio" name="mcq4" (change)="checkMCQ(4, 'The Board of Education')">
+              The Board of Education
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback[4]" [ngClass]="{'correct': mcqFeedback[4] === '✔️', 'incorrect': mcqFeedback[4] === '❌'}">{{ mcqFeedback[4] }}</span>
+    </li>
+
+    <!-- Question 5 -->
+    <li>
+       Quaternary healthcare requires advanced equipment.
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq5" (change)="checkMCQ(5, 'Yes')">
+              Yes
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq5" (change)="checkMCQ(5, 'No')">
+              No
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback[5]" [ngClass]="{'correct': mcqFeedback[5] === '✔️', 'incorrect': mcqFeedback[5] === '❌'}">{{ mcqFeedback[5] }}</span>
+    </li>
+  </ol>
+</div>
+
+<h2>My Theory Task</h2>
+
+<div class="mytheorytask">
+  Make sure to attempt <b>My Theory Task</b> before moving on to Do It!.
+
+  <div class="division">Part 1</div>
+</div>
+
+
+<div class="question-section">
+  <p class="question">Which of the following statements about healthcare are correct?</p>
+  <div class="options">
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')" class="checkbox">
+        <span class="statement">Local hospitals are a part of tertiary level of healthcare.</span>
+      </label>
+      <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
+        {{ feedback.option1 }}
+      </span>
+    </div>
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')" class="checkbox">
+        <span class="statement">More Hospitals are present in urban areas as compared to rural areas.</span>
+      </label>
+      <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
+        {{ feedback.option2 }}
+      </span>
+    </div>
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')" class="checkbox">
+        <span class="statement">Rehabilitation centres are synonymous to hospitals.</span>
+      </label>
+      <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
+        {{ feedback.option3 }}
+      </span>
+    </div>
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')" class="checkbox">
+        <span class="statement">Hospitals provide after-treatment services as well.</span>
+      </label>
+      <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
+        {{ feedback.option4 }}
+      </span>
+    </div>
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')" class="checkbox">
+        <span class="statement">Special institutions like rehabilitation centres help people who are under substance abuse.</span>
+      </label>
+      <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
+        {{ feedback.option5 }}
+      </span>
+    </div>
+  </div>
+
+  </div>

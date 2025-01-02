@@ -1,0 +1,121 @@
+<div class="content">
+<div class="startit">
+<p>Welcome! Let us start your journey!  </p>
+
+<div class="crousel">
+    person centered care crousel
+</div>
+
+<h2>What I Know Already</h2>
+<p>Before understanding about Person Centred Care, let’s test your prior knowledge in <b>‘What I Know Already…’!</b>
+</p>
+<hr>
+<div class="center">
+    <img src="https://kedskills.org/img/GDA_E/Unit2/LO3/Wika_Image1.jpg" >
+</div>
+<hr>
+
+<div class="mcqlist">
+    <ol>
+      <!-- Question 1 -->
+      <li>
+        What do you think the words <b>‘Patient Centered Care’</b> mean? Click on the correct answer.      
+          <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+                Medical staff must care for the patients medical needs.
+              </label>
+            </li>
+            <li>
+                <label>
+                  <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+                  Medical staff must care for the patients emotional needs.
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+                  Medical staff must show compassion and care for the patients.
+                </label>
+              </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'true')">
+                All of the Above.
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback[1]" [ngClass]="{'correct': mcqFeedback[1] === '✔️', 'incorrect': mcqFeedback[1] === '❌'}">{{ mcqFeedback[1] }}</span>
+      </li>
+  
+      <!-- Question 2 -->
+      <li>
+        <b>Research in the area of ‘Person Centred Care’ has shown that by following this method, patient recovery and their time in the hospital is shortened.<br></b>
+        Do you think this statement is true? Click on what you think is the correct answer and discuss in class/or in an online meeting with a classmate or in group.        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'true')">
+                Yes
+            </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+                No
+             </label>
+            </li>
+           </ol>
+        </div>
+        <span *ngIf="mcqFeedback[2]" [ngClass]="{'correct': mcqFeedback[2] === '✔️', 'incorrect': mcqFeedback[2] === '❌'}">{{ mcqFeedback[2] }}</span>
+      </li>
+<!-- question3 -->
+      <li>
+        The reason why Person Centred Care has shown such positive outcome is due to an increased use of drugs. Click on what you think is the correct answer and discuss in your class/group/online meeting.
+
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'true')">
+                Yes
+            </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'false')">
+                No
+             </label>
+            </li>
+           </ol>
+        </div>
+        <span *ngIf="mcqFeedback[3]" [ngClass]="{'correct': mcqFeedback[3] === '✔️', 'incorrect': mcqFeedback[3] === '❌'}">{{ mcqFeedback[3] }}</span>
+      </li>
+<!-- question4 -->
+      <li>
+        In Person Centred Care one of the core concepts is to make the patient an active participator in designing the care plan. Click on what you think is the correct answer and discuss in your class/group/online meeting.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(4, 'true')">
+                Yes
+            </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(4, 'false')">
+                No
+             </label>
+            </li>
+           </ol>
+        </div>
+        <span *ngIf="mcqFeedback[4]" [ngClass]="{'correct': mcqFeedback[4] === '✔️', 'incorrect': mcqFeedback[4] === '❌'}">{{ mcqFeedback[4] }}</span>
+      </li>
+    </ol>
+  </div>
+</div><!--startit ends -->
+</div>

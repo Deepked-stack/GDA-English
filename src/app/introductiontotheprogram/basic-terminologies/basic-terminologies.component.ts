@@ -7,7 +7,7 @@ import { StudyNavComponent } from '../../study-nav/study-nav.component';
   
   templateUrl: './basic-terminologies.component.html',
   styleUrl: './basic-terminologies.component.css',
-  imports:[StudyNavComponent]
+  imports:[]
 })
 export class BasicTerminologiesComponent {
 

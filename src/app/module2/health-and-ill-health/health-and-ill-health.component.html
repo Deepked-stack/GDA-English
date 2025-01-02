@@ -1,0 +1,362 @@
+<div class="content">
+    <div class="startit">
+<p>Welcome! Let us start your journey</p>
+<p><b>Health is Wealth!</b></p>
+
+<hr>
+<div class="butwithpic">
+    <div class="question"><p>Do you agree with this statement?<br>Click on your opinion.</p>
+    <button 
+      class="yesnobutton" 
+      [style.backgroundColor]="yesColor" 
+      (click)="selectOption('yes')">
+      Yes
+    </button>
+    <button 
+      class="yesnobutton" 
+      [style.backgroundColor]="noColor" 
+      (click)="selectOption('no')">
+      No
+    </button></div>
+<img src="assets/health.png" alt="health" loading="lazy">
+  </div>
+
+  <p>Is Health really considered important in a country? The answer is</p>
+  <p><b>Yes !</b></p>
+
+  <p>Hover to know about factors affecting health and ill health.</p>
+
+
+<div class="hovanimation">
+    <img src="https://tinyurl.com/45mu6erp" alt="">
+    <!-- Factors conbtributing good helth picture. -->
+    
+</div>
+
+<div class="didyknowbut">
+    <button (click)="toggleNote()">Did You Know?</button>
+    <div class="note" [class.visible]="isNoteVisible">World health organization (WHO) is a global authority with the vision of a world in which all people attain the highest possible level of health.</div>
+  </div>
+ <hr> 
+<h2>What I kNOW ALREADY</h2>
+<hr>
+<p>
+    Before understanding about health and ill health, let’s test your prior knowledge on it in <b>‘What I Know Already…’!</b>
+</p>
+<p>    Look at the images given below. Click on the images you think can affect human health in any way.
+</p>
+
+<div class="siximages">
+  <div class="siximages">
+    <!-- Card 1 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[1] === true, 'picincorrect': cardStatus[1] === false}" 
+      (click)="checkAnswer(1, true)">
+      <img src="/assets/food.jpg" alt="Bloodpressure" loading="lazy">
+      <label><b>Food</b></label>
+    </div>
+  
+    <!-- Card 2 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[2] === true, 'picincorrect': cardStatus[2] === false}" 
+      (click)="checkAnswer(2, false)">
+      <img src="/assets/hairstyle.jpg" alt="Good Communication" loading="lazy">
+      <label><b>Hair Style</b></label>
+    </div>
+  
+    <!-- Card 3 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[3] === true, 'picincorrect': cardStatus[3] === false}" 
+      (click)="checkAnswer(3, true)">
+      <img src="assets/claimate.jpg" alt="Only desk" loading="lazy">
+      <label><b>Claimate</b></label>
+    </div>
+  
+    <!-- Card 4 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[4] === true, 'picincorrect': cardStatus[4] === false}" 
+      (click)="checkAnswer(4, false)">
+      <img src="/assets/fasion.jpg" alt="No career growth" loading="lazy">
+      <label><b>Fashion</b></label>
+    </div>
+  
+    <!-- Card 5 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[5] === true, 'picincorrect': cardStatus[5] === false}" 
+      (click)="checkAnswer(5, true)">
+      <img src="/assets/hygeine.jpg" alt="Getting angry at patients" loading="lazy">
+      <label><b>Hygeine</b></label>
+    </div>
+  
+    <!-- Card 6 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[6] === true, 'picincorrect': cardStatus[6] === false}" 
+      (click)="checkAnswer(6, true)">
+      <img src="/assets/mentalill.jpg" alt="Maintaining patient safety" loading="lazy">
+      <label><b>Mental Illness</b></label>
+    </div>
+  </div>
+  
+  <!-- Repeat for other cards with unique IDs and correct/incorrect logic -->
+</div>
+
+<p>Discuss what effect does each correct answer have on human health? How can they improve or deteriorate health?</p>
+<p><b>
+  Find out how you will be assessed on your theory skills from the button below.
+</b></p>
+
+<div class="assessbutton">
+  <button>How will I be Assessed?</button>
+</div>
+</div>
+<div class="learnit">
+<hr>
+<b>LearnIt</b>
+<hr>
+<p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.
+</p>
+<h2>My Resources</h2>
+<p>1. <a href="https://kedskills.org/pdf/GDA_E/Unit2/LO2/2.2%20WHO%20poster%20PDF.pdf">Click here to know more about WHO</a></p>
+<p>Let's get to know what health and ill health is.</p>
+
+<div class="videodiv">
+  health and ill health video
+</div>
+
+<p><b>Ckeckpoint!</b></p>
+<br>
+
+<div class="mcqlist">
+  <ol>
+    <!-- Question 1 -->
+    <li>
+      According to WHO health is defined as “A state of complete physical, mental and social well-being and not merely the absence of disease or infirmity”,
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'True')">
+              True
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+              False
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback[1]" [ngClass]="{'correct': mcqFeedback[1] === '✔️', 'incorrect': mcqFeedback[1] === '❌'}">{{ mcqFeedback[1] }}</span>
+    </li>
+
+    <!-- Question 2 -->
+    <li>
+      Impairment in ____________ might result in ill health
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+              Physical Functioning
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'correct')">
+              Physical, psychological and social functioning
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+              Psychological functioning
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+              Social Functioning
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback[2]" [ngClass]="{'correct': mcqFeedback[2] === '✔️', 'incorrect': mcqFeedback[2] === '❌'}">{{ mcqFeedback[2] }}</span>
+    </li>
+  </ol>
+</div>
+
+
+<br>
+<h2>My Theory Task</h2>
+<div class="division">
+  Part 1
+</div>
+
+<div class="question-section">
+  <p class="question">Read the statements given below and click on the correct statements.</p>
+  <div class="options">
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answersch.option1" (change)="checkAnswerch('option1')" class="checkbox">
+        <span class="statement">Absence of disease doesn’t always confirm being in state of health.</span>
+      </label>
+      <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
+        {{ feedback.option1 }}
+      </span>
+    </div>
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answersch.option2" (change)="checkAnswerch('option2')" class="checkbox">
+        <span class="statement"> Physical illness is more harmful as compared to mental illness.</span>
+      </label>
+      <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
+        {{ feedback.option2 }}
+      </span>
+    </div>
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answersch.option3" (change)="checkAnswerch('option3')" class="checkbox">
+        <span class="statement">Aaron Antonovsky developed the health promoting approach- called salutogenesis.</span>
+      </label>
+      <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
+        {{ feedback.option3 }}
+      </span>
+    </div>
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answersch.option4" (change)="checkAnswerch('option4')" class="checkbox">
+        <span class="statement">WHO is the abbreviation of World head organization?</span>
+      </label>
+      <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
+        {{ feedback.option4 }}
+      </span>
+    </div>
+    <div class="option">
+      <label>
+        <input type="checkbox" [(ngModel)]="answersch.option5" (change)="checkAnswerch('option5')" class="checkbox">
+        <span class="statement">braham Maslow developed the theory of the hierarchy of needs.</span>
+      </label>
+      <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
+        {{ feedback.option5 }}
+      </span>
+    </div>
+  </div>
+
+  <b>B.</b>See the images given below and click which can have a bad impact on health.
+
+
+  <!-- imagecard question2 -->
+  <div class="siximages">
+    <div class="siximages">
+      <!-- Card 1 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[1] === true, 'picincorrect': cardStatus[1] === false}" 
+        (click)="checkAnswer(1, true)">
+        <img src="/assets/smoking.webp" alt="Bloodpressure" loading="lazy">
+        <label><b>Smoking</b></label>
+      </div>
+    
+      <!-- Card 2 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[2] === true, 'picincorrect': cardStatus[2] === false}" 
+        (click)="checkAnswer(2, false)">
+        <img src="/assets/yoga.webp" alt="Good Communication" loading="lazy">
+        <label><b>Meditation</b></label>
+      </div>
+    
+      <!-- Card 3 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[3] === true, 'picincorrect': cardStatus[3] === false}" 
+        (click)="checkAnswer(3, true)">
+        <img src="assets/cold.webp" alt="Only desk" loading="lazy">
+        <label><b>Extreme Cold Temperature</b></label>
+      </div>
+    
+      <!-- Card 4 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[4] === true, 'picincorrect': cardStatus[4] === false}" 
+        (click)="checkAnswer(4, true)">
+        <img src="/assets/depression.webp" alt="No career growth" loading="lazy">
+        <label><b>Depression</b></label>
+      </div>
+    
+      <!-- Card 5 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[5] === true, 'picincorrect': cardStatus[5] === false}" 
+        (click)="checkAnswer(5, true)">
+        <img src="/assets/junk.webp" alt="Getting angry at patients" loading="lazy">
+        <label><b>Junk Food</b></label>
+      </div>
+    
+      <!-- Card 6 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[6] === true, 'picincorrect': cardStatus[6] === false}" 
+        (click)="checkAnswer(6, false)">
+        <img src="/assets/early.webp" alt="Maintaining patient safety" loading="lazy">
+        <label><b>Early Riser</b></label>
+      </div>
+    </div>
+    
+    <!-- Repeat for other cards with unique IDs and correct/incorrect logic -->
+  </div>
+<br>
+  <b>C.</b>Come, let's meet Arvind.
+
+<div class="crousel">crousel</div>
+<div class="division">Part 3</div>
+<div class="dimage">
+  <div class="d">
+    <p>D.  Research on the health and different diseases in India. Argue for or against the reason behind your findings. Discuss in your class, write the answers in your notebook.</p>
+  </div>
+  <!-- <div class="imageind"> -->
+    <!-- <img src="" alt=""> -->
+    <img src="https://kedskills.org/img/GDA_E/Unit2/LO2/MTT_Image7.jpg" class="itiImgSize">
+  <!-- </div> -->
+</div>
+<hr>
+
+<div class="center">
+  <h4>GREAT!</h4>
+  <br>
+  <H4>Move on to DO IT!</H4>
+</div>
+<div class="assessbutton">
+  <button>How will I be Assessed?</button>
+</div>
+</div><!--learnit end-->
+
+<div class="doit">
+  <p>Almost done! Let's finish this goal with your practical.</p>
+
+  <h2><b>My Practical Task</b></h2>
+
+<p>Time for your practical! what is your practical asctivity? What is the best way to do it? Explore it in slideshow below.</p>
+<div class="crousel">crousel2</div>
+
+<p>Assess yourself in the practical using the : '<a href="https://kedskills.org/pdf/GDA_E/Unit2/LO2/2.2%20Practical%20Assessment%20Checklist.pdf">Practical Assesment Checklist</a></p>
+
+<b><p>CONGRATULATIONS! You have completed the goal!
+</p>
+<p>Find out how you will be assessed on your practical skills from the button below.
+</p></b>
+<div class="assessbutton">
+  <button>How will I be Assessed?</button>
+</div>
+</div><!--learnit end-->
+
+
+</div>
+</div>

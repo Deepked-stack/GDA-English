@@ -7,7 +7,7 @@ import { StudyNavComponent } from '../../study-nav/study-nav.component';
   
   templateUrl: './historical-perspective.component.html',
   styleUrl: './historical-perspective.component.css',
-  imports:[StudyNavComponent]
+  imports:[]
 
 })
 export class HistoricalPerspectiveComponent {
