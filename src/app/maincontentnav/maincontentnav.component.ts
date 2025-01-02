@@ -13,4 +13,14 @@ constructor(private router:Router){}
 gotohome(){
 this.router.navigate(['landingpage'])
 }
+isModuleVisible = false;
+
+menuOpen = false;
+
+toggleMenu() {
+  this.menuOpen = !this.menuOpen;
+  this.isModuleVisible = !this.isModuleVisible;
+
+}
+
 }

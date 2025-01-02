@@ -1,19 +1,35 @@
 <div class="container">
-    <ul>
-        
-        <li id="img">
-            <button><img src="/assets/house.webp" alt="Home" (click)="gotohome()" loading="lazy"></button>
-        </li>
-        <li>
-            <h1>General Duty Assistant</h1>
-        </li>
-        <li>
-            <p class="welcome">Welcome!</p>
-        </li>
+  <ul>
+    <!-- Toggle Button -->
+    <li>
+      <button class="toggle-button" (click)="toggleMenu()">☰</button>
+    </li>
 
-        <li>
-            <img src="/assets/SkilledIndia.webp" alt="" id="logo" loading="lazy">
+    <!-- Home Button -->
+    <li id="img">
+      <button>
+        <img src="/assets/house.webp" alt="Home" (click)="gotohome()" loading="lazy">
+      </button>
+    </li>
 
-       </li>
-    </ul>
+    <!-- Title -->
+    <li>
+      <h1>General Duty Assistant</h1>
+    </li>
+
+    <!-- Welcome Text -->
+    <li>
+      <p class="welcome">Welcome!</p>
+    </li>
+
+    <!-- Logo -->
+    <li>
+      <img src="/assets/SkilledIndia.webp" alt="Skilled India Logo" id="logo" loading="lazy">
+    </li>
+  </ul>
+
+  <!-- Module List Overlay (will display the ModuleComponent) -->
+  <div class="module-list-overlay" *ngIf="menuOpen">
+    <app-module></app-module>  <!-- This is your ModuleComponent -->
+  </div>
 </div>

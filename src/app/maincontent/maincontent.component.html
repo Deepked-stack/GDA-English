@@ -1,15 +1,21 @@
 <div class="main-container">
-    <!-- Module Component (left side) -->
-<!-- parent.component.html -->
-<app-module (moduleSelected)="displayModuleName($event)"></app-module>
-<div class="study-area">
-  <!-- <h2>{{ selectedModuleName }}</h2> -->
-  <!-- Additional content for the study area -->
-</div>
+  <!-- Module Component (left side) -->
+  <app-module (moduleSelected)="displayModuleName($event)"></app-module>
 
-<app-maincontentnav></app-maincontentnav>
-  <!-- <app-study-nav></app-study-nav> -->
-    <!-- Study Component (center area) -->
+  <!-- Display the selected submodule -->
+   <div class="hide" *ngIf="selectedsubmodule">
+  <div class="sub">{{ selectedsubmodule }}</div>  <!-- This will show the selected submodule -->
+   </div>
+   <div class="hide" *ngIf="!selectedsubmodule">
+    <div class="sub">Select Topic to Study.</div>  <!-- This will show the selected submodule -->
+     </div>
+  <!-- Study Area (center area) -->
+  <div class="study-area">
+    <!-- <h2>{{ selectedsubmodule }}</h2>  This will show the selected submodule -->
+    <!-- Additional content for the study area -->
     <app-study></app-study>
+
   </div>
-  
+
+  <app-maincontentnav></app-maincontentnav>
+</div>

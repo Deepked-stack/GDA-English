@@ -26,8 +26,13 @@
     
   }
 
+  .logo-container img{
+    mix-blend-mode: multiply;
+  }
+
   app-maincontentnav{
     position: absolute;
+
     width: 100%;
     left: 0;
     top: 0%;
@@ -35,22 +40,51 @@
     box-sizing: border-box; /* Ensures padding is included in the width */
 
   }
+
+  .sub{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    width: 50%; /* 70% for the Study area */
+    padding: 1%;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-left: 2.5%;
+    margin-top: 1%;
+    font-size: large;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    font-style: italic;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+  }
   app-study {
     position: absolute;
-    top: 15%;
+    top: 25%;
     right: 2.5%;
     width: 70%; /* 70% for the Study area */
     padding: 2.5%;
     background-color: #f4f4f4;
     border-radius: 8px;
+    margin-left: 2.5%;
   }
   @media (max-width: 768px) {
     .main-container {
       flex-direction: column;
     }
   
-    app-module, app-study {
-      width: 100%;
+     app-study,.sub {
+      width: 95%;
+    }
+
+    app-maincontentnav{
+      /* overflow-x: hidden; */
+      width: 50%;
+    }
+
+    app-module{
+      display: none;
     }
   }
   

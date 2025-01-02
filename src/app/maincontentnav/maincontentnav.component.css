@@ -1,59 +1,141 @@
 .container {
-    position: relative;
-    background-color:hsl(36, 71%, 97%);
+    display: flex;
     width: 100%;
     padding: 10px;
+    background-color: #f4f0f0;
     margin: 0;
-    border-bottom: 2px;
-    
-    /* padding: 0%; */
-}
-
-ul {
+    justify-content: space-evenly;
+    /* border-bottom: 2px solid #ccc; Add border for clarity */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+  }
+  
+  ul {
     display: flex;
     list-style-type: none;
-    flex-wrap: nowrap; /* Prevent items from wrapping */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Spread items evenly */
+    flex-wrap: nowrap; /* Prevent wrapping */
     padding: 0;
     margin: 0;
-    width: 100%;
-}
-
-ul li {
+    justify-content: space-evenly;
+    width: 100%; /* Ensure the ul spans 100% width */
+  }
+  
+  ul li {
     margin: 0 10px; /* Space between list items */
-}
-
-li img {
+    display: flex; /* Flex for alignment */
+    align-items: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    
+  }
+  
+  li img {
     height: 20px;
-    border: none;
-    mix-blend-mode:multiply;
-
-}
-
-li h1 {
+    border: 2px;
+    mix-blend-mode: multiply;
+  }
+  
+  li h1 {
     margin: 0;
     font-size: 2rem;
     text-align: center;
-}
-
-button {
+    white-space: nowrap; /* Prevent text wrap */
+  }
+  
+  button {
     border: none;
     background: none;
     cursor: pointer;
     padding: 0;
-}
-
-li p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-
-@media (max-width: 768px) {
-    app-maincontentnav {
-      width: 100%;
-      /* Additional responsive styles */
-    }
   }
   
+  li p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .toggle-button {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  @media (max-width: 768px) {
+    ul {
+      justify-content: flex-start; /* Align items to the start */
+    }
+  
+    li h1 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+  
+    li p {
+      font-size: 0.875rem; /* Adjust text size */
+    }
+  
+    .toggle-button {
+      display: block; /* Show toggle button */
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+    }
+  
+    .logo-container {
+      margin-left: auto;
+    }
+  
+    /* Adjust logo size for small screens */
+    li img {
+      height: 16px;
+    }
+  
+    /* Ensure ul spans the full width */
+    ul {
+      width: 100%;
+    }
+
+    
+  }
+  
+  /* Default style: Hide the module list overlay */
+.module-list-overlay {
+  display: none;
+}
+
+/* Show overlay when the menuOpen flag is true */
+.module-list-overlay.ng-trigger.ng-trigger-fadeIn {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  /* Ensure the hamburger button and overlay only work under 768px width */
+  .module-list-overlay {
+    display: block;
+  }
+
+  /* Ensure the toggle button works only for small screens */
+  .toggle-button {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Hide hamburger button for larger screens */
+  .toggle-button {
+    display: none;
+  }
+}
