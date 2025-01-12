@@ -1,15 +1,21 @@
 .container {
     display: flex;
     width: 100%;
-    padding: 10px;
-    background-color: #f4f0f0;
+    padding: 0px;
+    /* background-color: #f4f0f0; */
+    border-bottom: rgba(0, 0, 0, 0.6) 1px solid;
     margin: 0;
+    height: 10vh;
     justify-content: space-evenly;
+    font-family: 'Poppins', sans-serif;
+
     /* border-bottom: 2px solid #ccc; Add border for clarity */
-    box-sizing: border-box; /* Ensure padding is included in width calculations */
+    /* box-sizing: border-box; Ensure padding is included in width calculations */
   }
   
   ul {
+    /* background-color: #f4f0f0; */
+
     display: flex;
     list-style-type: none;
     flex-wrap: nowrap; /* Prevent wrapping */
@@ -25,6 +31,8 @@
     align-items: center;
     margin-left: 7%;
     margin-right: 7%;
+    /* background-color: #f4f0f0; */
+
     
   }
   
@@ -81,7 +89,7 @@
       left: 10px;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 1000;
+      z-index: 10;
     }
   
     .logo-container {
@@ -90,7 +98,7 @@
   
     /* Adjust logo size for small screens */
     li img {
-      height: 16px;
+      height: 20px;
     }
   
     /* Ensure ul spans the full width */
@@ -101,41 +109,4 @@
     
   }
   
-  /* Default style: Hide the module list overlay */
-.module-list-overlay {
-  display: none;
-}
-
-/* Show overlay when the menuOpen flag is true */
-.module-list-overlay.ng-trigger.ng-trigger-fadeIn {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 70%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-}
-
-@media (max-width: 768px) {
-  /* Ensure the hamburger button and overlay only work under 768px width */
-  .module-list-overlay {
-    display: block;
-  }
-
-  /* Ensure the toggle button works only for small screens */
-  .toggle-button {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) {
-  /* Hide hamburger button for larger screens */
-  .toggle-button {
-    display: none;
-  }
-}
+  

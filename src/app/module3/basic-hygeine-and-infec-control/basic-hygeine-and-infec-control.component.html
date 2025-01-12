@@ -1,0 +1,787 @@
+<div class="content">
+    <div class="startit">
+    <p>Welcome! let us start your journey!</p>
+    <div class="sideimg">
+        <p>Neelam is a General Duty Assistant in a hospital. One of her main roles is to conduct her work in a safe and hygienic manner. What activities do you think this involves? Write down your thoughts in your notebook.	
+        </p>
+        <img src="assets/module3/m3s2_image1.jpg" alt="">
+
+    </div>
+    
+    <div class="heading">
+    <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+   <h2>What I Know Already</h2>
+</div>
+   <p>Before understanding about basic hygiene routines and infection control, let´s test your prior knowledge on it in <b>‘What I Know Already…’</b>!
+</p>
+ <p>Match the pictures with the correct statements given on the right.
+</p>   
+    <div class="container d-flex justify-content-between align-items-start mt-4">
+        <!-- Left List: Questions (Images) -->
+       
+        <div class="list left-list">
+          <div
+            *ngFor="let item of leftItems"
+            class="list-item mb-2"
+            [class.selected]="selectedItem === item"
+            [class.correct]="item.correct"
+            (click)="selectLeftItem(item)"
+          >
+            <img
+              [src]="'assets/module3/m3s2_mtf2_image' + item.id + '.jpg'"
+              [alt]="item.text"
+              class="img-fluid question-image"
+            />
+          </div>
+        </div>
+      
+        <!-- Right List: Answers -->
+        <div class="list right-list">
+          <div
+            *ngFor="let item of rightItems"
+            class="list-item mb-2 d-flex justify-content-between align-items-center"
+            [ngClass]="{ 'correct': item.correct, 'incorrect': item.incorrect }"
+            (click)="matchWithRightItem(item)"
+          >
+            <span><div class="data">{{ item.text }}</div></span>
+            <span *ngIf="item.correct">{{ item.matchedWith }}</span>
+          </div>
+        </div>
+</div> 
+
+<p>Based on the correct images above, what will happen if the above tools are not used by a GDA while working with a patient? Discuss and write it down in your notebook.
+</p>
+<p><b>Find out how you will be assessed on your theory skills from the button below.
+</b></p>
+<div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+        Learning Objective: To understand personal hygiene and hygiene routines to prevent the spread of microorganisms and diseases
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span> and <span class="highlight-blue">give basic examples </span> of features of personal hygiene, hygiene routines and infection control.</td>
+          <td>You can <span class="highlight-red">explain</span> features of personal hygiene, hygiene routines and infection control to prevent the spread of healthcare-associated infections</td>
+          <td>You can <span class="highlight-black">justify</span> the importance of personal hygiene, hygiene routines and infection control to prevent healthcare- associated infections and disease.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Chart Preperation Play <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit3/LO2/3.2%20Practical%20Assessment%20Checklist,%20new.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    </div><!--startit ends-->
+
+<div class="learnit">
+<p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b></p>
+
+<div class="heading">
+    <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+<h2>My Resources</h2>
+</div>
+
+<p>1. As a GDA, you will be responsible for your patient’s health but even before that you should be able to take care of your own health and hygiene. Let’s understand how you can do so.
+</p>
+<div class="videodiv">
+GDA 3.2 PERSONAL HYGEINE AND HEALTH VIDEO
+</div>
+
+<p><b>Checkpoint!</b></p>
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. Personal hygiene and health are considered important for a GDA, as a GDA has to take care of the patients.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[1]" [ngClass]="{'correct': mcqFeedback1[1] === '✔️', 'incorrect': mcqFeedback1[1] === '❌'}">{{ mcqFeedback1[1] }}</span>
+      </li>
+  
+      <li>
+        b. A GDA must keep their nails short, especially while working.
+        <div class="inlist">
+          <ol>
+            <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'true')">
+                  True
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+                  False
+              </label>
+              </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[2]" [ngClass]="{'correct': mcqFeedback1[2] === '✔️', 'incorrect': mcqFeedback1[2] === '❌'}">{{ mcqFeedback1[2] }}</span>
+      </li>
+
+      <li>
+        c. A strong perfume must be used at work to keep the body odors away.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'false')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'true')">
+                False
+            </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[3]" [ngClass]="{'correct': mcqFeedback1[3] === '✔️', 'incorrect': mcqFeedback1[3] === '❌'}">{{ mcqFeedback1[3] }}</span>
+      </li>
+    </ol>
+  </div>
+
+  <p>2. To prevent infections while taking care of patients, it is crucial to adapt basic hygiene routines. Let’s watch the video below to understand the complete procedure of washing hands and why it is extremely important.</p>
+<div class="videodiv">
+    GDA 3.2 Hand Wash video
+</div>
+<p><b>Checkpoint1</b></p>
+<!--mcq2-->
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. Jewellery and accessories should be removed before washing hands.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[1]" [ngClass]="{'correct': mcqFeedback2[1] === '✔️', 'incorrect': mcqFeedback2[1] === '❌'}">{{ mcqFeedback2[1] }}</span>
+      </li> 
+      <li>
+        b. Just washing the palms of the hand is enough.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ2(2, 'false')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ2(2, 'true')">
+                False
+            </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[2]" [ngClass]="{'correct': mcqFeedback2[2] === '✔️', 'incorrect': mcqFeedback2[3] === '❌'}">{{ mcqFeedback2[2] }}</span>
+      </li>
+    </ol>
+  </div>
+<p>3. Healthcare workers also use a sanitizer regularly to keep their hands clean. This procedure of sanitizing hands should also be done with care so that every part of the hands is clean and free of germs. Let’s watch this procedure in the video below.</p> 
+<div class="videodiv">
+    GDA 3.2 Handrub
+</div>
+
+<p><b>Checkpoint!</b></p>
+<!--mcq3-->
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. After using the washroom, you must:
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'true')">
+                Wash hands with soap and water
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'false')">
+                Sanitize hands
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback3[1]" [ngClass]="{'correct': mcqFeedback3[1] === '✔️', 'incorrect': mcqFeedback3[1] === '❌'}">{{ mcqFeedback3[1] }}</span>
+      </li>
+  
+      <li>
+        b. The hand rub procedure should last for about:
+  
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ3(2, 'false')">
+                5-10 Seconds
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ3(2, 'true')">
+                20-30 Seconds
+            </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback3[2]" [ngClass]="{'correct': mcqFeedback3[2] === '✔️', 'incorrect': mcqFeedback3[2] === '❌'}">{{ mcqFeedback3[2] }}</span>
+      </li>
+    </ol>
+  </div>
+
+  <p>4. Infection Control is crucial for preventing spreading of infections in healthcare and residential settings. Let´s learn how to control infections.
+</p>
+
+<div class="videodiv">
+   GDA. 3.2 INFECTION CONTROL
+</div>
+
+<p><b>Checkpoint!</b></p>
+
+<!--mcq4-->
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. The first step to stop healthcare-associated infections is to conduct Infection Control.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ4(1, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ4(1, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback4[1]" [ngClass]="{'correct': mcqFeedback4[1] === '✔️', 'incorrect': mcqFeedback4[1] === '❌'}">{{ mcqFeedback4[1] }}</span>
+      </li>
+  
+        <li>
+        b. Always write your patient’s name or room number on all patient supplies.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ4(2, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ4(2, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback4[2]" [ngClass]="{'correct': mcqFeedback4[2] === '✔️', 'incorrect': mcqFeedback4[2] === '❌'}">{{ mcqFeedback4[2] }}</span>
+      </li>
+    </ol>
+  </div>
+
+  <p>5. We just learnt that wearing PPE is very important for infection control. But if PPE is not worn and taken off in a proper manner, there is a risk of infection. Let’s learn how to wear and take off PPE in the correct manner.
+</p>
+<div class="videodiv">
+    GDA 3.2 PPE
+</div>
+
+<p><b>Checkpoint Questions!</b></p>
+<!--mcq5-->
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. Hands should be sanitized in between the steps of wearing PPE.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ5(1, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ5(1, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback5[1]" [ngClass]="{'correct': mcqFeedback5[1] === '✔️', 'incorrect': mcqFeedback5[1] === '❌'}">{{ mcqFeedback5[1] }}</span>
+      </li>
+  
+      <li>
+        b. Seal check for a mask is important.
+
+        <div class="inlist">
+          <ol>
+           <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ5(2, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ5(2, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback5[2]" [ngClass]="{'correct': mcqFeedback5[2] === '✔️', 'incorrect': mcqFeedback5[2] === '❌'}">{{ mcqFeedback5[2] }}</span>
+      </li>
+  
+      <li>
+        c. While removing the dirty gloves, you should remove them by touching the:
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ5(3, 'false')">
+                Outer Side
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ5(3, 'true')">
+                Inner side
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback5[3]" [ngClass]="{'correct': mcqFeedback5[3] === '✔️', 'incorrect': mcqFeedback5[3] === '❌'}">{{ mcqFeedback5[3] }}</span>
+      </li>
+    </ol>
+  </div>
+
+  <p>Make sure to attempt <b>‘My Theory Task’</b> before moving on to Do It!
+</p>
+
+<div class="heading">
+    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+    <h2>My Theory Task</h2>   
+</div>
+
+<div class="division">Part 1</div>
+<p>A. A General Duty Assistant is responsible for performing work in a hygienic manner. Match the pictures with the correct statements given on the right.
+</p>
+
+<!-- Match the Following 2 -->
+<!-- Match the Following 2 -->
+<div class="container d-flex justify-content-between align-items-start mt-4">
+    <!-- Left List: Questions (Images) -->
+    <div class="list left-list">
+      <div
+        *ngFor="let item of leftItems2"
+        class="list-item mb-2"
+        [class.selected]="selectedItem2 === item"  
+        [class.correct]="item.correct"
+        (click)="selectLeftItem2(item)"
+      >
+        <img
+          [src]="'assets/module3/m3s2_mtf3_image' + item.id + '.jpg'"
+          [alt]="item.text"
+          class="img-fluid question-image"
+        />
+      </div>
+    </div>
+  
+    <!-- Right List: Answers -->
+    <div class="list right-list">
+      <div
+        *ngFor="let item of rightItems2"
+        class="list-item mb-2 d-flex justify-content-between align-items-center"
+        [ngClass]="{ 'correct': item.correct, 'incorrect': item.incorrect }"
+        (click)="matchWithRightItem2(item)"
+      >
+        <span><div class="data">{{ item.text }}</div></span>
+        <div *ngIf="item.correct">{{ item.matchedWith }}</div>
+      </div>
+    </div>
+</div>
+
+<p>
+    B. Read the statements given below and click on the correct option.
+
+</p>
+ 
+<!--mcq6-->
+<div class="mcqlist">
+    <ol>
+      <li>
+        Every year there are millions of people dying from healthcare-associated infections.        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ6(1, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ6(1, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback6[1]" [ngClass]="{'correct': mcqFeedback6[1] === '✔️', 'incorrect': mcqFeedback6[1] === '❌'}">{{ mcqFeedback6[1] }}</span>
+      </li>
+  
+      <li>
+        b. Showering daily makes your skin vulnerable to infections.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ6(2, 'false')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ6(2, 'true')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback6[2]" [ngClass]="{'correct': mcqFeedback6[2] === '✔️', 'incorrect': mcqFeedback6[2] === '❌'}">{{ mcqFeedback6[2] }}</span>
+      </li>
+  
+      <li>
+        c. You should wash your hair regularly because your hair contain microorganisms, mainly bacteria.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ6(3, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ6(3, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback6[3]" [ngClass]="{'correct': mcqFeedback6[3] === '✔️', 'incorrect': mcqFeedback6[3] === '❌'}">{{ mcqFeedback6[3] }}</span>
+      </li>
+  
+      <li>
+        d. Hand washing should only happen with alcohol-based sanitisers. If they are not available, do not wash your hands.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq4" (change)="checkMCQ6(4, 'false')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq4" (change)="checkMCQ6(4, 'true')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback6[4]" [ngClass]="{'correct': mcqFeedback6[4] === '✔️', 'incorrect': mcqFeedback6[4] === '❌'}">{{ mcqFeedback6[4] }}</span>
+      </li>
+  
+      <li>
+        e.  The first step to stop the spread of pathogenic organisms and infections to patients, residents, staff and visitors is to control infections in healthcare settings.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq5" (change)="checkMCQ6(5, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq5" (change)="checkMCQ6(5, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback6[5]" [ngClass]="{'correct': mcqFeedback6[5] === '✔️', 'incorrect': mcqFeedback6[5] === '❌'}">{{ mcqFeedback6[5] }}</span>
+      </li>
+  
+      <li>
+        f. Personal protective equipment is used all the time.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq6" (change)="checkMCQ6(6, 'false')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq6" (change)="checkMCQ6(6, 'true')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback6[6]" [ngClass]="{'correct': mcqFeedback6[6] === '✔️', 'incorrect': mcqFeedback6[6] === '❌'}">{{ mcqFeedback6[6] }}</span>
+      </li>
+    </ol>
+</div>
+
+<div class="division">Part 2</div>
+<p>Answer the following questions in your notebook and discuss in your class, training centre or online with your peer group.
+</p>
+<div class="sideimg">
+    <p>C. Govind is a student doing his internship as a General Duty Assistant. On his first day he comes in with a long beard and unkempt nails. He was also wearing a lot of perfume. What do you think will happen to Govind on his first day?	</p>
+    <img src="assets/module3/m3s2_mtf3_image1.jpg" alt="">
+</div>
+<div class="sideimg">
+    <p>D. Varnika has been working in the hospital for years as a General Duty Assistant. She had many patients in her ward and she had to clean her patients but she forgot to put on an apron. While washing the patient, she got a little dirty what do you think Varnika did next?
+<br><br> E. How do you ensure that infections are not spread in healthcare settings? What precautions do you need to take?	   </p>
+<img src="assets/module3/m3s2_image2.jpg" alt="">
+</div>
+<div class="division">Part 3</div>
+<div class="sideimg">
+    <p>When there are patients with highly contagious diseases such as COVID-19 or Ebola, you must wear special equipment when you enter a patient’s room. Please describe the different steps you have to take to protect yourself and the patient. Justify the importance of having knowledge in this field. Write the answer in your notebook and show it to your teacher.	</p>
+    <img src="assets/module3/m3s2_image3.png" alt="">
+</div>
+
+<div class="center">
+    <b>Great! Move on to Do It!</b>
+</div>
+<p><b>Find out how you will be assessed on your theory skills from the button below.
+</b></p>
+<br>
+<div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+        Learning Objective: To understand personal hygiene and hygiene routines to prevent the spread of microorganisms and diseases
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span> and <span class="highlight-blue">give basic examples </span> of features of personal hygiene, hygiene routines and infection control.</td>
+          <td>You can <span class="highlight-red">explain</span> features of personal hygiene, hygiene routines and infection control to prevent the spread of healthcare-associated infections</td>
+          <td>You can <span class="highlight-black">justify</span> the importance of personal hygiene, hygiene routines and infection control to prevent healthcare- associated infections and disease.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Chart Preperation Play <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit3/LO2/3.2%20Practical%20Assessment%20Checklist,%20new.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div><!--learnitends-->
+
+<div class="doit">
+    <h2>DoI It</h2>
+<p>Almost done! Let’s finish this goal with your practical.
+</p>
+<div class="heading">
+    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">   
+<h2>My Practical Task</h2>
+</div>
+
+<p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.
+</p>
+
+<div class="carousel-container">
+    <div id="Carousel1" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="5"></button>
+
+      </div>
+  
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/module3/crousel/m3s2_c1_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module3/crousel/m3s2_c1_vo1.mp3" type="audio/mpeg" >
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="assets/module3/crousel/m3s2_c1_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module3/crousel/m3s2_c1_vo2.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="assets/module3/crousel/m3s2_c1_Slide3.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module3/crousel/m3s2_c1_vo3.mp3" type="audio/mpeg" >
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+
+        <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s2_c1_Slide4.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s2_c1_vo4.mp3" type="audio/mpeg" >
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+
+          <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s2_c1_Slide5.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s2_c1_vo5.mp3" type="audio/mpeg" >
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+      </div>
+      <!-- Navigation Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#Carousel1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#Carousel1" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+<div class="center">Click on Play Button</div>
+
+<p>Assess yourself in the practical using the <a href="https://kedskills.org/pdf/GDA_E/Unit3/LO2/3.2%20Practical%20Assessment%20Checklist,%20new.pdf">'Practical Assessment Checklist'</a>.</p>
+<div class="heading">
+    <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+<h2>Conclusion</h2>
+</div>
+<div class="sideimg">
+    <p>Now that you have learnt all about hygiene routines and infection control, can you tell what activities GDA Neelam must perform to work in a hygienic and safe manner to minimize the risk of healthcare-associated infections? Write the answers in your notebook.	</p>
+    <img src="assets/module3/m3s2_image1.jpg" alt="">
+</div>
+
+<p><b>Find out how you will be assessed on your practical skills from the button below.
+</b></p>
+
+<p><b>CONGRATULATIONS! You have completed the goal!
+</b></p>
+<div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+        Learning Objective: To understand personal hygiene and hygiene routines to prevent the spread of microorganisms and diseases
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span> and <span class="highlight-blue">give basic examples </span> of features of personal hygiene, hygiene routines and infection control.</td>
+          <td>You can <span class="highlight-red">explain</span> features of personal hygiene, hygiene routines and infection control to prevent the spread of healthcare-associated infections</td>
+          <td>You can <span class="highlight-black">justify</span> the importance of personal hygiene, hygiene routines and infection control to prevent healthcare- associated infections and disease.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Chart Preperation Play <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit3/LO2/3.2%20Practical%20Assessment%20Checklist,%20new.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div><!--doit ends-->
+</div>

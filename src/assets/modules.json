@@ -1,70 +1,75 @@
 {
-    "modules": [
-      {
-        "name": "Introduction to the Program",
-        
-        "subModules": [
-          "Introduction Video",
-          "Historical Perspective",
-          "Healthcare Delivery Systems",
-          "Hospitals",
-          "Basic Terminologies"
-        ]
-      },
-      {
-        "name": "The GDA Profession",
-        "subModules": [
-          "General Duty Assistant Introduction",
-          "Health and Ill Health",
-          "Person-Centred Care",
-          "Effective Communication"
-        ]
-      },
-      {
-        "name": "Hygiene and Infection Prevention",
-        "subModules": [
-          "Microorganisms and Infections",
-          "Basic Hygiene Routines and Infection Control",
-          "Biomedical Waste Management",
-          "Sterilization and Disinfection",
-          "Aseptic Work and Cleaning Procedures"
-        ]
-      },
-      {
-        "name": "Human Body Structure and Function",
-        "subModules": [
-          "Anatomy and Physiology",
-          "Medication Routes and Administration"
-        ]
-      },
-      {
-        "name": "Positioning and Transferring of Patients",
-        "subModules": [
-          "Positioning and Transferring of Patients",
-          "Hospital Beds and Bed Making",
-          "Mobility of Patients"
-        ]
-      },
-      {
-        "name": "Patient Basic Care",
-        "subModules": [
-          "Tools and Equipment",
-          "Grooming",
-          "Elimination",
-          "Nutrition, Diet, and Feeding Procedures",
-          "Pre and Post Operative Care",
-          "Vulnerable Patient Care",
-          "Daily Care Plan"
-        ]
-      },
-      {
-        "name": "Measuring Parameters",
-        "subModules": [
-          "Vital Signs",
-          "Special Procedures",
-          "Transporting Samples"
-        ]
-      }
-    ]
-  }
-  
+  "modules": [
+    {
+      "name": "Introduction to the Program",
+      "numberofsubmodules": 5,
+      "subModules": [
+        "Introduction Video",
+        "Historical Perspective",
+        "Healthcare Delivery Systems",
+        "Hospitals",
+        "Basic Terminologies"
+      ]
+    },
+    {
+      "name": "The GDA Profession",
+      "numberofsubmodules": 4,
+      "subModules": [
+        "General Duty Assistant Introduction",
+        "Health and Ill Health",
+        "Person-Centred Care",
+        "Effective Communication"
+      ]
+    },
+    {
+      "name": "Hygiene and Infection Prevention",
+      "numberofsubmodules": 5,
+      "subModules": [
+        "Microorganisms and Infections",
+        "Basic Hygiene Routines and Infection Control",
+        "Biomedical Waste Management",
+        "Sterilization and Disinfection",
+        "Aseptic Work and Cleaning Procedures"
+      ]
+    },
+    {
+      "name": "Human Body Structure and Function",
+      "numberofsubmodules": 2,
+      "subModules": [
+        "Anatomy and Physiology",
+        "Medication Routes and Administration"
+      ]
+    },
+    {
+      "name": "Positioning and Transferring of Patients",
+      "numberofsubmodules": 3,
+      "subModules": [
+        "Positioning and Transferring of Patients",
+        "Hospital Beds and Bed Making",
+        "Mobility of Patients"
+      ]
+    },
+    {
+      "name": "Patient Basic Care",
+      "numberofsubmodules": 7,
+      "subModules": [
+        "Tools and Equipment",
+        "Grooming",
+        "Elimination",
+        "Nutrition, Diet, and Feeding Procedures",
+        "Pre and Post Operative Care",
+        "Vulnerable Patient Care",
+        "Daily Care Plan"
+      ]
+    },
+    {
+      "name": "Measuring Parameters",
+      "numberofsubmodules": 3,
+      "subModules": [
+        "Vital Signs",
+        "Special Procedures",
+        "Transporting Samples"
+      ]
+    }
+  ]
+}

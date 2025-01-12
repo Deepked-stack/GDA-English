@@ -11,15 +11,28 @@ import { Router } from '@angular/router';
 export class ModuleComponent implements OnInit {
   @Output() moduleSelected = new EventEmitter<string>();  // Emit selected submodule
 
-  modules: { name: string; subModules: string[] }[] = []; // Ensure proper typing
+  modules: { name: string;numberofsubmodules:number ; subModules: string[]}[] = []; // Ensure proper typing
+  completionStatus: any[] = [];
 
   constructor(private moduleDataService: ModuleDataService, private router: Router) {}
 
   ngOnInit() {
+    
     this.moduleDataService.getModules().subscribe((data) => {
       this.modules = data.modules;
+      this.moduleDataService.initializeCompletionStatus(data.modules);
+
     });
+this.moduleDataService.getCompletionStatus().subscribe(completionData=>{
+  if(completionData){
+    this.completionStatus =completionData.modules;
   }
+});
+  }
+
+markSubmoduleAsDone(moduleIndex:number,submoduleIndex:number){
+  this.moduleDataService.markSubmoduleAsCompleted(moduleIndex,submoduleIndex);
+}
 
   toggleSubModules(module: any) {
     module.showSubModules = !module.showSubModules;

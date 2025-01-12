@@ -1,90 +1,133 @@
 .main-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 100vh;
-    padding: 2% 2.5%; /* Add padding for spacing */
-  }
-  #logo{
-    position: relative;
-    top: 0;
-    align-items: flex-end;
-    
-  }
-  app-module {
-    width: 25%;
-    top: 10%;
-    position: relative; /* 25% for the left Module section */
-  }
-  
-  app-study-nav{
-    position: absolute;
-    padding: 2%;
-    left: 21.5%;
-    margin-bottom: 0%;
-    top: 0%;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 145vh;
+  padding: 2% 2.5%;
+  gap: 1rem; /* Added for consistent spacing */
+}
+
+#logo {
+  position: relative;
+  align-items: flex-end;
+}
+
+.content {
+  display: block;
+  font-size: smaller;
+  font-family: 'Poppins', sans-serif;
+}
+
+app-module {
+  width: 25%;
+  margin-top: 5%;
+}
+
+.logo-container img {
+  mix-blend-mode: multiply;
+}
+
+app-maincontentnav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.sub {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 15%;
+  left: 37%;
+  width: 50%;
+  padding: 1%;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  font-size: large;
+  font-family: 'Poppins', sans-serif;
+}
+
+app-study {
+  position: absolute;
+  top: 25%;
+  right: 2.5%;
+  width: 70%;
+  padding: 2.5%;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  font-size: small;
+  font-family: 'Poppins', sans-serif;
+  /* height: 140vh; */
+}
+
+
+.navigationbuttonsdown {
+  position: absolute;
+  display: flex;
+  justify-content: space-between; /* Back button on the left, Next button on the right */
+  /* margin-top: 1rem; Add spacing between the study area and buttons */
+  width: 65%; /* Match width of the study area */
+  margin-left: auto;
+  margin-right: auto;
+  top: 137.5vh;
+  left: 30vw ;
+}
+.navigationbuttonsdown button {
+  border-radius: 6px;
+  padding: 4px 10px; /* Increased padding for better UX */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+  background-color: rgba(237, 232, 232, 0.9);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.navigationbuttonsdown button:hover {
+  transform: scale(1.05); /* Enhanced hover effect */
+  box-shadow: rgba(0, 0, 0, 0.7) 3px 3px 3px;
+}
+
+.navigationbuttonsup {
+  position: absolute;
+  display: flex;
+  justify-content: space-between; /* Back button on the left, Next button on the right */
+  /* margin-top: 1rem; Add spacing between the study area and buttons */
+  width: 65%; /* Match width of the study area */
+  margin-left: auto;
+  margin-right: auto;
+  top: 18vh;
+  left: 30vw ;
+}
+.navigationbuttonsup button {
+  border-radius: 6px;
+  padding: 4px 10px; /* Increased padding for better UX */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+  background-color: rgba(237, 232, 232, 0.9);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.navigationbuttonsup button:hover {
+  transform: scale(1.05); /* Enhanced hover effect */
+  box-shadow: rgba(0, 0, 0, 0.7) 3px 3px 3px;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
   }
 
-  .logo-container img{
-    mix-blend-mode: multiply;
-  }
-
-  app-maincontentnav{
-    position: absolute;
-
-    width: 100%;
+  app-study,
+  .sub {
+    width: 95%;
     left: 0;
-    top: 0%;
-    right: 0;
-    box-sizing: border-box; /* Ensures padding is included in the width */
-
   }
 
-  .sub{
-    position: absolute;
-    top: 10%;
-    left: 25%;
-    width: 50%; /* 70% for the Study area */
-    padding: 1%;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    margin-left: 2.5%;
-    margin-top: 1%;
-    font-size: large;
-    justify-content: center;
-    display: flex;
-    font-weight: bold;
-    font-style: italic;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-
+  app-maincontentnav {
+    width: 95%;
   }
-  app-study {
-    position: absolute;
-    top: 25%;
-    right: 2.5%;
-    width: 70%; /* 70% for the Study area */
-    padding: 2.5%;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    margin-left: 2.5%;
-  }
-  @media (max-width: 768px) {
-    .main-container {
-      flex-direction: column;
-    }
-  
-     app-study,.sub {
-      width: 95%;
-    }
 
-    app-maincontentnav{
-      /* overflow-x: hidden; */
-      width: 50%;
-    }
-
-    app-module{
-      display: none;
-    }
+  app-module {
+    display: none;
   }
-  
+}

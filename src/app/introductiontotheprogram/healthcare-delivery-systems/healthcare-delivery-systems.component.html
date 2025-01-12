@@ -1,4 +1,5 @@
 <!-- <app-study-nav></app-study-nav> -->
+ <div class="content">
 <div class="container">
     <!-- Health is Wealth Section -->
     <div class="health-section">
@@ -24,59 +25,93 @@
   
     <!-- Striking Differences Section -->
     <div class="difference-section">
+      <div class="heading">
+        <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
       <h2>What I Know Already...</h2>
+      </div>
       <p>Before understanding about the healthcare delivery systems, let’s test your prior knowledge on it in ‘What I Know Already...’!</p>
-  
+  <img id="image2" src="assets/module1/m1_s2_image2.jpg" alt="">
       <div class="question-section">
         <p class="question">Which of the following statements about healthcare are correct?</p>
         <div class="options">
           <label>
             <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')">
             There are private and public sectors in Healthcare.
-            <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">{{ feedback.option1 }}</span>
+            <span *ngIf="feedback1.option1" [ngClass]="{'correct': feedback1.option1 === '✔️', 'incorrect': feedback1.option1 === '❌'}">{{ feedback1.option1 }}</span>
           </label>
           <label>
             <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')">
             Most doctors in India work in rural areas.
-            <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">{{ feedback.option2 }}</span>
+            <span *ngIf="feedback1.option2" [ngClass]="{'correct': feedback1.option2 === '✔️', 'incorrect': feedback1.option2 === '❌'}">{{ feedback1.option2 }}</span>
           </label>
           <label>
             <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')">
             Healthcare is provided only in hospitals.
-            <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">{{ feedback.option3 }}</span>
+            <span *ngIf="feedback1.option3" [ngClass]="{'correct': feedback1.option3 === '✔️', 'incorrect': feedback1.option3 === '❌'}">{{ feedback1.option3 }}</span>
           </label>
           <label>
             <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')">
             When you go to the doctor with a cold, you usually end up in the ICU.
-            <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">{{ feedback.option4 }}</span>
+            <span *ngIf="feedback1.option4" [ngClass]="{'correct': feedback1.option4 === '✔️', 'incorrect': feedback1.option4 === '❌'}">{{ feedback1.option4 }}</span>
           </label>
           <label>
             <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
             There are enough doctors in India today.
-            <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
+            <span *ngIf="feedback1.option5" [ngClass]="{'correct': feedback1.option5 === '✔️', 'incorrect': feedback1.option5 === '❌'}">{{ feedback1.option5 }}</span>
           </label>
         </div>
       </div>
   
-      <div class="button-section">
-        <button (click)="showAssessment()">How Will I Be Assessed?</button>
-      </div>
+      
     </div>
   </div>
+  <div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To know about history and important discoveries in Healthcare
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span> the features of <span class="highlight-blue">healthcare</span>delivery systems in India.</td>
+          <td>You can <span class="highlight-red">explain</span> healthcare delivery systems in detail</td>
+          <td>You can <span class="highlight-black">research</span> about the difference in healthcare services in urban vs. rural areas of the country.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   
-
   <hr>
   learn it
   <hr>
   <div class="learnit">
     Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>My Theory Task.</b>
-<br>
-    <h1>My Resources</h1>
+
+<div class="heading">
+  <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+  <h2>My Resources</h2>
+</div>
     <br>
 <b>1.</b> Lets get to know what healthcare deliver systems are<br>
 Look at the video below
 <div class="videodiv">
-  embedd video here
+  <iframe src="https://player.vimeo.com/video/465772470?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="1.2 Healthcare Delivery System"></iframe>
 </div>
 
 <b>Checkpoint!</b>
@@ -215,9 +250,10 @@ Look at the video below
     </li>
   </ol>
 </div>
-
+<div class="heading">
+  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
 <h2>My Theory Task</h2>
-
+</div>
 <div class="mytheorytask">
   Make sure to attempt <b>My Theory Task</b> before moving on to Do It!.
 
@@ -226,12 +262,12 @@ Look at the video below
 
 
 <div class="question-section">
-  <p class="question">Which of the following statements about healthcare are correct?</p>
+  <p class="question">Read the statements given below and click on the correct statements.</p>
   <div class="options">
     <div class="option">
       <label>
-        <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')" class="checkbox">
-        <span class="statement">Local hospitals are a part of tertiary level of healthcare.</span>
+        <input type="checkbox" [(ngModel)]="answersch.option1" (change)="checkAnswerch('option1')" class="checkbox">
+        <span class="statement">There are private and public sector in healthcare.</span>
       </label>
       <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
         {{ feedback.option1 }}
@@ -239,8 +275,8 @@ Look at the video below
     </div>
     <div class="option">
       <label>
-        <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')" class="checkbox">
-        <span class="statement">More Hospitals are present in urban areas as compared to rural areas.</span>
+        <input type="checkbox" [(ngModel)]="answersch.option2" (change)="checkAnswerch('option2')" class="checkbox">
+        <span class="statement">Most doctors in india work in rural areas.</span>
       </label>
       <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
         {{ feedback.option2 }}
@@ -248,8 +284,8 @@ Look at the video below
     </div>
     <div class="option">
       <label>
-        <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')" class="checkbox">
-        <span class="statement">Rehabilitation centres are synonymous to hospitals.</span>
+        <input type="checkbox" [(ngModel)]="answersch.option3" (change)="checkAnswerch('option3')" class="checkbox">
+        <span class="statement">Healthcare is always provided only in Hospital's.</span>
       </label>
       <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
         {{ feedback.option3 }}
@@ -257,8 +293,8 @@ Look at the video below
     </div>
     <div class="option">
       <label>
-        <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')" class="checkbox">
-        <span class="statement">Hospitals provide after-treatment services as well.</span>
+        <input type="checkbox" [(ngModel)]="answersch.option4" (change)="checkAnswerch('option4')" class="checkbox">
+        <span class="statement">When you go to the doctor with a cold, you usually end up in the ICU.</span>
       </label>
       <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
         {{ feedback.option4 }}
@@ -266,8 +302,8 @@ Look at the video below
     </div>
     <div class="option">
       <label>
-        <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')" class="checkbox">
-        <span class="statement">Special institutions like rehabilitation centres help people who are under substance abuse.</span>
+        <input type="checkbox" [(ngModel)]="answersch.option5" (change)="checkAnswerch('option5')" class="checkbox">
+        <span class="statement">There are enough doctors in India today.</span>
       </label>
       <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
         {{ feedback.option5 }}
@@ -275,4 +311,161 @@ Look at the video below
     </div>
   </div>
 
+  <div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
   </div>
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To know about history and important discoveries in Healthcare
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span> the features of <span class="highlight-blue">healthcare</span>delivery systems in India.</td>
+          <td>You can <span class="highlight-red">explain</span> healthcare delivery systems in detail</td>
+          <td>You can <span class="highlight-black">research</span> about the difference in healthcare services in urban vs. rural areas of the country.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+  <p>B. Match the following.</p>
+
+  <p>1. Match the options of left side to correct answers of right side:</p>
+
+<div class="container d-flex justify-content-between align-items-start mt-4">
+  <!-- Left List: Questions -->
+  <div class="list left-list">
+    <div
+      *ngFor="let item of leftItems"
+      class="list-item mb-2"
+      [class.selected]="selectedItem === item"
+      [class.correct]="item.correct"
+      (click)="selectLeftItem(item)"
+    >
+    {{item.id}}. {{ item.text }}
+    </div>
+  </div>
+
+  <!-- Right List: Answers -->
+  <div class="list right-list">
+    <div
+      *ngFor="let item of rightItems"
+      class="list-item mb-2 d-flex justify-content-between align-items-center"
+      [ngClass]="{ 'correct': item.correct, 'incorrect': item.incorrect }"
+      (click)="matchWithRightItem(item)"
+    >
+      <span>{{ item.text }}</span>
+      <span *ngIf="item.correct">Q{{ item.matchedWith }}</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="division">Part 2</div>
+
+<div class="sideimg">
+  <p>C. Raju is not able to see properly. He visits an ophthalmologist. What level of healthcare is this? Why did/didn’t he go to tertiary healthcare? Discuss in your class/with a friend/online and write the answer in your notebook.	
+  </p>
+  <img src="assets/module1/m1s2_sideimage1.jpg" alt="ophthalmologist">
+</div>
+
+<div class="sideimg">
+  <p>
+    D. Shivani goes to the gym daily and takes care of her diet too. Lately she doesn’t feel like talking to anyone and is always anxious. Is she healthy? Give answer with reasons and show to your teacher.	
+  </p>
+  <img src="assets/module1/m1s2_sideimage2.jpg" alt="good diet">
+</div>
+
+<div class="division">Part 3</div>
+<p>E. Research on the healthcare services in urban and rural areas of India. Did you find any differences in the quality and number of these services? Debate with your classmates/ friends/ online about the reasons behind these differences and write your answers in your notebook.
+</p> 
+
+<div class="twoimages">
+  <img src="assets/module1/m1s2_twoimage.png" alt="">
+</div>
+<div class="center">
+<p><b>GREAT! <br>Move on to 'DO IT!'</b></p>
+</div>
+
+<p><b>Find out how you will be assessed on your theory skills from the button below.</b></p>
+
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To know about history and important discoveries in Healthcare
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">identify</span> the features of <span class="highlight-blue">healthcare</span>delivery systems in India.</td>
+        <td>You can <span class="highlight-red">explain</span> healthcare delivery systems in detail</td>
+        <td>You can <span class="highlight-black">research</span> about the difference in healthcare services in urban vs. rural areas of the country.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+</div><!--learnit completed-->
+
+<div class="doit">
+  <p>Almost done! Let's finish this goal with your practical.</p>
+<div class="heading">
+  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
+<h2>My Practical Task</h2>
+</div>
+<p>
+  Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below
+</p>
+
+<div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/465772772?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="1.2 Practical Task"></iframe>
+</div>
+
+<p>Assess yourself in the practical using <a href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">'Practical Assessment Checklist’</a></p>
+<div class="heading">
+  <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+  <h2>Conclusion</h2>
+</div>
+<div class="sideimg">
+  <p>Based on your learning, do you think Healthcare delivery systems in India are important? What would be the consequences of their absence?	
+  </p>
+  <img src="assets/module1/m1s2_last.png" alt="">
+</div>
+</div><!--doit ends-->
+</div>

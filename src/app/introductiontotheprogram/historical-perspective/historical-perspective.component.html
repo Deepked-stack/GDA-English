@@ -1,1 +1,696 @@
-<!-- <app-study-nav></app-study-nav> -->
+<div class="content">
+<div class="startit">
+<div class="carousel-container">
+    <div id="historicalCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="3"></button>
+      </div>
+  
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/module1/crousel/m1s2c1Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c1vo1.mp3" type="audio/mpeg" >
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="assets/module1/crousel/m1s2c1Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c1vo2.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="assets/module1/crousel/m1s2c1Slide3.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c1vo3.mp3" type="audio/mpeg" >
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="assets/module1/crousel/m1s2c1Slide4.JPG" class="d-block w-100" alt="Slide 4" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c1vo4.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+      </div>
+      <!-- Navigation Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#historicalCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#historicalCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+<div class="center">Click on Play Button</div>
+
+<p>Before understanding about the 'Historical Perspective', let's test your prior Knowledge in <b>'What I Know Already'</b></p>
+<div class="heading">
+<img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+
+<h2>What I Know Already</h2>
+</div>
+Can you identify and click on the images given below that relate to ancient practices of medical treatment.
+  </div><!--startit ends-->
+<div class="center">
+    <div class="green"><button></button>Correct</div>
+    <div class="red"><button></button>Incorrect</div>
+</div>
+  <div class="siximages">
+    <div class="siximages">
+      <!-- Card 1 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[1] === true, 'picincorrect': cardStatus[1] === false}" 
+        (click)="checkAnswer(1, true)">
+        <img src="/assets/module1/wiak_m1_s2_image1.jpg" alt="pulse checking" loading="lazy">
+        <label><b>Pulse Checking</b></label>
+      </div>
+    
+      <!-- Card 2 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[2] === true, 'picincorrect': cardStatus[2] === false}" 
+        (click)="checkAnswer(2, true)">
+        <img src="/assets/module1/wiak_m1_s2_image2.jpg" alt="Treebarks" loading="lazy">
+        <label><b>Tree Barks</b></label>
+      </div>
+    
+      <!-- Card 3 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[3] === true, 'picincorrect': cardStatus[3] === false}" 
+        (click)="checkAnswer(3, false)">
+        <img src="assets/module1/wiak_m1_s2_image3.jpg" alt="DNA Tests" loading="lazy">
+        <label><b>DNA Tests</b></label>
+      </div>
+    
+      <!-- Card 4 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[4] === true, 'picincorrect': cardStatus[4] === false}" 
+        (click)="checkAnswer(4, false)">
+        <img src="/assets/module1/wiak_m1_s2_image4.jpg" alt="XRays" loading="lazy">
+        <label><b>X-Rays</b></label>
+      </div>
+    
+      <!-- Card 5 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[5] === true, 'picincorrect': cardStatus[5] === false}" 
+        (click)="checkAnswer(5, true)">
+        <img src="/assets/module1/wiak_m1_s2_image5.jpg" alt="Getting angry at patients" loading="lazy">
+        <label><b>Honey</b></label>
+      </div>
+    
+      <!-- Card 6 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[6] === true, 'picincorrect': cardStatus[6] === false}" 
+        (click)="checkAnswer(6, false)">
+        <img src="/assets/module1/wiak_m1_s2_image6.jpg" alt="Maintaining patient safety" loading="lazy">
+        <label><b>MRI Scanning</b></label>
+      </div>
+
+       <!-- Card 7 -->
+       <div 
+       class="imgcard" 
+       [ngClass]="{'piccorrect': cardStatus[7] === true, 'picincorrect': cardStatus[7] === false}" 
+       (click)="checkAnswer(7, true)">
+       <img src="/assets/module1/wiak_m1_s2_image7.jpg" alt="Plants and herbs" loading="lazy">
+       <label><b>Plants and Herbs</b></label>
+     </div>
+   
+     <!-- Card 8 -->
+     <div 
+       class="imgcard" 
+       [ngClass]="{'piccorrect': cardStatus[8] === true, 'picincorrect': cardStatus[8] === false}" 
+       (click)="checkAnswer(8, false)">
+       <img src="/assets/module1/wiak_m1_s2_image8.jpg" alt="ECG" loading="lazy">
+       <label><b>ECG Machines</b></label>
+     </div>
+   
+     <!-- Card 9 -->
+     <div 
+       class="imgcard" 
+       [ngClass]="{'piccorrect': cardStatus[9] === true, 'picincorrect': cardStatus[9] === false}" 
+       (click)="checkAnswer(9, true)">
+       <img src="/assets/module1/wiak_m1_s2_image9.jpg" alt="Natural Ointments" loading="lazy">
+       <label><b>Natural Ointments</b></label>
+     </div>
+    </div>
+    <!-- Repeat for other cards with unique IDs and correct/incorrect logic -->
+  </div>
+  <p><b>Find out how you will be assessed on your theory skills from the button below.</b></p>
+  <div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To know about history and important discoveries in Healthcare
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">state</span> and <span class="highlight-blue">identify</span> some of the most important discoveries in the history of healthcare.</td>
+          <td>You can <span class="highlight-red">explain</span> why these discoveries were important for the development of modern medicine.</td>
+          <td>You can <span class="highlight-black">do your own research</span> about the history of healthcare and reflect on their importance.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO1/1.1%20Practical%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+<!-- </div>startit ends -->
+
+<div class="learnit">
+    <hr>Learnit <hr>
+<p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the '<b>My Theory Task</b>'.</p>
+<div class="heading">
+  <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+<h2>My Resources</h2>
+</div>
+<p>1. As modern health care has evolved, we have increasingly recognized the relevance of different forms of medicine and healing that are steeped in culture and history. So, as a GDA you should know about the history of healthcare. Let’s explore and know more!</p>
+ <!-- Carousel 2 -->
+ <div class="carousel-container">
+    <div id="historicalCarousel2" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="5"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/module1/crousel/m1s2c2Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c2vo1.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/module1/crousel/m1s2c2Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c2vo2.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/module1/crousel/m1s2c2Slide3.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c2vo3.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/module1/crousel/m1s2c2Slide4.JPG" class="d-block w-100" alt="Slide 4" loading="lazy">
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c2vo4.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/module1/crousel/m1s2c2Slide5.JPG" class="d-block w-100" alt="Slide 5" loading="lazy">
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c2vo5.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/module1/crousel/m1s2c2Slide6.JPG" class="d-block w-100" alt="Slide 6" loading="lazy">
+          <audio controls>
+            <source src="assets/module1/crousel/m1s2c2vo6.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#historicalCarousel2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#historicalCarousel2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="center">Click on Play Button</div>
+
+  <p><b>Checkpoint!</b></p>
+
+  <!-- mcq1 -->
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. The ancient Indian medical system based on three doshas is:
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'true')">
+                Ayurveda
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+                Atharvaveda
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[1]" [ngClass]="{'correct': mcqFeedback1[1] === '✔️', 'incorrect': mcqFeedback1[1] === '❌'}">{{ mcqFeedback1[1] }}</span>
+      </li>
+  
+      <li>
+        b. The Greek physician associated with Hippocratic Oath is
+
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+                Edwin Smith
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'true')">
+                Hippocrates
+            </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[2]" [ngClass]="{'correct': mcqFeedback1[2] === '✔️', 'incorrect': mcqFeedback1[2] === '❌'}">{{ mcqFeedback1[2] }}</span>
+      </li>
+
+      <li>
+        c. Which country used acupuncture and moxibustion in ancient times?
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'false')">
+                Greece
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'true')">
+                China
+            </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[3]" [ngClass]="{'correct': mcqFeedback1[3] === '✔️', 'incorrect': mcqFeedback1[3] === '❌'}">{{ mcqFeedback1[3] }}</span>
+      </li>
+    </ol>
+  </div>
+  
+<p>2. Several key contributions were made by numerous scientists in old times which led to massive breakthroughs in healthcare scenario. Let’s learn about these pivotal discoveries in the next video.</p>
+
+<div class="videodiv">
+    <iframe src="https://player.vimeo.com/video/453937154?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+     frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="GDA1.1 Healthcare Discoveries"></iframe>
+</div>
+
+<p><b>Checkpoint! Questions!</b></p>
+
+ <!-- mcq2 -->
+ <div class="mcqlist">
+    <ol>
+      <li>
+        a. Who is known as ‘Lady with Lamp’?
+
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'false')">
+                Freda Nightingale
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'true')">
+                Florence Nightingale
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[1]" [ngClass]="{'correct': mcqFeedback2[1] === '✔️', 'incorrect': mcqFeedback2[1] === '❌'}">{{ mcqFeedback2[1] }}</span>
+      </li>
+  
+      <li>
+        b. Which organisation supports Indian government to achieve health goals?
+       <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'true')">
+                WHO
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'false')">
+                UNESCO
+            </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[2]" [ngClass]="{'correct': mcqFeedback2[2] === '✔️', 'incorrect': mcqFeedback2[2] === '❌'}">{{ mcqFeedback2[2] }}</span>
+      </li>
+    </ol>
+  </div><!--mcq ends-->
+<div class="division">Part 1</div>
+
+<div class="heading">
+<img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+<h2>My Theory Task</h2>
+
+</div>
+<p>1. Match the options of left side to correct answers of right side:</p>
+
+<div class="container d-flex justify-content-between align-items-start mt-4">
+  <!-- Left List: Questions -->
+  <div class="list left-list">
+    <div
+      *ngFor="let item of leftItems"
+      class="list-item mb-2"
+      [class.selected]="selectedItem === item"
+      [class.correct]="item.correct"
+      (click)="selectLeftItem(item)"
+    >
+    {{item.id}}. {{ item.text }}
+    </div>
+  </div>
+
+  <!-- Right List: Answers -->
+  <div class="list right-list">
+    <div
+      *ngFor="let item of rightItems"
+      class="list-item mb-2 d-flex justify-content-between align-items-center"
+      [ngClass]="{ 'correct': item.correct, 'incorrect': item.incorrect }"
+      (click)="matchWithRightItem(item)"
+    >
+      <span>{{ item.text }}</span>
+      <span *ngIf="item.correct">Q{{ item.matchedWith }}</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="division">Part 2</div>
+
+
+<p>2. Komal is a GDA. She wishes to explore about ancient medicines.</p>
+
+<!-- mcq1 -->
+<div class="mcqlist">
+  <ol>
+    <li>
+      a.Which ancient Indian literature can she refer to?
+
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'false')">
+              Rigveda
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'true')">
+              Atharvaveda
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'false')">
+              Yajurveda
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback3[1]" [ngClass]="{'correct': mcqFeedback3[1] === '✔️', 'incorrect': mcqFeedback3[1] === '❌'}">{{ mcqFeedback3[1] }}</span>
+    </li>
+
+    <li>
+      b. To follow medical ethical standards, she should be aware about?
+     <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(2, 'false')">
+              Neijing Medical Book
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(2, 'true')">
+              Edwin Smith Papyrus
+          </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(2, 'false')">
+              Atharvaveda
+          </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback3[2]" [ngClass]="{'correct': mcqFeedback3[2] === '✔️', 'incorrect': mcqFeedback3[2] === '❌'}">{{ mcqFeedback3[2] }}</span>
+    </li>
+
+    <li>
+      c. The ancient book she can use to know about surgical trauma?
+     <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(3, 'true')">
+              Hippocratic Oath
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(3, 'false')">
+              Germ Theory
+          </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(3, 'false')">
+              Environmental Theory
+          </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback3[3]" [ngClass]="{'correct': mcqFeedback3[3] === '✔️', 'incorrect': mcqFeedback3[3] === '❌'}">{{ mcqFeedback3[3] }}</span>
+    </li>
+
+    <li>
+      d. In Ayurved, she must know about which three Doshas??
+     <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(4, 'false')">
+              Land, Sea, Air
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(4, 'false')">
+              Sky, Water, Air
+          </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(4, 'true')">
+              Vatta, Pitta, Kapha
+          </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback3[4]" [ngClass]="{'correct': mcqFeedback3[4] === '✔️', 'incorrect': mcqFeedback3[4] === '❌'}">{{ mcqFeedback3[4] }}</span>
+    </li>
+  </ol>
+</div><!--mcq ends-->
+
+<p>3. Describe the contributions made by the following people to ancient healthcare in your journal.</p>
+
+<div class="describe">
+  <table>
+    <tr>
+      <td><img src="assets/module1/m1s2_mtt_tableimage1.jpg" alt=""><p>Louis Pasteur</p></td>
+      <td><img src="assets/module1/m1s2_mtt_tableimage2.jpg" alt=""><p>Alexander Flemming</p></td>
+    </tr>
+    <tr>
+      <td><img src="assets/module1/m1s2_mtt_tableimage3.jpg" alt=""><p>Edward Jenner</p></td>
+      <td><img src="assets/module1/m1s2_mtt_tableimage4.jpg" alt=""><p>Florence Nightingale</p></td>
+    </tr>
+  </table>
+</div>
+
+<div class="division">Part 3</div>
+<div class="fimage">
+  <p>
+    4. For your job role as a GDA which two ancient medical practices or theories can be used in present times also? Highlight their usefulness in this era in your journal</p>
+    <img src="assets/module1/6.jpg" alt="">
+</div>
+<hr>
+<div class="center">
+  <b>Great!<br>
+  Move on to Do It1</b>
+</div>
+<hr>
+<p><b>Find out how you will be assessed on yopur theory skills from the button below.</b></p>
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To know about history and important discoveries in Healthcare
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">state</span> and <span class="highlight-blue">identify</span> some of the most important discoveries in the history of healthcare.</td>
+        <td>You can <span class="highlight-red">explain</span> why these discoveries were important for the development of modern medicine.</td>
+        <td>You can <span class="highlight-black">do your own research</span> about the history of healthcare and reflect on their importance.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO1/1.1%20Practical%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</div><!--learnit ends-->
+<div class class="doit">
+  <p> Almost done! Let's finish this goal with your practical.</p>
+  <hr>
+  <h3>do it</h3>
+  <hr>
+  <p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.</p>
+
+
+<div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/453936943?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="GDA1.1 Do it"></iframe>
+</div>
+<p>Assess yourself in the practical using the <a href="https://kedskills.org/pdf/GDA_E/Unit1/LO1/1.1%20Practical%20Checklist.pdf">‘Practical Assessment Checklist’</a>.</p>
+
+<div class="heading">
+  <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+  <h2>Conclusion</h2>
+
+</div>
+<p>Based on your learning, can you discuss pivotal moments in the history of healthcare?
+</p>
+<p><b>CONGRATULATIONS! You have completed the goal!
+</b></p>
+<p><b>Find out how you will be assessed on your practical skills from the button below.
+</b></p>
+
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To know about history and important discoveries in Healthcare
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">state</span> and <span class="highlight-blue">identify</span> some of the most important discoveries in the history of healthcare.</td>
+        <td>You can <span class="highlight-red">explain</span> why these discoveries were important for the development of modern medicine.</td>
+        <td>You can <span class="highlight-black">do your own research</span> about the history of healthcare and reflect on their importance.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO1/1.1%20Practical%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+</div><!--doit ends-->
+</div>
+
+  

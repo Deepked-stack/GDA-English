@@ -1,0 +1,803 @@
+<div class="content">
+<div class="startit">
+    <p>Welcome! Let us start your journey!</p>
+    <div class="carousel-container">
+        <div id="Carousel1" class="carousel slide" >
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="5"></button> 
+          </div>
+      
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/module3/crousel/m3s5_c1_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+              <div class="carousel-caption">
+              </div>
+              <audio controls>
+                <source src="assets/module3/crousel/m3s5_c1_vo1.mp3" type="audio/mpeg" >
+                Your browser does not support the audio tag.
+              </audio>
+            </div>
+      
+            <div class="carousel-item">
+              <img src="assets/module3/crousel/m3s5_c1_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+              <div class="carousel-caption">
+              </div>
+              <audio controls>
+                <source src="assets/module3/crousel/m3s5_c1_vo2.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+              </audio>
+            </div>
+
+            <div class="carousel-item">
+                <img src="assets/module3/crousel/m3s5_c1_Slide3.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+                <div class="carousel-caption">
+                </div>
+                <audio controls>
+                  <source src="assets/module3/crousel/m3s5_c1_vo3.mp3" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
+              
+              <div class="carousel-item">
+                <img src="assets/module3/crousel/m3s5_c1_Slide4.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+                <div class="carousel-caption">
+                </div>
+                <audio controls>
+                  <source src="assets/module3/crousel/m3s5_c1_vo4.mp3" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
+
+              <div class="carousel-item">
+                <img src="assets/module3/crousel/m3s5_c1_Slide5.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+                <div class="carousel-caption">
+                </div>
+                <audio controls>
+                  <source src="assets/module3/crousel/m3s5_c1_vo5.mp3" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
+
+              <div class="carousel-item">
+                <img src="assets/module3/crousel/m3s5_c1_Slide6.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+                <div class="carousel-caption">
+                </div>
+                <audio controls>
+                  <source src="assets/module3/crousel/m3s5_c1_vo6.mp3" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
+
+          </div>
+          <!-- Navigation Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#Carousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#Carousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    <div class="center">Click on Play Button</div>
+<p>As a GDA, you need to know how to clean and disinfect equipment. In this learning objective, we are going to teach you how this procedure is done.</p>   
+
+<div class="heading">
+    <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+    <h2>What I Know Already</h2>
+</div>
+
+<p>Before understanding aseptic work and cleaning procedures, let´s test your prior knowledge on it in <b>‘What I Know Already…’</b>!</p>
+<p>Read the statements given below. Can you identify what a general duty assistant should do versus what they should not do?</p>
+
+<div class="difference-section">
+    <div class="question-section">
+      <div class="options">
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')" class="checkbox">
+            <span class="statement">Equipment that has been used on the previous patient must go through a thorough cleaning procedure before being used on another patient.
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
+            {{ feedback.option1 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')" class="checkbox">
+            <span class="statement"> To perform appropriate cleaning procedures, right cleaning solutions must be used – in the proper way and in the proper quantity.
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
+            {{ feedback.option2 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')" class="checkbox">
+            <span class="statement">Even if a medical device is a little damaged, you can still use it.
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
+            {{ feedback.option3 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')" class="checkbox">
+            <span class="statement">Effective cleaning management is related to diligence, good preparations, good quality of water, right usage of PPE and by following local guidelines.</span>
+          </label>
+          <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
+            {{ feedback.option4 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')" class="checkbox">
+            <span class="statement"> Disinfectants remove microorganisms without complete sterilization.
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
+            {{ feedback.option5 }}
+          </span>
+        </div>
+    </div>
+<p>Give reasons for your answers.</p> 
+<p><b>Find out how you will be assessed on your theory skills from the button below.</b></p>
+<div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+        Learning Objective: To have basic knowledge on aseptic work and cleaning procedures in healthcare facilities
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span> features of aseptic work and cleaning procedures in healthcare facilities.</td>
+          <td>You can <span class="highlight-red">explain</span> how aseptic work and cleaning procedures in healthcare facilities are performed</td>
+          <td>You can <span class="highlight-black">evaluate the actions OR lack of actions</span>taken by the GDAs in different situations involving aseptic work and cleaning procedures in healthcare facilities.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity : Chart Making and Cleaning Demonstration <br> <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit3/LO5/3.5%20Practical%20Assessment%20Checklist-1.pdf">'Practical Assessment Checklist'</a>      </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!--startit ends-->
+
+<div class="learnit">
+    <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.</p>
+    <div class="heading">
+        <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+        <h2>My Resources</h2>   
+    </div>
+    <div class="videodiv">
+        3.4 Aseptic work
+    </div>
+
+    <p><b>Checkpoint!</b></p>
+
+    <div class="mcqlist">
+        <ol>
+          <li>
+            a. The goal of the aseptic technique is to keep the purity of the material and equipment used during the whole procedure.
+            <div class="inlist">
+              <ol>
+                <li>
+                  <label>
+                    <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'true')">
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+                    False
+                  </label>
+                </li>
+              </ol>
+            </div>
+            <span *ngIf="mcqFeedback1[1]" [ngClass]="{'correct': mcqFeedback1[1] === '✔️', 'incorrect': mcqFeedback1[1] === '❌'}">{{ mcqFeedback1[1] }}</span>
+          </li>
+      
+          <li>
+            b.  Barriers protect the patient from the transfer of pathogens from a healthcare worker, from the environment, or from both
+            <div class="inlist">
+              <ol>
+                <li>
+                    <label>
+                      <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'true')">
+                      True
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+                      False
+                  </label>
+                  </li>
+              </ol>
+            </div>
+            <span *ngIf="mcqFeedback1[2]" [ngClass]="{'correct': mcqFeedback1[2] === '✔️', 'incorrect': mcqFeedback1[2] === '❌'}">{{ mcqFeedback1[2] }}</span>
+          </li>
+
+          <li>
+            c.  General Duty Assistants do not have to use sterile equipment and sterile instruments
+            <div class="inlist">
+              <ol>
+                <li>
+                    <label>
+                      <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'false')">
+                      True
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'true')">
+                      False
+                  </label>
+                  </li>
+              </ol>
+            </div>
+            <span *ngIf="mcqFeedback1[3]" [ngClass]="{'correct': mcqFeedback1[3] === '✔️', 'incorrect': mcqFeedback1[3] === '❌'}">{{ mcqFeedback1[3] }}</span>
+          </li>
+        </ol>
+      </div>
+<p>2. It is very important that you follow the cleaning procedures to prevent the risks for healthcare associated infections and ensure your patients’ safety.</p>      
+
+<div class="videodiv">
+    GDA 3.5 Essentials of manual cleaning
+</div>
+
+<p><b>Checkpoint!</b></p>
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. When doing a manual cleaning procedure, only use water
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'false')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'true')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[1]" [ngClass]="{'correct': mcqFeedback2[1] === '✔️', 'incorrect': mcqFeedback2[1] === '❌'}">{{ mcqFeedback2[1] }}</span>
+      </li>
+      <li>
+        b. When incorrect cleaning solutions are used for a device, it may cause damage to it
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[2]" [ngClass]="{'correct': mcqFeedback2[2] === '✔️', 'incorrect': mcqFeedback2[2] === '❌'}">{{ mcqFeedback2[2] }}</span>
+      </li>
+      <li>
+        c. When you use adequate cleaning and disinfection procedure you can prevent the risks for healthcare associated infections and ensure your patients safety
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ2(3, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq3" (change)="checkMCQ2(3, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[3]" [ngClass]="{'correct': mcqFeedback2[3] === '✔️', 'incorrect': mcqFeedback2[3] === '❌'}">{{ mcqFeedback2[3] }}</span>
+      </li>
+      <li>
+        d. Cleaning solutions are detergent, surfactants, buffers chelating agents and enzymes and they usually all contain alcohol
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq4" (change)="checkMCQ2(4, 'false')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq4" (change)="checkMCQ2(4, 'true')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[4]" [ngClass]="{'correct': mcqFeedback2[4] === '✔️', 'incorrect': mcqFeedback2[4] === '❌'}">{{ mcqFeedback2[4] }}</span>
+      </li>
+    </ol>
+  </div>
+
+  
+<p>3. In your role as a General Duty Assistant, you need to have basic knowledge on aseptic work and cleaning procedures in healthcare facilities. Watch this video to learn how to perform different cleaning procedures in the correct manner.</p>
+<div class="videodiv">
+    GDA3.5 Cleaning Procedure
+</div>
+
+<p><b>Checkpoint Questions!</b></p>
+
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. A bedpan should be disinfected after cleaning.
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq3_q1" (change)="checkMCQ3(1, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq3_q1" (change)="checkMCQ3(1, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback3[1]" [ngClass]="{'correct': mcqFeedback3[1] === '✔️', 'incorrect': mcqFeedback3[1] === '❌'}">{{ mcqFeedback3[1] }}</span>
+      </li>
+      <li>
+        b.  Before cleaning, a sputum pot must be pre-treated with:
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq3_q2" (change)="checkMCQ3(2, 'false')">
+                Detergent
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq3_q2" (change)="checkMCQ3(2, 'true')">
+                Sodium Hypochloride
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback3[2]" [ngClass]="{'correct': mcqFeedback3[2] === '✔️', 'incorrect': mcqFeedback3[2] === '❌'}">{{ mcqFeedback3[2] }}</span>
+      </li>
+      <li>
+        c.Wheelchairs and stretchers are cleaned with:
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq3_q3" (change)="checkMCQ3(3, 'false')">
+                Only a wet cloth
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq3_q3" (change)="checkMCQ3(3, 'true')">
+                Soapy water and Disinfectant
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback3[3]" [ngClass]="{'correct': mcqFeedback3[3] === '✔️', 'incorrect': mcqFeedback3[3] === '❌'}">{{ mcqFeedback3[3] }}</span>
+      </li>
+    </ol>
+  </div>
+  
+
+<div class="heading">
+    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+    <h2>My Theory Task</h2>    
+</div>
+
+<p>Make sure to attempt <b>My Theory Task</b> before moving on to  Do It!</p>
+
+<div class="division">Part 1</div>
+<p>Choose the correct option for the pictures given below:</p>
+
+<div class="mcqlist">
+    <ol>
+      <li>
+        <div class="center">
+          <img src="assets/module3/m3s5_mcq_image1.jpg" alt="">
+          <span class="inlist" type="none">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q1" (change)="checkMCQ4(1, 'true')">
+                  Common Disinfectant solutions
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q1" (change)="checkMCQ4(1, 'false')">
+                  Medical Syrups
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q1" (change)="checkMCQ4(1, 'false')">
+                  Surgical Equipments
+                </label>
+              </li>
+            </ol>
+          </span>
+        </div>
+        <span *ngIf="mcqFeedback4[1]" [ngClass]="{'correct': mcqFeedback4[1] === '✔️', 'incorrect': mcqFeedback4[1] === '❌'}">{{ mcqFeedback4[1] }}</span>
+      </li>
+      <li>
+        <div class="center">
+          <img src="assets/module3/m3s5_mcq_image2.jpg" alt="">
+          <span class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q2" (change)="checkMCQ4(2, 'true')">
+                  Soiled Medical Equipment
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q2" (change)="checkMCQ4(2, 'false')">
+                  Surgical Equipment
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q2" (change)="checkMCQ4(2, 'false')">
+                  Common Medical Equipment
+                </label>
+              </li>
+            </ol>
+          </span>
+        </div>
+        <span *ngIf="mcqFeedback4[2]" [ngClass]="{'correct': mcqFeedback4[2] === '✔️', 'incorrect': mcqFeedback4[2] === '❌'}">{{ mcqFeedback4[2] }}</span>
+      </li>
+      <li>
+        <div class="center">
+          <img src="assets/module3/m3s5_mcq_image3.jpg" alt="">
+          <span class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q3" (change)="checkMCQ4(3, 'true')">
+                  Damage to medical devices a wet cloth
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q3" (change)="checkMCQ4(3, 'false')">
+                  Soiled Medical Equipment
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q3" (change)="checkMCQ4(3, 'false')">
+                  Useful Surgical Equipment
+                </label>
+              </li>
+            </ol>
+          </span>
+        </div>
+        <span *ngIf="mcqFeedback4[3]" [ngClass]="{'correct': mcqFeedback4[3] === '✔️', 'incorrect': mcqFeedback4[3] === '❌'}">{{ mcqFeedback4[3] }}</span>
+      </li>
+      <li>
+        <div class="center">
+          <img src="assets/module3/m3s5_mcq_image4.jpg" alt="">
+          <span class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q4" (change)="checkMCQ4(4, 'false')">
+                  Proper Preparation
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq4_q4" (change)="checkMCQ4(4, 'true')">
+                  Medical Equipment
+                </label>
+              </li>
+            </ol>
+          </span>
+        </div>
+        <span *ngIf="mcqFeedback4[4]" [ngClass]="{'correct': mcqFeedback4[4] === '✔️', 'incorrect': mcqFeedback4[4] === '❌'}">{{ mcqFeedback4[4] }}</span>
+      </li>
+    </ol>
+  </div>
+  
+<p><b>Notebook Activity. Can you answer the following questions in your notebook? Discuss the answers in your base group or with classmates online:</b></p> 
+<p>What are the three factors for effective use of cleaning management?</p>
+<p>Why does a healthcare worker have to know how to clean surfaces, areas, equipment and devices? Write down your answers in your notebook.</p>
+
+<div class="division">Part 2</div>
+<p><b>A. Sequence the cleaning procedures by putting the correct step number in front of them.</b></p>
+<p><b>Cleaning the Bedpans/Urinals</b></p>
+
+<div class="sequence">
+    <table>
+      <tr *ngFor="let question of sequence; let i = index">
+        <td>{{ question.question }}</td>
+        <td>
+          <input type="number" [(ngModel)]="sequence[i].userInput" (input)="validatesequence(i)">
+          <span *ngIf="sequence[i].validated !== undefined" [ngClass]="{'correct': sequence[i].validated, 'incorrect': !sequence[i].validated}">
+            {{ sequence[i].validated ? '✔️' : '❌' }}
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+ <p>Cleaning the Surgical Trolley</p> 
+
+ <div class="sequence">
+    <table>
+      <tr *ngFor="let question of sequence2; let i = index">
+        <td>{{ question.question }}</td>
+        <td>
+          <input type="number" [(ngModel)]="sequence2[i].userInput" (input)="validateSequence2(i)">
+          <span *ngIf="sequence2[i].validated !== undefined" [ngClass]="{'correct': sequence2[i].validated, 'incorrect': !sequence2[i].validated}">
+            {{ sequence2[i].validated ? '✔️' : '❌' }}
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="sequence">
+    <table>
+      <tr *ngFor="let question of sequence3; let i = index">
+        <td>{{ question.question }}</td>
+        <td>
+          <input type="number" [(ngModel)]="sequence3[i].userInput" (input)="validateSequence3(i)">
+          <span *ngIf="sequence3[i].validated !== undefined" [ngClass]="{'correct': sequence3[i].validated, 'incorrect': !sequence3[i].validated}">
+            {{ sequence3[i].validated ? '✔️' : '❌' }}
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+<p><b>B. Notebook Activity. Can you answer the following questions in your notebook? Discuss the answers in your base group or with classmates online:</b></p>
+<ul style="list-style: disc;">
+    <li>Explain why it is important to apply strict rules when it comes to cleaning procedures?</li>
+    <li>Why is inserting a urinary catheter a common procedure that carries a risk for infections?</li>
+</ul>   
+<div class="division">Part 3</div>
+
+<b><p>C. Notebook Activity. Can you answer the following questions in your notebook? Discuss the answers in your base group or with classmates online:</p></b>
+<div class="sideimg">
+    <p>i. Sneha, a General Duty Assistant, was very eager to finish her shift and to go home to her family. It was Sneha’s daughter’s birthday. She had to get a gift on her way home, so she decided to rinse the bed pan with water. Do you think Sneha did the right thing by rinsing the bed pan in water? Discuss with a classmate online or with a friend/in a group. (Try to use the terminology from the presentation)	
+    </p>
+    <img src="assets/module3/m3s5_image1.jpg" alt="">
+</div>
+
+<p>ii. Today at the hospital, Niko found medical equipment that was damaged. Should he use that equipment? What should he do and why? What would you have done?</p>
+<div class="center">
+    <p><b>Great! Move on to Do It!</b></p>
+</div>
+<p><b>Find out how you will be assessed on your theory skills from the button below.</b></p>
+
+
+</div><!--learnit ends-->
+
+<div class="doit">
+    <h2>Do It</h2>
+    <p>Almost done! Let’s finish this goal with your practical.</p>
+
+    <div class="heading">
+        <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
+        <h2>My Practical Task</h2> 
+    </div>
+
+<p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.</p>
+<div class="carousel-container">
+    <div id="Carousel2" class="carousel slide" >
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="5"></button> 
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="6"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="7"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="8"></button>
+      </div>
+  
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/module3/crousel/m3s5_c2_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module3/crousel/m3s5_c2_vo1.mp3" type="audio/mpeg" >
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="assets/module3/crousel/m3s5_c2_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module3/crousel/m3s5_c2_vo2.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+
+        <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s5_c2_Slide3.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s5_c2_vo3.mp3" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s5_c2_Slide4.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s5_c2_vo4.mp3" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+
+          <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s5_c2_Slide5.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s5_c2_vo5.mp3" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+
+          <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s5_c2_Slide6.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s5_c2_vo6.mp3" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+
+          <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s5_c2_Slide7.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s5_c2_vo7.mp3" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+
+          <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s5_c2_Slide8.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s5_c2_vo8.mp3" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+
+      </div>
+      <!-- Navigation Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#Carousel2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#Carousel2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+<div class="center">Click on Play Button</div>
+
+<p>Assess yourself in the practical using the <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit3/LO5/3.5%20Practical%20Assessment%20Checklist-1.pdf">'Practical Assessment Checklist'</a></p>
+
+<div class="heading">
+  <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+<h2>Conclusion</h2>
+</div>
+<p>In this goal, I have learnt that the purpose of cleaning medical devices are to remove dirt and dust, microorganisms and to prolong life of article and usage. I have learnt about common cleaning solutions. I have also learnt about Healthcare professionals commonly use aseptic techniques.</p>
+<div class="center">I’m excited to try all this. Are you?</div>
+
+<p><b>Find out how you will be assessed on your practical skills from the button below.</b></p>
+<p><b>CONGRATULATIONS! You have completed the goal!</b></p>
+
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+      Learning Objective: To have basic knowledge on aseptic work and cleaning procedures in healthcare facilities
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">identify</span> features of aseptic work and cleaning procedures in healthcare facilities.</td>
+        <td>You can <span class="highlight-red">explain</span> how aseptic work and cleaning procedures in healthcare facilities are performed</td>
+        <td>You can <span class="highlight-black">evaluate the actions OR lack of actions</span>taken by the GDAs in different situations involving aseptic work and cleaning procedures in healthcare facilities.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity : Chart Making and Cleaning Demonstration <br> <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit3/LO5/3.5%20Practical%20Assessment%20Checklist-1.pdf">'Practical Assessment Checklist'</a>      </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div><!--doit ends-->
+</div><!--content ends-->

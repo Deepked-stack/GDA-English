@@ -59,4 +59,16 @@ export class GDAIntroComponent {
     this.cardStatus[cardId] = isCorrect;
   }
 
+  goToSection(sectionId: string): void {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  isTableVisible = false;
+
+  toggleTable() {
+    this.isTableVisible = !this.isTableVisible;
+  }
 }

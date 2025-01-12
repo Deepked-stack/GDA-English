@@ -53,41 +53,233 @@
   /* ------------------------------------------------------------------------------------------------------ */
 
   
-.question-section {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+
+  .content {
+    display: block;
+    padding: 20px;
+    font-size:smaller;
+    font-family: 'Poppins', sans-serif;
+
+}
+#image2{
+  width: 100%;
+  height: 15%;
+  }
+
+  .question-section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .question {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .options input[type="checkbox"]:checked + span {
+    visibility: visible;
+    display: inline-block;
+  }
+  
+  .options label {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background-color: #adebbc;
+    color: rgb(21, 6, 6);
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .answer-options button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    width: 80%;
+  }
+  
+    .answer-options button:hover {
+      /* opacity: 0.8; */
+      scale: 1.03;
+      background-color: green;
+      color: aliceblue;
+    }
+  
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    
+    .checkbox {
+      margin-top: 5px;
+      margin-right: 20px;
+    }
+    
+    .statement {
+      flex-grow: 1;
+      display: inline-block;
+      max-width: 70%;
+      margin-left: 20px;
+    }
+    
+
+    
+/* Button styling */
+.assessbutton {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-.question {
-  font-weight: bold;
-  margin-bottom: 20px;
+.assessbutton button {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px black;
+}
+
+.assessbutton button:hover {
+  background-color: rgb(84, 45, 121);
+  text-decoration: underline;
+}
+
+/* Table container */
+.assessment-table {
+  margin: 20px auto;
+  /* padding: 20px; */
+  width: 100%;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.assessment-table h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
   text-align: center;
 }
 
-.options {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.assessment-table .learning-objective {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.option {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin: 2px;
+}
+
+tbody td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f3f3;
 }
 
 
-.checkbox {
-  margin-top: 5px;
+
+/* Highlight styles */
+.highlight-blue {
+  color: blue;
+  font-weight: bold;
 }
 
-.statement {
-  flex-grow: 1;
-  display: inline-block;
-  max-width: 70%;
+.highlight-red {
+  color: red;
+  font-weight: bold;
 }
 
+.highlight-black {
+  color: black;
+  font-weight: bold;
+}
+
+/* Link styling */
+a {
+  color: purple;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* -----------*/
+.videodiv {
+  position: relative;
+  width: 100%;
+  max-width: 640px; /* Optional: set max width for the video */
+  margin: 20px auto; /* Center the video */
+}
+
+.videodiv iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: round corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for aesthetics */
+}
+
+ 
+.mcqlist li {
+  /* background-color: #adebbc; */
+  list-style-type: none;
+  margin-bottom: 10px;
+  border: 0.1px black solid;
+  box-shadow: 2px 2px 5px black;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: small;
+  width: 100%;
+}
+
+.inlist li {
+  background-color: #dadcda;
+  list-style-type: lower-alpha;
+  margin-left: 15%;
+  padding: 5px;
+  width: 80%;
+}
+
+.inlist li:hover {
+  scale: 1.03;
+}
 
 span.correct {
   color: green;
@@ -101,34 +293,82 @@ span.incorrect {
   margin-left: 10px;
 }
 
-.options input[type="checkbox"]:checked + span {
-  visibility: visible;
-  display: inline-block;
-}
-
-.options label {
-  display: block;
-  padding: 10px;
-  background-color: #adebbc;
-  color: rgb(21, 6, 6);
-  margin-bottom: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.answer-options button {
-  padding: 10px 20px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+.division {
+  background-color: rgb(201, 200, 200);
   display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* color: #d2efd9; */
 }
 
-  .answer-options button:hover {
-    /* opacity: 0.8; */
-    scale: 1.03;
-    background-color: green;
-    color: aliceblue;
+/* for match the folllowing */
+.container {
+  .list {
+    width: 40%;
   }
+
+  .list-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    background: #f8f9fa;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &.selected {
+      background: #007bff;
+      color: white;
+    }
+
+    &.correct {
+      background: #d4edda; /* Light green for correct */
+      color: #155724;
+      pointer-events: none; /* Disable further clicks */
+    }
+
+    &.incorrect {
+      background: #f8d7da; /* Light red for incorrect */
+      color: #721c24;
+    }
+  }
+}
+
+
+.sideimg{
+  width: 100%;
+  display: flex;
+  margin-bottom: 3vh;
+}
+
+.sideimg img{
+  width: 40%;
+}
+
+.sideimg p{
+max-width: 60%;
+margin-right: 10px;
+}
+
+
+.twoimages{
+  display: flex;
+  justify-content: center;
+}
+.twoimages img{
+  height: 20vh;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+.heading{
+  display: flex;
+  align-items: center;
+  margin: 2vh;
+  border-bottom: 0.1px solid black;
+  border-top: 0.1px solid black;
+  padding: 1%;
+}

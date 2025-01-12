@@ -15,10 +15,10 @@ export class HealthAndIllHealthComponent {
  
   selectOption(option: string) {
     if (option === 'yes') {
-      this.yesColor = 'green';
+      this.yesColor = '#aafb83';
       this.noColor = ''; // Reset No button color
     } else if (option === 'no') {
-      this.noColor = 'red';
+      this.noColor = '#ff9185';
       this.yesColor = ''; // Reset Yes button color
     }
   }
@@ -75,6 +75,12 @@ export class HealthAndIllHealthComponent {
     } else {
       this.feedback[option] = '❌'; // Incorrect answer
     }
+  }
+
+  isTableVisible = false;
+
+  toggleTable() {
+    this.isTableVisible = !this.isTableVisible;
   }
 
 }

@@ -19,9 +19,8 @@ export class HealthcareDeliverySystemsComponent {
     option4: false,
     option5: false,
   };
-  feedback: { [key: string]: string | undefined } = {};
-
-  // Check if the user clicked 'Yes' or 'No' and show feedback
+  feedback1: { [key: string]: string | undefined } = {};
+ 
   checkOpinion(opinion: string) {
     this.userOpinion = opinion;
   }
@@ -37,9 +36,9 @@ export class HealthcareDeliverySystemsComponent {
     };
 
     if (this.answers[option] === correctAnswers[option]) {
-      this.feedback[option] = '✔️'; // Correct answer
+      this.feedback1[option] = '✔️'; // Correct answer
     } else {
-      this.feedback[option] = '❌'; // Incorrect answer
+      this.feedback1[option] = '❌'; // Incorrect answer
     }
   }
 
@@ -71,4 +70,83 @@ export class HealthcareDeliverySystemsComponent {
   }
 
 
+  feedback: { [key: string]: string | undefined } = {};
+
+  answersch = {
+    option1: false,
+    option2: false,
+    option3: false,
+    option4: false,
+    option5: false,
+  };
+
+  checkAnswerch(option: string) {
+    const correctAnswers = {
+      option1: true,
+      option2: false,
+      option3: false,
+      option4: false,
+      option5: false,
+    };
+
+    if (this.answersch[option] === correctAnswers[option]) {
+      this.feedback[option] = '✔️'; // Correct answer
+    } else {
+      this.feedback[option] = '❌'; // Incorrect answer
+    }
+  }
+
+  isTableVisible = false;
+
+  toggleTable() {
+    this.isTableVisible = !this.isTableVisible;
+  }
+
+  leftItems = [
+    { id: 1, text: 'Cardiologist', correct: false },
+    { id: 2, text: 'Intensive Care Units(ICU)', correct: false },
+    { id: 3, text: 'Mohalla Government Clinics', correct: false },
+    { id: 4, text: 'Experimental treatment', correct: false },
+    
+  ];
+  
+  rightItems = [
+    { id: 4, text: 'Quaternery Health Care', correct: false, incorrect: false, matchedWith: null },
+    { id: 1, text: 'Secondary Health care', correct: false, incorrect: false, matchedWith: null },
+    { id: 2, text: 'Tertiary Healthcare', correct: false, incorrect: false, matchedWith: null },
+    { id: 3, text: 'Primary Healthcare', correct: false, incorrect: false, matchedWith: null },
+    
+  ];
+  
+  // for match the following
+  selectedItem: any = null;
+  
+  selectLeftItem(item: any) {
+    if (!item.correct) {
+      this.selectedItem = item;
+    }
+  }
+  
+  matchWithRightItem(targetItem: any) {
+    if (this.selectedItem && !targetItem.correct) {
+      if (this.selectedItem.id === targetItem.id) {
+        // Correct match
+        this.selectedItem.correct = true;
+        targetItem.correct = true;
+        targetItem.matchedWith = this.selectedItem.id;
+  
+        // Clear selection
+        this.selectedItem = null;
+      } else {
+        // Incorrect match
+        targetItem.incorrect = true;
+        setTimeout(() => {
+          targetItem.incorrect = false;
+        }, 2000);
+      }
+    }
+  }
+
+
 }
+

@@ -1,31 +1,446 @@
-<div class="mcq-section">
-  <div class="mcq-question">
-    I. A hospital with less than 100 beds is considered a small hospital.
+<div class="content">
+  <div class="startit">
+    <p>Welcome!</p>
+<div class="sideimg">
+  <p>A General Duty Assistant needs to understand the basic terms that will be used in a medical setup – be it hospital, clinic, primary healthcare centre or even hospice care. These terms will help you better understand your job
+  <br><br>
+  Which medical terms are you familiar with? Write them down and explain each one. Share in your class!	</p>
+<img src="assets/module1/m1s5_image1.jpg" alt="">
+</div>
+<div class="heading">
+  <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+<h2>What I Know Already</h2>
+</div>
+<p>Before understanding basic terminologies, let's test your prior knowledge on it in '<b>What I know Already.</b>'!</p>
+<p>Can you identify the images below and match them appropriately?
+</p>
+
+<div class="container d-flex justify-content-between align-items-start mt-4">
+  <!-- Left List: Questions (Images) -->
+ 
+  <div class="list left-list">
+    <div
+      *ngFor="let item of leftItems"
+      class="list-item mb-2"
+      [class.selected]="selectedItem === item"
+      [class.correct]="item.correct"
+      (click)="selectLeftItem(item)"
+    >
+      <img
+        [src]="'assets/module1/m1s5_mcqimg' + item.id + '.jpg'"
+        [alt]="item.text"
+        class="img-fluid question-image"
+      />
+    </div>
   </div>
-  <div class="mcq-options">
-    <label class="mcq-option">
-      <input type="radio" name="question1" value="True" />
-      True
-    </label>
-    <label class="mcq-option">
-      <input type="radio" name="question1" value="False" />
-      False
-    </label>
+
+  <!-- Right List: Answers -->
+  <div class="list right-list">
+    <div
+      *ngFor="let item of rightItems"
+      class="list-item mb-2 d-flex justify-content-between align-items-center"
+      [ngClass]="{ 'correct': item.correct, 'incorrect': item.incorrect }"
+      (click)="matchWithRightItem(item)"
+    >
+      <span><div class="data">{{ item.text }}</div></span>
+      <span *ngIf="item.correct">{{ item.matchedWith }}</span>
+    </div>
   </div>
+  
+  
+</div>
+<p><b>Find out how you will be assessed on your theory skills from the button below.</b></p>
+  <div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To know about history and important discoveries in Healthcare
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">define</span> basic terms used in medical setups.</td>
+          <td>You can <span class="highlight-red">explain</span> the medical terms.</td>
+          <td>You can <span class="highlight-black"> research</span> on the medical terms and explain them.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO4/1.4%20Practical%20Assessment%20Checklist%20English.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div><!--startit ends-->
+
+<div class="learnit">
+  <hr><h2>learnit</h2><hr>
+  <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.
+  </p>
+<div class="heading">
+  <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+  <h2>My resources</h2>
+</div>
+  <p>1. An efficient GDA is well aware of the variety of terms used in his/her day to day work. Let’s learn some of such terms here
+    .</p>
+
+    <div class="videodiv">
+      <iframe src="https://player.vimeo.com/video/454708962?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="1.4 My Practical Task"></iframe>
+    </div>
+
+<p><b>Checkpoint!</b></p>
+
+<p>2. Several key contributions were made by numerous scientists in old times which led to massive breakthroughs in healthcare scenario. Let’s learn about these pivotal discoveries in the next video.</p>
+
+
+
+<p><b>Checkpoint! Questions!</b></p>
+
+<!-- mcq2 -->
+<div class="mcqlist">
+  <ol>
+    <li>
+      a. Oncology is related to
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'false')">
+              Kidneys
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'true')">
+              Cancer
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback2[1]" [ngClass]="{'correct': mcqFeedback2[1] === '✔️', 'incorrect': mcqFeedback2[1] === '❌'}">{{ mcqFeedback2[1] }}</span>
+    </li>
+
+    <li>
+      b. maternity is related to?
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'true')">
+              Women
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'false')">
+              Men
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback2[2]" [ngClass]="{'correct': mcqFeedback2[2] === '✔️', 'incorrect': mcqFeedback2[2] === '❌'}">{{ mcqFeedback2[2] }}</span>
+    </li>
+  </ol>
+</div><!-- mcq ends -->
+
+
+<p>Make sure to attempt ‘My Theory Task’ before moving on to Do It!
+</p>
+<div class="heading">
+  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+<h2>My Theory Task</h2>
 </div>
 
-<div class="mcq-section">
-  <div class="mcq-question">
-    II. OPD must be located:
-  </div>
-  <div class="mcq-options">
-    <label class="mcq-option">
-      <input type="radio" name="question2" value="Near Entrance" />
-      Near Entrance
-    </label>
-    <label class="mcq-option">
-      <input type="radio" name="question2" value="Near Operation Theatre" />
-      Near operation theatre
-    </label>
-  </div>
+<div class="division">Part 1</div>
+<div class="centerbut">
+  <div class="green"><button></button>Correct</div>
+  <div class="red"><button></button>Incorrect</div>
 </div>
+<div class="siximages">
+  <div class="siximages">
+    <!-- Card 1 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[1] === true, 'picincorrect': cardStatus[1] === false}" 
+      (click)="checkAnswer(1, true)">
+      <img src="/assets/module1/m1s5_siximg1.jpg" alt="Nephrology" loading="lazy">
+      <label><b>Nephrology</b></label>
+    </div>
+  
+    <!-- Card 2 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[2] === true, 'picincorrect': cardStatus[2] === false}" 
+      (click)="checkAnswer(2, false)">
+      <img src="/assets/module1/m1s5_siximg2.jpg" alt="Endocrinology" loading="lazy">
+      <label><b>Endocrinology</b></label>
+    </div>
+  
+    <!-- Card 3 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[3] === true, 'picincorrect': cardStatus[3] === false}" 
+      (click)="checkAnswer(3, false)">
+      <img src="assets/module1/m1s5_siximg3.jpg" alt="Ophtalmology" loading="lazy">
+      <label><b>Ophtalmology</b></label>
+    </div>
+  
+    <!-- Card 4 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[4] === true, 'picincorrect': cardStatus[4] === false}" 
+      (click)="checkAnswer(4, true)">
+      <img src="/assets/module1/m1s5_siximg4.jpg" alt="Pulmonology" loading="lazy">
+      <label><b>Pulmonology</b></label>
+    </div>
+  
+    <!-- Card 5 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[5] === true, 'picincorrect': cardStatus[5] === false}" 
+      (click)="checkAnswer(5, false)">
+      <img src="/assets/module1/m1s5_siximg5.jpg" alt="Anaesthetics" loading="lazy">
+      <label><b>Anaesthetics</b></label>
+    </div>
+  
+    <!-- Card 6 -->
+    <div 
+      class="imgcard" 
+      [ngClass]="{'piccorrect': cardStatus[6] === true, 'picincorrect': cardStatus[6] === false}" 
+      (click)="checkAnswer(6, false)">
+      <img src="/assets/module1/m1s5_siximg6.jpg" alt="Geriatrics" loading="lazy">
+      <label><b>Geriatrics</b></label>
+    </div>
+</div>
+<p>B. Could you identify the wrong boxes from the table given above? Write the correct name for each image in your notebook and discuss them in the class.
+</p>
+<div class="division">Part 2</div>
+<p>C. Firoz is working as a GDA. He understands the importance of maintenance of medical equipment which are used by doctors and nurses. Can you tell the name of the department where such equipment are maintained and cleaned?
+</p>
+<p>D. Fill in the blanks with correct words. Write down the complete statements in your notebook and show it to your teacher.(enter answers as option number here)
+</p>
+
+<div>
+  <!-- Options Table -->
+  <div>
+    
+    <!-- <h2>Fill in the blanks</h2> -->
+    <h6>Options</h6>
+    <table border="1" class="options-table">
+      <tr>
+        <td>1: Oncology</td>
+        <td>2: OPD</td>
+        <td>3: Anaesthesia</td>
+        <td>4: Pharmacy</td>
+      </tr>
+      <tr>
+        <td>5: Lungs</td>
+        <td>6: Maternity</td>
+        <td>7: Premature</td>
+        <td>8: Prescription</td>
+      </tr>
+    </table>
+    <form>
+      <!-- Question 1 -->
+      <p>
+        a) Aparna is two months pregnant. She was sitting in the 
+        <input
+          type="text"
+          id="fillupOPD"
+          (keydown.enter)="validateAnswer('fillupOPD', 2)"
+          class="inline-input"
+        />
+        section of the hospital. She was further directed towards the 
+        <input
+          type="text"
+          id="fillupMaternity"
+          (keydown.enter)="validateAnswer('fillupMaternity', 6)"
+          class="inline-input"
+        />
+        department to see the doctor. After the doctor saw her, the doctor wrote her a 
+        <input
+          type="text"
+          id="fillupPrescription"
+          (keydown.enter)="validateAnswer('fillupPrescription', 8)"
+          class="inline-input"
+        />
+        . Aparna leaves the doctor’s cabin and goes to the 
+        <input
+          type="text"
+          id="fillupPharmacy"
+          (keydown.enter)="validateAnswer('fillupPharmacy', 4)"
+          class="inline-input"
+        />
+        to get her medicines.
+      </p>
+  
+      <!-- Question 2 -->
+      <p>
+        b) Ajay goes to the 
+        <input
+          type="text"
+          id="fillupOncology"
+          (keydown.enter)="validateAnswer('fillupOncology', 1)"
+          class="inline-input"
+        />
+        department to get his cancer treatment done. The doctor advises him to go to the Pulmonology department to get his 
+        <input
+          type="text"
+          id="fillupLungs"
+          (keydown.enter)="validateAnswer('fillupLungs', 5)"
+          class="inline-input"
+        />
+        checked.
+      </p>
+  
+      <!-- Question 3 -->
+      <p>
+        c) Before the surgery began, the patient was given 
+        <input
+          type="text"
+          id="fillupAnaesthesia"
+          (keydown.enter)="validateAnswer('fillupAnaesthesia', 3)"
+          class="inline-input"
+        />
+        to fall unconscious.
+      </p>
+  
+      <!-- Question 4 -->
+      <p>
+        d) Kaavya gave birth to her baby in 7 months. Her 
+        <input
+          type="text"
+          id="fillupPremature"
+          (keydown.enter)="validateAnswer('fillupPremature', 7)"
+          class="inline-input"
+        />
+        baby will be in neonatal ICU.
+      </p>
+    </form>
+  
+    <!-- Shuffled Options Table -->
+    
+    <div class="division">Part 3</div>
+    <div class="center">
+      <p><b>GREAT !
+
+        Move on to ‘DO IT !’</b>
+      </p></div>
+      Find out how you will be assessed on your theory skills from the button below.
+    
+  </div>
+  
+  <div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To know about history and important discoveries in Healthcare
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">define</span> basic terms used in medical setups.</td>
+          <td>You can <span class="highlight-red">explain</span> the medical terms.</td>
+          <td>You can <span class="highlight-black"> research</span> on the medical terms and explain them.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO4/1.4%20Practical%20Assessment%20Checklist%20English.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div><!--learnit ends-->
+
+<div class="doit">
+  <p>Almost done! Let's finish this goal with your practical.</p>
+  <div class="heading">
+    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
+  <h2>My Practical Task</h2>
+  </div>
+  <p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.
+  </p>
+  <div class="videodiv">
+    <iframe src="https://player.vimeo.com/video/454708962?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="1.4 My Practical Task"></iframe>
+  </div>
+  <p>Assess yourself in the practical using the <a href="https://kedskills.org/pdf/GDA_E/Unit1/LO4/1.4%20Practical%20Assessment%20Checklist%20English.pdf">‘Practical Assessment Checklist’</a>
+  </p>
+<div class="heading">
+  <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+  <h2>Conclusion</h2>
+  </div>
+  <div class="sideimg">
+    <p>
+      Based on your learning, can you discuss common medical terms a GDA must be familiar with?
+    <br><br>
+    Discuss in your class.</p>
+  <img src="assets/module1/m1s5_image1.jpg" alt="">
+  </div>
+
+  <p><b>CONGRATULATIONS! You have completed the goal! <br>
+    Find out how you will be assessed on your practical skills from the button below.</b></p>
+
+    <div class="assessbutton">
+      <button (click)="toggleTable()">How will I be Assessed?</button>
+    </div>
+    
+    <!-- Table Display -->
+    <div class="assessment-table" *ngIf="isTableVisible">
+      <h3>How Will I Be Assessed?</h3>
+      <p class="learning-objective">
+        Learning Objective: To know about history and important discoveries in Healthcare
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Blue</th>
+            <th>Red</th>
+            <th>Black</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Theory</td>
+            <td>You can <span class="highlight-blue">define</span> basic terms used in medical setups.</td>
+            <td>You can <span class="highlight-red">explain</span> the medical terms.</td>
+            <td>You can <span class="highlight-black"> research</span> on the medical terms and explain them.</td>
+          </tr>
+          <tr>
+            <td>Practical</td>
+            <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO4/1.4%20Practical%20Assessment%20Checklist%20English.pdf">‘Practical Assessment Checklist’</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div><!--do it ends-->
+
+</div><!--content ends-->

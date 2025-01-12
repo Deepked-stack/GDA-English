@@ -1,0 +1,701 @@
+.content {
+    display: block;
+    padding: 20px;
+    font-size: medium;
+    font-size:smaller;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
+  
+  .heading{
+    display: flex;
+    align-items: center;
+    margin: 2vh;
+    border-bottom: 0.1px solid black;
+    border-top: 0.1px solid black;
+    padding: 1%;
+  }
+
+  .sideimg{
+    display: flex;
+  }
+  
+  .sideimg img{
+    width: 35%;
+    height: 5%;
+  }
+  
+  .sideimg p{
+    max-width: 65%;
+    margin-right: 5px;
+  }
+  .videodiv {
+    position: relative;
+    width: 100%;
+    max-width: 640px; /* Optional: set max width for the video */
+    margin: 20px auto; /* Center the video */
+  }
+  
+  .videodiv iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: round corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for aesthetics */
+  }
+
+
+/* Carousel Container */
+.carousel-container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 40px; /* More padding around the carousel */
+    border: 0.1px solid black;
+    position: relative;
+  }
+  
+  /* Carousel Images (Contain images, don't cut them off) */
+  .carousel img {
+    height: 250px; /* Decrease image height */
+    width: 100%; /* Ensure the image takes up full width of its container */
+    object-fit: contain; /* Contain the image without cutting it off */
+    border: 0.1px solid black;
+  }
+  
+  /* Carousel Audio (Below the image) */
+  .carousel audio {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  /* Carousel Controls (Black) */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black;
+    border-radius: 15px;
+  }
+  
+  /* Carousel Indicators (White) and positioned above the image */
+  .carousel-indicators {
+    position: absolute;
+    top: 1px;
+    left: 35%;
+    transform: translateX(-50%);
+  }
+  
+  .carousel-indicators button {
+    background-color: rgb(82, 79, 79);
+  }
+  
+  /* Hide the audio inside caption */
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .center{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  
+  }
+  .assessbutton {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .assessbutton button {
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px black;
+  }
+  
+  .assessbutton button:hover {
+    background-color: rgb(84, 45, 121);
+    text-decoration: underline;
+  }
+  
+  /* Table container */
+  .assessment-table {
+    margin: 20px auto;
+    overflow-x: auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .assessment-table h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .assessment-table .learning-objective {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead th {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin: 2px;
+  }
+  
+  tbody td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+  
+  
+  
+  /* Highlight styles */
+  .highlight-blue {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .highlight-red {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .highlight-black {
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Link styling */
+  a {
+    color: purple;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .mcqlist li {
+    /* background-color: #adebbc; */
+    list-style-type: none;
+    margin-bottom: 10px;
+    border: 0.1px black solid;
+    box-shadow: 2px 2px 5px black;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: small;
+    width: 100%;
+  }
+  
+  .inlist li {
+    background-color: #dadcda;
+    list-style-type: lower-alpha;
+    margin-left: 15%;
+    padding: 5px;
+    width: 80%;
+  }
+  
+  .inlist li:hover {
+    scale: 1.03;
+  }
+  
+  span.correct {
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  span.incorrect {
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .division {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* color: #d2efd9; */
+  }
+  .question-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .question {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  
+  .checkbox {
+    margin-top: 5px;
+  }
+  
+  .statement {
+    flex-grow: 1;
+    display: inline-block;
+    max-width: 70%;
+    margin-left: 20px;
+  }
+  
+  
+  span.correct {
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  span.incorrect {
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .options input[type="checkbox"]:checked + span {
+    visibility: visible;
+    display: inline-block;
+  }
+  
+  .options label {
+    display: block;
+    padding: 10px;
+    background-color: #adebbc;
+    color: rgb(21, 6, 6);
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .answer-options button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+  }
+  
+    .answer-options button:hover {
+      /* opacity: 0.8; */
+      scale: 1.03;
+      background-color: green;
+      color: aliceblue;
+    }
+
+    /* for image match the following */
+    .container {
+        .list {
+          width: 40%;
+        }
+      
+        .list-item {
+          display: flex;
+          justify-content: center;
+          /* align-content: center; */
+          align-items: center;
+          font-size: small;
+          /* height: 20%; */
+          height: 30vh;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          text-align: center;
+          cursor: pointer;
+          background: #f8f9fa;
+          transition: background 0.3s ease, color 0.3s ease;
+      
+          &.selected {
+            background: #007bff;
+            color: white;
+          }
+      
+          &.correct {
+            background: #d4edda; /* Light green for correct */
+            color: #155724;
+            pointer-events: none; /* Disable further clicks */
+          }
+      
+          &.incorrect {
+            background: #f8d7da; /* Light red for incorrect */
+            color: #721c24;
+          }
+        }
+        .list-item img{
+          height: 25vh;
+          mix-blend-mode:darken;
+          border-radius: 4px;
+        }
+      
+      }
+
+      .assessbutton {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      
+      .assessbutton button {
+        background-color: purple;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px black;
+      }
+      
+      .assessbutton button:hover {
+        background-color: rgb(84, 45, 121);
+        text-decoration: underline;
+      }
+      
+      /* Table container */
+      .assessment-table {
+        margin: 20px auto;
+        overflow-x: auto;
+        padding: 20px;
+        width: 100%;
+        max-width: 800px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      .assessment-table h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        text-align: center;
+      }
+      
+      .assessment-table .learning-objective {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      /* Table styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      thead th {
+        background-color: purple;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        margin: 2px;
+      }
+      
+      tbody td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+        font-size: 14px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f3f3f3;
+      }
+      
+      
+      
+      /* Highlight styles */
+      .highlight-blue {
+        color: blue;
+        font-weight: bold;
+      }
+      
+      .highlight-red {
+        color: red;
+        font-weight: bold;
+      }
+      
+      .highlight-black {
+        color: black;
+        font-weight: bold;
+      }
+      
+      /* Link styling */
+      a {
+        color: purple;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .sequence  {
+        /* margin: 20px; */
+        border:  0.1px solid black;
+        padding: 20px;
+  }
+  .sequence td input{
+ width:50px;
+  }
+
+      .mcqlist li {
+        /* background-color: #adebbc; */
+        list-style-type: none;
+        margin-bottom: 10px;
+        border: 0.1px black solid;
+        box-shadow: 2px 2px 5px black;
+        padding: 5px;
+        border-radius: 8px;
+        font-size: small;
+        width: 100%;
+      }
+      
+      .inlist li {
+        background-color: #dadcda;
+        list-style-type: lower-alpha;
+        margin-left: 15%;
+        padding: 5px;
+        width: 80%;
+      }
+      
+      .inlist li:hover {
+        scale: 1.03;
+      }
+      
+      span.correct {
+        color: green;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+      
+      span.incorrect {
+        color: red;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+      
+      .division {
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* color: #d2efd9; */
+      }
+      .question-section {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      .question {
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .option {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+      }
+      
+      
+      .checkbox {
+        margin-top: 5px;
+      }
+      
+      .statement {
+        flex-grow: 1;
+        display: inline-block;
+        max-width: 70%;
+        margin-left: 20px;
+      }
+      
+      
+      span.correct {
+        color: green;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+      
+      span.incorrect {
+        color: red;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+      
+      .options input[type="checkbox"]:checked + span {
+        visibility: visible;
+        display: inline-block;
+      }
+      
+      .options label {
+        display: block;
+        padding: 10px;
+        background-color: #adebbc;
+        color: rgb(21, 6, 6);
+        margin-bottom: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+      }
+      
+      .answer-options button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: flex;
+      }
+      
+        .answer-options button:hover {
+          /* opacity: 0.8; */
+          scale: 1.03;
+          background-color: green;
+          color: aliceblue;
+        }
+
+/* Form styling */
+form p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  /* Inline input styling */
+  .inline-input {
+    width: 50px;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+  }
+  
+  .inline-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Table styling */
+  .options-table {
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    width: 100%;
+  
+  }
+  
+  .options-table td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .options-table td:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .options-table td:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  .options-table td {
+    border: 1px solid #ddd;
+  }
+
+  .listedwords {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next row */
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center-align the cards */
+  }
+  
+  .card {
+    justify-content: center;
+    flex: 0 1 calc(50% - 20px); /* Two cards per row with space between them */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional card shadow */
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px;
+    background-color: #fff;
+    transition: transform 0.2s ease; /* Hover effect */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+  }
+  
+  .card p {
+    margin: 5px 0;
+    font-size: 14px;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 1 calc(100% - 20px); /* Full-width on smaller screens */
+    }
+  }
+  

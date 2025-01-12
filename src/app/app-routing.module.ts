@@ -25,6 +25,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./module2/module2.module').then((m) => m.Module2Module),
   },
+  {
+    path: 'module3', // Lazy load Module3
+    loadChildren: () =>
+      import('./module3/module3.module').then((m) => m.Module3Module),
+  },
+
 ];
 
 @NgModule({

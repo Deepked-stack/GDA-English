@@ -2,11 +2,88 @@
 <div class="startit">
 <p>Welcome! Let us start your journey!  </p>
 
-<div class="crousel">
-    person centered care crousel
+<div class="carousel-container">
+  <div id="historicalCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="4"></button>
+
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/module2/crousel/m2s3_c1_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m1s3_c1_vo1.mp3" type="audio/mpeg" >
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module2/crousel/m2s3_c1_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m1s3_c1_vo2.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module2/crousel/m2s3_c1_Slide3.jpg" class="d-block w-100" alt="Slide 3" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m1s3_c1_vo3.mp3" type="audio/mpeg" >
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module2/crousel/m2s3_c1_Slide4.jpg" class="d-block w-100" alt="Slide 4" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m1s3_c1_vo4.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module2/crousel/m2s3_c1_Slide5.JPG" class="d-block w-100" alt="Slide 4" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m1s3_c1_vo5.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+    </div>
+    <!-- Navigation Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#historicalCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#historicalCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </div>
+<div class="center">Click on Play Button</div>
+<div class="heading">
+  <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
 
 <h2>What I Know Already</h2>
+</div>
+
 <p>Before understanding about Person Centred Care, let’s test your prior knowledge in <b>‘What I Know Already…’!</b>
 </p>
 <hr>
@@ -117,5 +194,423 @@
       </li>
     </ol>
   </div>
+
+  <div class="difference-section">
+    <div class="heading">
+      <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+ 
+    <h2>What I Know Already</h2>
+    </div>
+    <p>Before understanding about the healthcare delivery systems, let’s test your prior knowledge on it in ‘What I Know Already...’!</p>
+    <div class="question-section">
+      <p class="question">Which of the following statements about healthcare are correct?</p>
+      <div class="options">
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')" class="checkbox">
+            <span class="statement">a) Tell your friends about a patient’s disease
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
+            {{ feedback.option1 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')" class="checkbox">
+            <span class="statement">b) Let the patient be involved during the admission meeting
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
+            {{ feedback.option2 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')" class="checkbox">
+            <span class="statement">c) Be an active listener and attentive to the patient’s preferences
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
+            {{ feedback.option3 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')" class="checkbox">
+            <span class="statement">d) Ensure confidentiality by not informing the nurse about changes in the patient’s condition
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
+            {{ feedback.option4 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')" class="checkbox">
+            <span class="statement">e) Not washing hands before touching the patient
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
+            {{ feedback.option5 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option6" (change)="checkAnswer('option6')" class="checkbox">
+            <span class="statement">f) Being informed about the process of the treatment
+
+            </span>
+          </label>
+          <span *ngIf="feedback.option6" [ngClass]="{'correct': feedback.option6 === '✔️', 'incorrect': feedback.option6 === '❌'}">
+            {{ feedback.option6 }}
+          </span>
+        </div>
+      </div>
 </div><!--startit ends -->
+
+<p><b>Find out how you will be assessed on yopur theory skills from the button below.</b></p>
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To understand and use a Person Centred Care approach in the daily work as a GDA
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">describe</span>how the key features of a Person-Centred Care approach affects the patient, GDA and the medical team</td>
+        <td>You can <span class="highlight-red">explain</span> how the Person-Centred Care approach affects patients and professionals</td>
+        <td>You can <span class="highlight-black">debate </span>about the benefits and challenges of implementing Person Centred Care in the healthcare industry.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit2/LO3/2.3%20Practical%20Assessment%20Checklist-%20English%20NEW.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="learnit">
+  <hr><h2>LearnIt</h2><hr>
+  <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.
+  </p>
+
+<div class="heading">
+  <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+  <h2>My Resources</h2>
+</div>
+<p>1. Person Centred Care has shown many positive outcomes in the healthcare industry with shorter time in hospital and a safer healthcare for both patients and professionals. How does it occur? Let’s get some more knowledge about this theory.
+</p>
+
+<div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/455765073?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="GDA2.3 Person Centered Care English"></iframe>
+</div>
+
+<p><b>Checkpoint Questions!</b></p>
+
+<div class="mcqlist">
+    <ol>
+      <!-- Question 1 -->
+      <li>
+        a) The core value in Person Centred Care is:
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'false')">
+                To treat the patient as an object- as a patient identified by their diagnosis.
+              </label>
+            </li>
+            <li>
+                <label>
+                  <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'true')">
+                  To treat the patient as an subject- as a patient identified by own personality and preferences.
+                </label>
+            </li>
+          </ol>
+          </div>
+          <span *ngIf="mcqFeedback2[1]" [ngClass]="{'correct': mcqFeedback2[1] === '✔️', 'incorrect': mcqFeedback2[1] === '❌'}">{{ mcqFeedback2[1] }}</span>
+      </li>
+  
+      <!-- Question 2 -->
+      <li>
+        a) The core value in Person Centred Care is:
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'true')">
+                shorter stay in hospital for patients
+            </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'false')">
+                Ill health among the proffessionals.
+             </label>
+            </li>
+           </ol>
+        </div>
+        <span *ngIf="mcqFeedback2[2]" [ngClass]="{'correct': mcqFeedback2[2] === '✔️', 'incorrect': mcqFeedback2[2] === '❌'}">{{ mcqFeedback2[2] }}</span>
+      </li>
+<!-- question3 -->
+      <li>
+        c) In Person Centred Care designing of the care plan is made by:
+
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'false')">
+                Entirely the nurses and doctors.
+            </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'true')">
+                In a team work where patient has an active role.
+             </label>
+            </li>
+           </ol>
+        </div>
+        <span *ngIf="mcqFeedback[3]" [ngClass]="{'correct': mcqFeedback[3] === '✔️', 'incorrect': mcqFeedback[3] === '❌'}">{{ mcqFeedback[3] }}</span>
+      </li>      
+    </ol>
+  </div>
+
+<p>Make sure to attempt <b>'My Theory Task'</b>before moving on to Do It!</p>
+<div class="heading">
+  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+  <h2>My Theory Task</h2>
+</div>
+<div class="division">Part 1</div>
+<div class="full">
+<img src="assets/module2/m2s3_img1.jpg" alt=""></div>
+
+<p>Look at the word cloud below and write the answers to the following questions in your notebook. You may discuss the answers in your class, training center or in an online discussion with peers.
+</p>
+<p>1. Select three words in the cloud that you find define the approach of Person Centred Care.
+</p>
+<p>
+  2. <b>Describe</b> how the meaning in these three words affects:</p>
+<ul type="circle">
+  <li>The patient</li>
+  <li>yourself in your profession.</li>
+  <li>your colleagues and working in a team</li>
+</ul>
+<p><b>Picture on the left: “concerned patient looking away.”</b></p>
+
+<p><b>Picture on the Right: “Patient at the center of the healthcare team”
+</b><b>Explain</b>how the approach that characterizes the healthcare team in this picture affects:</p>
+<ul type="circle">
+  <li>The patient</li>
+  <li>yourself in your profession.</li>
+  <li>your colleagues and working in a team</li>
+</ul>
+
+<div class="division">Part 3</div>
+<div class="sideimg">
+  <p>5. Debate on the benefits and challenges of implementing Person Centred Care in the healthcare industry with your family or in an online meeting with a friend.	
+  </p>
+</div>
+
+<div class="center">
+  <b>Great! Move on to Do It!</b>
+</div>
+<p><b>Find out how you will be assessed on yopur theory skills from the button below.</b></p>
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To understand and use a Person Centred Care approach in the daily work as a GDA
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">describe</span>how the key features of a Person-Centred Care approach affects the patient, GDA and the medical team</td>
+        <td>You can <span class="highlight-red">explain</span> how the Person-Centred Care approach affects patients and professionals</td>
+        <td>You can <span class="highlight-black">debate </span>about the benefits and challenges of implementing Person Centred Care in the healthcare industry.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit2/LO3/2.3%20Practical%20Assessment%20Checklist-%20English%20NEW.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</div><!--learnit ends-->
+
+<div class="doit">
+  <p>Almost done! Let's finish this goal with your practical</p>
+
+  <div class="heading">
+    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+    <h2>My Practical Task</h2>
+  </div>
+  <p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the slideshow below.
+  </p>
+
+  
+<div class="carousel-container">
+  <div id="historicalCarousel2" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="4"></button>
+
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/module2/crousel/m2s3_c2_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m2s3_c2_vo1.mp3" type="audio/mpeg" >
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module2/crousel/m2s3_c2_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m2s3_c2_vo2.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module2/crousel/m2s3_c2_Slide3.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m2s3_c2_vo3.mp3" type="audio/mpeg" >
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module2/crousel/m2s3_c2_Slide4.JPG" class="d-block w-100" alt="Slide 4" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m2s3_c2_vo4.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module2/crousel/m2s3_c2_Slide5.JPG" class="d-block w-100" alt="Slide 4" loading="lazy">
+        <div class="carousel-caption">
+        </div>
+        <audio controls>
+          <source src="assets/module2/crousel/m2s3_c2_vo5.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+    </div>
+    <!-- Navigation Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#historicalCarousel2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#historicalCarousel2" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<div class="center">Click on Play Button</div>
+
+  <p>Assess yourself in the practical using the <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit2/LO3/2.3%20Practical%20Assessment%20Checklist-%20English%20NEW.pdf">'Practicval Assessment Checklist'</a>.</p>
+
+  <div class="heading">
+    <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+    <h2>Conclusion</h2>
+  </div>
+  <p>Based on your learning, the follow up will be through discussions in class/or arranged through a meeting online with a classmate or in a group.
+  </p>
+
+  <p>Discuss strategies on how a person centred care approach can strengthened the profession as a GDA. The discussion should include reflections linked to the content of the Person Centered Care video and the Handbook modules “Code of Conduct”, “Code of Ethics” and “Compassion and Patient Centricity” and “Patient’s Rights”.
+  </p>
+  <p><b>Find out how you will be assessed on your practical skills from the button below.
+  </b></p>
+  <p><b>CONGRATULATIONS! You have completed the goal!
+  </b></p>
+  <div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To understand and use a Person Centred Care approach in the daily work as a GDA
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">describe</span>how the key features of a Person-Centred Care approach affects the patient, GDA and the medical team</td>
+          <td>You can <span class="highlight-red">explain</span> how the Person-Centred Care approach affects patients and professionals</td>
+          <td>You can <span class="highlight-black">debate </span>about the benefits and challenges of implementing Person Centred Care in the healthcare industry.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit2/LO3/2.3%20Practical%20Assessment%20Checklist-%20English%20NEW.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div><!--do it ends-->
 </div>

@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  /* width: 100%; */
 }
 
 .option {
@@ -33,6 +34,7 @@
   flex-grow: 1;
   display: inline-block;
   max-width: 70%;
+  margin-left: 20px;
 }
 
 
@@ -103,34 +105,30 @@ span.incorrect {
 
 
   /* .....................................image hover change.................................... */
-
-  .changeonhover{
-    /* background-color: beige; */
-    border: 1px solid black;
-    padding: 5px;
-
-
+ 
+  
+  
+  
+  .hoverimage:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
   }
   
-
-  .hoverimage{
-    height: 25rem;
-    background-size: cover;
-    background-image: url('https://thumbs.dreamstime.com/b/indian-medicine-healthcare-concept-doctor-close-up-against-flag-india-background-272751775.jpg');
-  }
-
-  .hoverimage:hover{
-    height: 25rem;
-    background-size: cover;
-    background-image: url('https://media-cms.virohan.com/staging/ott_1f8b35aeec.webp');
-  }
 /* ------------------------------------------------------------------------------------------------------------------- */
   /* .....................hospital input ........................... */
-input{
-    width: 100px;
-    background-color: rgb(213, 232, 248);
-    border-bottom: #0056b3;
-    border: 2px solid blue;
+.blank{
+  display: flex;
+}
+
+  input{
+    width: auto;
+    height: 20px;
+    border: none;
+    /* background-color: rgb(213, 232, 248); */
+    /* border-bottom: 2px solid #0056b3; */
+    /* border: 2px solid blue; */
+    font-size: small;
+    padding: 0%;
+    padding-top: px;
 
 }
 /* ....................................for all content.............................. */
@@ -138,6 +136,9 @@ input{
 .content {
     display: block;
     padding: 20px;
+    font-size:smaller;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 /* ---------------------------------------------------------------------------------------------- */
@@ -199,13 +200,14 @@ ol li {
 
 /* ..............................................mcq............................................. */
 .mcqlist li{
-    background-color: #adebbc;
+    /* background-color: #adebbc; */
+    background-color: transparent;
     list-style-type: upper-roman;
 
 }
 
 .inlist li{
-    background-color: #d2efd9;
+    background-color: #cdd3ce;
     list-style-type: lower-alpha;
     margin-left: 15%;
 }
@@ -214,10 +216,12 @@ ol li {
 
 .division{
     align-items: center;
-    background-color: rgb(160, 152, 152);
+    background-color: rgb(218, 213, 213);
     color: rgb(15, 16, 17);
     margin-bottom: 15px;
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 #injection{
@@ -237,29 +241,162 @@ ol li {
 
 
 /* .......................................................for video............................. */
-.videodiv{
-  margin: 15px;
-
-padding: 15px;
-border: 0.1px solid black;
-border-radius: 15px;
+.videodiv {
+  position: relative;
   width: 100%;
-  height: 20em;
-  /* background-color: #adebbc; */
-
-  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.6);
+  max-width: 640px; /* Optional: set max width for the video */
+  margin: 20px auto; /* Center the video */
 }
 
-.videofucoahospital{
-  margin: 15px;
-  
-  padding: 15px;
-  border: 0.1px solid black;
-  border-radius: 15px;
-      width: 100%;
-      height: 20em;
-      /* background-color: #adebbc; */
-  
-      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.6);
-  }
-  
+.videodiv iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: round corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for aesthetics */
+}
+
+.imgwithaudio{
+  display: flexbox;
+  justify-items: center;
+}
+.imgwithaudio img{
+  width: 100%;
+}
+.imgwithaudio audio{
+  display: flex;
+  justify-items: center;
+}
+
+.sideimg{
+  display: flex;
+}
+
+.sideimg img{
+  width: 35%;
+  height: 5%;
+}
+
+.sideimg p{
+  max-width: 65%;
+  margin-right: 5px;
+}
+
+/* Button styling */
+.assessbutton {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.assessbutton button {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px black;
+}
+
+.assessbutton button:hover {
+  background-color: rgb(84, 45, 121);
+  text-decoration: underline;
+}
+
+/* Table container */
+.assessment-table {
+  margin: 20px auto;
+  padding: 10px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.assessment-table h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.assessment-table .learning-objective {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin: 2px;
+}
+
+tbody td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+
+
+/* Highlight styles */
+.highlight-blue {
+  color: blue;
+  font-weight: bold;
+}
+
+.highlight-red {
+  color: red;
+  font-weight: bold;
+}
+
+.highlight-black {
+  color: black;
+  font-weight: bold;
+}
+
+/* Link styling */
+a {
+  color: purple;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.heading{
+  display: flex;
+  align-items: center;
+  margin: 2vh;
+  border-bottom: 0.1px solid black;
+  border-top: 0.1px solid black;
+  padding: 1%;
+}
+
+.heading img{
+  height:66px;
+  width: 66px;
+  border: none;
+  box-shadow: none;
+  margin: 5px;
+}
+

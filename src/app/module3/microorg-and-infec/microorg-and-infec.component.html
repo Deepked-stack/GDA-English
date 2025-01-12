@@ -1,0 +1,586 @@
+<div class="content">
+    <div class="startit">
+        <p>Welcome! Let us start your journey!</p>
+
+        <div class="carousel-container">
+            <div id="Carousel1" class="carousel slide" data-bs-ride="carousel">
+              <!-- Indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="3"></button>
+              </div>
+          
+              <!-- Slides -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/module3/crousel/m3s1_c1_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+                  <div class="carousel-caption">
+                  </div>
+                  <audio controls>
+                    <source src="assets/module3/crousel/m3s1_c1_vo1.mp3" type="audio/mpeg" >
+                    Your browser does not support the audio tag.
+                  </audio>
+                </div>
+          
+                <div class="carousel-item">
+                  <img src="assets/module3/crousel/m3s1_c1_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+                  <div class="carousel-caption">
+                  </div>
+                  <audio controls>
+                    <source src="assets/module3/crousel/m3s1_c1_vo2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                  </audio>
+                </div>
+          
+                <div class="carousel-item">
+                  <img src="assets/module3/crousel/m3s1_c1_Slide3.jpg" class="d-block w-100" alt="Slide 3" loading="lazy">
+                  <div class="carousel-caption">
+                  </div>
+                  <audio controls>
+                    <source src="assets/module3/crousel/m3s1_c1_vo3.mp3" type="audio/mpeg" >
+                    Your browser does not support the audio tag.
+                  </audio>
+                </div>
+              </div>
+              <!-- Navigation Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#Carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+<div class="center">Click on Play Button</div>
+<div class="heading">
+ <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+ <h2>What I Know Already</h2>  
+</div> 
+<div class="sideimg">
+    <p>Before understanding about microorganisms and infections, let´s test your prior knowledge on it with <b>‘What I Know Already…’!</b></p>
+    <img src="assets/module3/m3s1_image1.jpg" alt="">
+</div>
+<p>Look at the images given below. Click on the images you think can cause infection in human body</p>
+ 
+
+<div class="center">
+    <div class="green"><button></button>Correct</div>
+    <div class="red"><button></button>Incorrect</div>
+</div>
+  <div class="siximages">
+    <div class="siximages">
+      <!-- Card 1 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[1] === true, 'picincorrect': cardStatus[1] === false}" 
+        (click)="checkAnswercard(1, true)">
+        <img src="/assets/module3/m3s1_six_image1.jpg" alt="pulse checking" loading="lazy">
+        <label><b>Parasites</b></label>
+      </div>
+    
+      <!-- Card 2 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[2] === true, 'picincorrect': cardStatus[2] === false}" 
+        (click)="checkAnswercard(2, true)">
+        <img src="/assets/module3/m3s1_six_image2.jpg" alt="Treebarks" loading="lazy">
+        <label><b>Fungi</b></label>
+      </div>
+    
+      <!-- Card 3 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[3] === true, 'picincorrect': cardStatus[3] === false}" 
+        (click)="checkAnswercard(3, false)">
+        <img src="/assets/module3/m3s1_six_image3.jpg" alt="DNA Tests" loading="lazy">
+        <label><b>Dust</b></label>
+      </div>
+    
+      <!-- Card 4 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[4] === true, 'picincorrect': cardStatus[4] === false}" 
+        (click)="checkAnswercard(4, true)">
+        <img src="/assets/module3/m3s1_six_image4.jpg" alt="XRays" loading="lazy">
+        <label><b>Bacteria</b></label>
+      </div>
+    
+      <!-- Card 5 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[5] === true, 'picincorrect': cardStatus[5] === false}" 
+        (click)="checkAnswercard(5, true)">
+        <img src="/assets/module3/m3s1_six_image5.jpg" alt="Getting angry at patients" loading="lazy">
+        <label><b>Virus</b></label>
+      </div>
+    
+      <!-- Card 6 -->
+      <div 
+        class="imgcard" 
+        [ngClass]="{'piccorrect': cardStatus[6] === true, 'picincorrect': cardStatus[6] === false}" 
+        (click)="checkAnswercard(6, true)">
+        <img src="/assets/module3/m3s1_six_image6.jpg" alt="Maintaining patient safety" loading="lazy">
+        <label><b>Dog</b></label>
+      </div>
+      </div>
+    
+<p>Reflect on what effect microorganisms might have on humans and write down your answers in your notebook. Do you think we can influence their effect on humans?</p>
+<div class="didyknowbut">
+    <button (click)="toggleNote()">Did You Know?</button>
+    <div class="note" [class.visible]="isNoteVisible">Dust causes diseases not infections!
+    </div>
+  </div>     
+
+  <div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To know about history and important discoveries in Healthcare
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span>and give basic examples of features of microorganisms and infections.</td>
+          <td>You can <span class="highlight-red">explain</span> ow the most common microorganisms and infections are spread.</td>
+          <td>You can <span class="highlight-black">do your own research</span>  the importance of having knowledge about microorganisms and infections.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Chart Preperation Play <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit3/LO1/3.1%20Practical%20Assessment%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+    </div><!--startit ends-->
+
+<div class="learnit">
+    <h2>Learn It</h2>
+    <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.
+    </p>
+
+    <div class="heading">
+        <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+        <h2>My Resources</h2>
+    </div>
+<p>1. Let’s get to learn more about microorganisms and infections.</p>
+<div class="videodiv">
+GDA3.1 Microorganisms and infections English    
+</div>
+
+<p><b>Checkpoint!</b></p>
+<!--mcq1-->
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. Microorganisms are small living organisms
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+                False
+              </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[1]" [ngClass]="{'correct': mcqFeedback1[1] === '✔️', 'incorrect': mcqFeedback1[1] === '❌'}">{{ mcqFeedback1[1] }}</span>
+      </li>
+  
+      <li>
+        b. Microorganisms includes
+
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+                Bacteria and Viruses
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+                Fungi
+            </label>
+            </li>
+            <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'true')">
+                  Bacteria,Fungi,Parasites and Viruses
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+                  Parasites
+              </label>
+              </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[2]" [ngClass]="{'correct': mcqFeedback1[2] === '✔️', 'incorrect': mcqFeedback1[2] === '❌'}">{{ mcqFeedback1[2] }}</span>
+      </li>
+
+      <li>
+        c. Microorganisms can spread through different transmission routes, e.g. through inoculation, vectors and indirect contact
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'true')">
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'false')">
+                False
+            </label>
+            </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[3]" [ngClass]="{'correct': mcqFeedback1[3] === '✔️', 'incorrect': mcqFeedback1[3] === '❌'}">{{ mcqFeedback1[3] }}</span>
+      </li>
+    </ol>
+  </div>
+
+  <p>Make sure to attempt <b>'My Theory Task'</b> before moving on to Do It!</p>
+
+<div class="heading">
+    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+    <h2>My Theory Task</h2>   
+</div>
+<div class="division">Part 1</div>
+
+<p>A. Read the statements given below and click on the correct statements.
+</p>
+<div class="difference-section">
+    <div class="question-section">
+      <div class="options">
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')" class="checkbox">
+            <span class="statement">Microorganisms can´t cause infections.</span>
+          </label>
+          <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
+            {{ feedback.option1 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')" class="checkbox">
+            <span class="statement">The human immunodeficiency virus is also called HIV and can cause AIDS.</span>
+          </label>
+          <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
+            {{ feedback.option2 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')" class="checkbox">
+            <span class="statement">Tuberculosis can be spread through airborne transmission route.</span>
+          </label>
+          <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
+            {{ feedback.option3 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')" class="checkbox">
+            <span class="statement"> Every year 5-8 million people die from healthcare- associated infections.</span>
+          </label>
+          <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
+            {{ feedback.option4 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')" class="checkbox">
+            <span class="statement">A healthcare- associated infection is when a patient is infected with an infection during hospital stay</span>
+          </label>
+          <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
+            {{ feedback.option5 }}
+          </span>
+        </div>
+        <div class="option">
+            <label>
+              <input type="checkbox" [(ngModel)]="answers.option6" (change)="checkAnswer('option6')" class="checkbox">
+              <span class="statement">Microorganisms are large living organisms.</span>
+            </label>
+            <span *ngIf="feedback.option6" [ngClass]="{'correct': feedback.option6 === '✔️', 'incorrect': feedback.option6 === '❌'}">
+              {{ feedback.option6 }}
+            </span>
+          </div>
+          
+          <div class="option">
+            <label>
+              <input type="checkbox" [(ngModel)]="answers.option7" (change)="checkAnswer('option7')" class="checkbox">
+              <span class="statement">When microorganism has a disease-causing ability, it is called pathogenic.</span>
+            </label>
+            <span *ngIf="feedback.option7" [ngClass]="{'correct': feedback.option7 === '✔️', 'incorrect': feedback.option7 === '❌'}">
+              {{ feedback.option7 }}
+            </span>
+          </div>
+          
+          <div class="option">
+            <label>
+              <input type="checkbox" [(ngModel)]="answers.option8" (change)="checkAnswer('option8')" class="checkbox">
+              <span class="statement">Pathogenic microorganisms can be found on the patient, the health worker and on the surrounding environment in hospitals.</span>
+            </label>
+            <span *ngIf="feedback.option8" [ngClass]="{'correct': feedback.option8 === '✔️', 'incorrect': feedback.option8 === '❌'}">
+              {{ feedback.option8 }}
+            </span>
+          </div>
+          
+      </div>
+    
+<div class="container d-flex justify-content-between align-items-start mt-4">
+        <!-- Left List: Questions (Images) -->
+       
+        <div class="list left-list">
+          <div
+            *ngFor="let item of leftItems"
+            class="list-item mb-2"
+            [class.selected]="selectedItem === item"
+            [class.correct]="item.correct"
+            (click)="selectLeftItem(item)"
+          >
+            <img
+              [src]="'assets/module3/m3s1_mtf_image' + item.id + '.jpg'"
+              [alt]="item.text"
+              class="img-fluid question-image"
+            />
+          </div>
+        </div>
+      
+        <!-- Right List: Answers -->
+        <div class="list right-list">
+          <div
+            *ngFor="let item of rightItems"
+            class="list-item mb-2 d-flex justify-content-between align-items-center"
+            [ngClass]="{ 'correct': item.correct, 'incorrect': item.incorrect }"
+            (click)="matchWithRightItem(item)"
+          >
+            <span><div class="data">{{ item.text }}</div></span>
+            <span *ngIf="item.correct">{{ item.matchedWith }}</span>
+          </div>
+        </div>
+</div> 
+<div class="division">Part 2</div>
+<p>Answer the following questions in your notebook and discuss in your class, training centre or online with your peer group.
+</p>
+<ol type="A" style="margin-left: 2%;">
+    <li style="margin-bottom: 5%;">Merlin had a surgery in her leg and was operated two days ago. Now she has pain at the operation site, and she has a slight fever. What do you think has happened to Merlin and which pathogenic organism might be the cause?</li>
+    <li style="margin-bottom: 5%;">You have learnt about pathogenic microorganisms. Explain their features and how they can spread to your best friend? Elaborate upon the most common pathogenic organisms and how they can spread infections.</li>
+    <li style="margin-bottom: 5%;">Hospitals have dedicated floors for patients infected by the Covid-19 virus. Which microorganism is causing this pandemic and how does the disease spread?</li>
+</ol>
+
+<div class="division">Part 3</div>
+
+<p>“Doctors and nurses need to be educated on microorganisms and the spread of diseases. General Duty Assistants should not bother themselves with this knowledge.”
+    <br>Justify why this statement is not correct and why it is important for a GDA to have knowledge about this.	
+</p>
+</div>
+<div class="center">
+    <b>Great!, Move on to Do It!</b>
+</div>
+<div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To know about history and important discoveries in Healthcare
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span>and give basic examples of features of microorganisms and infections.</td>
+          <td>You can <span class="highlight-red">explain</span> ow the most common microorganisms and infections are spread.</td>
+          <td>You can <span class="highlight-black">do your own research</span>  the importance of having knowledge about microorganisms and infections.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Chart Preperation Play <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit3/LO1/3.1%20Practical%20Assessment%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div><!--learnit ends-->
+
+<div class="doit">
+<p>Almost Almost done! Let’s finish this goal with your practical.
+</p>
+
+<div class="heading">
+    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">   
+    <h2>My Practical Task</h2>
+</div>
+
+<p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.
+</p>
+
+<div class="carousel-container">
+    <div id="Carousel2" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="4"></button>
+
+      </div>
+  
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/module3/crousel/m3s1_c2_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module3/crousel/m3s1_c2_vo1.mp3" type="audio/mpeg" >
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="assets/module3/crousel/m3s1_c2_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module3/crousel/m3s1_c2_vo2.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="assets/module3/crousel/m3s1_c2_Slide3.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+          <div class="carousel-caption">
+          </div>
+          <audio controls>
+            <source src="assets/module3/crousel/m3s1_c2_vo3.mp3" type="audio/mpeg" >
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+
+        <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s1_c2_Slide4.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s1_c2_vo4.mp3" type="audio/mpeg" >
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+
+          <div class="carousel-item">
+            <img src="assets/module3/crousel/m3s1_c2_Slide5.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+            <div class="carousel-caption">
+            </div>
+            <audio controls>
+              <source src="assets/module3/crousel/m3s1_c2_vo5.mp3" type="audio/mpeg" >
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+      </div>
+      <!-- Navigation Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#Carousel2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#Carousel2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+<div class="center">Click on Play Button</div>
+<p>Assess youself in the practical using the <a href="https://kedskills.org/pdf/GDA_E/Unit3/LO1/3.1%20Practical%20Assessment%20Checklist.pdf">'Practical Assessment Checklist'.</a></p>
+
+<div class="heading">
+<img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+<h2>Conclusion</h2>
+</div>
+
+<div class="sideimg">
+    <p>Based on your learning, recall your answers in What I Know Already regarding what effects you think microorganisms might have on humans and why this is important?</p>
+    <img src="assets/module3/m3s1_last.jpg" alt="">
+</div>
+<p><b>Find out how you will be assessed on your practical skills from the button below.
+</b></p>
+<div class="center">
+    <p><b>CONGRATULATIONS! You have completed the goal!
+    </b></p>
+</div>
+
+<div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To know about history and important discoveries in Healthcare
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span>and give basic examples of features of microorganisms and infections.</td>
+          <td>You can <span class="highlight-red">explain</span> ow the most common microorganisms and infections are spread.</td>
+          <td>You can <span class="highlight-black">do your own research</span>  the importance of having knowledge about microorganisms and infections.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Chart Preperation Play <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit3/LO1/3.1%20Practical%20Assessment%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div><!--Do it ends-->
+</div><!--content ends-->

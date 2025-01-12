@@ -1,0 +1,533 @@
+<div class="content">
+    <div class="startit">
+        <p>Wecome! Let us start your journey!</p>
+        <div class="sideimg">
+            <p>Hello everyone, my name is Madhu and I’m going to take you through this learning objective where you will learn about common medication routes
+            <br><br>Medication routes are different ways of getting medication into the body. There are several medication routes, each with their own specific area of use.
+        </p>
+        <img src="assets/module4/m4s2_image1.jpg" alt="">
+        </div>
+
+        <p>Let's Start</p>
+
+        <div class="carousel-container">
+            <div id="Carousel1" class="carousel slide" >
+              <!-- Indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#Carousel1" data-bs-slide-to="4"></button>
+              </div>
+          
+              <!-- Slides -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/module4/crousel/m4s2_c1_Slide1.jpg" class="d-block w-100" alt="Slide 1" loading="lazy">
+                  <div class="carousel-caption">
+                  </div>
+                  <audio controls>
+                    <source src="assets/module4/crousel/m4s2_c1_vo1.mp3" type="audio/mpeg" >
+                    Your browser does not support the audio tag.
+                  </audio>
+                </div>
+          
+                <div class="carousel-item">
+                  <img src="assets/module4/crousel/m4s2_c1_Slide2.jpg" class="d-block w-100" alt="Slide 2" loading="lazy">
+                  <div class="carousel-caption">
+                  </div>
+                  <audio controls>
+                    <source src="assets/module4/crousel/m4s2_c1_vo2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                  </audio>
+                </div>
+    
+                <div class="carousel-item">
+                    <img src="assets/module4/crousel/m4s2_c1_Slide3.jpg" class="d-block w-100" alt="Slide 2" loading="lazy">
+                    <div class="carousel-caption">
+                    </div>
+                    <audio controls>
+                      <source src="assets/module4/crousel/m4s2_c1_vo3.mp3" type="audio/mpeg">
+                      Your browser does not support the audio tag.
+                    </audio>
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="assets/module4/crousel/m4s2_c1_Slide4.jpg" class="d-block w-100" alt="Slide 2" loading="lazy">
+                    <div class="carousel-caption">
+                    </div>
+                    <audio controls>
+                      <source src="assets/module4/crousel/m4s2_c1_vo4.mp3" type="audio/mpeg">
+                      Your browser does not support the audio tag.
+                    </audio>
+                  </div>                  
+              </div>
+              <!-- Navigation Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#Carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        <div class="center">Click on Play Button</div>   
+   
+
+<div class="heading">
+    <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+    <h2>What I Know Already</h2>    
+</div>
+
+<p>Before understanding what medical routes and administration is, let’s test your prior knowledge in <b>‘What I Know Already…’!</b>
+</p>
+<p>A General Duty Assistant needs to give help with medication. Look at the pictures of different body parts given below. Which of these routes do you think are used to administer medication to patients? Write in your notebook.
+</p>
+
+<div class="imagetable">
+    <table>
+        <tr>
+            <td>
+                <img src="assets/module4/m4s2_image2.jpg" alt="">
+            </td>
+            <td>
+                <img src="assets/module4/m4s2_image3.jpg" alt="">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="assets/module4/m4s2_image4.jpg" alt="">
+            </td>
+            <td>
+                <img src="assets/module4/m4s2_image5.jpg" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="assets/module4/m4s2_image6.jpg" alt="">
+            </td>
+            <td>
+                <img src="assets/module4/m4s2_image7.jpg" alt="">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p><b>Find out how you will be assessed on your theory skills from the button below.
+</b></p>
+
+<div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+        Learning Objective: To learn about common medication routes and administration
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You should be able to <span class="highlight-blue">identify different</span> medication routes.</td>
+          <td>You should be able to <span class="highlight-red">explain</span> how how different medication routes work in the body.</td>
+          <td>You should be able to  <span class="highlight-black"> oragnize </span> the importance of having knowledge about the different medication routes.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity : List the routes <br> <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit4/LO2/4.2%20Practical%20Assessment%20Checklist%20-%20Medication%20Routes.pdf">'Practical Assessment Checklist'</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+    </div><!--startit-->
+
+<div class="learnit">
+<p>ome, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b> ‘My Theory Task’.</b></p>
+<div class="heading">
+    <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+   <h2>My Resources</h2>
+</div>
+
+<p>1. A General Duty Assistant needs to have basic knowledge about medication routes and administration. Let’s learn about these different routes and the terms used for them through the video below.
+</p>
+
+<div class="videodiv">
+   GDA 4.2 Medication routes and administration 
+</div>
+
+<p><b>Checkpoint!</b></p>
+
+<div class="mcqlist">
+    <ol>
+      <li>
+        a. There is only one way to give an injection
+        <div class="inlist">
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+                True
+            </label>
+            </li>
+            <li>
+                <label>
+                  <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'true')">
+                  False
+                </label>
+              </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[1]" [ngClass]="{'correct': mcqFeedback1[1] === '✔️', 'incorrect': mcqFeedback1[1] === '❌'}">{{ mcqFeedback1[1] }}</span>
+      </li>
+  
+      <li>
+        b. When you give medication orally, it means you only drink fluid.
+        <div class="inlist">
+          <ol>
+            <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+                  True
+                </label>
+              </li>
+            <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'true')">
+                  False
+                </label>
+              </li>            
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[2]" [ngClass]="{'correct': mcqFeedback1[2] === '✔️', 'incorrect': mcqFeedback1[2] === '❌'}">{{ mcqFeedback1[2] }}</span>
+      </li>
+  
+      <li>
+        c. When patients are suffering from different skin conditions such as eczema, psoriasis, rosacea etc., medicine can be administered cutaneously.
+        <div class="inlist">
+          <ol>
+            <li>
+                <label>
+                  <input type="radio" name="mcq3" (change)="checkMCQ1(3, 'true')">
+                  True
+                </label>
+              </li>            
+            <li>
+                <label>
+                  <input type="radio" name="mcq3" (change)="checkMCQ1(3, 'false')">
+                  False
+                </label>
+              </li>
+          </ol>
+        </div>
+        <span *ngIf="mcqFeedback1[3]" [ngClass]="{'correct': mcqFeedback1[3] === '✔️', 'incorrect': mcqFeedback1[3] === '❌'}">{{ mcqFeedback1[3] }}</span>
+      </li>
+    </ol>
+  </div>
+
+<p>Make sure to attempt <b>'My Theory Task</b> before moving on to Do It!</p>
+
+<div class="heading">
+    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+    <h2>My Theory Task</h2>    
+</div>
+
+<div class="division">Part 1</div>
+<p>Q1. Read the statement given below and click on the correct options.
+</p>
+<p>Injection can be given in one of the following ways:
+</p>
+<div class="difference-section">
+    <div class="question-section">
+      <div class="options">
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')" class="checkbox">
+            <span class="statement">Bacterial spores can be killed by disinfectants.</span>
+          </label>
+          <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
+            {{ feedback.option1 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')" class="checkbox">
+            <span class="statement"> Sterilization and disinfection are used only in hospitals.</span>
+          </label>
+          <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
+            {{ feedback.option2 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')" class="checkbox">
+            <span class="statement">Sterilization completely kills all micro-organisms.</span>
+          </label>
+          <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
+            {{ feedback.option3 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')" class="checkbox">
+            <span class="statement"> Disinfectants do not take time to work.</span>
+          </label>
+          <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
+            {{ feedback.option4 }}
+          </span>
+        </div>
+        <div class="option">
+          <label>
+            <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')" class="checkbox">
+            <span class="statement"> UV lights means ultra-violet lights.</span>
+          </label>
+          <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
+            {{ feedback.option5 }}
+          </span>
+        </div>
+</div>
+
+<div class="container d-flex justify-content-between align-items-start mt-4">
+    <!-- Left List: Questions -->
+    <div class="list left-list">
+      <div
+        *ngFor="let item of leftItems"
+        class="list-item mb-2"
+        [class.selected]="selectedItem === item"
+        [class.correct]="item.correct"
+        (click)="selectLeftItem(item)"
+      >
+      {{item.id}}. {{ item.text }}
+      </div>
+    </div>
+  
+    <!-- Right List: Answers -->
+    <div class="list right-list">
+      <div
+        *ngFor="let item of rightItems"
+        class="list-item mb-2 d-flex justify-content-between align-items-center"
+        [ngClass]="{ 'correct': item.correct, 'incorrect': item.incorrect }"
+        (click)="matchWithRightItem(item)"
+      >
+        <span>{{ item.text }}</span>
+        <span *ngIf="item.correct">Q{{ item.matchedWith }}</span>
+      </div>
+    </div>
+  </div>
+<p>A. Rahim a healthcare worker is asked to give the medication by Otic route. Where does he give the medication? Discuss in your class and write the answer in your notebook.
+</p>  
+
+
+    <p>Mary goes to the gym daily and takes care of her diet too. Lately she has been feeling she is in bad shape. She finds out she has <b>'Asthma'</b>. How will she take her medication? Give answer with reasons and show to your teacher.</p>
+
+
+<p>
+    Sheela, an old lady is so afraid of medication that they have to give it transdermally. How will they give the medicine?
+</p>
+<div class="division">Part 3</div>
+<p>In a class discussion, explain what these medication routes mean. Justify with arguments why it is important to have knowledge of all these routes.</p>
+<ul>
+    <li>Oral route</li>
+    <li>Buccal route</li>
+    <li>Sublingual route</li>
+    <li>Vaginal route</li>
+    <li>Rectally</li>
+    <li>Otic route</li>
+    <li>Ocular route</li>
+    <li>Nasal Route</li>
+    <li>Inhalation</li>
+    <li>Cutaneous route</li>
+</ul>
+
+<img src="assets/module4/m4s2_image8.png" style="width: 100%; height: 50vh;" alt="">
+<div class="center">
+    <p><b>Great! Move on to Do It!</b></p>
+</div>
+
+<p><b>Find out how you will be assessed on your theory skills from the button below.
+</b></p>
+<div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+        Learning Objective: To learn about common medication routes and administration
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You should be able to <span class="highlight-blue">identify different</span> medication routes.</td>
+          <td>You should be able to <span class="highlight-red">explain</span> how how different medication routes work in the body.</td>
+          <td>You should be able to  <span class="highlight-black"> oragnize </span> the importance of having knowledge about the different medication routes.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity : List the routes <br> <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit4/LO2/4.2%20Practical%20Assessment%20Checklist%20-%20Medication%20Routes.pdf">'Practical Assessment Checklist'</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div><!--learnit ends-->
+
+<div class="doit">
+    <p>Almost done! Let’s finish this goal with your practical.
+    </p>
+    <div class="heading">
+        <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+        <h2>My Practical Task</h2>  
+    </div>
+
+<p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the slideshow below.
+</p>
+
+    <div class="carousel-container">
+        <div id="Carousel2" class="carousel slide" >
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="3"></button>
+          </div>
+      
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/module4/crousel/m4s2_c2_Slide1.jpg" class="d-block w-100" alt="Slide 1" loading="lazy">
+              <div class="carousel-caption">
+              </div>
+              <audio controls>
+                <source src="assets/module4/crousel/m4s2_c1_vo1.mp3" type="audio/mpeg" >
+                Your browser does not support the audio tag.
+              </audio>
+            </div>
+      
+            <div class="carousel-item">
+              <img src="assets/module4/crousel/m4s2_c2_Slide2.jpg" class="d-block w-100" alt="Slide 2" loading="lazy">
+              <div class="carousel-caption">
+              </div>
+              <audio controls>
+                <source src="assets/module4/crousel/m4s2_c2_vo2.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+              </audio>
+            </div>
+
+            <div class="carousel-item">
+                <img src="assets/module4/crousel/m4s2_c2_Slide3.jpg" class="d-block w-100" alt="Slide 2" loading="lazy">
+                <div class="carousel-caption">
+                </div>
+                <audio controls>
+                  <source src="assets/module4/crousel/m4s2_c2_vo3.mp3" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
+              
+              <div class="carousel-item">
+                <img src="assets/module4/crousel/m4s2_c2_Slide4.jpg" class="d-block w-100" alt="Slide 2" loading="lazy">
+                <div class="carousel-caption">
+                </div>
+                <audio controls>
+                  <source src="assets/module4/crousel/m4s2_c2_vo4.mp3" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>                  
+          </div>
+          <!-- Navigation Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#Carousel2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#Carousel2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    <div class="center">Click on Play Button</div>
+
+    <p>Assess yourself in the practical using the <a href="https://kedskills.org/pdf/GDA_E/Unit4/LO2/4.2%20Practical%20Assessment%20Checklist%20-%20Medication%20Routes.pdf">Practical Assessment Checklist</a></p>
+
+    <div class="heading">
+        <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">   
+        <h2>Conclusion</h2>
+    </div>
+        <p>Based on your learning, you are now able to understand medication routes and administration. Good Luck in your future job as a General Duty Assistant.
+        </p>
+
+    
+    <div class="twoimage">
+        <table>
+          <tr>
+            <td><img src="assets/module4/m4s2_image1.jpg" alt=""></td>
+            <td><img src="assets/module4/m4s2_image9.png" alt=""></td>
+          </tr>
+        </table>
+      </div>
+
+        <p><b>CONGRATULATIONS! You have completed the goal!
+        </b></p>
+        <p><b>Find out how you will be assessed on your practical skills from the button below.
+        </b></p>
+        <div class="assessbutton">
+            <button (click)="toggleTable()">How will I be Assessed?</button>
+          </div>
+          
+          <!-- Table Display -->
+          <div class="assessment-table" *ngIf="isTableVisible">
+            <h3>How Will I Be Assessed?</h3>
+            <p class="learning-objective">
+                Learning Objective: To learn about common medication routes and administration
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>Blue</th>
+                  <th>Red</th>
+                  <th>Black</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Theory</td>
+                  <td>You should be able to <span class="highlight-blue">identify different</span> medication routes.</td>
+                  <td>You should be able to <span class="highlight-red">explain</span> how how different medication routes work in the body.</td>
+                  <td>You should be able to  <span class="highlight-black"> oragnize </span> the importance of having knowledge about the different medication routes.</td>
+                </tr>
+                <tr>
+                  <td>Practical</td>
+                  <td colspan="3">Practical Activity : List the routes <br> <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit4/LO2/4.2%20Practical%20Assessment%20Checklist%20-%20Medication%20Routes.pdf">'Practical Assessment Checklist'</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>  
+    
+   
+</div><!--doit-->
+</div><!--content ends-->

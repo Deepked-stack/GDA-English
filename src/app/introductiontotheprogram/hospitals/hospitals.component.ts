@@ -10,6 +10,13 @@ import { CommonModule } from '@angular/common';
   imports: [FormsModule, CommonModule],
 })
 export class HospitalsComponent {
+  
+  isCorrect: boolean | null = null;
+
+validateAnswer(value: string) {
+  this.isCorrect = value.trim().toLowerCase() === 'ospital';
+}
+
   userOpinion: string | undefined;
   feedback: { [key: string]: string | undefined } = {};
 
@@ -22,15 +29,6 @@ export class HospitalsComponent {
     option5: false,
   };
 
-  answers2 = {
-    option1: false,
-    option2: false,
-    option3: false,
-    option4: false,
-    option5: false,
-    option6: false,
-    option7: false,
-  };
 
   // MCQ feedback
   mcqFeedback: { [key: number]: string } = {};
@@ -52,6 +50,17 @@ export class HospitalsComponent {
     }
   }
 
+  answers2 = {
+    option1: false,
+    option2: false,
+    option3: false,
+    option4: false,
+    option5: false,
+    option6: false,
+    option7: false,
+  };
+  feedback2: { [key: string]: string | undefined } = {};
+
   // Exercise 2 (7 questions) answers
   checkAnswer2(option: string) {
     const correctAnswers2 = {
@@ -65,9 +74,9 @@ export class HospitalsComponent {
     };
 
     if (this.answers2[option] === correctAnswers2[option]) {
-      this.feedback[option] = '✔️'; // Correct answer
+      this.feedback2[option] = '✔️'; // Correct answer
     } else {
-      this.feedback[option] = '❌'; // Incorrect answer
+      this.feedback2[option] = '❌'; // Incorrect answer
     }
   }
 
@@ -104,6 +113,11 @@ export class HospitalsComponent {
       this.isSecondOptionSelected = true;  // Allow incorrect answers
       this.isThirdOptionSelected = true;   // Allow incorrect answers
     }
+  }
+  isTableVisible = false;
+
+  toggleTable() {
+    this.isTableVisible = !this.isTableVisible;
   }
 
 }

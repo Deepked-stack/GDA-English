@@ -1,1 +1,603 @@
-<p>effective-communication works!</p>
+<div class="content">
+  <div class="startit">
+<p>Welcome! Let us start your journey!</p>
+
+<div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/458427531?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="GDA2.4 Introduction"></iframe> 
+</div>
+<div class="heading">
+  <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+  <h2>What I Already know</h2>
+</div>
+<p>Before understandingabout what communication is, let's test your prior knowledge in <b>What I Know Already</b></p>
+<div class="sideimg">
+  <p>Read the statements given below. Can you identify what a general duty assistant should do versus what they should not do?	
+  </p>
+  <img src="assets/module2/m2_s4_image1.jpg" alt="">
+</div>
+<p style="font-size: small;">(select the correct one's)</p>
+<!--checkbox questions-->
+<div class="difference-section">
+    <div class="question-section">
+    <p class="question"></p>
+    <div class="options">
+      <div class="option">
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')" class="checkbox">
+          <span class="statement">When a patient is talking to you do not have to listen carefully.It is ok to look at your phone to read messages from other nurses and GDAs	
+            .</span>
+        </label>
+        <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
+          {{ feedback.option1 }}
+        </span>
+      </div>
+      <div class="option">
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')" class="checkbox">
+          <span class="statement">Body language is very important when you address other people.	
+          </span>
+        </label>
+        <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
+          {{ feedback.option2 }}
+        </span>
+      </div>
+      <div class="option">
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')" class="checkbox">
+          <span class="statement">Language skills are not important in a GDA’s job.	
+          </span>
+        </label>
+        <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
+          {{ feedback.option3 }}
+        </span>
+      </div>
+      <div class="option">
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')" class="checkbox">
+          <span class="statement">When a patient is shifted to another facility it is important to communicate to pass on information.	
+          </span>
+        </label>
+        <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
+          {{ feedback.option4 }}
+        </span>
+      </div>
+      <div class="option">
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')" class="checkbox">
+          <span class="statement">When you write an email try to be as clear as you can in order to avoid misunderstandings.	
+          </span>
+        </label>
+        <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
+          {{ feedback.option5 }}
+        </span>
+      </div>
+      <div class="option">
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option6" (change)="checkAnswer('option6')" class="checkbox">
+          <span class="statement"> Always be aware of the varied styles in which people often communicate.
+          </span>
+        </label>
+        <span *ngIf="feedback.option6" [ngClass]="{'correct': feedback.option6 === '✔️', 'incorrect': feedback.option6 === '❌'}">
+          {{ feedback.option6 }}
+        </span>
+      </div>
+      <div class="option">
+        <label>
+          <input type="checkbox" [(ngModel)]="answers.option7" (change)="checkAnswer('option7')" class="checkbox">
+          <span class="statement">Accept payment or tips or gifts, either directly or indirectly, from a patient when they are nice to you.	
+	
+          </span>
+        </label>
+        <span *ngIf="feedback.option7" [ngClass]="{'correct': feedback.option7 === '✔️', 'incorrect': feedback.option7 === '❌'}">
+          {{ feedback.option7 }}
+        </span>
+      </div>
+    </div>
+  
+  <p><b>Find out how you will be assessed on you theory skills from the button below.</b></p>
+  <div class="assessbutton">
+    <button (click)="toggleTable()">How will I be Assessed?</button>
+  </div>
+  
+  <!-- Table Display -->
+  <div class="assessment-table" *ngIf="isTableVisible">
+    <h3>How Will I Be Assessed?</h3>
+    <p class="learning-objective">
+      Learning Objective: To do effective communication
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>Blue</th>
+          <th>Red</th>
+          <th>Black</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Theory</td>
+          <td>You can <span class="highlight-blue">identify</span> basic features of effective communication for a GDA and <span class="highlight-blue">identify</span> techniques to use in Therapeutic Communication.</td>
+          <td>You can <span class="highlight-red">explain</span>  the use of the 7Cs of communication and explain how a Therapeutic Communication perspective approach, affects the patients</td>
+          <td>You can <span class="highlight-black">analyse situations</span>for better and more effective communication and analyse the benefits of therapeutic communication.</td>
+        </tr>
+        <tr>
+          <td>Practical</td>
+          <td colspan="3">Practical Activity: Demonstration/Role Play <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit2/LO4/2.4%20Practical%20Assessment%20Checklist,%20new.pdf">‘Practical Assessment Checklist’</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+</div><!--startit ends-->
+
+<div class="learnit">
+  <p>Come, let us learn the theory of this learning outcome Look at the resources below and then attempt the <b>My Theory Task</b>.</p>
+ 
+<div class="heading">
+  <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+  <h2>My Resources</h2>
+  </div>
+<p>1. A GDA needs to have basic knowledge about communication and when and with whom. Let’s learn about the different ways of communicating.
+</p>
+<div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/458427377?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="GDA2.4 Communication"></iframe>
+</div>
+<p><b>Checkpoint! Please write down the answers in your notebook.</b></p>
+<div class="listingarea">
+  <p>Communication</p>
+<ol>
+  <li> Why do you need to have the skills to be able to communicate in different ways?</li>
+<li> Can you give examples when you use body language.</li>
+</ol>
+<p>Give examples of:</p>
+<ol>
+  <li>Non -Verbal communication</li>
+  <li>Formal communication</li>
+  <li>Non Formal communication</li>
+</ol>
+</div>
+<p>2. Therapeutic Communication has shown many positive outcomes with shorter time in hospital for patients and safer healthcare for both patients and professionals. How does it occur? Let us understand more about it.
+</p>
+
+<div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/679019378?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Therapeutic Communication"></iframe>
+</div>
+<div class="mcqlist">
+  <ol>
+    <li>
+      The core value in Therapeutic Communication is:
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'true')">
+              To treat the patient as an subject- as a whole person with their own personality and prefrences.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ1(1, 'false')">
+              To treat the patient as an object- as a patient identidied with their diagnosis.
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback1[1]" [ngClass]="{'correct': mcqFeedback1[1] === '✔️', 'incorrect': mcqFeedback1[1] === '❌'}">{{ mcqFeedback1[1] }}</span>
+    </li>
+
+    <li>
+      Research in Therapeutic Communication has shown:
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'false')">
+              Ill Health among the professionals.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ1(2, 'true')">
+              Shorter stay in hospital for the patients.
+          </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback1[2]" [ngClass]="{'correct': mcqFeedback1[2] === '✔️', 'incorrect': mcqFeedback1[2] === '❌'}">{{ mcqFeedback1[2] }}</span>
+    </li>
+
+    <li>
+      In Therapeutic Communication:
+            <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'false')">
+              You ask a lot of questions
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ1(3, 'true')">
+              You ask open questions
+          </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback1[3]" [ngClass]="{'correct': mcqFeedback1[3] === '✔️', 'incorrect': mcqFeedback1[3] === '❌'}">{{ mcqFeedback1[3] }}</span>
+    </li>
+  </ol>
+</div>
+<div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/699085606?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Communication Skills"></iframe> 
+</div>
+
+<div class="mcqlist">
+  <ol>
+    <li>
+      LSRW refers to:
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'false')">
+              Listening, Speaking, Remembering, Writing
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'true')">
+              Listening, Speaking, Reading, Writing
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback2[1]" [ngClass]="{'correct': mcqFeedback2[1] === '✔️', 'incorrect': mcqFeedback2[1] === '❌'}">{{ mcqFeedback2[1] }}</span>
+    </li>
+
+    <li>
+      Eye contact is a part of:
+     <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'true')">
+              Non-Verbal Communication.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'false')">
+              Verbal Communication
+          </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback2[2]" [ngClass]="{'correct': mcqFeedback2[2] === '✔️', 'incorrect': mcqFeedback2[2] === '❌'}">{{ mcqFeedback2[2] }}</span>
+    </li>
+  </ol>
+</div><!--mcq ends-->
+<p>Make sure to attempt <b>'My Theory Task'</b> before  moving on to <b>Do It!</b></p>
+<div class="heading">
+  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+  <h2>My Theory Task</h2>
+</div>
+
+<div class="division">Part 1</div>
+<p><b>IDENTIFY</b></p>
+<p>1. As a GDA, who among the following would you be communicating with on an everyday professional basis?
+</p>
+<!-- ----------------------checkbox-------2 -->
+
+<div class="difference-section">
+  <div class="question-section">
+   <div class="options">
+     <div class="option">
+     <label>
+         <input type="checkbox" [(ngModel)]="answers2.option1" (change)="checkAnswer2('option1')" />
+         <div class="statement">The Patient</div>
+     </label>
+     <span *ngIf="feedback2.option1" [ngClass]="{'correct': feedback2.option1 === '✔️', 'incorrect': feedback2.option1 === '❌'}">{{ feedback2.option1 }}</span>
+     </div>
+     <div class="option">
+     <label>
+         <input type="checkbox" [(ngModel)]="answers2.option2" (change)="checkAnswer2('option2')" />
+        <div class="statement">The nurse</div>
+     </label>
+     <span *ngIf="feedback2.option2" [ngClass]="{'correct': feedback2.option2 === '✔️', 'incorrect': feedback2.option2 === '❌'}">{{ feedback2.option2 }}</span>
+
+     </div>
+     <div class="option">
+     <label>
+         <input type="checkbox" [(ngModel)]="answers2.option3" (change)="checkAnswer2('option3')" />
+         <div class="statement">The doctor</div>
+     </label>
+     <span *ngIf="feedback2.option3" [ngClass]="{'correct': feedback2.option3 === '✔️', 'incorrect': feedback2.option3 === '❌'}">{{ feedback2.option3 }}</span>
+     </div>
+     <div class="option">
+     <label>
+         <input type="checkbox" [(ngModel)]="answers2.option4" (change)="checkAnswer2('option4')" />
+        <div class="statement">The Hospital Owners</div>
+     </label>
+     <span *ngIf="feedback2.option4" [ngClass]="{'correct': feedback2.option4 === '✔️', 'incorrect': feedback2.option4 === '❌'}">{{ feedback2.option4 }}</span>
+   </div>
+   <div class="option">
+     <label>
+         <input type="checkbox" [(ngModel)]="answers2.option5" (change)="checkAnswer2('option5')" />
+         <div class="statement">The Hospital Administeration.</div>
+     </label>
+     <span *ngIf="feedback2.option5" [ngClass]="{'correct': feedback2.option5 === '✔️', 'incorrect': feedback2.option5 === '❌'}">{{ feedback2.option5 }}</span>
+     </div>
+     <div class="option">
+     <label>
+         <input type="checkbox" [(ngModel)]="answers2.option6" (change)="checkAnswer2('option6')" />
+         <div class="statement">Hospital Canteen Staff.</div>
+     </label>
+     <span *ngIf="feedback2.option6" [ngClass]="{'correct': feedback2.option6 === '✔️', 'incorrect': feedback2.option6 === '❌'}">{{ feedback2.option6 }}</span>
+     </div>
+     <div class="option">
+     <label>
+         <input type="checkbox" [(ngModel)]="answers2.option7" (change)="checkAnswer2('option7')" />
+         <div class="statement">Hospital Chemist/ Pharmaceutical Staff</div>
+     </label>
+     <span *ngIf="feedback2.option7" [ngClass]="{'correct': feedback2.option7 === '✔️', 'incorrect': feedback2.option7 === '❌'}">{{ feedback2.option7 }}</span>
+     </div>
+ </div>
+</div>
+</div>
+   </div>
+
+    <p>
+      2. <b>Identify if the following are verbal or non-verbal ways to communicate? Type a ‘V’ in front of Verbal and ‘NV’ in front of Non-Verbal.</b>
+    </p>
+    
+    <form>
+      <div class="fillup">
+        
+         Reading a daily care plan of patient - This is 
+        <input type="text" [(ngModel)]="answersFillUp.q1" name="q1"> communication 
+        <span *ngIf="answersFillUp.q1">
+          {{ validateAnswerFillUp(answersFillUp.q1, 'V') }}
+        </span>
+      </div>
+      <div class="fillup">
+         Watching a patient for any signs of pain or discomfort - This is 
+        <input type="text" [(ngModel)]="answersFillUp.q2" name="q2"> communication 
+        <span *ngIf="answersFillUp.q2">
+          {{ validateAnswerFillUp(answersFillUp.q2, 'NV') }}
+        </span>
+      </div>
+      <div class="fillup">
+         Talking to the nurse about a patient - This is 
+        <input type="text" [(ngModel)]="answersFillUp.q3" name="q3"> communication 
+        <span *ngIf="answersFillUp.q3">
+          {{ validateAnswerFillUp(answersFillUp.q3, 'V') }}
+        </span>
+      </div>
+      <div class="fillup">
+         If the patient’s relatives are sitting, biting their nails, or their feet are constantly tapping, these are signs of tension - This is 
+        <input type="text" [(ngModel)]="answersFillUp.q4" name="q4"> communication 
+        <span *ngIf="answersFillUp.q4">
+          {{ validateAnswerFillUp(answersFillUp.q4, 'NV') }}
+        </span>
+      </div>
+    </form>
+  <p>3. <b>Notebook activity!</b> Imagine you have a new GDA colleague who has just shifted from Kerala to Delhi for his job. Guide them and point out:
+  </p> 
+  <ol style="list-style-type: lower-alpha;">
+    <li>Any three barriers of communication he may face in his job</li>
+    <li>Any three ways he can communicate better with examples Write the answers in your notebook and discuss with a GDA colleague or with a family member</li>
+  </ol> 
+<p>4. Choose the correct responsibilities of a General Duty Assistant related to Therapeutic Communication.</p>
+<hr>
+
+<!-- ----------------------checkbox-------3 -->
+
+   <div class="difference-section">
+    <div class="question-section">
+      <div class="options">
+       <div class="option">
+       <label>
+           <input type="checkbox" [(ngModel)]="answers3.option1" (change)="checkAnswer3('option1')" />
+           <div class="statement">Give the patient time and space in order to talk.
+
+           </div>
+       </label>
+       <span *ngIf="feedback3.option1" [ngClass]="{'correct': feedback3.option1 === '✔️', 'incorrect': feedback3.option1 === '❌'}">{{ feedback3.option1 }}</span>
+       </div>
+       <div class="option">
+       <label>
+           <input type="checkbox" [(ngModel)]="answers3.option2" (change)="checkAnswer3('option2')" />
+          <div class="statement">Apply nail polish before talking to the patient
+
+          </div>
+       </label>
+       <span *ngIf="feedback3.option2" [ngClass]="{'correct': feedback3.option2 === '✔️', 'incorrect': feedback3.option2 === '❌'}">{{ feedback3.option2 }}</span>
+        </div>
+       <div class="option">
+       <label>
+           <input type="checkbox" [(ngModel)]="answers3.option3" (change)="checkAnswer3('option3')" />
+           <div class="statement">Administer medicines to the patient before talking to the patient
+
+           </div>
+       </label>
+       <span *ngIf="feedback3.option3" [ngClass]="{'correct': feedback3.option3 === '✔️', 'incorrect': feedback3.option3 === '❌'}">{{ feedback3.option3 }}</span>
+       </div>
+       <div class="option">
+       <label>
+           <input type="checkbox" [(ngModel)]="answers3.option4" (change)="checkAnswer3('option4')" />
+          <div class="statement">Let the patient break the ice it’s ok to sit with the patient in silence for a while
+
+          </div>
+       </label>
+       <span *ngIf="feedback3.option4" [ngClass]="{'correct': feedback3.option4 === '✔️', 'incorrect': feedback3.option4 === '❌'}">{{ feedback3.option4 }}</span>
+     </div>
+     <div class="option">
+       <label>
+           <input type="checkbox" [(ngModel)]="answers3.option5" (change)="checkAnswer3('option5')" />
+           <div class="statement">Ensure that the patient is comfortable in the bed
+
+           </div>
+       </label>
+       <span *ngIf="feedback3.option5" [ngClass]="{'correct': feedback3.option5 === '✔️', 'incorrect': feedback3.option5 === '❌'}">{{ feedback3.option5 }}</span>
+       </div>
+       <div class="option">
+       <label>
+           <input type="checkbox" [(ngModel)]="answers3.option6" (change)="checkAnswer3('option6')" />
+           <div class="statement">As a healthcare worker you need to pay attention to the patients´ condition.
+
+           </div>
+       </label>
+       <span *ngIf="feedback3.option6" [ngClass]="{'correct': feedback3.option6 === '✔️', 'incorrect': feedback3.option6 === '❌'}">{{ feedback3.option6 }}</span>
+       </div>
+       <div class="option">
+       <label>
+           <input type="checkbox" [(ngModel)]="answers3.option7" (change)="checkAnswer3('option7')" />
+           <div class="statement">You don’t need to assist the patient while using the washroom.
+
+           </div>
+       </label>
+       <span *ngIf="feedback3.option7" [ngClass]="{'correct': feedback3.option7 === '✔️', 'incorrect': feedback3.option7 === '❌'}">{{ feedback3.option7 }}</span>
+       </div>
+   </div>
+ </div>
+ </div>
+     </div>
+
+     <div class="division">Part 2</div>
+     <p><b>EXPLAIN!</b></p>
+<p>5.<b>Notebook Activity!</b>Explain the 7 c’s communication skills given below in your notebook using examples from your profession as a GDA or from the healthcare professions:</p>
+<div class="allps">
+<p>Give an example of how you can be <b>'CLEAR'</b> when you communicate</p>
+<p>Describe how you can be <b>"CONCISE"</b> IN YOUR communication?</p>
+<p>How do you make sure that your commmunication is <b>"CORRECT"?</b></p>
+<p>How could your communication <b>"CONCRETE"?</b></p>
+<p>How do you make sure that your communication is <b>"COHERENT"</b></p>
+<p>How do you make sure that your commmunication is <b>'COMPLETE'?</b></p>
+<p>Give an example of how you can be <b>'COURTEOUS'</b> when you communicate.</p>
+</div>
+
+<p>6. Mention any four open questions that a Health care worker should use while using Therapeutic Communication. Write the questions in your notebook and have a class discussion.
+</p>
+<div class="division">Part 3</div>
+
+<img src="assets/module2/m2s4_image2.jpg" alt="" style="display: flex; justify-self: center; width: 100%; height: 40vh;">
+<p>A. Manju, a GDA, was very upset with a patient for not eating. Manju started to argue with the patient, talking loudly. Other patients could hear Manju in the corridor and in the ward next door
+</p>
+<ul style="list-style: disc; margin-left: 4%;">
+  <li>Are these right behaviour for a GDA? </li>
+  <li>How could Manju have acted differently?</li>
+</ul>
+
+<p>Discuss with a friend or family member, try to use the communication words from the presentation
+</p>
+
+<p>B. After the meeting, when the participants left the room, Shibani-a nurse and Deepti-a GDA, talked about what happened in the meeting. But soon they realised they disagreed on what was explained during the meeting. What should have been done to avoid misunderstandings? Explain your answer.
+</p>
+
+<p>C. There is a patient lying in bed crying and screaming what can you do and say to make the patient feel safe and comfortable? Write the answers in your notebook and have discussion with your class/supervisor.
+</p>
+<div class="center">
+  <b>Great! Move on to DoIt</b>
+</div>
+
+<p><b>Find out how you will be assessed on your theory skills from the button below.
+</b></p>
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To do effective communication
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">identify</span> basic features of effective communication for a GDA and <span class="highlight-blue">identify</span> techniques to use in Therapeutic Communication.</td>
+        <td>You can <span class="highlight-red">explain</span>  the use of the 7Cs of communication and explain how a Therapeutic Communication perspective approach, affects the patients</td>
+        <td>You can <span class="highlight-black">analyse situations</span>for better and more effective communication and analyse the benefits of therapeutic communication.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Demonstration/Role Play <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit2/LO4/2.4%20Practical%20Assessment%20Checklist,%20new.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div><!--learn it ends-->
+
+<div class="doit">
+
+  <h2>DoIt</h2>
+  <p>Almost done! Let's finish this goal with your practical,</p>
+ <div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/458427599?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="GDA2.4 Practical Task English"></iframe>
+ </div>
+<p>Assess yourself in the practical using the <a href="https://kedskills.org/pdf/GDA_E/Unit2/LO4/2.4%20Practical%20Assessment%20Checklist,%20new.pdf">'Practical Assessment Checklist.'</a></p>
+<div class="heading">
+  <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt=""> 
+<h2>Conclusion</h2>
+</div>
+
+<p>Based on your learning, can you write the rules of effective communication?
+</p>
+<p>a. Write the rules of effective communication?
+</p>
+<p>b. Discuss why it is important to practice ‘Therapeutic Communication'
+</p>
+
+<img src="assets/module2/m2_s4_image3.jpg" alt="" style="display: flex; justify-self: center; width: 100%; height: 60vh; mix-blend-mode: darken;" >
+
+<p><b>Find out how you will be assessed on your practical skills from the button below.</b></p>
+<p><b>CONGRATULATIONS! You have completed the goal!
+</b></p>
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To do effective communication
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">identify</span> basic features of effective communication for a GDA and <span class="highlight-blue">identify</span> techniques to use in Therapeutic Communication.</td>
+        <td>You can <span class="highlight-red">explain</span>  the use of the 7Cs of communication and explain how a Therapeutic Communication perspective approach, affects the patients</td>
+        <td>You can <span class="highlight-black">analyse situations</span>for better and more effective communication and analyse the benefits of therapeutic communication.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Demonstration/Role Play <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit2/LO4/2.4%20Practical%20Assessment%20Checklist,%20new.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div><!--do it ends-->
+</div><!--content ends-->
+

@@ -36,7 +36,7 @@
       </app-hospitals>
 
     </div>
-
+<!--module1 submodules ends-->
     <div *ngIf="selectedSubmodule=='General Duty Assistant Introduction'">
       <app-gda-intro>
 
@@ -64,7 +64,60 @@
       </app-effective-communication>
 
     </div> 
-    </div>
+    <!--module2 submodules ends-->
+
+
+    <div *ngIf="selectedSubmodule=='Microorganisms and Infections'">
+      <app-microorg-and-infec>
+
+      </app-microorg-and-infec>
+
+    </div> 
+
+    <div *ngIf="selectedSubmodule=='Basic Hygiene Routines and Infection Control'">
+      <app-basic-hygeine-and-infec-control>
+
+      </app-basic-hygeine-and-infec-control>
+
+    </div> 
+
+    <div *ngIf="selectedSubmodule=='Biomedical Waste Management'">
+      <app-biomedical-waste-mgmnt>
+
+      </app-biomedical-waste-mgmnt>
+
+    </div> 
+    <div *ngIf="selectedSubmodule=='Sterilization and Disinfection'">
+      <app-sterlization-disinfection>
+
+      </app-sterlization-disinfection>
+
+    </div> 
+    <div *ngIf="selectedSubmodule=='Aseptic Work and Cleaning Procedures'">
+      <app-aseptic-work>
+
+      </app-aseptic-work>
+
+    </div> 
+<!--module3 submodules ends-->
+
+<div *ngIf="selectedSubmodule=='Anatomy and Physiology'">
+  <app-anatomy-and-physio>
+
+  </app-anatomy-and-physio>
+
+</div> 
+
+<div *ngIf="selectedSubmodule=='Medication Routes and Administration'">
+  <app-medication-routes-and-admn>
+
+  </app-medication-routes-and-admn>
+
+</div> 
+
+
+<!--add components above here only-->
+    </div><!--dont touch-->
     
-  </div>
+  </div><!--donttouch-->
   

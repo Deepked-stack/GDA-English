@@ -1,8 +1,16 @@
 <!-- <app-study-nav></app-study-nav> -->
-
+<div class="content">
 <div class="container">
-    <div class="videodiv">mbed that video here</div>
-
+  <hr>
+  <p>Welcome! let us start with our journey!</p>
+    <div class="imgwithaudio">
+      <img src="assets/module1/m1s4_image1.jpg" alt="">
+      <audio controls>
+        <source src="assets/module1/m1s4_vo1.mp3" type="audio/mpeg" >
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+    <hr>
 Where will Noor's son be admitted?
 <br>
 <br>
@@ -10,14 +18,24 @@ You must have seen this place at least once, either in real life or on TV . Pati
 
 <br>
 <br>
-It is the H<input type="text" id="hblank"/>
+<div class="blank">
+  <label for="hblank">It is the H</label>
+  <input type="text" id="hblank" #answer class="form-control" placeholder="Type your answer" /></div>
+  <button (click)="validateAnswer(answer.value)" class="btn btn-primary mt-2">Submit</button>
+
+<div *ngIf="isCorrect !== null" class="mt-2">
+  <span *ngIf="isCorrect" class="text-success">Correct! The answer is hospital.</span>
+  <span *ngIf="!isCorrect" class="text-danger">Incorrect. Try again!</span>
+</div>
 </div>
 
 <br>
 <br>
-<div class="difference-section">
-    <h2>What I Know Already...</h2>
+  <div class="heading">
+    <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">    
+    <h2>What I Know Already...</h2></div>
     <p>Before understanding about the healthcare delivery systems, let’s test your prior knowledge on it in ‘What I Know Already...’!</p>
+    <div class="difference-section">
     <div class="question-section">
       <p class="question">Which of the following statements about healthcare are correct?</p>
       <div class="options">
@@ -70,17 +88,51 @@ It is the H<input type="text" id="hblank"/>
     
     
     
+    <p style="font-size: x-small;">Hover here:</p>
+    <div 
+      class="changeonhover" 
+      style="width: 100%; height: 25rem; background-image: url('assets/module1/m1s4_hover1.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat; border: 0.1px solid black;"
+      onmouseover="this.style.backgroundImage='url(assets/module1/m1s4_hover2.JPG)'" 
+      onmouseout="this.style.backgroundImage='url(assets/module1/m1s4_hover1.JPG)'">
+    </div>
     
-        <!-- <img src="" alt=""> -->
-         <div class="changeonhover">
-            <div class="h2">
-                <h2>This exercise tested your prior knowledge on basics of health care Systems in India</h2>
-            </div>
-            <div class="hoverimage">
-                
-            </div>
-         </div>
+        
       </div>
+
+      <div class="assessbutton">
+        <button (click)="toggleTable()">How will I be Assessed?</button>
+      </div>
+      
+      <!-- Table Display -->
+      <div class="assessment-table" *ngIf="isTableVisible">
+        <h3>How Will I Be Assessed?</h3>
+        <p class="learning-objective">
+          Learning Objective: To know about history and important discoveries in Healthcare
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Blue</th>
+              <th>Red</th>
+              <th>Black</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Theory</td>
+              <td>You can <span class="highlight-blue">define</span> a <span class="highlight-blue">Hospital.</span></td>
+              <td>You can <span class="highlight-red">functions of</span>hospitals.</td>
+              <td>You can <span class="highlight-black">compare</span>between the hospitals with all functional departments and hospitals lacking some departments.</td>
+            </tr>
+            <tr>
+              <td>Practical</td>
+              <td colspan="3">Practical Activity: Observe and Record <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO3/1.3%20Practical%20Assessment%20Checklist%20eng.pdf">‘Practical Assessment Checklist’</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
       </div>
 <!-- learnit -->
  
@@ -92,8 +144,7 @@ It is the H<input type="text" id="hblank"/>
  <br>
 <div class="learnit">
 Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>'My Theory Task'</b><br>
-<br><div class="heading"><h2>My Resources</h2></div><br>
-<div class="content">
+<br><div class="heading"><img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt=""><h2>My Resources</h2></div><br>
     <p>Read The Definition given below and click on the correct statement.</p>
     <div class="ollist-and-image">
         <div class="ollist">
@@ -121,9 +172,9 @@ Come, let us learn the theory of this learning outcome. Look at the resources be
                 </li>
             </ol>
         </div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTScVzkYHt256-z_1zDfuOygroTr3vIqdSTSQ&s" alt="Hospital Image">
+        <img src="assets/module1/m1s4_image2.jpg" alt="Hospital Image">
     </div>
-</div>
+
 
 <br>
 <br>
@@ -133,8 +184,8 @@ In your class, discuss the meaningof hospitals and what it does according to you
 <div class="content2">
 2. A hospital is a place which plays a very significant role in well being of a society. However, there is a lot more to hospitals. Let's understand it together.
 
-<div class="videofucoahospital">
-    video fuctions of a hospital
+<div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/454312359?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="1.3 Functions of a Hospital"></iframe>
 </div>
 <b>Checkpoint!</b>
 
@@ -186,7 +237,11 @@ In your class, discuss the meaningof hospitals and what it does according to you
       </ol>
       
 
-<br><div class="heading"><h2><b>My Theory Task</b></h2></div>
+<br><div class="heading">
+  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+
+  <h2>My Theory Task</h2>
+</div>
 
 <div class="division">Part 1</div>
 
@@ -200,37 +255,37 @@ In your class, discuss the meaningof hospitals and what it does according to you
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option1" (change)="checkAnswer2('option1')" />
             <div class="statement">i. Aparna works as a nurse in a hospital, she gets time-to-time training.</div>
-            <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">{{ feedback.option1 }}</span>
+            <span *ngIf="feedback2.option1" [ngClass]="{'correct': feedback2.option1 === '✔️', 'incorrect': feedback2.option1 === '❌'}">{{ feedback2.option1 }}</span>
         </label>
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option2" (change)="checkAnswer2('option2')" />
            <div class="statement"> ii. A hospital can function without a Finance and Accounts department.</div>
-            <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">{{ feedback.option2 }}</span>
+            <span *ngIf="feedback2.option2" [ngClass]="{'correct': feedback2.option2 === '✔️', 'incorrect': feedback2.option2 === '❌'}">{{ feedback2.option2 }}</span>
         </label>
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option3" (change)="checkAnswer2('option3')" />
             <div class="statement">iii. In district hospitals, OPD has easy access to x-ray rooms and pharmacy.</div>
-            <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">{{ feedback.option3 }}</span>
+            <span *ngIf="feedback2.option3" [ngClass]="{'correct': feedback2.option3 === '✔️', 'incorrect': feedback2.option3 === '❌'}">{{ feedback2.option3 }}</span>
         </label>
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option4" (change)="checkAnswer2('option4')" />
            <div class="statement"> iv. Hospice care is available in every district in India.</div>
-            <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">{{ feedback.option4 }}</span>
+            <span *ngIf="feedback2.option4" [ngClass]="{'correct': feedback2.option4 === '✔️', 'incorrect': feedback2.option4 === '❌'}">{{ feedback2.option4 }}</span>
         </label>
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option5" (change)="checkAnswer2('option5')" />
             <div class="statement">v. Rajiv is a dietician in Take Care hospital, his work is to provide appropriate food and nutrient intake for patients.</div>
-            <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">{{ feedback.option5 }}</span>
+            <span *ngIf="feedback2.option5" [ngClass]="{'correct': feedback2.option5 === '✔️', 'incorrect': feedback2.option5 === '❌'}">{{ feedback2.option5 }}</span>
         </label>
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option6" (change)="checkAnswer2('option6')" />
             <div class="statement">vi. Suraksha hospital in the town is very small, it doesn’t require a housekeeping department and staff.</div>
-            <span *ngIf="feedback.option6" [ngClass]="{'correct': feedback.option6 === '✔️', 'incorrect': feedback.option6 === '❌'}">{{ feedback.option6 }}</span>
+            <span *ngIf="feedback2.option6" [ngClass]="{'correct': feedback2.option6 === '✔️', 'incorrect': feedback2.option6 === '❌'}">{{ feedback2.option6 }}</span>
         </label>
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option7" (change)="checkAnswer2('option7')" />
             <div class="statement">vii. Community hospitals are equipped to provide surgical services for minor injuries.</div>
-            <span *ngIf="feedback.option7" [ngClass]="{'correct': feedback.option7 === '✔️', 'incorrect': feedback.option7 === '❌'}">{{ feedback.option7 }}</span>
+            <span *ngIf="feedback2.option7" [ngClass]="{'correct': feedback2.option7 === '✔️', 'incorrect': feedback2.option7 === '❌'}">{{ feedback2.option7 }}</span>
         </label>
     </div>
 </div>
@@ -257,12 +312,49 @@ In your class, discuss the meaningof hospitals and what it does according to you
 
 <div class="division">Part 3</div>
 <div class="injdiv">
-<b>F</b>. Draw comparison between your experiences regarding hospitals and what you have studied. Did any hospital from your personal experience lack any department? Write the comparisons in detail. You can also use the internet for research.<img id="weigh" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw4T-tBl8DgF3QJ2iL5OOWmegV8Q8fZZfbTigLLrzqmEkSCtfypZc8mbBytwCbfTuF8do&usqp=CAU" alt="weight">
+<b>F</b>. Draw comparison between your experiences regarding hospitals and what you have studied. Did any hospital from your personal experience lack any department? Write the comparisons in detail. You can also use the internet for research.
 </div>
 <div class="inmiddle"><br>
    <b> <h2>Great!</h2>
     <h3>Move on to 'Do It!'</h3></b>
 </div>
+<p><b>Find out how you will be assessed on your theory skills from the button below.
+</b></p>
+
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To know about history and important discoveries in Healthcare
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">define</span> a <span class="highlight-blue">Hospital.</span></td>
+        <td>You can <span class="highlight-red">functions of</span>hospitals.</td>
+        <td>You can <span class="highlight-black">compare</span>between the hospitals with all functional departments and hospitals lacking some departments.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Observe and Record <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO3/1.3%20Practical%20Assessment%20Checklist%20eng.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 <!--Do It-->
 <hr>
@@ -271,19 +363,59 @@ Do it
 
 <div class="doit">
 Almost done! Let's finish this goal with your practical.<br>
-
-<h2><b>My Practical Task</b></h2>
+<div class="heading">
+<img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
+<h2>My Practical Task</h2>
+</div>
     Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.
 
-    <div class="doitvideo">
-        Mypractical task video
+    <div class="videodiv">
+      <iframe src="https://player.vimeo.com/video/454312647?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="1.3 My Practical Task"></iframe>
     </div>
-
-
-    Assess yourself in the practical using 'Practical Assesment Checklist'
+<hr>
+<div class="sideimg">
+    <p>Assess yourself in the practical using 'Practical Assesment Checklist'
 
     Based on your learning , can you justify why hospitals are an integral part of coomunity.<br>
-    Discuss in you class.
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmupPZu3ZlfGHZTVy5bHUZxZ0Tw50VeiydYMb4f0TK1eDBezJE6R2JqN_UkEjwkOJhECs&usqp=CAU" alt="">
+    Discuss in you class.</p>
+    <img src="assets/module1/m1s4_brain.jpg" alt=""></div>
+</div>
+<p><b>CONGRATULATIONS! you have completed the goal!</b></p>
+<p><b>Find out how you will be assessed on your practical skills from the button below.
+</b></p>
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To know about history and important discoveries in Healthcare
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">define</span> a <span class="highlight-blue">Hospital.</span></td>
+        <td>You can <span class="highlight-red">functions of</span>hospitals.</td>
+        <td>You can <span class="highlight-black">compare</span>between the hospitals with all functional departments and hospitals lacking some departments.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Observe and Record <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO3/1.3%20Practical%20Assessment%20Checklist%20eng.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 </div>
 </div>

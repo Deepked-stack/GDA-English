@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+
 }
 
 .module-navbar {
@@ -20,6 +22,9 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
+  /* font-size:smaller; */
+  font-family: 'Poppins', sans-serif;
+
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -34,12 +39,24 @@
   align-items: center;
   width:80%;
   margin-right: 10px;
+  /* font-size:smaller; */
+  font-family: 'Poppins', sans-serif;
+
 }
 
-.module-title h4 {
+.module-title h6 {
   margin: 0;
 }
 
+
+.progress{
+  font-size: x-small;
+  background-color: rgb(250, 250, 250);
+  /* font-size:smaller; */
+  font-family: 'Poppins', sans-serif;
+
+
+}
 .module-title .arrow {
   transition: transform 0.3s;
 }
@@ -64,6 +81,8 @@
   margin-bottom: 5px;
   transition: background-color 0.3s, color 0.3s;
   font-size: small;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .sub-modules li:hover {

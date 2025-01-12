@@ -1,12 +1,16 @@
+
 <div class="module-container">
   <div class="module-card" *ngFor="let module of modules" (click)="toggleSubModules(module)">
     <div class="module-title">
+      <div class="modulename">
       <h6>{{ module.name }}</h6>
+    <div class="progress">Completed:{{ completionStatus[i]?.completedCount }} /{{module.numberofsubmodules}}</div>
+  </div>
       <span class="arrow" [class.open]="module.showSubModules">&#9654;</span>
     </div>
     <div class="sub-modules" *ngIf="module.showSubModules">
       <ul>
-        <li *ngFor="let subModule of module.subModules" (click)="selectSubModule(subModule, $event)">
+        <li *ngFor="let subModule of module.subModules,let i = index" (click)="selectSubModule(subModule, $event)"       [ngStyle]="{ 'background-color': selectedSubModuleIndex === i ? 'lightblue' : '' }">
           {{ subModule}}
         </li>
       </ul>
