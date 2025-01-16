@@ -1,11 +1,17 @@
-.study-container {
-    padding: 2rem;
+  
+
+  .study-container {
+    /* padding: 1em; */
     background-color: #fff;
     border-radius: 8px;
-    /* padding: 2px; */
-    /* margin-left: 2px; */
-    max-height: 60em;
-    overflow: scroll;
+    max-height: auto;
+    padding-top: 0;
+    /* padding-left: 1rem; */
+    /* padding-right: 1rem; */
+    padding-bottom: 1rem;
+    /* padding: 1rem; */
+    overflow: auto;
+    position: relative; /* Ensure the sticky positioning works within the container */
   }
   
   .study-header {
@@ -17,3 +23,51 @@
     color: #333;
   }
   
+  .navigation-buttons {
+    position: sticky; /* Stick to the top */
+    top: 0; /* 0px from the top */
+    /* background-color: #f1f1f1; Light background to make the buttons stand out */
+    z-index: 10; /* Ensure it's above other content when scrolling */
+    /* padding: 10px 0; */
+    display: flex;
+    /* gap: 1vw; */
+    /* justify-content: space-around; */
+    background-color: rgba(238, 238, 238, 1);
+    border-bottom: 2px solid #ccc; /* Optional: border to separate from content */
+  }
+  
+  .navigation-buttons button {
+    background-color: #ffffff; /* Button background color */
+    color: rgb(0, 0, 0); /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 1vw;
+    background-color: white;
+    border: 0.1px solid black;
+    box-shadow: black 2px 2px 2px;
+
+  }
+  
+  .navigation-buttons button:hover {
+    background-color: #eae8e8; /* Slight hover effect for buttons */
+    scale: 1.07;
+  }
+
+  .navigation-buttons button.active-button {
+    background-color: #292929; /* Darker shade for the active button */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transform: scale(1.05); /* Slightly enlarge the active button */
+    color:white;
+  }
+  
+
+  @media (max-width: 479px) {
+  .navigation-buttons button{
+    height: 4vh;
+    padding: 4px;
+    font-size: small;
+  }
+  }

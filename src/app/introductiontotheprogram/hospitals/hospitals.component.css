@@ -63,6 +63,7 @@ span.incorrect {
   margin-bottom: 10px;
   cursor: pointer;
   border-radius: 5px;
+  width: 100vw;
 }
 
 .answer-options button {
@@ -199,18 +200,60 @@ ol li {
 /* ------------------------------------------------------------------------------------------------------------------ */
 
 /* ..............................................mcq............................................. */
-.mcqlist li{
-    /* background-color: #adebbc; */
-    background-color: transparent;
-    list-style-type: upper-roman;
-
+p{
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+.mcqlist li {
+  /* background-color: #adebbc; */
+  list-style-type: none;
+  margin-bottom: 10px;
+  border: 0.1px black solid;
+  box-shadow: 2px 2px 5px black;
+  padding: 5px;
+  border-radius: 8px;
+  padding: 2%;
+  font-size:medium;
+  width: 100%;
+  margin: 2%;
+  background-color: white;
 }
 
-.inlist li{
-    background-color: #cdd3ce;
-    list-style-type: lower-alpha;
-    margin-left: 15%;
+.inlist li {
+  background-color: #dadcda;
+  list-style-type: lower-alpha;
+  margin-left: 15%;
+  padding: 5px;
+  width: 80%;
+  margin: 2%;
+  font-size: medium;
 }
+
+.inlist li:hover {
+  scale: 1.03;
+}
+
+span.correct {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+span.incorrect {
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.division
+{
+display: flex;
+justify-content: center;
+background-color: #dadcda;
+margin-top: 2%;
+margin-bottom: 2%;
+}
+
 
 /* ----------------------------------------------------------------------------------------------------- */
 
@@ -311,6 +354,7 @@ ol li {
   padding: 10px;
   width: 100%;
   max-width: 800px;
+  overflow-x: auto;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;

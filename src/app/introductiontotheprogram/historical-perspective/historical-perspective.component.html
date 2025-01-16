@@ -1,7 +1,9 @@
 <div class="content">
-<div class="startit">
+<div class="startit"  *ngIf="selectedState === 'start'">
+  <p>Welcome! Let us start your journey!
+  </p>
 <div class="carousel-container">
-    <div id="historicalCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="historicalCarousel" class="carousel slide" >
       <!-- Indicators -->
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
@@ -72,7 +74,7 @@
 <h2>What I Know Already</h2>
 </div>
 Can you identify and click on the images given below that relate to ancient practices of medical treatment.
-  </div><!--startit ends-->
+  
 <div class="center">
     <div class="green"><button></button>Correct</div>
     <div class="red"><button></button>Incorrect</div>
@@ -196,11 +198,24 @@ Can you identify and click on the images given below that relate to ancient prac
       </tbody>
     </table>
   </div>
-  
-<!-- </div>startit ends -->
+<!-- --------------------------------------- -->
+<!-- <div class="center">
+  <div class="section">     
+    <button (click)="toggleCompletion()">
+      Mark the Section complete
+    </button>
+    <div class="center"><br><span [class.completed]="isSectionCompleted">
+      {{ isSectionCompleted ? 'Completed' : 'Not Completed' }}
+    </span></div>
+  </div>
 
-<div class="learnit">
-    <hr>Learnit <hr>
+   -->
+  
+<!-- -------------------------------------------------- -->
+</div><!--startit ends-->
+
+<div class="learnit" *ngIf="selectedState === 'learn'">
+   
 <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the '<b>My Theory Task</b>'.</p>
 <div class="heading">
   <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
@@ -209,7 +224,7 @@ Can you identify and click on the images given below that relate to ancient prac
 <p>1. As modern health care has evolved, we have increasingly recognized the relevance of different forms of medicine and healing that are steeped in culture and history. So, as a GDA you should know about the history of healthcare. Let’s explore and know more!</p>
  <!-- Carousel 2 -->
  <div class="carousel-container">
-    <div id="historicalCarousel2" class="carousel slide" data-bs-ride="carousel">
+    <div id="historicalCarousel2" class="carousel slide" >
       <!-- Indicators -->
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="0" class="active" aria-current="true"></button>
@@ -451,7 +466,7 @@ Can you identify and click on the images given below that relate to ancient prac
 
 <p>2. Komal is a GDA. She wishes to explore about ancient medicines.</p>
 
-<!-- mcq1 -->
+<!-- mcq3 -->
 <div class="mcqlist">
   <ol>
     <li>
@@ -589,7 +604,7 @@ Can you identify and click on the images given below that relate to ancient prac
 <hr>
 <div class="center">
   <b>Great!<br>
-  Move on to Do It1</b>
+  Move on to Do It!</b>
 </div>
 <hr>
 <p><b>Find out how you will be assessed on yopur theory skills from the button below.</b></p>
@@ -626,14 +641,11 @@ Can you identify and click on the images given below that relate to ancient prac
     </tbody>
   </table>
 </div>
-
-
 </div><!--learnit ends-->
-<div class class="doit">
+
+<div  class="doit" *ngIf="selectedState === 'do'">
   <p> Almost done! Let's finish this goal with your practical.</p>
-  <hr>
-  <h3>do it</h3>
-  <hr>
+  
   <p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.</p>
 
 
@@ -693,4 +705,3 @@ Can you identify and click on the images given below that relate to ancient prac
 </div><!--doit ends-->
 </div>
 
-  

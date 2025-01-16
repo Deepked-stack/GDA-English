@@ -115,14 +115,23 @@
   text-decoration: underline;
 }
 
+p{
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
 .mcqlist li {
   /* background-color: #adebbc; */
   list-style-type: none;
-  margin: 10px;
+  margin-bottom: 10px;
   border: 0.1px black solid;
   box-shadow: 2px 2px 5px black;
   padding: 5px;
   border-radius: 8px;
+  padding: 2%;
+  font-size:medium;
+  width: 100%;
+  margin: 2%;
+  background-color: white;
 }
 
 .inlist li {
@@ -131,6 +140,8 @@
   margin-left: 15%;
   padding: 5px;
   width: 80%;
+  margin: 2%;
+  font-size: medium;
 }
 
 .inlist li:hover {
@@ -147,6 +158,15 @@ span.incorrect {
   color: red;
   font-weight: bold;
   margin-left: 10px;
+}
+
+.division
+{
+display: flex;
+justify-content: center;
+background-color: #dadcda;
+margin-top: 2%;
+margin-bottom: 2%;
 }
 
 .fimage {
@@ -190,9 +210,13 @@ span.incorrect {
 /* Carousel Audio (Below the image) */
 .carousel audio {
   display: block;
+  width: 100%;
   margin: 10px auto;
 }
 
+.carousel-control-prev,.carousel-control-next{
+  max-height: 70%;
+}
 /* Carousel Controls (Black) */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -260,6 +284,7 @@ span.incorrect {
 
 /* Table container */
 .assessment-table {
+  overflow-x: auto;
   margin: 20px auto;
   padding: 10px;
   width: 100%;

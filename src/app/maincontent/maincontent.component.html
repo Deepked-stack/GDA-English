@@ -14,23 +14,24 @@
     <!-- Study Area (center area) -->
     <div class="study-area">
       <app-study></app-study>
+      <div class="navigationbuttonsdown" >
+        <button (click)="navigate('back')" [disabled]="isFirstSubmodule()"> <p>{{ getPreviousSubmoduleName() || 'None' }}</p><< Back </button>
+        <button (click)="navigate('next')" [disabled]="isLastSubmodule()">   <p>{{ getNextSubmoduleName() || 'None' }} </p> Next >> </button>
+      </div>
     </div>
 
     <!-- Navigation Buttons -->
 
     
-  <div class="navigationbuttonsup">
-    <button (click)="navigate('back')" [disabled]="isFirstSubmodule()">Back</button>
-    <button (click)="navigate('next')" [disabled]="isLastSubmodule()">Next</button>
-  </div>
 
 
-    <div class="navigationbuttonsdown">
-      <button (click)="navigate('back')" [disabled]="isFirstSubmodule()">Back</button>
-      <button (click)="navigate('next')" [disabled]="isLastSubmodule()">Next</button>
-    </div>
+
+    
+
+    
 
   </div>
 
   <app-maincontentnav></app-maincontentnav>
+
 </div>

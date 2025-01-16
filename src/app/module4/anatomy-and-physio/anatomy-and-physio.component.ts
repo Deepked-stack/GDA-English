@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './anatomy-and-physio.component.css'
 })
 export class AnatomyAndPhysioComponent {
+    @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
+  
   leftItems = [
     { id: 1, text: 'Question 1', correct: false },
     { id: 2, text: 'Question 2', correct: false },
@@ -223,6 +225,7 @@ addTickOrCross(inputId: string, symbol: string): void {
   
   tickCrossElement.textContent = symbol;
 }
+
 sequence = [
   { question: ' Pancreas', answer: 6, userInput: null, validated: undefined },
   { question: ' Anus/Anal canal', answer: 9, userInput: null, validated: undefined },

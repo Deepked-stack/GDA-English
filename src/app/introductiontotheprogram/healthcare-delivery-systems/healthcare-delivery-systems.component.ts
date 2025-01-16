@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { StudyNavComponent } from '../../study-nav/study-nav.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -82,10 +82,10 @@ export class HealthcareDeliverySystemsComponent {
 
   checkAnswerch(option: string) {
     const correctAnswers = {
-      option1: true,
+      option1: false,
       option2: false,
-      option3: false,
-      option4: false,
+      option3: true,
+      option4: true,
       option5: false,
     };
 
@@ -146,7 +146,7 @@ export class HealthcareDeliverySystemsComponent {
       }
     }
   }
-
-
+ 
+  @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
 }
 

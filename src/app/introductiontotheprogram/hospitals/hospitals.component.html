@@ -1,5 +1,6 @@
 <!-- <app-study-nav></app-study-nav> -->
 <div class="content">
+  <div class="startit" *ngIf="selectedState === 'start'">
 <div class="container">
   <hr>
   <p>Welcome! let us start with our journey!</p>
@@ -121,9 +122,9 @@ You must have seen this place at least once, either in real life or on TV . Pati
           <tbody>
             <tr>
               <td>Theory</td>
-              <td>You can <span class="highlight-blue">define</span> a <span class="highlight-blue">Hospital.</span></td>
-              <td>You can <span class="highlight-red">functions of</span>hospitals.</td>
-              <td>You can <span class="highlight-black">compare</span>between the hospitals with all functional departments and hospitals lacking some departments.</td>
+              <td>You can <span class="highlight-blue">define </span> a <span class="highlight-blue">Hospital.</span></td>
+              <td>You can <span class="highlight-red"> tell functions of</span>hospitals.</td>
+              <td>You can <span class="highlight-black">compare </span>between the hospitals with all functional departments and hospitals lacking some departments.</td>
             </tr>
             <tr>
               <td>Practical</td>
@@ -134,15 +135,15 @@ You must have seen this place at least once, either in real life or on TV . Pati
       </div>
       
       </div>
-<!-- learnit -->
+      </div><!--startit endss-->
+
+
+      <!-- learnit -->
  
- <br>
- <hr>
- learn It
- <hr>
+ 
 
  <br>
-<div class="learnit">
+<div class="learnit" *ngIf="selectedState === 'learn'">
 Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>'My Theory Task'</b><br>
 <br><div class="heading"><img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt=""><h2>My Resources</h2></div><br>
     <p>Read The Definition given below and click on the correct statement.</p>
@@ -343,9 +344,9 @@ In your class, discuss the meaningof hospitals and what it does according to you
     <tbody>
       <tr>
         <td>Theory</td>
-        <td>You can <span class="highlight-blue">define</span> a <span class="highlight-blue">Hospital.</span></td>
-        <td>You can <span class="highlight-red">functions of</span>hospitals.</td>
-        <td>You can <span class="highlight-black">compare</span>between the hospitals with all functional departments and hospitals lacking some departments.</td>
+        <td>You can <span class="highlight-blue">define </span> a <span class="highlight-blue">Hospital.</span></td>
+        <td>You can <span class="highlight-red">tell functions of </span>hospitals.</td>
+        <td>You can <span class="highlight-black">compare </span>between the hospitals with all functional departments and hospitals lacking some departments.</td>
       </tr>
       <tr>
         <td>Practical</td>
@@ -354,14 +355,14 @@ In your class, discuss the meaningof hospitals and what it does according to you
     </tbody>
   </table>
 </div>
+</div>
 
+<!-- </div>learnit -->
 
 <!--Do It-->
-<hr>
-Do it
-<hr>
 
-<div class="doit">
+
+<div class="doit" *ngIf="selectedState === 'do'">
 Almost done! Let's finish this goal with your practical.<br>
 <div class="heading">
 <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
@@ -405,9 +406,9 @@ Almost done! Let's finish this goal with your practical.<br>
     <tbody>
       <tr>
         <td>Theory</td>
-        <td>You can <span class="highlight-blue">define</span> a <span class="highlight-blue">Hospital.</span></td>
-        <td>You can <span class="highlight-red">functions of</span>hospitals.</td>
-        <td>You can <span class="highlight-black">compare</span>between the hospitals with all functional departments and hospitals lacking some departments.</td>
+        <td>You can <span class="highlight-blue">define </span> a <span class="highlight-blue">Hospital.</span></td>
+        <td>You can <span class="highlight-red">tell functions of </span>hospitals.</td>
+        <td>You can <span class="highlight-black">compare </span>between the hospitals with all functional departments and hospitals lacking some departments.</td>
       </tr>
       <tr>
         <td>Practical</td>
@@ -417,5 +418,6 @@ Almost done! Let's finish this goal with your practical.<br>
   </table>
 </div>
 
+
 </div>
-</div>
+

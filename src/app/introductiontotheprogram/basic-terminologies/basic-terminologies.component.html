@@ -1,5 +1,5 @@
 <div class="content">
-  <div class="startit">
+  <div class="startit" *ngIf="selectedState === 'start'">
     <p>Welcome!</p>
 <div class="sideimg">
   <p>A General Duty Assistant needs to understand the basic terms that will be used in a medical setup – be it hospital, clinic, primary healthcare centre or even hospice care. These terms will help you better understand your job
@@ -86,8 +86,7 @@
   
 </div><!--startit ends-->
 
-<div class="learnit">
-  <hr><h2>learnit</h2><hr>
+<div class="learnit" *ngIf="selectedState === 'learn'">
   <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.
   </p>
 <div class="heading">
@@ -224,6 +223,7 @@
       <img src="/assets/module1/m1s5_siximg6.jpg" alt="Geriatrics" loading="lazy">
       <label><b>Geriatrics</b></label>
     </div>
+</div>
 </div>
 <p>B. Could you identify the wrong boxes from the table given above? Write the correct name for each image in your notebook and discuss them in the class.
 </p>
@@ -377,9 +377,10 @@
     </table>
   </div>
   
+</div>
 </div><!--learnit ends-->
 
-<div class="doit">
+<div class="doit" *ngIf="selectedState === 'do'" >
   <p>Almost done! Let's finish this goal with your practical.</p>
   <div class="heading">
     <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
@@ -443,4 +444,5 @@
     
   </div><!--do it ends-->
 
-</div><!--content ends-->
+</div> <!--content ends-->
+

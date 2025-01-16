@@ -1,8 +1,8 @@
 .content {
     display: block;
-    padding: 20px;
     font-size: medium;
     font-size:smaller;
+    padding: 20px;
     font-family: 'Poppins', sans-serif;
   }
   
@@ -30,6 +30,15 @@
     margin: 10px auto;
   }
   
+  .carousel-control-prev{
+    height: 70%;
+  }
+
+  .carousel-control-next{
+    height: 70%;
+
+  }
+
   /* Carousel Controls (Black) */
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
@@ -40,13 +49,13 @@
   /* Carousel Indicators (White) and positioned above the image */
   .carousel-indicators {
     position: absolute;
-    top: 10px;
-    left: 50%;
+    top: 1px;
+    left: 40%;
     transform: translateX(-50%);
   }
   
   .carousel-indicators button {
-    background-color: white;
+    background-color: rgb(25, 12, 12);
   }
   
   /* Hide the audio inside caption */
@@ -236,7 +245,10 @@ a:hover {
     background-color: rgb(250, 78, 78) !important;
     color: white;
   }
-  
+  p{
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
   .mcqlist li {
     /* background-color: #adebbc; */
     list-style-type: none;
@@ -245,8 +257,10 @@ a:hover {
     box-shadow: 2px 2px 5px black;
     padding: 5px;
     border-radius: 8px;
-    font-size: small;
+    padding: 2%;
+    font-size:medium;
     width: 100%;
+    margin: 2%;
   }
   
   .inlist li {
@@ -255,6 +269,8 @@ a:hover {
     margin-left: 15%;
     padding: 5px;
     width: 80%;
+    margin: 2%;
+    font-size: medium;
   }
   
   .inlist li:hover {
@@ -273,7 +289,15 @@ a:hover {
     margin-left: 10px;
   }
   
-  
+.division
+{
+display: flex;
+justify-content: center;
+background-color: #dadcda;
+margin-top: 2%;
+margin-bottom: 2%;
+}
+
 
 .videodiv {
     position: relative;
@@ -364,6 +388,7 @@ a:hover {
       border: 1px solid #ddd;
       border-radius: 5px;
       text-align: center;
+      word-break: break-all;
       cursor: pointer;
       background: #f8f9fa;
       transition: background 0.3s ease, color 0.3s ease;
@@ -395,3 +420,36 @@ a:hover {
     border-top: 0.1px solid black;
     padding: 1%;
   }
+
+
+  @media (max-width:480px) {
+  .siximages .imgcard{
+    width: 100%;
+  } 
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .section {
+    /* font-family: Arial, sans-serif; */
+  }
+  
+  .completed {
+    color: green;
+    font-weight: bold;
+  }
+  

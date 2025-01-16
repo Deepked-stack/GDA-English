@@ -1,7 +1,7 @@
 
 
 <div class="content">
-    <div class="startit" id="start-it">
+    <div class="startit" *ngIf="selectedState === 'learn'">
 <b>Welcome! Lets us start your Journey!</b>
 
 <div class="videodiv">
@@ -116,8 +116,7 @@ Discuss in your class, why is it important to have good communication skills and
 
 </div>
 
-<div class="learnit" id="learn-it">
-    <hr>LearnIt<hr><br>
+<div class="learnit" *ngIf="selectedState === 'start'">
 
 Come, let us leaarn the theory of this learning outcome. Look at the resources below and then attempt the <b>'My Theory Task.</b>
 <div class="heading">
@@ -521,7 +520,7 @@ Come, let us leaarn the theory of this learning outcome. Look at the resources b
 <div class="division">Part 3</div>
 See the slides given below and answer the question.<br>
 <div class="carousel-container">
-  <div id="historicalCarousel2" class="carousel slide" data-bs-ride="carousel">
+  <div id="historicalCarousel2" class="carousel slide" >
     <!-- Indicators -->
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#historicalCarousel2" data-bs-slide-to="0" class="active" aria-current="true"></button>
@@ -612,12 +611,10 @@ See the slides given below and answer the question.<br>
   </table>
 </div>
 
-</div>
+</div><!--doit ends-->
 
-<div class="doit" id="do-it">
-    <hr>
-    Do It 
-    <hr>
+<div class="doit" *ngIf="selectedState === 'do'">
+    
 
 Almost done! Let's finished this goal with your practical.
 

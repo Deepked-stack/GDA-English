@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-
+  max-height: 83vh;
+  overflow-y: scroll;
 }
 
 .module-navbar {
@@ -12,7 +12,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  overflow-y: auto;
+ 
+  
 }
 
 .module-card {
@@ -44,6 +45,11 @@
 
 }
 
+.module-title p{
+  margin: 0%;
+  font-size: x-small;
+}
+
 .module-title h6 {
   margin: 0;
 }
@@ -51,6 +57,7 @@
 
 .progress{
   font-size: x-small;
+  margin: 0%;
   background-color: rgb(250, 250, 250);
   /* font-size:smaller; */
   font-family: 'Poppins', sans-serif;
@@ -142,4 +149,12 @@
   .module-container {
     padding-top: 60px;  /* Adjust for fixed navbar */
   }
+}
+
+
+@media (max-width: 479px) {
+.module-container .module-card{
+  width: 100%;
+}
+
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { StudyNavComponent } from '../../study-nav/study-nav.component';
 import { CommonModule } from '@angular/common';
 // import { CarouselComponent } from '../../carousel/carousel.component';
@@ -12,13 +12,17 @@ import { CommonModule } from '@angular/common';
   imports:[CommonModule]
 
 })
-export class HistoricalPerspectiveComponent {
+export class HistoricalPerspectiveComponent implements OnInit {
+ngOnInit(): void {
+  console.log(`Historical Perspective Component loaded with state: ${this.selectedState}`);
+
+}
+
+  @Input() selectedState: 'start' | 'learn' | 'do' | null = 'start';
+
+  mcqFeedback1: { [key: number]: string } = {};
 
   cardStatus: { [key: number]: boolean | undefined } = {};
-  mcqFeedback1: { [key: number]: string } = {};
-  mcqFeedback2: { [key: number]: string } = {};
-  mcqFeedback3: { [key: number]: string } = {};
-
 
   // Method to update the card status
   checkAnswer(cardId: number, isCorrect: boolean): void {
@@ -37,7 +41,9 @@ export class HistoricalPerspectiveComponent {
     correctAnswers[questionNumber] === selectedAnswer ? '✔️' : '❌';
   }
 // --------------------------------------------
-  checkMCQ2(questionNumber:number, selectedAnswer:string):void{
+mcqFeedback2: { [key: number]: string } = {};
+  
+checkMCQ2(questionNumber:number, selectedAnswer:string):void{
 
     const correctAnswers:{[key:number]:string}={
       1: 'true',
@@ -48,7 +54,9 @@ export class HistoricalPerspectiveComponent {
     correctAnswers[questionNumber] === selectedAnswer ? '✔️' : '❌';
   }
 // --------------------------------------------------------------
-  checkMCQ3(questionNumber:number, selectedAnswer:string):void{
+mcqFeedback3: { [key: number]: string } = {};
+  
+checkMCQ3(questionNumber:number, selectedAnswer:string):void{
 
     const correctAnswers:{[key:number]:string}={
       1: 'true',
@@ -121,4 +129,25 @@ export class HistoricalPerspectiveComponent {
       }
     }
   }
+
+ 
+
+  // isSectionCompleted: boolean = false;
+
+  // toggleCompletion(): void {
+  //   this.isSectionCompleted = !this.isSectionCompleted;
+  //   // this.selectedState= 'learn'
+  //   // this.selectedState = 'learn';
+
+  // }
+  // @Output() stateChanged = new EventEmitter<string>();  // Event emitter to notify parent when state changes
+
+  // ngOnChanges() {
+  //   console.log('Selected State in Child:', this.selectedState);
+  //   // Optionally emit event whenever state changes
+  //   if (this.selectedState === 'learn') {
+  //     this.stateChanged.emit(this.selectedState);
+  //   }
+  // }
+  
 }  

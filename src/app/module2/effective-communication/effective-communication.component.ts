@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './effective-communication.component.css'
 })
 export class EffectiveCommunicationComponent {
+    @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
+  
   feedback: { [key: string]: string | undefined } = {};
   mcqFeedback1: { [key: number]: string } = {};
   mcqFeedback2: { [key: number]: string } = {};

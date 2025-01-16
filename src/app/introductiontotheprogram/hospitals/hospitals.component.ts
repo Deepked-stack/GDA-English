@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output,EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +10,8 @@ import { CommonModule } from '@angular/common';
   imports: [FormsModule, CommonModule],
 })
 export class HospitalsComponent {
-  
+  @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
+
   isCorrect: boolean | null = null;
 
 validateAnswer(value: string) {

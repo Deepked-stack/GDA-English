@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './microorg-and-infec.component.css'
 })
 export class MicroorgAndInfecComponent {
+    @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
+  
   
   cardStatus: { [key: number]: boolean | undefined } = {};
 

@@ -1,84 +1,109 @@
-/* General container adjustments for both login and signup */
-.login-container, .signup-container {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Base styles for the container */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background: #000;
+  overflow: hidden;
+}
+
+.login-container {
+  position: relative;
+  height: 90vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center 80%; /* Align the image to the bottom center */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  z-index: 0; /* Neutral z-index to avoid event blocking */
+}
+
+.login-box {
+  position: absolute;
+  top: 70%; /* Position from the top */
+  left: 20%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  width: 30%; /* Adjust width for the login box */
+  max-width: 400px;
+  padding: 2rem;
+  /* background: rgba(255, 255, 255, 0.3); Glass morphism effect */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  z-index: 10; /* Ensure it's above the background */
+  color: #000;
+  text-align: center;
+}
+
+
+/* Input field styles */
+.login-box input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+
+.login-box input::placeholder {
+  color: #1f1c1c;
+}
+
+/* Button styles */
+.login-box button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #3737ea;
+  color: white;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #077bf7;
+}
+
+/* Link styles */
+.login-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-box p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.logo{
+  position: absolute;
+  /* background-color: #077bf7; */
+  width: 23%;
+  height: auto;
+  top: 30%;
+  left: 8%;
+}
+.logo img{
+  height: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .login-box {
+    top: 25%;
+    left: 10%;
+    width: 50%;
+    padding: 1.5rem;
   }
-  
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://wesoftyou.com/wp-content/uploads/2024/08/ai-artificial-intelligence-search-engine-600nw-2304697097.webp') no-repeat center center/cover;
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    top: 30%;
+    left: 5%;
+    width: 80%;
+    padding: 1.5rem;
   }
-  
-  .glass-morphism {
-    border-radius: 15px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    z-index: 1;
-    padding: 2rem;
-    width: 30%; /* Reduce the width */
-    height: auto; /* Allow height to adjust dynamically */
-    max-height: 500px; /* Add a max height if needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Input field styles */
-  .glass-morphism input {
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-  }
-  
-  .glass-morphism input::placeholder {
-    color: #ccc;
-  }
-  
-  /* Button styles */
-  .glass-morphism button {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .glass-morphism button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Link styles */
-  .glass-morphism a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  /* Adjust text within the glass morphism container */
-  .glass-morphism p {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  @media (max-width: 768px) {
-    .glass-morphism {
-      width: 90%; /* Reduce width for smaller screens */
-      padding: 1.5rem;
-    }
-  }
-  
+}

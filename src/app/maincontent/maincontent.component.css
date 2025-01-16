@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 145vh;
+  /* height: 145vh; */
   padding: 2% 2.5%;
   gap: 1rem; /* Added for consistent spacing */
 }
@@ -38,48 +38,74 @@ app-maincontentnav {
   position: absolute;
   display: flex;
   justify-content: center;
-  top: 15%;
-  left: 37%;
-  width: 50%;
-  padding: 1%;
+  top: 16%;
+  left: 27.5%;
+  width: 68%;
+  padding: 0.8%;
   background-color: #f4f4f4;
   border-radius: 8px;
-  font-size: large;
+  font-size: medium;
   font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.study-area {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 23%;
+  left: 26.5%;
+  width: 70%;
+  height: auto;
+  padding: 1rem;
+  /* background-color: violet; Keeping this as per the original design */
 }
 
 app-study {
-  position: absolute;
-  top: 25%;
-  right: 2.5%;
-  width: 70%;
+  position: relative;
+  width: 100%;
   padding: 2.5%;
   background-color: #f4f4f4;
   border-radius: 8px;
   font-size: small;
+  color: black;
   font-family: 'Poppins', sans-serif;
-  /* height: 140vh; */
 }
-
 
 .navigationbuttonsdown {
-  position: absolute;
   display: flex;
-  justify-content: space-between; /* Back button on the left, Next button on the right */
-  /* margin-top: 1rem; Add spacing between the study area and buttons */
-  width: 65%; /* Match width of the study area */
-  margin-left: auto;
-  margin-right: auto;
-  top: 137.5vh;
-  left: 30vw ;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 3px solid #cbc8c8;
+  border-radius: 10px;
+  width: 100%;
 }
+
 .navigationbuttonsdown button {
   border-radius: 6px;
   padding: 4px 10px; /* Increased padding for better UX */
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
-  background-color: rgba(237, 232, 232, 0.9);
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  /* box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px; */
+  background-color: rgba(249, 247, 247, 0.9);
   transition: transform 0.2s, box-shadow 0.2s;
+  height: 9vh;
+  width: 15vw;
+  display: flex;
+  font-size: medium;
+  font-weight: bold;
+  flex-direction: column;
+  align-items: center; /* Horizontally center the content */
+  justify-content: center; /* Vertically center the content */
+  text-align: center; /* Ensure text is centered */
+}
+
+.navigationbuttonsdown button p {
+  margin: 0; /* Remove default margin from p tag */
+  font-size: 0.6rem; /* Adjust font size for better readability */
+  color: #9a9999; /* Darker text color for better contrast */
+  font-weight: 600; /* Make the text bold */
 }
 
 .navigationbuttonsdown button:hover {
@@ -87,30 +113,49 @@ app-study {
   box-shadow: rgba(0, 0, 0, 0.7) 3px 3px 3px;
 }
 
-.navigationbuttonsup {
+
+.navigationbuttonsforintro {
   position: absolute;
   display: flex;
-  justify-content: space-between; /* Back button on the left, Next button on the right */
+  /* justify-content: space-evenly; Back button on the left, Next button on the right */
   /* margin-top: 1rem; Add spacing between the study area and buttons */
   width: 65%; /* Match width of the study area */
   margin-left: auto;
   margin-right: auto;
-  top: 18vh;
+  top: 100vh;
   left: 30vw ;
+  gap: 1vw;
+  justify-content: space-between; /* Back button on the left, Next button on the right */
+
 }
-.navigationbuttonsup button {
+.navigationbuttonsforintro button {
   border-radius: 6px;
-  padding: 4px 10px; /* Increased padding for better UX */
+  padding: 8px 15px; /* Increased padding for better UX */
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
   background-color: rgba(237, 232, 232, 0.9);
   transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 15px;
+/* background-color: aqua; */
 }
 
-.navigationbuttonsup button:hover {
+.navigationbuttonsforintro button:hover {
   transform: scale(1.05); /* Enhanced hover effect */
   box-shadow: rgba(0, 0, 0, 0.7) 3px 3px 3px;
 }
+
+.navigationbuttonsforintro button p {
+  margin: 0; /* Remove default margin from p tag */
+  font-size: 0.6rem; /* Adjust font size for better readability */
+  color: #9a9999; /* Darker text color for better contrast */
+  font-weight: 600; /* Make the text bold */
+}
+
+.navigationbuttonsforintro button:hover {
+  transform: scale(1.05); /* Enhanced hover effect */
+  box-shadow: rgba(0, 0, 0, 0.7) 3px 3px 3px;
+}
+
 
 @media (max-width: 768px) {
   .main-container {
@@ -124,10 +169,110 @@ app-study {
   }
 
   app-maincontentnav {
-    width: 95%;
+    width: 100vw;
   }
 
   app-module {
     display: none;
   }
+}
+
+
+
+
+@media (max-width: 1024px) {
+ 
+  .sub{
+    top: 15%;
+    left: 2%;
+  }
+  .navigationbuttonsforintro{
+    top: 20%;
+    left: 4.5% ;
+    width: 85%;
+  }
+  .navigationbuttonsdown{
+    
+    top: 100vh;
+    width: 95vw;
+    left: 2.5%;
+  }
+
+  .navigationbuttonsdown button{
+    height: 80px;
+  }
+  app-study{
+    width: 100vw;
+    height: 100vh;
+  }
+  .study-area{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    top: 13%;
+    left: 0%;
+    padding: 5vw;
+    
+  }
+
+  .sub{
+    top: 10%;
+    width: 95vw;
+  }
+
+  .main-container{
+    height: 100vh;
+  }
+  
+} 
+
+@media (max-width: 479px) {
+  .sub{
+    font-size: small;
+    /* background-color: blue; */
+    margin: 0;
+  }
+.study-area{
+  height: 100vh;
+  top: -9%;
+}
+
+.navigationbuttonsdown{
+  position: absolute;
+  top: 100%;
+  left: 5%;
+}
+  } 
+  /* Add styles for small mobile devices here */
+
+
+@media (min-width: 480px) and (max-width: 599px) {
+ app-maincontentnav{
+  /* background-color: aquamarine; */
+ }
+  /* Add styles for large mobile devices here */
+}
+@media (max-width:480px) {
+.navigationbuttonsdown{
+  top: 138vh;
+  left: 15%;
+}
+
+app-study{
+  left: 3.7%;
+}
+
+app-maincontentnav{
+  width: 100%;
+
+}
+
+
+
+
+.navigationbuttonsdown button{
+  padding: 3px 10px;
+}
+
 }

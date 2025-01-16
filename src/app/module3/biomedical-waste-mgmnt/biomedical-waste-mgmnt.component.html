@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="startit">
+    <div class="startit" *ngIf="selectedState === 'start'">
         Charu is a GDA. It’s her first day at the job. Look at the picture below. Why do you think there are different dustbins in the hospital? Type your thoughts in the empty box below.
     <div class="full">
         <img src="assets/module3/m3s3_image1.jpg" alt="">
@@ -88,8 +88,8 @@
   </div>
 
 </div><!--startit ends-->
-<div class="learnit">
-    <h2>Learn It</h2>
+<div class="learnit" *ngIf="selectedState === 'learn'">
+ 
     <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the ‘My Theory Task’.
     </p>
 <div class="heading">
@@ -148,8 +148,7 @@
 <p>2. Now that you are aware of the different types of waste in hospitals, let us understand the process of managing the waste.</p>
 
 <div class="videodiv">
-    GDA 3.3 Steps of Bio Medical waste management english
-</div>
+  <iframe src="https://player.vimeo.com/video/454973206?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="GDA3.3 Steps of Bio Medical Waste Management English"></iframe>
 
 <p><b>Checkpoint!</b></p>
 <!--mcq2-->
@@ -618,8 +617,8 @@
   </table>
 </div>
 </div><!--learn it ends-->
-
-<div class="doit">
+</div>
+<div class="doit" *ngIf="selectedState === 'do'">
   <p>Almost done! Let’s finish this goal with your practical.
   </p>
 
@@ -772,4 +771,5 @@
 </div>
 
 </div><!--do it complete-->
+
 </div>

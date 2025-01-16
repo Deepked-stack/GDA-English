@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="startit">
+    <div class="startit" *ngIf="selectedState === 'start'">
     <p>Welcome! let us start your journey!</p>
     <div class="sideimg">
         <p>Neelam is a General Duty Assistant in a hospital. One of her main roles is to conduct her work in a safe and hygienic manner. What activities do you think this involves? Write down your thoughts in your notebook.	
@@ -88,7 +88,7 @@
   </div>
     </div><!--startit ends-->
 
-<div class="learnit">
+<div class="learnit" *ngIf="selectedState === 'learn'">
 <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b></p>
 
 <div class="heading">
@@ -99,7 +99,7 @@
 <p>1. As a GDA, you will be responsible for your patient’s health but even before that you should be able to take care of your own health and hygiene. Let’s understand how you can do so.
 </p>
 <div class="videodiv">
-GDA 3.2 PERSONAL HYGEINE AND HEALTH VIDEO
+  <iframe src="https://player.vimeo.com/video/458523924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="3.2 Personal Hygiene and Health"></iframe>
 </div>
 
 <p><b>Checkpoint!</b></p>
@@ -172,8 +172,7 @@ GDA 3.2 PERSONAL HYGEINE AND HEALTH VIDEO
 
   <p>2. To prevent infections while taking care of patients, it is crucial to adapt basic hygiene routines. Let’s watch the video below to understand the complete procedure of washing hands and why it is extremely important.</p>
 <div class="videodiv">
-    GDA 3.2 Hand Wash video
-</div>
+  <iframe src="https://player.vimeo.com/video/498282053?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"   frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="GDA3.2 Hand Wash"></iframe></div>
 <p><b>Checkpoint1</b></p>
 <!--mcq2-->
 <div class="mcqlist">
@@ -222,7 +221,7 @@ GDA 3.2 PERSONAL HYGEINE AND HEALTH VIDEO
   </div>
 <p>3. Healthcare workers also use a sanitizer regularly to keep their hands clean. This procedure of sanitizing hands should also be done with care so that every part of the hands is clean and free of germs. Let’s watch this procedure in the video below.</p> 
 <div class="videodiv">
-    GDA 3.2 Handrub
+  <iframe src="https://player.vimeo.com/video/498281981?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="GDA3.2 Hand Rub"></iframe>
 </div>
 
 <p><b>Checkpoint!</b></p>
@@ -278,7 +277,7 @@ GDA 3.2 PERSONAL HYGEINE AND HEALTH VIDEO
 </p>
 
 <div class="videodiv">
-   GDA. 3.2 INFECTION CONTROL
+  <iframe src="https://player.vimeo.com/video/458522385?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="3.2 Infection Control"></iframe>
 </div>
 
 <p><b>Checkpoint!</b></p>
@@ -333,7 +332,7 @@ GDA 3.2 PERSONAL HYGEINE AND HEALTH VIDEO
   <p>5. We just learnt that wearing PPE is very important for infection control. But if PPE is not worn and taken off in a proper manner, there is a risk of infection. Let’s learn how to wear and take off PPE in the correct manner.
 </p>
 <div class="videodiv">
-    GDA 3.2 PPE
+  <iframe src="https://player.vimeo.com/video/498282121?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="GDA3.2 PPE"></iframe>
 </div>
 
 <p><b>Checkpoint Questions!</b></p>
@@ -646,8 +645,7 @@ GDA 3.2 PERSONAL HYGEINE AND HEALTH VIDEO
   </div>
 </div><!--learnitends-->
 
-<div class="doit">
-    <h2>DoI It</h2>
+<div class="doit" *ngIf="selectedState === 'do'">
 <p>Almost done! Let’s finish this goal with your practical.
 </p>
 <div class="heading">

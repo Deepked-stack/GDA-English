@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gda-intro',
@@ -9,6 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./gda-intro.component.css']
 })
 export class GDAIntroComponent {
+
+    @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
+  
   mcqFeedback1: { [key: number]: string } = {};
   mcqFeedback2: { [key: number]: string } = {};
   mcqFeedback3: { [key: number]: string } = {};

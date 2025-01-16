@@ -1,71 +1,73 @@
 /* Main Container */
 .coruscant-container {
+  display: block;
   position: relative;
-  height: 100vh;
+  padding-top: 4%; /* Add gap above the carousel */
+  height: 110vh; /* Full viewport height */
   overflow: hidden;
 }
 
-/* Carousel (background) */
+/* Carousel */
 #coruscantCarousel {
-  height: 100%;
+  position: relative;
+  height: 90%; /* Adjust carousel height to fit below the gap */
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  z-index: 0;
 }
 
-#coruscantCarousel .carousel-inner img {
-  height: 100vh;
-  object-fit: cover;
+/* Logos Container */
+.logos-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  top: 0%; /* Place logos within the gap */
+  left: 80%;
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  z-index:103;
+  width: 5%;
+  /* background-color: #007bff; */
 }
 
-/* Slanted Overlay */
+.logo {
+  width: 8vw;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Overlay and Other Styles */
 .slanted-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10%; /* Align with carousel placement */
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #000 30%, transparent);
+  height: 90%; /* Adjust overlay to match carousel height */
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   z-index: 2;
   color: white;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-  padding: 5%;
 }
-
-
-/* Logos */
-.logos-container {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.logo {
-  width: 100px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain;
-}
-
-
 /* Content */
 .content {
   position: absolute;
-  top: 50%;
+  top: 60%; /* Adjust to match the new carousel placement */
   left: 5%;
   transform: translateY(-50%);
+  font-weight: bold;
+  z-index: 3; /* Ensure content appears above overlay */
+  color: white;
 }
 
 .content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.7rem;
+  margin-bottom: 1.5rem;
 }
 
 .content h2,
 .content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.3rem;
 }
 
 .get-started-button {
@@ -78,6 +80,7 @@
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease;
+  z-index: 4; /* Keep the button above other content */
 }
 
 .get-started-button:hover {
@@ -91,4 +94,16 @@
   opacity: 0.7;
   width: 80px;
   height: auto;
+  z-index: 3; /* Keep it above the carousel but below other content */
+}
+
+
+.carousel-control-next, .carousel-control-prev{
+
+  z-index: 250;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  z-index: 100;
+  cursor: pointer;
 }

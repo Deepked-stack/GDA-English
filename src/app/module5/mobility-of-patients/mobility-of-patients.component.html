@@ -1,0 +1,959 @@
+<div class="content">
+    <div class="startit" *ngIf="selectedState === 'start'">
+        <p>Welcome! Let's start your Journey!</p>
+        <div class="carousel-container">
+            <div id="carousel1" class="carousel slide" >
+              <!-- Indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"></button>
+            </div>
+          
+              <!-- Slides -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/module5/crousel/m5s3_c1_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+                  <div class="carousel-caption">
+                  </div>
+                  <audio controls>
+                    <source src="assets/module5/crousel/m5s3_c1_vo1.mp3" type="audio/mpeg" >
+                    Your browser does not support the audio tag.
+                  </audio>
+                </div>
+          
+                <div class="carousel-item">
+                  <img src="assets/module5/crousel/m5s3_c1_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+                  <div class="carousel-caption">
+                  </div>
+                  <audio controls>
+                    <source src="assets/module5/crousel/m5s3_c1_vo2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                  </audio>
+                </div>
+          
+                <div class="carousel-item">
+                  <img src="assets/module5/crousel/m5s3_c1_Slide3.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+                  <div class="carousel-caption">
+                  </div>
+                  <audio controls>
+                    <source src="assets/module5/crousel/m5s3_c1_vo3.mp3" type="audio/mpeg" >
+                    Your browser does not support the audio tag.
+                  </audio>
+                </div>               
+              </div>
+              <!-- Navigation Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        <div class="center">Click on Play Button</div>
+
+        <div class="heading">
+            <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+            <h2>What I Know Already</h2>
+        </div>
+        <p>Before understanding what mobilization, immobilization and bed rest complication means, let’s test your prior knowledge in <b>‘What I Know Already…’!</b></p>
+        <p>Read the statements given below. Can you identify what a General Duty Assistant should do and what they should not do?
+        </p>
+
+        
+        <div class="difference-section">
+            <div class="question-section">
+              <div class="options">
+                <div class="option">
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="option1"
+                      [(ngModel)]="answers.option1"
+                      (change)="checkAnswer('option1')"
+                      class="checkbox"
+                    />
+                    <span class="statement">i) When a patient is complaining about being in pain you should give them pain killers immediately.	
+                    </span>
+                  </label>
+                  <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
+                    {{ feedback.option1 }}
+                  </span>
+                </div>
+          
+                <div class="option">
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="option2"
+                      [(ngModel)]="answers.option2"
+                      (change)="checkAnswer('option2')"
+                      class="checkbox"
+                    />
+                    <span class="statement">ii) If a patient develops bed sores you should check on the patient every other hour.	
+                    </span>
+                  </label>
+                  <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
+                    {{ feedback.option2 }}
+                  </span>
+                </div>
+          
+                <div class="option">
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="option3"
+                      [(ngModel)]="answers.option3"
+                      (change)="checkAnswer('option3')"
+                      class="checkbox"
+                    />
+                    <span class="statement">iii) Pressure wounds will occur only if you are overweight	
+                    </span>
+                  </label>
+                  <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
+                    {{ feedback.option3 }}
+                  </span>
+                </div>
+          
+                <div class="option">
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="option4"
+                      [(ngModel)]="answers.option4"
+                      (change)="checkAnswer('option4')"
+                      class="checkbox"
+                    />
+                    <span class="statement">iv) When a patient is shifted to another ward, check that all the needed medical equipment are present in the new ward for the patient.	
+                    </span>
+                  </label>
+                  <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
+                    {{ feedback.option4 }}
+                  </span>
+                </div>
+          
+                <div class="option">
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="option5"
+                      [(ngModel)]="answers.option5"
+                      (change)="checkAnswer('option5')"
+                      class="checkbox"
+                    />
+                    <span class="statement">v) Bed sores can occur when patient is unable to move independently.	
+                    </span>
+                  </label>
+                  <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
+                    {{ feedback.option5 }}
+                  </span>
+                </div>
+          
+                <div class="option">
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="option6"
+                      [(ngModel)]="answers.option6"
+                      (change)="checkAnswer('option6')"
+                      class="checkbox"
+                    />
+                    <span class="statement">vi) You do not need to stay fit and heathy when you work as a GDA.	
+                    </span>
+                  </label>
+                  <span *ngIf="feedback.option6" [ngClass]="{'correct': feedback.option6 === '✔️', 'incorrect': feedback.option6 === '❌'}">
+                    {{ feedback.option6 }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>Discuss and give reasons for your answers.
+        </p>
+        <p><b>Find out how you will be assessed on your theory skills from the button below.
+        </b></p>
+        <div class="assessbutton">
+            <button (click)="toggleTable()">How will I be Assessed?</button>
+          </div>
+          
+          <!-- Table Display -->
+          <div class="assessment-table" *ngIf="isTableVisible">
+            <h3>How Will I Be Assessed?</h3>
+            <p class="learning-objective">
+                Learning Objective: To understand mobilization, immobilization and bed rest complications and how to prevent the same
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>Blue</th>
+                  <th>Red</th>
+                  <th>Black</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Theory</td>
+                  <td>You can <span class="highlight-blue">identify</span>  the correct features of mobilization, immobilization and bed rest complications</td>
+                  <td>You can <span class="highlight-red">explain</span> effects of immobilization and what actions are required to prevent bed rest complications</td>
+                  <td>You can <span class="highlight-black">suggest </span> appropriate solutions and precautions to take for mobility, fall prevention, and bedrest complications</td>
+                </tr>
+                <tr>
+                  <td>Practical</td>
+                  <td colspan="3">Practical Activity : Quiz Time
+                    <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit5/LO3/5.3%20Practical%20Assessment%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+    </div><!--startit ends-->
+
+    <div class="learnit" *ngIf="selectedState === 'learn'">
+      <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>'My Theory Task'</b></p>  
+      <div class="heading">
+        <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+        <h2>My Resources</h2>
+      </div>
+
+      <p>1. A General Duty Assistant needs to have basic knowledge about mobilization and fall prevention to adequately support their patients. Let’s learn more about it here.
+    </p>
+    <div class="videodiv">
+      <iframe src="https://player.vimeo.com/video/460467340?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="5.3 Mobilization and Fall Prevention"></iframe>    </div>
+    <p><b>Checkpoint!</b></p>
+    
+<div class="mcqlist">
+    <ol>
+        <li>
+            a) The height of cane should be
+            <div class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq1" (change)="checkMCQ(1, 'false')">
+                  Taller than Patient.
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq1" (change)="checkMCQ(1, 'true')">
+                  According to patients Wrist.
+                </label>
+              </li>
+            </ol>
+          </div>
+          <span *ngIf="mcqFeedback[1]" [ngClass]="{'correct': mcqFeedback[1] === '✔️', 'incorrect': mcqFeedback[1] === '❌'}">{{ mcqFeedback[1] }}</span>
+        </li>
+      
+        <li>
+            b) A cane has different number of tips for
+            <div class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ(2, 'false')">
+                  Designing
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq2" (change)="checkMCQ(2, 'true')">
+                  Support
+                </label>
+              </li>
+            </ol>
+          </div>
+          <span *ngIf="mcqFeedback[2]" [ngClass]="{'correct': mcqFeedback[2] === '✔️', 'incorrect': mcqFeedback[2] === '❌'}">{{ mcqFeedback[2] }}</span>
+        </li>
+      </ol>
+</div>
+
+<p>Make sure to attempt <b>'My Theory Task'</b> before moving on to Do It!</p>
+<div class="heading">
+    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+    <h2>My Theory Task</h2>
+</div>
+<p><b>CheckPoint!</b></p>
+
+<div class="mcqlist">
+  <ol>
+    <li>
+      a) The height of cane should be
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'false')">
+              Taller Than Patient
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ2(1, 'true')">
+              According to patient's wrist
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback2[1]" [ngClass]="{'correct': mcqFeedback2[1] === '✔️', 'incorrect': mcqFeedback2[1] === '❌'}">{{ mcqFeedback2[1] }}</span>
+    </li>
+
+    <li>
+      b) A cane has different number of tips for:
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'false')">
+              Designing
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ2(2, 'true')">
+              Support
+          </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback2[2]" [ngClass]="{'correct': mcqFeedback2[2] === '✔️', 'incorrect': mcqFeedback2[2] === '❌'}">{{ mcqFeedback2[2] }}</span>
+    </li>
+  </ol>
+</div><!--mcq ends-->
+
+<p>2. When patients are on prolonged bedrest or in wheelchairs, they can develop bedrest complications due to immobilization. It is essential to understand these complications and work towards preventing them. Understand these below.
+</p>
+
+<div class="videodiv">
+  <iframe src="https://player.vimeo.com/video/460467483?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="5.3 Immobilization and Bedrest Complications"></iframe>
+</div>
+<p><b>CheckPoint!</b></p>
+
+<div class="mcqlist">
+  <ol>
+    <li>
+      a) Bed sores have __ stages
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'false')">
+              Two
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ3(1, 'true')">
+              Four
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback3[1]" [ngClass]="{'correct': mcqFeedback3[1] === '✔️', 'incorrect': mcqFeedback3[1] === '❌'}">{{ mcqFeedback3[1] }}</span>
+    </li>
+
+    <li>
+      b. To follow medical ethical standards, she should be aware about?
+     <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(2, 'true')">
+              Total pressure relief of the affected area.
+          </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ3(2, 'false')">
+              Increasing water intake
+          </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback3[2]" [ngClass]="{'correct': mcqFeedback3[2] === '✔️', 'incorrect': mcqFeedback3[2] === '❌'}">{{ mcqFeedback3[2] }}</span>
+    </li>
+  </ol>
+</div><!--mcq ends-->
+
+<p>Make sure to attempt <b>'My Theory Task'</b></p>
+
+<div class="heading">
+  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+<h2>My Theory Task</h2>
+</div>
+<div class="division">Part 1</div>
+
+<p></p>
+A. Choose and click on the correct answer from the given options.
+<div class="mcqlist">
+  <ol>
+    <!-- Question 1 -->
+    <li>
+      When your patient’s mobility is restricted and you are about to help him or her to mobilize, what are the things to keep in mind?
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ4(1, 'false')">
+              What level of assistance that is needed by the patient.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ4(1, 'false')">
+              Use equipment for ambulation/mobilization when needed
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ4(1, 'false')">
+              Break the mobilization process into stages
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq1" (change)="checkMCQ4(1, 'true')">
+              All of the mentioned
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback4[1]" [ngClass]="{'correct': mcqFeedback4[1] === '✔️', 'incorrect': mcqFeedback4[1] === '❌'}">{{ mcqFeedback4[1] }}</span>
+    </li>
+
+    <!-- Question 2 -->
+    <li>
+      Gait belt, a cane, a walker, or crutches are examples of items that can be used if a patient is immobilized.
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ4(2, 'true')">
+              True
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq2" (change)="checkMCQ4(2, 'false')">
+              False
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback4[2]" [ngClass]="{'correct': mcqFeedback4[2] === '✔️', 'incorrect': mcqFeedback4[2] === '❌'}">{{ mcqFeedback4[2] }}</span>
+    </li>
+
+    <!-- Question 3 -->
+    <li>
+      A brace is used only for the teeth.
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq3" (change)="checkMCQ4(3, 'false')">
+              True
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq3" (change)="checkMCQ4(3, 'true')">
+              False
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback4[3]" [ngClass]="{'correct': mcqFeedback4[3] === '✔️', 'incorrect': mcqFeedback4[3] === '❌'}">{{ mcqFeedback4[3] }}</span>
+    </li>
+
+    <!-- Question 4 -->
+    <li>
+      The most important fall prevention action is to ensure that the patient waits for help to get out of bed.
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq4" (change)="checkMCQ4(4, 'true')">
+              True
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq4" (change)="checkMCQ4(4, 'false')">
+              False
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback4[4]" [ngClass]="{'correct': mcqFeedback4[4] === '✔️', 'incorrect': mcqFeedback4[4] === '❌'}">{{ mcqFeedback4[4] }}</span>
+    </li>
+
+    <!-- Question 5 -->
+    <li>
+      Most conditions related to immobilization are not due to prolonged bed rest.
+      <div class="inlist">
+        <ol>
+          <li>
+            <label>
+              <input type="radio" name="mcq5" (change)="checkMCQ4(5, 'false')">
+              True
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="mcq5" (change)="checkMCQ4(5, 'true')">
+              False
+            </label>
+          </li>
+        </ol>
+      </div>
+      <span *ngIf="mcqFeedback4[5]" [ngClass]="{'correct': mcqFeedback4[5] === '✔️', 'incorrect': mcqFeedback4[5] === '❌'}">{{ mcqFeedback4[5] }}</span>
+    </li>
+
+        <li>
+          Being bedridden does not affect the circulation, respiration, muscles, or other physiological body functions.
+          <div class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq6" (change)="checkMCQ4(6, 'false')">
+                  True
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq6" (change)="checkMCQ4(6, 'true')">
+                  False
+                </label>
+              </li>
+            </ol>
+          </div>
+          <span *ngIf="mcqFeedback4[6]" [ngClass]="{'correct': mcqFeedback4[6] === '✔️', 'incorrect': mcqFeedback4[6] === '❌'}">{{ mcqFeedback4[6] }}</span>
+        </li>
+    
+        <!-- Question 7 -->
+        <li>
+          To prevent bed sores, you need to inspect the skin every day.
+          <div class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq7" (change)="checkMCQ4(7, 'true')">
+                  True
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq7" (change)="checkMCQ4(7, 'false')">
+                  False
+                </label>
+              </li>
+            </ol>
+          </div>
+          <span *ngIf="mcqFeedback4[7]" [ngClass]="{'correct': mcqFeedback4[7] === '✔️', 'incorrect': mcqFeedback4[7] === '❌'}">{{ mcqFeedback4[7] }}</span>
+        </li>
+    
+        
+        <!-- Question 9 -->
+        <li>
+          If you discover a pressure wound, it is important to make a schedule to turn the patient every other hour.
+          <div class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq9" (change)="checkMCQ4(9, 'true')">
+                  True
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq9" (change)="checkMCQ4(9, 'false')">
+                  False
+                </label>
+              </li>
+            </ol>
+          </div>
+          <span *ngIf="mcqFeedback4[9]" [ngClass]="{'correct': mcqFeedback4[9] === '✔️', 'incorrect': mcqFeedback4[9] === '❌'}">{{ mcqFeedback4[9] }}</span>
+        </li>
+    
+        <!-- Question 10 -->
+        <!-- Question 12 -->
+        <li>
+          Hard beds are good for the back and so patients on bed rest should also sleep on hard beds.
+          <div class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq12" (change)="checkMCQ4(12, 'false')">
+                  True
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq12" (change)="checkMCQ4(12, 'true')">
+                  False
+                </label>
+              </li>
+            </ol>
+          </div>
+          <span *ngIf="mcqFeedback4[12]" [ngClass]="{'correct': mcqFeedback4[12] === '✔️', 'incorrect': mcqFeedback4[12] === '❌'}">{{ mcqFeedback4[12] }}</span>
+        </li>
+        <li>
+        Which of the following is LEAST important to consider for a patient on bedrest?
+          <div class="inlist">
+            <ol>
+              <li>
+                <label>
+                  <input type="radio" name="mcq11" (change)="checkMCQ4(11, 'Frequent repositioning')">
+                  Nutrition and water Intake
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq11" (change)="checkMCQ4(11, 'Using high-protein diet')">
+                  Hygeine
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq11" (change)="checkMCQ4(11, 'Regular physical therapy')">
+                  How mosturized their skin is
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="mcq11" (change)="checkMCQ4(11, 'Maintaining hydration')">
+                  How often to turn them on alternative sides
+                </label>
+              </li>
+
+              <li>
+                <label>
+                  <input type="radio" name="mcq11" (change)="checkMCQ4(11, 'Maintaining hydration')">
+                  All options are important.
+                </label>
+              </li>
+            </ol>
+          </div>
+          <span *ngIf="mcqFeedback4[11]" [ngClass]="{'correct': mcqFeedback4[11] === '✔️', 'incorrect': mcqFeedback4[11] === '❌'}">{{ mcqFeedback4[11] }}</span>
+        </li>    
+  </ol>
+</div>
+
+<div class="container d-flex justify-content-between align-items-start mt-4">
+  <!-- Left List: Questions (Images) -->
+ 
+  <div class="list left-list">
+    <div
+      *ngFor="let item of leftItems"
+      class="list-item mb-2"
+      [class.selected]="selectedItem === item"
+      [class.correct]="item.correct"
+      (click)="selectLeftItem(item)"
+    >
+      <img
+        [src]="'assets/module5/m5s3_mtf1_img' + item.id + '.jpg'"
+        [alt]="item.text"
+        class="img-fluid question-image"
+      />
+    </div>
+  </div>
+  
+
+  <!-- Right List: Answers -->
+  <div class="list right-list">
+    <div
+      *ngFor="let item of rightItems"
+      class="list-item mb-2 d-flex justify-content-between align-items-center"
+      [ngClass]="{ 'correct': item.correct, 'incorrect': item.incorrect }"
+      (click)="matchWithRightItem(item)"
+    >
+      <div class="center"><span><div class="data">{{ item.text }}</div></span></div>
+      <span *ngIf="item.correct">{{ item.matchedWith }}</span>
+    </div>
+  </div>
+ </div> 
+  <div class="division">Part 2</div>
+  <p><b>Notebook Activity!</b></p>
+
+  <div class="sideimg">
+    <p>C. Amit, a 57-year old patient was overweight. He was unable to move due to a surgery. This caused him a lot of discomfort and the nurse said that the risk of getting bed rest complications increased.
+    </p>
+    <img src="assets/module5/m5s2_image3.jpg">
+  </div>
+  
+
+<p>i) What do bed rest complications mean and what parts of the body might be affected?
+</p>
+<p>ii) What actions do you need to take as a General Duty Assistant in this case to prevent the patient of getting bed rest complications?
+</p>
+
+<p>
+  D. There are 4 stages when it comes to bedsores. Explain the characteristics of the different stages in your notebook and what should be done to help a patient at each stage:
+ 
+</p>
+
+<ul style="list-style: disc;">
+<li>What signifies stage 1?</li>
+<li>What signifies stage 2?</li>
+<li>What signifies stage 3?</li>
+<li>What signifies stage 4?</li>
+</ul>
+
+
+<div class="division">Part 3</div>
+
+<div class="carousel-container">
+  <div id="carousel2" class="carousel slide">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="4"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/module5/crousel/m5s3_c2_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c2_vo1.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module5/crousel/m5s3_c2_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c2_vo2.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module5/crousel/m5s3_c2_Slide3.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c2_vo3.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module5/crousel/m5s3_c2_Slide4.JPG" class="d-block w-100" alt="Slide 4" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c2_vo4.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module5/crousel/m5s3_c2_Slide5.JPG" class="d-block w-100" alt="Slide 5" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c2_vo5.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<div class="center">Click on Play Button</div>
+
+<p>A. Look at the slideshow below and help these people find the answers to their questions. Write your replies to the questions in your notebook and discuss among your peer group.
+</p>
+<div class="center"><p><b>GREAT!</b></p></div>
+<div class="center"><p><b>Move on to 'Do It!'</b></p></div>
+<p><b>Find out how you will be assessed on your theory skills from the button below.
+</b></p>
+
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+      Learning Objective: To understand mobilization, immobilization and bed rest complications and how to prevent the same
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">identify</span>  the correct features of mobilization, immobilization and bed rest complications</td>
+        <td>You can <span class="highlight-red">explain</span> effects of immobilization and what actions are required to prevent bed rest complications</td>
+        <td>You can <span class="highlight-black">suggest </span> appropriate solutions and precautions to take for mobility, fall prevention, and bedrest complications</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity : Quiz Time
+          <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit5/LO3/5.3%20Practical%20Assessment%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+    </div><!--learnit ends-->
+    <div class="doit" *ngIf="selectedState === 'do'">
+      <p>Almost done! Let’s finish this goal with your practical.
+      </p>
+<div class="heading">
+  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+<h2>My Practical Task</h2>
+</div>
+
+<p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.
+</p>
+<div class="carousel-container">
+  <div id="carousel3" class="carousel slide">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carousel3" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carousel3" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#carousel3" data-bs-slide-to="4"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/module5/crousel/m5s3_c3_Slide1.JPG" class="d-block w-100" alt="Slide 1" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c3_vo1.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module5/crousel/m5s3_c3_Slide2.JPG" class="d-block w-100" alt="Slide 2" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c3_vo2.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module5/crousel/m5s3_c3_Slide3.JPG" class="d-block w-100" alt="Slide 3" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c3_vo3.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module5/crousel/m5s3_c3_Slide4.JPG" class="d-block w-100" alt="Slide 4" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c3_vo4.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/module5/crousel/m5s3_c3_Slide5.JPG" class="d-block w-100" alt="Slide 5" loading="lazy">
+        <audio controls>
+          <source src="assets/module5/crousel/m5s3_c3_vo5.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<div class="center">Click on Play Button</div>
+<p>Assess yourself in the practical using the <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit5/LO3/5.3%20Practical%20Assessment%20Checklist.pdf">'Practical Assessment Checklist'</a> </p>
+
+<div class="heading">
+  <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+<h2>Conclusion</h2>
+</div>
+
+<p>Based on your learning, can you discuss:
+</p>
+
+<ul style="list-style: disc;">
+<li>The importance of patient mobilization
+</li>
+<li>The importance of patient mobilization
+</li>
+<li>How to prevent and take care of bedrest complications
+</li>
+</ul>
+
+<p><b>CONGRATULATIONS! You have completed the goal!
+</b></p>
+<p><b>Find out how you will be assessed on your practical skills from the button below.
+</b></p>
+
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+      Learning Objective: To understand mobilization, immobilization and bed rest complications and how to prevent the same
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">identify</span>  the correct features of mobilization, immobilization and bed rest complications</td>
+        <td>You can <span class="highlight-red">explain</span> effects of immobilization and what actions are required to prevent bed rest complications</td>
+        <td>You can <span class="highlight-black">suggest </span> appropriate solutions and precautions to take for mobility, fall prevention, and bedrest complications</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity : Quiz Time
+          <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit5/LO3/5.3%20Practical%20Assessment%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div><!--doit ends-->
+</div>
+

@@ -1,112 +1,129 @@
 .container {
-    display: flex;
-    width: 100%;
-    padding: 0px;
-    /* background-color: #f4f0f0; */
-    border-bottom: rgba(0, 0, 0, 0.6) 1px solid;
-    margin: 0;
-    height: 10vh;
-    justify-content: space-evenly;
-    font-family: 'Poppins', sans-serif;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  margin: 0;
+  height: 8vh; /* Allow height to adjust based on content */
+  justify-content: space-evenly;
+  align-items: center; /* Center items vertically */
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
 
-    /* border-bottom: 2px solid #ccc; Add border for clarity */
-    /* box-sizing: border-box; Ensure padding is included in width calculations */
+ul {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap; /* Allow items to wrap if necessary */
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  width: 100%; /* Ensure ul spans the container */
+}
+
+ul li {
+  margin: 0 1%; /* Use relative spacing */
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow items to grow equally */
+  text-align: center;
+}
+
+li img {
+  height: 40px;
+  max-height: 100%; /* Prevent image overflow */
+  object-fit: contain;
+}
+
+li h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrap */
+  flex-grow: 2; /* Allow title to take up more space */
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+li p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.toggle-button {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch;
   }
-  
+
   ul {
-    /* background-color: #f4f0f0; */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items on smaller screens */
+  }
 
-    display: flex;
-    list-style-type: none;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    padding: 0;
-    margin: 0;
-    justify-content: space-evenly;
-    width: 100%; /* Ensure the ul spans 100% width */
-  }
-  
-  ul li {
-    margin: 0 10px; /* Space between list items */
-    display: flex; /* Flex for alignment */
-    align-items: center;
-    margin-left: 7%;
-    margin-right: 7%;
-    /* background-color: #f4f0f0; */
-
-    
-  }
-  
-  li img {
-    height: 20px;
-    border: 2px;
-    mix-blend-mode: multiply;
-  }
-  
   li h1 {
-    margin: 0;
-    font-size: 2rem;
-    text-align: center;
-    white-space: nowrap; /* Prevent text wrap */
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
   }
-  
-  button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-  }
-  
-  li p {
-    margin: 0;
-    font-size: 1rem;
-  }
-  
+
   .toggle-button {
-    display: none; /* Hidden by default */
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+    display: block; /* Show toggle button */
     margin: 0 10px;
   }
-  
-  @media (max-width: 768px) {
-    ul {
-      justify-content: flex-start; /* Align items to the start */
-    }
-  
-    li h1 {
-      font-size: 1.5rem; /* Adjust font size for smaller screens */
-    }
-  
-    li p {
-      font-size: 0.875rem; /* Adjust text size */
-    }
-  
-    .toggle-button {
-      display: block; /* Show toggle button */
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-    }
-  
-    .logo-container {
-      margin-left: auto;
-    }
-  
-    /* Adjust logo size for small screens */
-    li img {
-      height: 20px;
-    }
-  
-    /* Ensure ul spans the full width */
-    ul {
-      width: 100%;
-    }
 
-    
+  li img {
+    height: 30px; /* Adjust image size */
   }
+}
+@media (max-width: 479px) {
+.container{
+  width: 100%;
+  display: flex;
+}
+.container li p{
+  font-size: x-small;
+}
+.container li img{
+  height: 15px;
+}
+
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 5%; /* Add padding for small screens */
+  }
+
+  ul {
+    flex-direction: row; /* Stack items */
+    align-items: center;
+  }
+
+  li {
+    width: auto; /* Make each item span full width */
+    margin: 10px 0; /* Add space between items */
+  }
+
+  li img {
+    height: 20px;
+  }
+
+  li p {
+    font-size: 0.9rem; /* Further adjust font size */
+  }
+
   
-  
+}

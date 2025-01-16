@@ -1,6 +1,7 @@
 {
   "modules": [
     {
+      "id": 1,
       "name": "Introduction to the Program",
       "numberofsubmodules": 5,
       "subModules": [
@@ -12,6 +13,7 @@
       ]
     },
     {
+      "id": 2,
       "name": "The GDA Profession",
       "numberofsubmodules": 4,
       "subModules": [
@@ -22,6 +24,7 @@
       ]
     },
     {
+      "id": 3,
       "name": "Hygiene and Infection Prevention",
       "numberofsubmodules": 5,
       "subModules": [
@@ -33,6 +36,7 @@
       ]
     },
     {
+      "id": 4,
       "name": "Human Body Structure and Function",
       "numberofsubmodules": 2,
       "subModules": [
@@ -41,6 +45,7 @@
       ]
     },
     {
+      "id": 5,
       "name": "Positioning and Transferring of Patients",
       "numberofsubmodules": 3,
       "subModules": [
@@ -50,6 +55,7 @@
       ]
     },
     {
+      "id": 6,
       "name": "Patient Basic Care",
       "numberofsubmodules": 7,
       "subModules": [
@@ -63,6 +69,7 @@
       ]
     },
     {
+      "id": 7,
       "name": "Measuring Parameters",
       "numberofsubmodules": 3,
       "subModules": [

@@ -35,6 +35,9 @@ import { SterlizationDisinfectionComponent } from './module3/sterlization-disinf
 import { AsepticWorkComponent } from './module3/aseptic-work/aseptic-work.component';
 import { AnatomyAndPhysioComponent } from './module4/anatomy-and-physio/anatomy-and-physio.component';
 import { MedicationRoutesAndAdmnComponent } from './module4/medication-routes-and-admn/medication-routes-and-admn.component';
+import { PosAndTransOfPatientsComponent } from './module5/pos-and-trans-of-patients/pos-and-trans-of-patients.component';
+import { HospitalbedsAndBedmakingComponent } from './module5/hospitalbeds-and-bedmaking/hospitalbeds-and-bedmaking.component';
+import { MobilityOfPatientsComponent } from './module5/mobility-of-patients/mobility-of-patients.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +77,10 @@ import { MedicationRoutesAndAdmnComponent } from './module4/medication-routes-an
     SterlizationDisinfectionComponent,
     AsepticWorkComponent,
     AnatomyAndPhysioComponent,
-    MedicationRoutesAndAdmnComponent
+    MedicationRoutesAndAdmnComponent,
+    PosAndTransOfPatientsComponent,
+    HospitalbedsAndBedmakingComponent,
+    MobilityOfPatientsComponent
   ],
   providers: [
     provideClientHydration(withEventReplay())

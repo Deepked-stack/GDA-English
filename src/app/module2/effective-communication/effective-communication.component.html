@@ -1,5 +1,5 @@
 <div class="content">
-  <div class="startit">
+ <div class="startit" *ngIf="selectedState === 'start'">
 <p>Welcome! Let us start your journey!</p>
 
 <div class="videodiv">
@@ -93,6 +93,9 @@
         </span>
       </div>
     </div>
+    </div>
+    </div>
+    
   
   <p><b>Find out how you will be assessed on you theory skills from the button below.</b></p>
   <div class="assessbutton">
@@ -128,11 +131,12 @@
       </tbody>
     </table>
   </div>
-  
-  
-</div><!--startit ends-->
+ </div> 
 
-<div class="learnit">
+<!--startit ends-->
+
+
+<div class="learnit" *ngIf="selectedState === 'learn'">
   <p>Come, let us learn the theory of this learning outcome Look at the resources below and then attempt the <b>My Theory Task</b>.</p>
  
 <div class="heading">
@@ -347,7 +351,7 @@
  </div>
 </div>
 </div>
-   </div>
+   
 
     <p>
       2. <b>Identify if the following are verbal or non-verbal ways to communicate? Type a ‘V’ in front of Verbal and ‘NV’ in front of Non-Verbal.</b>
@@ -464,7 +468,7 @@
    </div>
  </div>
  </div>
-     </div>
+     
 
      <div class="division">Part 2</div>
      <p><b>EXPLAIN!</b></p>
@@ -538,11 +542,10 @@
     </tbody>
   </table>
 </div>
-</div><!--learn it ends-->
 
-<div class="doit">
+</div>
+<div class="doit" *ngIf="selectedState === 'do'" >
 
-  <h2>DoIt</h2>
   <p>Almost done! Let's finish this goal with your practical,</p>
  <div class="videodiv">
   <iframe src="https://player.vimeo.com/video/458427599?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="GDA2.4 Practical Task English"></iframe>
@@ -599,5 +602,5 @@
   </table>
 </div>
 </div><!--do it ends-->
-</div><!--content ends-->
+</div>
 

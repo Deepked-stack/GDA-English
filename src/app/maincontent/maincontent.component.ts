@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModuleDataService } from '../module-data.service';
 
@@ -9,6 +9,7 @@ import { ModuleDataService } from '../module-data.service';
   styleUrl: './maincontent.component.css'
 })
 export class MaincontentComponent {
+  
   selectedsubmodule: string = '';  // This is the submodule you want to display
   selectedModuleName: string = 'Select a module to view details';
   currentModuleIndex: number = 0;
@@ -88,5 +89,44 @@ export class MaincontentComponent {
     return this.currentModuleIndex === this.modules.length - 1 &&
            this.currentSubmoduleIndex === this.modules[this.currentModuleIndex].subModules.length - 1;
   }
+  getNextSubmoduleName(): string | null {
+    if (this.isLastSubmodule()) {
+      return null; // No next submodule if it's the last one
+    }
   
+    if (this.currentSubmoduleIndex < this.modules[this.currentModuleIndex].subModules.length - 1) {
+      // Within the same module
+      return this.modules[this.currentModuleIndex].subModules[this.currentSubmoduleIndex + 1];
+    } else if (this.currentModuleIndex < this.modules.length - 1) {
+      // Move to the next module
+      return this.modules[this.currentModuleIndex + 1].subModules[0];
+    }
+  
+    return null;
+  }
+  
+  getPreviousSubmoduleName(): string | null {
+    if (this.isFirstSubmodule()) {
+      return null; // No previous submodule if it's the first one
+    }
+  
+    if (this.currentSubmoduleIndex > 0) {
+      // Within the same module
+      return this.modules[this.currentModuleIndex].subModules[this.currentSubmoduleIndex - 1];
+    } else if (this.currentModuleIndex > 0) {
+      // Move to the previous module
+      return this.modules[this.currentModuleIndex - 1].subModules[
+        this.modules[this.currentModuleIndex - 1].subModules.length - 1
+      ];
+    }
+  
+    return null;
+  }
+  
+  @Output() contentSelected = new EventEmitter<string>();
+
+  // This method is called when the StartIt button is clicked
+  showStudyContent(content: string) {
+    this.contentSelected.emit(content); // Emit the selected content
+  } 
 }

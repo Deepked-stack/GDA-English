@@ -1,5 +1,5 @@
 <div class="content">
-<div class="startit">
+<div class="startit" *ngIf="selectedState === 'start'">
     <p>Welcome! Let us start your journey!</p>
     <div class="carousel-container">
         <div id="Carousel1" class="carousel slide" >
@@ -155,6 +155,9 @@
           </span>
         </div>
     </div>
+</div>
+
+  </div>
 <p>Give reasons for your answers.</p> 
 <p><b>Find out how you will be assessed on your theory skills from the button below.</b></p>
 <div class="assessbutton">
@@ -191,16 +194,17 @@
     </table>
   </div>
 
+
 </div><!--startit ends-->
 
-<div class="learnit">
+<div class="learnit" *ngIf="selectedState === 'learn'">
     <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.</p>
     <div class="heading">
         <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
         <h2>My Resources</h2>   
     </div>
     <div class="videodiv">
-        3.4 Aseptic work
+      <iframe src="https://player.vimeo.com/video/463434786?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="3.5 Aseptic Work"></iframe>
     </div>
 
     <p><b>Checkpoint!</b></p>
@@ -274,7 +278,7 @@
 <p>2. It is very important that you follow the cleaning procedures to prevent the risks for healthcare associated infections and ensure your patients’ safety.</p>      
 
 <div class="videodiv">
-    GDA 3.5 Essentials of manual cleaning
+  <iframe src="https://player.vimeo.com/video/463442341?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="3.5 Essentials of Manual Cleaning"></iframe>
 </div>
 
 <p><b>Checkpoint!</b></p>
@@ -366,7 +370,7 @@
   
 <p>3. In your role as a General Duty Assistant, you need to have basic knowledge on aseptic work and cleaning procedures in healthcare facilities. Watch this video to learn how to perform different cleaning procedures in the correct manner.</p>
 <div class="videodiv">
-    GDA3.5 Cleaning Procedure
+  <iframe src="https://player.vimeo.com/video/498291749?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="GDA3.5 Cleaning Procedure"></iframe>
 </div>
 
 <p><b>Checkpoint Questions!</b></p>
@@ -577,6 +581,7 @@
           </span>
         </td>
       </tr>
+      <br>
     </table>
   </div>
 
@@ -629,11 +634,44 @@
 </div>
 <p><b>Find out how you will be assessed on your theory skills from the button below.</b></p>
 
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+
+<!-- Table Display -->
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+      Learning Objective: To have basic knowledge on aseptic work and cleaning procedures in healthcare facilities
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">identify</span> features of aseptic work and cleaning procedures in healthcare facilities.</td>
+        <td>You can <span class="highlight-red">explain</span> how aseptic work and cleaning procedures in healthcare facilities are performed</td>
+        <td>You can <span class="highlight-black">evaluate the actions OR lack of actions</span>taken by the GDAs in different situations involving aseptic work and cleaning procedures in healthcare facilities.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity : Chart Making and Cleaning Demonstration <br> <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit3/LO5/3.5%20Practical%20Assessment%20Checklist-1.pdf">'Practical Assessment Checklist'</a>      </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 </div><!--learnit ends-->
 
-<div class="doit">
-    <h2>Do It</h2>
+<div class="doit" *ngIf="selectedState === 'do'">
+    
     <p>Almost done! Let’s finish this goal with your practical.</p>
 
     <div class="heading">

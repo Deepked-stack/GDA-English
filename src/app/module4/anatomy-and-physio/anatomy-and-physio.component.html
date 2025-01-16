@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="startit">
+    <div class="startit" *ngIf="selectedState === 'start'">
         <p>Welcome to this adventure! We are going to take you through how the body works and what different Physiological systems that you can find in the body.
         </p>
         <div class="carousel-container">
@@ -161,7 +161,7 @@
   </div>
     </div><!--starit ends-->
 
-    <div class="learnit">
+    <div class="learnit" *ngIf="selectedState === 'learn'">
         <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.</p>
         <div class="heading">
             <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
@@ -170,7 +170,7 @@
 <p>1. A General Duty Assistant needs to have basic knowledge about the human body structure and its functions. Let’s learn about the different systems in the body.</p>
 
 <div class="videodiv">
-    4.1 Human Anatomy
+  <iframe src="https://player.vimeo.com/video/456121303?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="4.1 Human Anatomy"></iframe>
 </div>
 
 <p><b>CheckPoint!</b></p>
@@ -345,7 +345,7 @@
 </p>
 
 <div class="videodiv">
-    GDA 4.1 Nervous System
+  <iframe src="https://player.vimeo.com/video/696854130?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="GDA4.1 Nervous System"></iframe>
 </div>
 
 
@@ -998,9 +998,10 @@
       </tbody>
     </table>
   </div>
+</div>
 </div><!--learnit ends-->
 
-<div class="doit">
+<div class="doit" *ngIf="selectedState === 'do'">
     <p>Almost done! Let’s finish this goal with your practical.
     </p>
 

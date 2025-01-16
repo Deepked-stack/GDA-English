@@ -52,6 +52,10 @@ margin: 20px;
 color: #d2efd9;
 }
 
+p{
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
 .mcqlist li {
   /* background-color: #adebbc; */
   list-style-type: none;
@@ -60,8 +64,11 @@ color: #d2efd9;
   box-shadow: 2px 2px 5px black;
   padding: 5px;
   border-radius: 8px;
-  font-size: small;
+  padding: 2%;
+  font-size:medium;
   width: 100%;
+  margin: 2%;
+  background-color: white;
 }
 
 .inlist li {
@@ -70,6 +77,8 @@ color: #d2efd9;
   margin-left: 15%;
   padding: 5px;
   width: 80%;
+  margin: 2%;
+  font-size: medium;
 }
 
 .inlist li:hover {
@@ -86,6 +95,15 @@ span.incorrect {
   color: red;
   font-weight: bold;
   margin-left: 10px;
+}
+
+.division
+{
+display: flex;
+justify-content: center;
+background-color: #dadcda;
+margin-top: 2%;
+margin-bottom: 2%;
 }
 
   
@@ -346,3 +364,4 @@ a:hover {
   border-top: 0.1px solid black;
   padding: 1%;
 }
+

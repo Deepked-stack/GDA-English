@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="startit">
+    <div class="startit" *ngIf="selectedState === 'start'">
         <p>Welcome! Let us start your journey!</p>
         <div class="carousel-container">
             <div id="Carousel1" class="carousel slide" >
@@ -104,8 +104,8 @@
   </div>
     </div><!--startit ends-->
 
-<div class="learnit">
-  <h2>Learn it</h2>
+<div class="learnit" *ngIf="selectedState === 'learn'">
+  
   <hr>
   <div class="heading">
     <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
@@ -219,7 +219,7 @@
 </p>
 
 <div class="videodiv">
-  GDA3.4 Sterlization and disinfection english
+  <iframe src="https://player.vimeo.com/video/455791138?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="GDA3.4 Sterilization and Disinfection English"></iframe>
 </div>
 
 <p><b>Checkpoint!</b></p>
@@ -331,8 +331,8 @@
             {{ feedback.option6 }}
           </span>
         </div>     
-    </div>
-
+    
+</div>
 <p>B. State two reasons in your notebook, why disinfection and sterilization are important in a healthcare system – hospital or clinic?.
 </p>
 <p>C. Given below is a list of materials that have to be sterilised. Click on the correct column and state whether the following items should be autoclaved or not.
@@ -414,7 +414,7 @@
 </div>
 </div>
 </div>
-  </div>
+
 <p>D. Write down the differences between sterilization and disinfection in your notebook and show it to your teacher.
 </p>
 <p>E. Ravi is making a chart on physical methods of sterilization which is given below. Find out mistakes in it and draw the correct chart in your notebook.
@@ -512,8 +512,8 @@
 </div>
 </div><!--learnit ends-->
 
-<div class="doit">
-  <h2>Do It</h2>
+<div class="doit" *ngIf="selectedState === 'do'">
+
   <p>Almost done! Let’s finish this goal with your practical.
   </p>
 <div class="heading">
@@ -523,7 +523,7 @@
 <p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.</p>
 
 <div class="videodiv">
-  GDA 3.4 Practical task video English
+  <iframe src="https://player.vimeo.com/video/455791648?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="GDA3.4 My Practical Task Video English"></iframe>
 </div>
 
 <p>Assess yourself in practical using the <a target="_blank" href="https://kedskills.org/pdf/GDA_E/Unit3/LO4/3.4%20Practical%20Assessment%20Checklist,%20revised%20goal%20name.pdf">'Practical Assesment Checklist'</a></p>

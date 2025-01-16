@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="startit">
+    <div class="startit" *ngIf="selectedState === 'start'">
 <p>Welcome! Let us start your journey</p>
 <p><b>Health is Wealth!</b></p>
 
@@ -149,10 +149,10 @@
   </table>
 </div>
 </div><!--start it ends-->
-<div class="learnit">
-<hr>
-<b>LearnIt</b>
-<hr>
+
+
+<div class="learnit" *ngIf="selectedState === 'learn'">
+
 <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.
 </p>
 <div class="heading">
@@ -361,7 +361,7 @@
 
 
   <div class="carousel-container">
-    <div id="historicalCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="historicalCarousel" class="carousel slide" >
       <!-- Indicators -->
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#historicalCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
@@ -468,9 +468,11 @@
     </tbody>
   </table>
 </div>
-</div><!--learnit end-->
+</div>
+</div>
+<!--learnit end-->
 
-<div class="doit">
+<div class="doit" *ngIf="selectedState === 'do'">
   <p>Almost done! Let's finish this goal with your practical.</p>
 <div class="heading">
   <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
@@ -479,7 +481,7 @@
 <p>Time for your practical! what is your practical asctivity? What is the best way to do it? Explore it in slideshow below.</p>
 
 <div class="carousel-container">
-  <div id="historicalsCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="historicalsCarousel" class="carousel slide" >
     <!-- Indicators -->
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#historicalsCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
@@ -594,8 +596,7 @@
   </table>
 </div>
 
-</div><!--learnit end-->
+</div><!--doit end-->
 
 
-</div>
 </div>

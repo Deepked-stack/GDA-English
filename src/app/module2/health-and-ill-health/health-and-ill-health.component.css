@@ -1,7 +1,7 @@
 .content{
     display: block;
-    padding: 20px;
     font-size: medium;
+    padding: 2rem;
 }
 
 .yesnobutton {
@@ -62,6 +62,7 @@
 .toimg img{
   margin-bottom: 5vh;
   mix-blend-mode: darken;
+  width: 60%;
 }
 .red button{
   background-color: rgb(250, 78, 78) !important;
@@ -196,27 +197,37 @@ margin-bottom: 10px;
 }
 
 
-.mcqlist li{
+p{
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+.mcqlist li {
   /* background-color: #adebbc; */
   list-style-type: none;
-  margin: 10px;
+  margin-bottom: 10px;
   border: 0.1px black solid;
-  box-shadow: 2px 2px 5px black ;
+  box-shadow: 2px 2px 5px black;
   padding: 5px;
   border-radius: 8px;
-
+  padding: 2%;
+  font-size:medium;
+  width: 100%;
+  margin: 2%;
+  background-color: white;
 }
 
-.inlist li{
-  background-color: #e6e8e6;
+.inlist li {
+  background-color: #dadcda;
   list-style-type: lower-alpha;
   margin-left: 15%;
   padding: 5px;
   width: 80%;
+  margin: 2%;
+  font-size: medium;
 }
 
-.inlist li:hover{
-scale: 1.03;
+.inlist li:hover {
+  scale: 1.03;
 }
 
 span.correct {
@@ -229,6 +240,15 @@ span.incorrect {
   color: red;
   font-weight: bold;
   margin-left: 10px;
+}
+
+.division
+{
+display: flex;
+justify-content: center;
+background-color: #dadcda;
+margin-top: 2%;
+margin-bottom: 2%;
 }
 
 /* for checkbox */
@@ -427,6 +447,9 @@ span.incorrect {
   margin: 10px auto;
 }
 
+.carousel-control-prev,.carousel-control-next{
+height: 70%;
+}
 /* Carousel Controls (Black) */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -487,6 +510,7 @@ span.incorrect {
   margin: 20px auto;
   padding: 20px;
   width: 100%;
+  overflow-x: auto;
   max-width: 800px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;

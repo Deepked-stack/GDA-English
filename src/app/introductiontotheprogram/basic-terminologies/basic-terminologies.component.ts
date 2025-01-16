@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { StudyNavComponent } from '../../study-nav/study-nav.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class BasicTerminologiesComponent {
+
+  @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
+
   leftItems = [
     { id: 1, text: 'Question 1', correct: false, src: 'src/assets/module1/m1s5_mcqimg1.jpg' },
     { id: 2, text: 'Question 2', correct: false, src: 'src/assets/module1/m1s5_mcqimg2.jpg' },
@@ -153,4 +156,6 @@ addTickOrCross(inputId: string, symbol: string): void {
   
   tickCrossElement.textContent = symbol;
 }
+
+
 } 

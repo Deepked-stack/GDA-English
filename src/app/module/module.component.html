@@ -2,7 +2,10 @@
 <div class="module-container">
   <div class="module-card" *ngFor="let module of modules" (click)="toggleSubModules(module)">
     <div class="module-title">
+
       <div class="modulename">
+        <p>Module: {{module.id}}</p><br>
+
       <h6>{{ module.name }}</h6>
     <div class="progress">Completed:{{ completionStatus[i]?.completedCount }} /{{module.numberofsubmodules}}</div>
   </div>

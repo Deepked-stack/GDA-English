@@ -1,5 +1,6 @@
 <!-- <app-study-nav></app-study-nav> -->
  <div class="content">
+  <div class="starit"  *ngIf="selectedState === 'start'">
 <div class="container">
     <!-- Health is Wealth Section -->
     <div class="health-section">
@@ -34,31 +35,46 @@
       <div class="question-section">
         <p class="question">Which of the following statements about healthcare are correct?</p>
         <div class="options">
+          <div class="option">
           <label>
             <input type="checkbox" [(ngModel)]="answers.option1" (change)="checkAnswer('option1')">
             There are private and public sectors in Healthcare.
-            <span *ngIf="feedback1.option1" [ngClass]="{'correct': feedback1.option1 === '✔️', 'incorrect': feedback1.option1 === '❌'}">{{ feedback1.option1 }}</span>
           </label>
+          <span *ngIf="feedback1.option1" [ngClass]="{'correct': feedback1.option1 === '✔️', 'incorrect': feedback1.option1 === '❌'}">{{ feedback1.option1 }}</span>
+          </div>
+
+          <div class="option">
           <label>
             <input type="checkbox" [(ngModel)]="answers.option2" (change)="checkAnswer('option2')">
             Most doctors in India work in rural areas.
-            <span *ngIf="feedback1.option2" [ngClass]="{'correct': feedback1.option2 === '✔️', 'incorrect': feedback1.option2 === '❌'}">{{ feedback1.option2 }}</span>
           </label>
+          <span *ngIf="feedback1.option2" [ngClass]="{'correct': feedback1.option2 === '✔️', 'incorrect': feedback1.option2 === '❌'}">{{ feedback1.option2 }}</span>
+          </div>
+
+          <div class="option">
           <label>
             <input type="checkbox" [(ngModel)]="answers.option3" (change)="checkAnswer('option3')">
             Healthcare is provided only in hospitals.
-            <span *ngIf="feedback1.option3" [ngClass]="{'correct': feedback1.option3 === '✔️', 'incorrect': feedback1.option3 === '❌'}">{{ feedback1.option3 }}</span>
           </label>
+          <span *ngIf="feedback1.option3" [ngClass]="{'correct': feedback1.option3 === '✔️', 'incorrect': feedback1.option3 === '❌'}">{{ feedback1.option3 }}</span>
+          </div>
+          
+          <div class="option">
           <label>
             <input type="checkbox" [(ngModel)]="answers.option4" (change)="checkAnswer('option4')">
             When you go to the doctor with a cold, you usually end up in the ICU.
-            <span *ngIf="feedback1.option4" [ngClass]="{'correct': feedback1.option4 === '✔️', 'incorrect': feedback1.option4 === '❌'}">{{ feedback1.option4 }}</span>
           </label>
+          <span *ngIf="feedback1.option4" [ngClass]="{'correct': feedback1.option4 === '✔️', 'incorrect': feedback1.option4 === '❌'}">{{ feedback1.option4 }}</span>
+          </div>
+
+          <div class="option">
           <label>
             <input type="checkbox" [(ngModel)]="answers.option5" (change)="checkAnswer('option5')">
             There are enough doctors in India today.
-            <span *ngIf="feedback1.option5" [ngClass]="{'correct': feedback1.option5 === '✔️', 'incorrect': feedback1.option5 === '❌'}">{{ feedback1.option5 }}</span>
           </label>
+          <span *ngIf="feedback1.option5" [ngClass]="{'correct': feedback1.option5 === '✔️', 'incorrect': feedback1.option5 === '❌'}">{{ feedback1.option5 }}</span>
+
+          </div>
         </div>
       </div>
   
@@ -96,11 +112,11 @@
       </tbody>
     </table>
   </div>
-  
-  <hr>
-  learn it
-  <hr>
-  <div class="learnit">
+ </div> 
+
+
+ <!-- ----------------------------------------------------------- -->
+ <div class="learnit" *ngIf="selectedState === 'learn'">
     Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>My Theory Task.</b>
 
 <div class="heading">
@@ -267,7 +283,7 @@ Look at the video below
     <div class="option">
       <label>
         <input type="checkbox" [(ngModel)]="answersch.option1" (change)="checkAnswerch('option1')" class="checkbox">
-        <span class="statement">There are private and public sector in healthcare.</span>
+        <span class="statement">General clinics come under public sector.</span>
       </label>
       <span *ngIf="feedback.option1" [ngClass]="{'correct': feedback.option1 === '✔️', 'incorrect': feedback.option1 === '❌'}">
         {{ feedback.option1 }}
@@ -276,7 +292,7 @@ Look at the video below
     <div class="option">
       <label>
         <input type="checkbox" [(ngModel)]="answersch.option2" (change)="checkAnswerch('option2')" class="checkbox">
-        <span class="statement">Most doctors in india work in rural areas.</span>
+        <span class="statement">Physical Ilness is more fatal than mental.</span>
       </label>
       <span *ngIf="feedback.option2" [ngClass]="{'correct': feedback.option2 === '✔️', 'incorrect': feedback.option2 === '❌'}">
         {{ feedback.option2 }}
@@ -285,7 +301,7 @@ Look at the video below
     <div class="option">
       <label>
         <input type="checkbox" [(ngModel)]="answersch.option3" (change)="checkAnswerch('option3')" class="checkbox">
-        <span class="statement">Healthcare is always provided only in Hospital's.</span>
+        <span class="statement">absence of disease doesnot being in state of good health.</span>
       </label>
       <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
         {{ feedback.option3 }}
@@ -294,7 +310,7 @@ Look at the video below
     <div class="option">
       <label>
         <input type="checkbox" [(ngModel)]="answersch.option4" (change)="checkAnswerch('option4')" class="checkbox">
-        <span class="statement">When you go to the doctor with a cold, you usually end up in the ICU.</span>
+        <span class="statement">Secondary healthcare is provided at district hospital..</span>
       </label>
       <span *ngIf="feedback.option4" [ngClass]="{'correct': feedback.option4 === '✔️', 'incorrect': feedback.option4 === '❌'}">
         {{ feedback.option4 }}
@@ -303,7 +319,7 @@ Look at the video below
     <div class="option">
       <label>
         <input type="checkbox" [(ngModel)]="answersch.option5" (change)="checkAnswerch('option5')" class="checkbox">
-        <span class="statement">There are enough doctors in India today.</span>
+        <span class="statement">Most of health problems of people can be addressed at primary healthcare level.</span>
       </label>
       <span *ngIf="feedback.option5" [ngClass]="{'correct': feedback.option5 === '✔️', 'incorrect': feedback.option5 === '❌'}">
         {{ feedback.option5 }}
@@ -311,44 +327,13 @@ Look at the video below
     </div>
   </div>
 
-  <div class="assessbutton">
-    <button (click)="toggleTable()">How will I be Assessed?</button>
-  </div>
-  <div class="assessment-table" *ngIf="isTableVisible">
-    <h3>How Will I Be Assessed?</h3>
-    <p class="learning-objective">
-      Learning Objective: To know about history and important discoveries in Healthcare
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th>Criteria</th>
-          <th>Blue</th>
-          <th>Red</th>
-          <th>Black</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Theory</td>
-          <td>You can <span class="highlight-blue">identify</span> the features of <span class="highlight-blue">healthcare</span>delivery systems in India.</td>
-          <td>You can <span class="highlight-red">explain</span> healthcare delivery systems in detail</td>
-          <td>You can <span class="highlight-black">research</span> about the difference in healthcare services in urban vs. rural areas of the country.</td>
-        </tr>
-        <tr>
-          <td>Practical</td>
-          <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">‘Practical Assessment Checklist’</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
 
+<div class="learnit" *ngIf="selectedState === 'learn'">
   <p>B. Match the following.</p>
 
   <p>1. Match the options of left side to correct answers of right side:</p>
 
-<div class="container d-flex justify-content-between align-items-start mt-4">
+<div class="container d-flex justify-content-between align-items-start mt-2">
   <!-- Left List: Questions -->
   <div class="list left-list">
     <div
@@ -443,7 +428,9 @@ Look at the video below
 
 </div><!--learnit completed-->
 
-<div class="doit">
+</div>
+</div>
+<div class="doit" *ngIf="selectedState === 'do'">
   <p>Almost done! Let's finish this goal with your practical.</p>
 <div class="heading">
   <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
@@ -467,5 +454,43 @@ Look at the video below
   </p>
   <img src="assets/module1/m1s2_last.png" alt="">
 </div>
+
+<p><b>Congratulations! you have completed the goal.</b></p>
+<p><b>Click on the button below to see how you will be assessed</b></p>
+
+<div class="assessbutton">
+  <button (click)="toggleTable()">How will I be Assessed?</button>
+</div>
+<div class="assessment-table" *ngIf="isTableVisible">
+  <h3>How Will I Be Assessed?</h3>
+  <p class="learning-objective">
+    Learning Objective: To know about history and important discoveries in Healthcare
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Blue</th>
+        <th>Red</th>
+        <th>Black</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Theory</td>
+        <td>You can <span class="highlight-blue">identify</span> the features of <span class="highlight-blue">healthcare</span>delivery systems in India.</td>
+        <td>You can <span class="highlight-red">explain</span> healthcare delivery systems in detail</td>
+        <td>You can <span class="highlight-black">research</span> about the difference in healthcare services in urban vs. rural areas of the country.</td>
+      </tr>
+      <tr>
+        <td>Practical</td>
+        <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">‘Practical Assessment Checklist’</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 </div><!--doit ends-->
 </div>
+
+

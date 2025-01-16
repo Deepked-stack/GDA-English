@@ -1,5 +1,5 @@
 <div class="content">
-<div class="startit">
+<div class="startit" *ngIf="selectedState === 'start'">
 <p>Welcome! Let us start your journey!  </p>
 
 <div class="carousel-container">
@@ -309,9 +309,12 @@
   </table>
 </div>
 
+</div>
+</div>
 
-<div class="learnit">
-  <hr><h2>LearnIt</h2><hr>
+
+<div class="learnit" *ngIf="selectedState === 'learn'">
+ 
   <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.
   </p>
 
@@ -354,7 +357,7 @@
   
       <!-- Question 2 -->
       <li>
-        a) The core value in Person Centred Care is:
+        a) Research in person centered care have shown:
         <div class="inlist">
           <ol>
             <li>
@@ -475,7 +478,7 @@
 
 </div><!--learnit ends-->
 
-<div class="doit">
+<div class="doit" *ngIf="selectedState === 'do'">
   <p>Almost done! Let's finish this goal with your practical</p>
 
   <div class="heading">

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./person-centered-care.component.css'],
 })
 export class PersonCenteredCareComponent {
+    @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
+  
   mcqFeedback: { [key: number]: string } = {};
 
   checkMCQ1(questionNumber: number, selectedAnswer: string): void {

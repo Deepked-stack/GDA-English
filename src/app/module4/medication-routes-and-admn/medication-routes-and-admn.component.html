@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="startit">
+    <div class="startit" *ngIf="selectedState === 'start'">
         <p>Wecome! Let us start your journey!</p>
         <div class="sideimg">
             <p>Hello everyone, my name is Madhu and I’m going to take you through this learning objective where you will learn about common medication routes
@@ -156,7 +156,7 @@
 
     </div><!--startit-->
 
-<div class="learnit">
+<div class="learnit" *ngIf="selectedState === 'learn'">
 <p>ome, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b> ‘My Theory Task’.</b></p>
 <div class="heading">
     <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
@@ -167,7 +167,7 @@
 </p>
 
 <div class="videodiv">
-   GDA 4.2 Medication routes and administration 
+  <iframe src="https://player.vimeo.com/video/467241538?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="4.2 Medication Routes and Administration"></iframe>
 </div>
 
 <p><b>Checkpoint!</b></p>
@@ -393,9 +393,11 @@
       </tbody>
     </table>
   </div>
+</div>
+</div>
 </div><!--learnit ends-->
 
-<div class="doit">
+<div class="doit" *ngIf="selectedState === 'do'">
     <p>Almost done! Let’s finish this goal with your practical.
     </p>
     <div class="heading">

@@ -56,7 +56,7 @@
 
   .content {
     display: block;
-    padding: 20px;
+    /* padding: 20px; */
     font-size:smaller;
     font-family: 'Poppins', sans-serif;
 
@@ -165,6 +165,7 @@
 
 /* Table container */
 .assessment-table {
+  overflow-x: auto;
   margin: 20px auto;
   /* padding: 20px; */
   width: 100%;
@@ -257,6 +258,10 @@ a:hover {
 }
 
  
+p{
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
 .mcqlist li {
   /* background-color: #adebbc; */
   list-style-type: none;
@@ -265,8 +270,10 @@ a:hover {
   box-shadow: 2px 2px 5px black;
   padding: 5px;
   border-radius: 8px;
-  font-size: small;
+  padding: 2%;
+  font-size:medium;
   width: 100%;
+  margin: 2%;
 }
 
 .inlist li {
@@ -275,6 +282,8 @@ a:hover {
   margin-left: 15%;
   padding: 5px;
   width: 80%;
+  margin: 2%;
+  font-size: medium;
 }
 
 .inlist li:hover {
@@ -293,14 +302,17 @@ span.incorrect {
   margin-left: 10px;
 }
 
-.division {
-  background-color: rgb(201, 200, 200);
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  /* color: #d2efd9; */
+.division
+{
+display: flex;
+justify-content: center;
+background-color: #dadcda;
+margin-top: 2%;
+margin-bottom: 2%;
 }
+
+
+
 
 /* for match the folllowing */
 .container {
@@ -312,15 +324,18 @@ span.incorrect {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: small;
     text-align: center;
+    width: 100%;
     cursor: pointer;
     background: #f8f9fa;
     transition: background 0.3s ease, color 0.3s ease;
-
+    word-break: break-all;
     &.selected {
       background: #007bff;
       color: white;
     }
+ 
 
     &.correct {
       background: #d4edda; /* Light green for correct */
@@ -371,4 +386,12 @@ margin-right: 10px;
   border-bottom: 0.1px solid black;
   border-top: 0.1px solid black;
   padding: 1%;
+}
+
+.content {
+  display: block;
+  padding: 20px;
+  font-size:smaller;
+  font-family: 'Poppins', sans-serif;
+
 }

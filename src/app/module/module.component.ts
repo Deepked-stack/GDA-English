@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ModuleDataService } from '../module-data.service';
 import { Router } from '@angular/router';
 
@@ -44,5 +44,25 @@ markSubmoduleAsDone(moduleIndex:number,submoduleIndex:number){
 
     this.moduleDataService.setSubmodule(subModule);
     this.moduleSelected.emit(subModule);  // Emit selected submodule to the parent
+  }
+
+
+
+  @Input() module: any; // Pass module data (e.g., title, sub-modules)
+
+  completedSubModules = 0;
+
+  updateProgress() {
+    this.completedSubModules++;
+
+    // Check if the module is completed
+    if (this.completedSubModules === this.module.subModules.length) {
+      this.markModuleAsCompleted();
+    }
+  }
+
+  markModuleAsCompleted() {
+    console.log(`Module "${this.module.title}" completed!`);
+    // Logic to transition to the next module or reset progress
   }
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './basic-hygeine-and-infec-control.component.css'
 })
 export class BasicHygeineAndInfecControlComponent {
+
+    @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
+  
   leftItems = [
     { id: 1, text: 'Question 1', correct: false },
     { id: 2, text: 'Question 2', correct: false },
