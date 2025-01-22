@@ -121,4 +121,31 @@ validateAnswer(value: string) {
     this.isTableVisible = !this.isTableVisible;
   }
 
+  isnextEnabled:string='false';
+  clicked:boolean=false;
+
+  @Output() nextStateChanged = new EventEmitter<boolean>();
+
+  MakeNextEnabled(){
+ this.isnextEnabled= 'true';
+ this.nextStateChanged.emit(true);
+ this.clicked=true;
+  }
+
+
+  @Output() stateChanged =new EventEmitter<string>();
+  movetoLearnIt(state:string){
+   this.selectedState='learn';
+   this.stateChanged.emit(this.selectedState);
+ 
+  }
+ 
+  movetoDoIt(state:string){
+   this.selectedState='do';
+   this.stateChanged.emit(this.selectedState);
+ 
+  }
+ 
+ 
+
 }

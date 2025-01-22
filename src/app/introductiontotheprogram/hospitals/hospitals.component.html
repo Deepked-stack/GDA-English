@@ -33,8 +33,8 @@ You must have seen this place at least once, either in real life or on TV . Pati
 <br>
 <br>
   <div class="heading">
-    <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">    
-    <h2>What I Know Already...</h2></div>
+    <img width="66" height="65" src="assets/wiak.svg" class="attachment-large size-large" alt="">    
+    <h2>What I Already Know...</h2></div>
     <p>Before understanding about the healthcare delivery systems, let’s test your prior knowledge on it in ‘What I Know Already...’!</p>
     <div class="difference-section">
     <div class="question-section">
@@ -128,13 +128,16 @@ You must have seen this place at least once, either in real life or on TV . Pati
             </tr>
             <tr>
               <td>Practical</td>
-              <td colspan="3">Practical Activity: Observe and Record <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO3/1.3%20Practical%20Assessment%20Checklist%20eng.pdf">‘Practical Assessment Checklist’</a></td>
+              <td colspan="3">Practical Activity: Observe and Record <a target=”_blank” href="assets/module1/m1s3_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
             </tr>
           </tbody>
         </table>
       </div>
       
       </div>
+
+      <button (click)="movetoLearnIt('learn')">Mark the Section Completed</button>
+
       </div><!--startit endss-->
 
 
@@ -145,7 +148,7 @@ You must have seen this place at least once, either in real life or on TV . Pati
  <br>
 <div class="learnit" *ngIf="selectedState === 'learn'">
 Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>'My Theory Task'</b><br>
-<br><div class="heading"><img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt=""><h2>My Resources</h2></div><br>
+<br><div class="heading"><img width="67" height="66" src="assets/mricon.svg" class="attachment-large size-large" alt=""><h2>My Resources</h2></div><br>
     <p>Read The Definition given below and click on the correct statement.</p>
     <div class="ollist-and-image">
         <div class="ollist">
@@ -239,7 +242,7 @@ In your class, discuss the meaningof hospitals and what it does according to you
       
 
 <br><div class="heading">
-  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+  <img width="67" height="63" src="assets/mtticon.svg" class="attachment-large size-large" alt="">
 
   <h2>My Theory Task</h2>
 </div>
@@ -253,41 +256,64 @@ In your class, discuss the meaningof hospitals and what it does according to you
     <div class="question-section">
       <p class="question">Which of the following statements about healthcare are correct?</p>
       <div class="options">
+        <div class="option">
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option1" (change)="checkAnswer2('option1')" />
             <div class="statement">i. Aparna works as a nurse in a hospital, she gets time-to-time training.</div>
-            <span *ngIf="feedback2.option1" [ngClass]="{'correct': feedback2.option1 === '✔️', 'incorrect': feedback2.option1 === '❌'}">{{ feedback2.option1 }}</span>
         </label>
+        <span *ngIf="feedback2.option1" [ngClass]="{'correct': feedback2.option1 === '✔️', 'incorrect': feedback2.option1 === '❌'}">{{ feedback2.option1 }}</span>
+        </div>
+        
+        <div class="option">
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option2" (change)="checkAnswer2('option2')" />
            <div class="statement"> ii. A hospital can function without a Finance and Accounts department.</div>
-            <span *ngIf="feedback2.option2" [ngClass]="{'correct': feedback2.option2 === '✔️', 'incorrect': feedback2.option2 === '❌'}">{{ feedback2.option2 }}</span>
         </label>
+        <span *ngIf="feedback2.option2" [ngClass]="{'correct': feedback2.option2 === '✔️', 'incorrect': feedback2.option2 === '❌'}">{{ feedback2.option2 }}</span>
+        </div>
+
+        <div class="option">
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option3" (change)="checkAnswer2('option3')" />
             <div class="statement">iii. In district hospitals, OPD has easy access to x-ray rooms and pharmacy.</div>
-            <span *ngIf="feedback2.option3" [ngClass]="{'correct': feedback2.option3 === '✔️', 'incorrect': feedback2.option3 === '❌'}">{{ feedback2.option3 }}</span>
         </label>
+        <span *ngIf="feedback2.option3" [ngClass]="{'correct': feedback2.option3 === '✔️', 'incorrect': feedback2.option3 === '❌'}">{{ feedback2.option3 }}</span>
+        </div>
+
+        <div class="option">
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option4" (change)="checkAnswer2('option4')" />
            <div class="statement"> iv. Hospice care is available in every district in India.</div>
-            <span *ngIf="feedback2.option4" [ngClass]="{'correct': feedback2.option4 === '✔️', 'incorrect': feedback2.option4 === '❌'}">{{ feedback2.option4 }}</span>
         </label>
+        <span *ngIf="feedback2.option4" [ngClass]="{'correct': feedback2.option4 === '✔️', 'incorrect': feedback2.option4 === '❌'}">{{ feedback2.option4 }}</span>
+        </div>
+
+        <div class="option">
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option5" (change)="checkAnswer2('option5')" />
             <div class="statement">v. Rajiv is a dietician in Take Care hospital, his work is to provide appropriate food and nutrient intake for patients.</div>
-            <span *ngIf="feedback2.option5" [ngClass]="{'correct': feedback2.option5 === '✔️', 'incorrect': feedback2.option5 === '❌'}">{{ feedback2.option5 }}</span>
         </label>
+        <span *ngIf="feedback2.option5" [ngClass]="{'correct': feedback2.option5 === '✔️', 'incorrect': feedback2.option5 === '❌'}">{{ feedback2.option5 }}</span>
+        </div>
+
+        <div class="option">
         <label>
             <input type="checkbox" [(ngModel)]="answers2.option6" (change)="checkAnswer2('option6')" />
             <div class="statement">vi. Suraksha hospital in the town is very small, it doesn’t require a housekeeping department and staff.</div>
-            <span *ngIf="feedback2.option6" [ngClass]="{'correct': feedback2.option6 === '✔️', 'incorrect': feedback2.option6 === '❌'}">{{ feedback2.option6 }}</span>
         </label>
+        <span *ngIf="feedback2.option6" [ngClass]="{'correct': feedback2.option6 === '✔️', 'incorrect': feedback2.option6 === '❌'}">{{ feedback2.option6 }}</span>
+
+      </div>
+
+      <div class="option">
         <label>
-            <input type="checkbox" [(ngModel)]="answers2.option7" (change)="checkAnswer2('option7')" />
-            <div class="statement">vii. Community hospitals are equipped to provide surgical services for minor injuries.</div>
-            <span *ngIf="feedback2.option7" [ngClass]="{'correct': feedback2.option7 === '✔️', 'incorrect': feedback2.option7 === '❌'}">{{ feedback2.option7 }}</span>
-        </label>
+          <input type="checkbox" [(ngModel)]="answers2.option7" (change)="checkAnswer2('option7')" />
+          <div class="statement">vii. Community hospitals are equipped to provide surgical services for minor injuries.</div>
+      </label>
+      <span *ngIf="feedback2.option7" [ngClass]="{'correct': feedback2.option7 === '✔️', 'incorrect': feedback2.option7 === '❌'}">{{ feedback2.option7 }}</span>
+
+      </div>
+        
     </div>
 </div>
 </div>
@@ -350,11 +376,13 @@ In your class, discuss the meaningof hospitals and what it does according to you
       </tr>
       <tr>
         <td>Practical</td>
-        <td colspan="3">Practical Activity: Observe and Record <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO3/1.3%20Practical%20Assessment%20Checklist%20eng.pdf">‘Practical Assessment Checklist’</a></td>
+        <td colspan="3">Practical Activity: Observe and Record <a target=”_blank” href="assets/module1/m1s3_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
       </tr>
     </tbody>
   </table>
 </div>
+<button (click)="movetoDoIt('Do')">Mark the Section completed</button>
+
 </div>
 
 <!-- </div>learnit -->
@@ -365,7 +393,7 @@ In your class, discuss the meaningof hospitals and what it does according to you
 <div class="doit" *ngIf="selectedState === 'do'">
 Almost done! Let's finish this goal with your practical.<br>
 <div class="heading">
-<img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
+<img width="67" height="63" src="assets/mpticon.svg" class="attachment-large size-large" alt=""> 
 <h2>My Practical Task</h2>
 </div>
     Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.
@@ -412,12 +440,15 @@ Almost done! Let's finish this goal with your practical.<br>
       </tr>
       <tr>
         <td>Practical</td>
-        <td colspan="3">Practical Activity: Observe and Record <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO3/1.3%20Practical%20Assessment%20Checklist%20eng.pdf">‘Practical Assessment Checklist’</a></td>
+        <td colspan="3">Practical Activity: Observe and Record <a target=”_blank” href="assets/module1/m1s3_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 
+<button (click)="MakeNextEnabled()" [disabled]="clicked">Mark this Submodule complete</button>
+
 </div>
+
 

@@ -3,15 +3,19 @@
       <h2>Let's Study</h2>
     </div>
     <div class="study-content">
-
+<!-- {{userId}} -->
       <div class="navigation-buttons" *ngIf="selectedSubmodule!='Introduction Video'">
         <button (click)="setSubmoduleState('start')" [ngClass]="{'active-button': selectedSubmoduleState === 'start'}">Start It</button>
-        <button (click)="setSubmoduleState('learn')" [ngClass]="{'active-button': selectedSubmoduleState === 'learn'}">Learn It</button>
-        <button (click)="setSubmoduleState('do')" [ngClass]="{'active-button': selectedSubmoduleState === 'do'}">Do It</button>
+        <button (click)="setSubmoduleState('learn')" [ngClass]="{'active-button': selectedSubmoduleState === 'learn'}"   >Learn It</button>
+        <button (click)="setSubmoduleState('do')" [ngClass]="{'active-button': selectedSubmoduleState === 'do'}" >Do It</button>
+        <!-- [disabled]="!learnEnabled" -->
+        <!-- [disabled]="!doEnabled" -->
       </div>
       
       <div *ngIf="selectedSubmodule=='Introduction Video'">
-        <app-introduction-video [selectedState]="selectedSubmoduleState">
+        <app-introduction-video [selectedState]="selectedSubmoduleState"
+        (stateChanged)="handleStateChange($event)"
+        (nextStateChanged)="handleNextButton($event)">
         </app-introduction-video>
       </div>
       
@@ -24,53 +28,72 @@
 
 
       <div *ngIf="selectedSubmodule=='Historical Perspective'" >
-        <app-historical-perspective [selectedState]="selectedSubmoduleState">
+        <app-historical-perspective [selectedState]="selectedSubmoduleState" 
+        (stateChanged)="handleStateChange($event)"
+        (nextStateChanged)="handleNextButton($event)"
+        [userId]="userId">
         </app-historical-perspective>
       </div>
 
     <div *ngIf="selectedSubmodule=='Healthcare Delivery Systems'">
-      <app-healthcare-delivery-systems [selectedState]="selectedSubmoduleState">
+      <app-healthcare-delivery-systems 
+      [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)"
+      >
 
       </app-healthcare-delivery-systems>
 
     </div>
 
     <div *ngIf="selectedSubmodule=='Basic Terminologies'">
-      <app-basic-terminologies [selectedState]="selectedSubmoduleState">
-
-      </app-basic-terminologies>
+      <app-basic-terminologies 
+      [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">
+     </app-basic-terminologies>
 
     </div>
     <div *ngIf="selectedSubmodule=='Hospitals'">
-      <app-hospitals [selectedState]="selectedSubmoduleState">
+      <app-hospitals [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
       </app-hospitals>
 
     </div>
 <!--module1 submodules ends-->
     <div *ngIf="selectedSubmodule=='General Duty Assistant Introduction'">
-      <app-gda-intro [selectedState]="selectedSubmoduleState">
+      <app-gda-intro [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
       </app-gda-intro>
 
     </div> 
 
     <div *ngIf="selectedSubmodule=='Health and Ill Health'">
-      <app-health-and-ill-health [selectedState]="selectedSubmoduleState">
+      <app-health-and-ill-health [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
       </app-health-and-ill-health>
 
     </div> 
     
     <div *ngIf="selectedSubmodule=='Person-Centred Care'">
-      <app-person-centered-care [selectedState]="selectedSubmoduleState">
+      <app-person-centered-care [selectedState]="selectedSubmoduleState" 
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
       </app-person-centered-care>
 
     </div> 
 
     <div *ngIf="selectedSubmodule=='Effective Communication'">
-      <app-effective-communication [selectedState]="selectedSubmoduleState">
+      <app-effective-communication [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
       </app-effective-communication>
 
@@ -79,32 +102,42 @@
 
 
     <div *ngIf="selectedSubmodule=='Microorganisms and Infections'">
-      <app-microorg-and-infec [selectedState]="selectedSubmoduleState">
+      <app-microorg-and-infec [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
       </app-microorg-and-infec>
 
     </div> 
 
     <div *ngIf="selectedSubmodule=='Basic Hygiene Routines and Infection Control'">
-      <app-basic-hygeine-and-infec-control [selectedState]="selectedSubmoduleState">
+      <app-basic-hygeine-and-infec-control [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
       </app-basic-hygeine-and-infec-control>
 
     </div> 
 
     <div *ngIf="selectedSubmodule=='Biomedical Waste Management'">
-      <app-biomedical-waste-mgmnt [selectedState]="selectedSubmoduleState">
+      <app-biomedical-waste-mgmnt [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
       </app-biomedical-waste-mgmnt>
 
     </div> 
     <div *ngIf="selectedSubmodule=='Sterilization and Disinfection'">
-      <app-sterlization-disinfection [selectedState]="selectedSubmoduleState">
+      <app-sterlization-disinfection [selectedState]="selectedSubmoduleState"
+      (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
       </app-sterlization-disinfection>
 
     </div> 
-    <div *ngIf="selectedSubmodule=='Aseptic Work and Cleaning Procedures'">
+    <div *ngIf="selectedSubmodule=='Aseptic Work and Cleaning Procedures'"
+    (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
       <app-aseptic-work [selectedState]="selectedSubmoduleState">
 
       </app-aseptic-work>
@@ -113,34 +146,44 @@
 <!--module3 submodules ends-->
 
 <div *ngIf="selectedSubmodule=='Anatomy and Physiology'">
-  <app-anatomy-and-physio [selectedState]="selectedSubmoduleState">
+  <app-anatomy-and-physio [selectedState]="selectedSubmoduleState"
+  (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
   </app-anatomy-and-physio>
 
 </div> 
 
 <div *ngIf="selectedSubmodule=='Medication Routes and Administration'">
-  <app-medication-routes-and-admn [selectedState]="selectedSubmoduleState">
+  <app-medication-routes-and-admn [selectedState]="selectedSubmoduleState"
+  (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
   </app-medication-routes-and-admn>
 
 </div> 
 
 <div *ngIf="selectedSubmodule=='Positioning and Transferring of Patients'">
-  <app-pos-and-trans-of-patients [selectedState]="selectedSubmoduleState">
+  <app-pos-and-trans-of-patients [selectedState]="selectedSubmoduleState"
+  (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
   </app-pos-and-trans-of-patients>
 
 </div> 
 
 <div *ngIf="selectedSubmodule=='Hospital Beds and Bed Making'">
-  <app-hospitalbeds-and-bedmaking [selectedState]="selectedSubmoduleState">
+  <app-hospitalbeds-and-bedmaking [selectedState]="selectedSubmoduleState"
+  (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
 
   </app-hospitalbeds-and-bedmaking>
 
   </div>
   <div *ngIf="selectedSubmodule=='Mobility of Patients'">
-    <app-mobility-of-patients [selectedState]="selectedSubmoduleState">
+    <app-mobility-of-patients [selectedState]="selectedSubmoduleState"
+    (stateChanged)="handleStateChange($event)"
+      (nextStateChanged)="handleNextButton($event)">>
   
     </app-mobility-of-patients>
   

@@ -98,6 +98,18 @@
   cursor: pointer;
 }
 
+.sub-modules ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.sub-modules ul li.active {
+  background-color: #2061b7; /* Apply the desired background color */
+  color: white; /* Ensure text is readable on dark background */
+  font-weight: bold;
+}
+
 /* Styles for smaller screens */
 @media (max-width: 768px) {
   .menu-icon {

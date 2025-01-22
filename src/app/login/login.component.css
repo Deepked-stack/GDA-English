@@ -21,14 +21,14 @@ body, html {
 
 .login-box {
   position: absolute;
-  top: 70%; /* Position from the top */
+  top: 67%; /* Position from the top */
   left: 20%; /* Center horizontally */
   transform: translate(-50%, -50%);
   width: 30%; /* Adjust width for the login box */
   max-width: 400px;
   padding: 2rem;
   /* background: rgba(255, 255, 255, 0.3); Glass morphism effect */
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-radius: 15px;
   z-index: 10; /* Ensure it's above the background */
   color: #000;
@@ -48,7 +48,7 @@ body, html {
 }
 
 .login-box input::placeholder {
-  color: #1f1c1c;
+  color: #6e6b6b;
 }
 
 /* Button styles */
@@ -89,21 +89,175 @@ body, html {
   height: 100px;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .login-box {
-    top: 25%;
-    left: 10%;
-    width: 50%;
-    padding: 1.5rem;
-  }
+.complete{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #077bf7; */
+  gap: 5%;
 }
 
-@media (max-width: 768px) {
+.complete .logo{
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  /* background-color: aqua; */
+}
+
+.complete .signup-box{
+  margin-top: 2%;
+  /* background-color: aquamarine; */
+}
+
+.error span{
+/* background-color: #007bff; */
+font-size: small;
+color: red;
+}
+
+@media(max-width:480px){
+ .logo{
+  /* background-color: #3737ea; */
+  top: 15%;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+ } 
+
+ .logo img{
+  margin: auto;
+ }
+
+.login-container{
+  overflow: hidden;
+}
+ .login-box{
+width: 80vw;
+margin-left:30% ;
+background-color: rgba(226, 249, 252, 0.7);
+ }
+
+
+}
+
+
+@media (min-width: 481px) and (max-width: 640px) {
+
+.logo{
+  /* width: 100vw; */
+  /* background-color: #3737ea; */
+  width: 23vw;
+  height: auto;
+  top: 10%;
+}
+.logo img{
+  width: 100%;
+  height: 15vh;
+}
+
+.login-box{
+  /* background-color: palevioletred; */
+  padding: 2%;
+  width: 25vw;
+}
+.login-box  input{
+  margin-bottom: 4%;
+  /* background-color: #077bf7; */
+  height: 8vh;
+  font-size: 14px;
+
+}
+.login-box button{
+  height: 8vh;
+  padding: 2%;
+}
+.error span{
+  font-size: 8px;
+}
+.complete p{
+font-size: 12px;
+}
+}
+
+@media (min-width: 641px) and (max-width: 840px) {
+.login-container{
+  display: flex;
+  justify-content: center;
+}
+  .logo{
+    top: 20%;
+    left: 30vw;
+  /* background-color: #3737ea; */
+  width: 40vw;
+}
+.logo img{
+  width: 100%;
+}
+.login-box{
+  width: 60vw;
+  left: 50vw;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+}
+
+
+@media (min-width: 841px) and (max-width: 1024px) {
+  .complete{
+    width: 100vw;
+  }
+  .login-box {
+    top: 55%;
+    left: 50%;
+    width: 80vw;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .login-box input{
+    height: 6vh;
+    /* width: auto; */
+    font-size: xx-large;
+  }
+
+  .login-box button{
+    height: 6vh;
+    font-size: xx-large;
+  }
+.logo{
+  top: 25%;
+  /* background-color: #077bf7; */
+  left: 32%;
+}
+
+.complete p{
+  font-size: x-large;
+}
+
+.error span{
+  /* background-color: #007bff; */
+  font-size: large;
+}
+  
+}
+
+@media (min-width:1919px){
+.logo{
+  left: 11%; 
+  /* background-color: #077bf7; */
+  /* top: 33%;*/
+ }
+.login-box{
+  top: 65%;
+}
+
+
+} 
+
+/* @media (max-width: 768px) {
   .login-box {
     top: 30%;
     left: 5%;
     width: 80%;
     padding: 1.5rem;
   }
-}
+}  */

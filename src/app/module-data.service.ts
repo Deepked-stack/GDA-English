@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
+import * as moduleData from '../assets/modules.json';  // Import your module.json data
+
 
 interface ModuleData {
   modules: { name: string; numberofsubmodules: number; subModules: string[] }[]; // Define the structure of your JSON data

@@ -1,25 +1,37 @@
 <div class="login-container" style="background-image: url('assets/loginbg.png');">
+  <div class="complete">
   <div class="logo">
-    <img src="assets/skilledlogo.png" alt="">
+    <img src="assets/skilledlogo.png" alt="" />
   </div>
   <div class="login-box">
-    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
       <input
         type="text"
-        name="username"
-        ngModel
-        placeholder="Username"
+        formControlName="email"
+        placeholder="Email"
         required
+        [class.error]="loginForm.controls.email.touched && loginForm.controls.email.invalid"
       />
+      <div class="error"
+       *ngIf="loginForm.controls.email.touched && loginForm.controls.email.invalid">
+        <span>Email is required!</span>
+      </div>
+
       <input
         type="password"
-        name="password"
-        ngModel
+        formControlName="password"
         placeholder="Password"
         required
+        [class.error]="loginForm.controls.password.touched && loginForm.controls.password.invalid"
       />
+      <div class="error"
+       *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid">
+        <span>Password is required!</span>
+      </div>
+
       <button type="submit">Login</button>
     </form>
     <p>Don't have an account? <a href="/signup">Sign up</a></p>
   </div>
+</div>
 </div>

@@ -1,7 +1,7 @@
 /* ...........................for checkbox questions.................................... */
 
 .question-section {
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
@@ -10,44 +10,7 @@
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-}
-
-.options {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  /* width: 100%; */
-}
-
-.option {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-
-.checkbox {
-  margin-top: 5px;
-}
-
-.statement {
-  flex-grow: 1;
-  display: inline-block;
-  max-width: 70%;
-  margin-left: 20px;
-}
-
-
-span.correct {
-  color: green;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-span.incorrect {
-  color: red;
-  font-weight: bold;
-  margin-left: 10px;
+  width: 100%;
 }
 
 .options input[type="checkbox"]:checked + span {
@@ -58,12 +21,12 @@ span.incorrect {
 .options label {
   display: block;
   padding: 10px;
+  width: 100%;
   background-color: #adebbc;
   color: rgb(21, 6, 6);
   margin-bottom: 10px;
   cursor: pointer;
   border-radius: 5px;
-  width: 100vw;
 }
 
 .answer-options button {
@@ -74,6 +37,7 @@ span.incorrect {
   cursor: pointer;
   transition: 0.3s;
   display: flex;
+  width: 80%;
 }
 
   .answer-options button:hover {
@@ -82,6 +46,33 @@ span.incorrect {
     background-color: green;
     color: aliceblue;
   }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  
+  .checkbox {
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+  
+  .statement {
+    flex-grow: 1;
+    display: inline-block;
+    max-width: 70%;
+    margin-left: 20px;
+  }
+  
+
   
  /* ------------------------------------------------------------------------------------------------------- */
   
@@ -434,6 +425,84 @@ a:hover {
   border-bottom: 0.1px solid black;
   border-top: 0.1px solid black;
   padding: 1%;
+}
+.heading h2{
+  color: #2061b7;
+  margin-left: 1%;
+  font-weight:600;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+
+}
+/* Carousel Container */
+.carousel-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  padding-right: 20px;
+  padding-left: 20px; /* More padding around the carousel */
+  border: 0.1px solid black;
+  position: relative;
+  padding-bottom: 26px;
+}
+
+/* Carousel Images (Contain images, don't cut them off) */
+.carousel img {
+  
+  height: 250px; /* Decrease image height */
+  width: 100%; /* Ensure the image takes up full width of its container */
+  object-fit: contain; /* Contain the image without cutting it off */
+  /* border: 0.1px solid black; */
+}
+
+/* Carousel Audio (Below the image) */
+.carousel audio {
+  display: block;
+  margin: 10px auto;
+}
+
+.carousel-control-prev{
+  height: 70%;
+  border-radius: px;
+  padding: 2px;
+}
+
+.carousel-control-next{
+  height: 70%;
+
+}
+
+/* Carousel Controls (Black) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color:black;
+  
+  
+}
+
+/* Carousel Indicators (White) and positioned above the image */
+.carousel-indicators {
+  position: absolute;
+  top: -30px;
+  left: 37%;
+  transform: translateX(-50%);
+}
+
+.carousel-indicators button {
+  background-color: black;
+}
+
+/* Hide the audio inside caption */
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+
 }
 
 .heading img{

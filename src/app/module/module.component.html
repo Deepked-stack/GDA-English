@@ -13,8 +13,12 @@
     </div>
     <div class="sub-modules" *ngIf="module.showSubModules">
       <ul>
-        <li *ngFor="let subModule of module.subModules,let i = index" (click)="selectSubModule(subModule, $event)"       [ngStyle]="{ 'background-color': selectedSubModuleIndex === i ? 'lightblue' : '' }">
-          {{ subModule}}
+        <li
+          *ngFor="let subModule of module.subModules"
+          (click)="selectSubModule(subModule, $event)"
+          [ngStyle]="{ 'background-color': activeSubModule === subModule ? '#2061b7' : '' ,'color':activeSubModule===subModule? 'white' : ''}"
+        >
+          {{ subModule }}
         </li>
       </ul>
     </div>

@@ -10,8 +10,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'landingpage', component: LandingpageComponent},
-  { path: 'main', component: MaincontentComponent },
+  {path:'landingpage',component:LandingpageComponent},
+  { path: 'landingpage/:userId', component: LandingpageComponent},
+  {path:'main',component:MaincontentComponent},
+  { path: 'main/:userId', component: MaincontentComponent },
   { path: 'study', component: StudyComponent },
   {
     path: 'intro', // Lazy load Introduction module

@@ -1,3 +1,4 @@
+
 /* Main Container */
 .coruscant-container {
   display: block;
@@ -106,4 +107,13 @@
 .carousel-control-next-icon, .carousel-control-prev-icon{
   z-index: 100;
   cursor: pointer;
+}
+
+@media screen and (max-width: 430px) {
+ .content{
+  color: black;
+  /* overflow-y: hidden; */
+ }
+ 
+
 }

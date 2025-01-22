@@ -1,8 +1,12 @@
 <div class="content">
   <div class="main-container">
     <!-- Module Component (left side) -->
-    <app-module (moduleSelected)="displayModuleName($event)"></app-module>
 
+    <!-- <div class="module-overlay" *ngIf="isModuleOverlayVisible"> -->
+      <app-module *ngIf="isModuleVisible" (moduleSelected)="displayModuleName($event)" (selectedsubmodule)="selectedsubmodule"  (closeMenu)="handleCloseModule()"></app-module>
+      <!-- <button class="close-overlay" (click)="toggleModuleOverlay()">Close</button> -->
+    <!-- </div> -->
+  
     <!-- Display the selected submodule -->
     <div class="hide" *ngIf="selectedsubmodule">
       <div class="sub">{{ selectedsubmodule }}</div>
@@ -13,25 +17,17 @@
 
     <!-- Study Area (center area) -->
     <div class="study-area">
-      <app-study></app-study>
+      <app-study (nextStateEnabled)="handleNextButtonEnabling($event)" [userId]="userId"></app-study>
       <div class="navigationbuttonsdown" >
         <button (click)="navigate('back')" [disabled]="isFirstSubmodule()"> <p>{{ getPreviousSubmoduleName() || 'None' }}</p><< Back </button>
         <button (click)="navigate('next')" [disabled]="isLastSubmodule()">   <p>{{ getNextSubmoduleName() || 'None' }} </p> Next >> </button>
       </div>
     </div>
 
-    <!-- Navigation Buttons -->
-
-    
-
-
-
-    
-
-    
+    <!-- for disabling next button replace this with next button -->
 
   </div>
 
-  <app-maincontentnav></app-maincontentnav>
+  <app-maincontentnav  [userId]="userId"></app-maincontentnav>
 
 </div>

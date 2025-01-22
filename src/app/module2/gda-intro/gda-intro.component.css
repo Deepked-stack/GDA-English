@@ -188,52 +188,79 @@ margin-bottom: 2%;
   /* border: black 0.1px solid; */
 }
 
-  
 
+.heading{
+  display: flex;
+  align-items: center;
+  margin: 2vh;
+  border-bottom: 0.1px solid black;
+  border-top: 0.1px solid black;
+  padding: 1%;
+}
+.heading h2{
+  color: #2061b7;
+  margin-left: 1%;
+  font-weight:600;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+
+}
 /* Carousel Container */
 .carousel-container {
-  max-width: 640px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 40px; /* More padding around the carousel */
+  padding: 40px;
+  padding-right: 20px;
+  padding-left: 20px; /* More padding around the carousel */
   border: 0.1px solid black;
   position: relative;
+  padding-bottom: 26px;
 }
 
 /* Carousel Images (Contain images, don't cut them off) */
 .carousel img {
+  
   height: 250px; /* Decrease image height */
   width: 100%; /* Ensure the image takes up full width of its container */
   object-fit: contain; /* Contain the image without cutting it off */
-  border: 0.1px solid black;
+  /* border: 0.1px solid black; */
 }
 
 /* Carousel Audio (Below the image) */
 .carousel audio {
   display: block;
-  width: 100%;
   margin: 10px auto;
 }
 
-.carousel-control-prev,.carousel-control-next{
-  max-height: 70%;
+.carousel-control-prev{
+  height: 70%;
+  border-radius: px;
+  padding: 2px;
 }
+
+.carousel-control-next{
+  height: 70%;
+
+}
+
 /* Carousel Controls (Black) */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: black;
-  border-radius: 15px;
+  background-color:black;
+  
+  
 }
 
 /* Carousel Indicators (White) and positioned above the image */
 .carousel-indicators {
   position: absolute;
-  top: 10px;
-  left: 50%;
+  top: -30px;
+  left: 37%;
   transform: translateX(-50%);
 }
 
 .carousel-indicators button {
-  background-color: white;
+  background-color: black;
 }
 
 /* Hide the audio inside caption */
@@ -242,6 +269,12 @@ margin-bottom: 2%;
   bottom: 0;
 }
 
+.center{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+
+}
 /* Button styling */
 .assessbutton {
   display: flex;
@@ -439,11 +472,4 @@ a:hover {
   }
 }
 
-.heading{
-  display: flex;
-  align-items: center;
-  margin: 2vh;
-  border-bottom: 0.1px solid black;
-  border-top: 0.1px solid black;
-  padding: 1%;
-}
+

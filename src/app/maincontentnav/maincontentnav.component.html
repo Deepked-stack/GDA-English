@@ -1,33 +1,33 @@
-<div class="container">
-  <ul>
-    <!-- Toggle Button -->
-    <li id="img">
-      <button class="toggle-button" (click)="toggleMenu()">☰</button>
-    </li>
-
-    <!-- Home Button -->
-    <li id="img">
-      <button>
-        <img src="/assets/house.webp" alt="Home" (click)="gotohome()" loading="lazy">
-      </button>
-    </li>
-
-    <!-- Title -->
-    <li>
-      <p>General Duty Assistant</p>
-    </li>
-
-    <!-- Welcome Text -->
-    
-
-    <!-- Logo -->
-    <li>
-      <img src="/assets/skilledlogo.png" alt="Skilled India Logo" id="logo" loading="lazy">
-    </li>
-  </ul>
-
-  <!-- Module List Overlay (will display the ModuleComponent) -->
-  <div class="module-list-overlay" *ngIf="menuOpen">
-    <app-module></app-module>  <!-- This is your ModuleComponent -->
+<div class="navcontainer">
+  <div class="left">
+    <button>
+      <img src="/assets/skilledlogo.png" alt="Home" (click)="gotohome()" loading="lazy">
+    </button>
   </div>
+
+  <div class="center">General Duty Assistant</div>
+
+<!-- Profile Button -->
+<div class="right">
+  Hi, {{studentData.name || 'Guest'}}
+ 
+  <button (click)="toggleProfileOverlay()">
+    <img src="assets/download.jpg" alt="Profile" />
+  </button>
+</div>
+
+<!-- Profile Overlay -->
+<div *ngIf="profileOverlayVisible" class="profile-overlay">
+  <div class="overlay-content">
+    <h3>Student Corner</h3>
+    <div class="student-details">
+      <p><strong>Name:</strong> {{ studentData.name || 'Guest' }}</p>
+      <p><strong>Email:</strong> {{ studentData.email || 'Not Available' }}</p>
+    </div>
+    <button class="close-btn" (click)="toggleProfileOverlay()">Close</button>
+    <button class="logout" (click)="goToLogin()">Log Out</button>
+
+  </div>
+</div>
+
 </div>

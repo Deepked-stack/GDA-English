@@ -1,33 +1,84 @@
-<div class="signup-container"  style="background-image: url('assets/loginbg.png');">
-  <div class="logo">
-    <img src="assets/skilledlogo.png" alt="">
-  </div> 
-  
+<div class="signup-container" style="background-image: url('assets/loginbg.png');">
+  <div class="complete">
+    <div class="logo">
+      <img src="assets/skilledlogo.png" alt="Logo" />
+    </div>
+
     <div class="signup-box">
-      <form>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
         <input
           type="text"
-          placeholder="Full Name"
+          placeholder="First Name"
           required
+          formControlName="username"
         />
+        <div class="error"
+          *ngIf="signupForm.controls['username'].invalid && signupForm.controls['username'].touched"
+        >
+          <span *ngIf="signupForm.controls['username'].errors.minlength">
+            Username must be at least 6 characters long.
+          </span>
+        </div>
+        <input
+          type="text"
+          placeholder="Last Name"
+          required
+          
+        />
+        <div class="error"
+          *ngIf="signupForm.controls['username'].invalid && signupForm.controls['username'].touched"
+        >
+          <span *ngIf="signupForm.controls['username'].errors.minlength">
+            Username must be at least 6 characters long.
+          </span>
+        </div>
+
         <input
           type="email"
           placeholder="Email"
           required
+          formControlName="email"
         />
+        <div class="error"
+          *ngIf="signupForm.controls['email'].invalid && signupForm.controls['email'].touched"
+          >
+          <span *ngIf="signupForm.controls['email'].errors.required">
+            Invalid email.
+          </span>
+        </div>
+
         <input
           type="password"
           placeholder="Password"
           required
+          formControlName="password"
         />
+        <div class="error"
+  *ngIf="signupForm.controls['confpassword'].invalid && signupForm.controls['confpassword'].touched">
+  <span *ngIf="signupForm.controls['confpassword'].hasError('required')">
+    Confirm Password is required.
+  </span>
+  <span *ngIf="signupForm.controls['confpassword'].hasError('mismatch')">
+    Passwords do not match.
+  </span>
+</div>
+
         <input
           type="password"
           placeholder="Confirm Password"
           required
+          formControlName="confpassword"
         />
+        <div class="error"
+          *ngIf="signupForm.controls['confpassword'].invalid && signupForm.controls['confpassword'].touched"
+        >
+          <span *ngIf="signupForm.controls['confpassword'].errors.required">
+            Passwords must match.
+          </span>
+        </div>
         <button type="submit">Sign Up</button>
       </form>
       <p>Already have an account? <a href="/login">Log in</a></p>
     </div>
   </div>
-  
+</div>

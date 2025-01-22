@@ -5,7 +5,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MaincontentComponent } from './maincontent/maincontent.component';
@@ -38,6 +38,7 @@ import { MedicationRoutesAndAdmnComponent } from './module4/medication-routes-an
 import { PosAndTransOfPatientsComponent } from './module5/pos-and-trans-of-patients/pos-and-trans-of-patients.component';
 import { HospitalbedsAndBedmakingComponent } from './module5/hospitalbeds-and-bedmaking/hospitalbeds-and-bedmaking.component';
 import { MobilityOfPatientsComponent } from './module5/mobility-of-patients/mobility-of-patients.component';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +59,8 @@ import { MobilityOfPatientsComponent } from './module5/mobility-of-patients/mobi
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
     HttpClientModule,
     IntroductiontotheprogramModule,
     IntroductionVideoComponent,

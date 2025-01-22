@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { StudyNavComponent } from '../../study-nav/study-nav.component';
 import { CommonModule } from '@angular/common';
+import { ApiService } from '../../api.service';
+import { Console } from 'console';
 // import { CarouselComponent } from '../../carousel/carousel.component';
 
 @Component({
@@ -13,13 +15,94 @@ import { CommonModule } from '@angular/common';
 
 })
 export class HistoricalPerspectiveComponent implements OnInit {
+
+  @Input() userId!: string; // Input property to receive userId
+
+  constructor(private apiservice:ApiService){}
 ngOnInit(): void {
   console.log(`Historical Perspective Component loaded with state: ${this.selectedState}`);
 
 }
+ @Output() stateChanged =new EventEmitter<string>();
+ movetoLearnIt(state:string){
+  this.selectedState='learn';
+  this.stateChanged.emit(this.selectedState);
+
+  this.onUpdatetabletolearnit(this.userId);
+
+ }
+
+ onUpdatetabletolearnit(userId: string) {
+  this.apiservice.updateSectionToLearnit(userId).subscribe(
+    (response) => {
+      console.log('Section updated successfully:', response);
+    },
+    (error) => {
+      console.error('Error updating section:', error);
+    }
+  );
+}
+movetoDoIt(state: string) {
+  // Emit only if state is different from the current state
+  if (this.selectedState !== 'do') {
+    this.selectedState = 'do';
+    this.stateChanged.emit(this.selectedState);
+
+    // Proceed with your API call
+    this.onUpdatetabletodoit(this.userId);
+  }
+}
+
+onUpdatetabletodoit(userId: string) {
+  this.apiservice.updateSectionToDoit(userId).subscribe(
+    (response) => {
+      console.log('Section updated successfully:', response);
+    },
+    (error) => {
+      console.error('Error updating section:', error);
+    }
+  );
+}
+
+
+
+ isnextEnabled:string='false';
+ clicked:boolean=false;
+
+ @Output() nextStateChanged = new EventEmitter<boolean>();
+
+ MakeNextEnabled(){
+this.isnextEnabled= 'true';
+this.nextStateChanged.emit(true);
+this.clicked=true;
+
+this.updateSubModuleToInitial();
+ }
+
+ updateSubModuleToInitial(){
+  this.apiservice.setSubModuleNumberToInitial(this.userId).subscribe(
+    (response)=>{
+      console.log('submodulenumber updated to 1 successfully');
+    },
+  
+    (error)=>{
+      console.error('Error updating submoduleno to 1');
+      
+    }
+  )
+ }
+
 
   @Input() selectedState: 'start' | 'learn' | 'do' | null = 'start';
 
+  @Output() changedstate = new EventEmitter<void>(); 
+  
+  @Output() sectionComplete = new EventEmitter<void>();  // EventEmitter to notify parent when section is complete
+
+  markSectionComplete() {
+    // Emit an event to inform the parent that the section is complete
+    this.sectionComplete.emit();
+  }
   mcqFeedback1: { [key: number]: string } = {};
 
   cardStatus: { [key: number]: boolean | undefined } = {};
@@ -129,25 +212,9 @@ checkMCQ3(questionNumber:number, selectedAnswer:string):void{
       }
     }
   }
-
- 
-
-  // isSectionCompleted: boolean = false;
-
-  // toggleCompletion(): void {
-  //   this.isSectionCompleted = !this.isSectionCompleted;
-  //   // this.selectedState= 'learn'
-  //   // this.selectedState = 'learn';
-
-  // }
-  // @Output() stateChanged = new EventEmitter<string>();  // Event emitter to notify parent when state changes
-
-  // ngOnChanges() {
-  //   console.log('Selected State in Child:', this.selectedState);
-  //   // Optionally emit event whenever state changes
-  //   if (this.selectedState === 'learn') {
-  //     this.stateChanged.emit(this.selectedState);
-  //   }
-  // }
+  @Output() tabChanged = new EventEmitter<string>(); // Declare the event emitter
+  moveToLearnIt() {
+    this.tabChanged.emit('learnIt');  // Emit 'learnIt' to StudyComponent
+  }
   
 }  

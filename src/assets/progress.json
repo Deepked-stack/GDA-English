@@ -1,0 +1,170 @@
+
+{
+    "modules": [
+      {
+        "id": 1,
+        "name": "Introduction to the Program",
+        "numberofsubmodules": 5,
+        "subModules": [
+          {
+            "name": "Introduction Video",
+            "index": 0
+          },
+          {
+            "name": "Historical Perspective",
+            "index": 1
+          },
+          {
+            "name": "Healthcare Delivery Systems",
+            "index": 2
+          },
+          {
+            "name": "Hospitals",
+            "index": 3
+          },
+          {
+            "name": "Basic Terminologies",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "The GDA Profession",
+        "numberofsubmodules": 4,
+        "subModules": [
+          {
+            "name": "General Duty Assistant Introduction",
+            "index": 0
+          },
+          {
+            "name": "Health and Ill Health",
+            "index": 1
+          },
+          {
+            "name": "Person-Centred Care",
+            "index": 2
+          },
+          {
+            "name": "Effective Communication",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Hygiene and Infection Prevention",
+        "numberofsubmodules": 5,
+        "subModules": [
+          {
+            "name": "Microorganisms and Infections",
+            "index": 0
+          },
+          {
+            "name": "Basic Hygiene Routines and Infection Control",
+            "index": 1
+          },
+          {
+            "name": "Biomedical Waste Management",
+            "index": 2
+          },
+          {
+            "name": "Sterilization and Disinfection",
+            "index": 3
+          },
+          {
+            "name": "Aseptic Work and Cleaning Procedures",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Human Body Structure and Function",
+        "numberofsubmodules": 2,
+        "subModules": [
+          {
+            "name": "Anatomy and Physiology",
+            "index": 0
+          },
+          {
+            "name": "Medication Routes and Administration",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Positioning and Transferring of Patients",
+        "numberofsubmodules": 3,
+        "subModules": [
+          {
+            "name": "Positioning and Transferring of Patients",
+            "index": 0
+          },
+          {
+            "name": "Hospital Beds and Bed Making",
+            "index": 1
+          },
+          {
+            "name": "Mobility of Patients",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Patient Basic Care",
+        "numberofsubmodules": 7,
+        "subModules": [
+          {
+            "name": "Tools and Equipment",
+            "index": 0
+          },
+          {
+            "name": "Grooming",
+            "index": 1
+          },
+          {
+            "name": "Elimination",
+            "index": 2
+          },
+          {
+            "name": "Nutrition, Diet, and Feeding Procedures",
+            "index": 3
+          },
+          {
+            "name": "Pre and Post Operative Care",
+            "index": 4
+          },
+          {
+            "name": "Vulnerable Patient Care",
+            "index": 5
+          },
+          {
+            "name": "Daily Care Plan",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Measuring Parameters",
+        "numberofsubmodules": 3,
+        "subModules": [
+          {
+            "name": "Vital Signs",
+            "index": 0
+          },
+          {
+            "name": "Special Procedures",
+            "index": 1
+          },
+          {
+            "name": "Transporting Samples",
+            "index": 2
+          }
+        ]
+      }
+    ]
+}  

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-introduction-video',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './introduction-video.component.css'
 })
 export class IntroductionVideoComponent {
+
 
 }

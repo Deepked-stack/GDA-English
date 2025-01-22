@@ -69,7 +69,7 @@
 
 <p>Before understanding about the 'Historical Perspective', let's test your prior Knowledge in <b>'What I Know Already'</b></p>
 <div class="heading">
-<img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+<img width="66" height="65" src="assets/wiak.svg" alt="">
 
 <h2>What I Know Already</h2>
 </div>
@@ -193,23 +193,15 @@ Can you identify and click on the images given below that relate to ancient prac
         </tr>
         <tr>
           <td>Practical</td>
-          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO1/1.1%20Practical%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="assets/module1/m1s1_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
         </tr>
       </tbody>
     </table>
   </div>
 <!-- --------------------------------------- -->
-<!-- <div class="center">
-  <div class="section">     
-    <button (click)="toggleCompletion()">
-      Mark the Section complete
-    </button>
-    <div class="center"><br><span [class.completed]="isSectionCompleted">
-      {{ isSectionCompleted ? 'Completed' : 'Not Completed' }}
-    </span></div>
-  </div>
 
-   -->
+<button (click)="movetoLearnIt('learn')">Mark the Section Completed</button>
+  
   
 <!-- -------------------------------------------------- -->
 </div><!--startit ends-->
@@ -218,7 +210,7 @@ Can you identify and click on the images given below that relate to ancient prac
    
 <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the '<b>My Theory Task</b>'.</p>
 <div class="heading">
-  <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+  <img width="67" height="66" src="assets/mricon.svg" alt="">
 <h2>My Resources</h2>
 </div>
 <p>1. As modern health care has evolved, we have increasingly recognized the relevance of different forms of medicine and healing that are steeped in culture and history. So, as a GDA you should know about the history of healthcare. Let’s explore and know more!</p>
@@ -424,7 +416,7 @@ Can you identify and click on the images given below that relate to ancient prac
 <div class="division">Part 1</div>
 
 <div class="heading">
-<img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+<img width="67" height="63" src="assets/mtticon.svg" class="attachment-large size-large" alt="">
 <h2>My Theory Task</h2>
 
 </div>
@@ -466,7 +458,7 @@ Can you identify and click on the images given below that relate to ancient prac
 
 <p>2. Komal is a GDA. She wishes to explore about ancient medicines.</p>
 
-<!-- mcq3 -->
+<!-- mcq1 -->
 <div class="mcqlist">
   <ol>
     <li>
@@ -604,7 +596,7 @@ Can you identify and click on the images given below that relate to ancient prac
 <hr>
 <div class="center">
   <b>Great!<br>
-  Move on to Do It!</b>
+  Move on to Do It</b>
 </div>
 <hr>
 <p><b>Find out how you will be assessed on yopur theory skills from the button below.</b></p>
@@ -636,11 +628,14 @@ Can you identify and click on the images given below that relate to ancient prac
       </tr>
       <tr>
         <td>Practical</td>
-        <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO1/1.1%20Practical%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+        <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="assets/module1/m1s1_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
       </tr>
     </tbody>
   </table>
 </div>
+
+<button (click)="movetoDoIt('Do')">Mark the Section completed</button>
+
 </div><!--learnit ends-->
 
 <div  class="doit" *ngIf="selectedState === 'do'">
@@ -652,10 +647,10 @@ Can you identify and click on the images given below that relate to ancient prac
 <div class="videodiv">
   <iframe src="https://player.vimeo.com/video/453936943?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="GDA1.1 Do it"></iframe>
 </div>
-<p>Assess yourself in the practical using the <a href="https://kedskills.org/pdf/GDA_E/Unit1/LO1/1.1%20Practical%20Checklist.pdf">‘Practical Assessment Checklist’</a>.</p>
+<p>Assess yourself in the practical using the <a href="assets/module1/m1s1_Practicalchecklist.pdf">‘Practical Assessment Checklist’</a>.</p>
 
 <div class="heading">
-  <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+  <img width="64" height="66" src="assets/conicon.svg" class="attachment-large size-large" alt="">
   <h2>Conclusion</h2>
 
 </div>
@@ -694,13 +689,13 @@ Can you identify and click on the images given below that relate to ancient prac
       </tr>
       <tr>
         <td>Practical</td>
-        <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO1/1.1%20Practical%20Checklist.pdf">‘Practical Assessment Checklist’</a></td>
+        <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="assets/module1/m1s1_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
       </tr>
     </tbody>
   </table>
 </div>
 
-
+<button (click)="MakeNextEnabled()" [disabled]="clicked">Mark this Submodule complete</button>
 
 </div><!--doit ends-->
 </div>

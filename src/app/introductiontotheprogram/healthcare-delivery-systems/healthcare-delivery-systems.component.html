@@ -19,15 +19,15 @@
       <p>Did you know?</p>
       <p>Malnourishment is recorded highest in Madhya Pradesh, Jharkhand, and Bihar while obesity is the highest in Punjab, Kerala, and Delhi.</p>
       <div class="image-container">
-        <img src="https://kedskills.org/img/GDA_E/Unit1/LO2/Slide1.JPG" alt="Left Image" class="image-left">
-        <img src="https://kedskills.org/img/GDA_E/Unit1/LO2/Slide2.JPG" alt="Right Image" class="image-right">
+        <img src="assets/module1/m1s3_image1.jpg" alt="Left Image" class="image-left">
+        <img src="assets/module1/m1s3_image2.jpg" alt="Right Image" class="image-right">
       </div>
     </div>
   
     <!-- Striking Differences Section -->
     <div class="difference-section">
       <div class="heading">
-        <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+        <img width="66" height="65" src="assets/wiak.svg" class="attachment-large size-large" alt="">
       <h2>What I Know Already...</h2>
       </div>
       <p>Before understanding about the healthcare delivery systems, let’s test your prior knowledge on it in ‘What I Know Already...’!</p>
@@ -107,20 +107,21 @@
         </tr>
         <tr>
           <td>Practical</td>
-          <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">‘Practical Assessment Checklist’</a></td>
+          <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="assets/module1/m1s2_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
         </tr>
       </tbody>
     </table>
   </div>
  </div> 
 
+ <button (click)="movetoLearnIt('learn')">Mark the Section Completed</button>
 
  <!-- ----------------------------------------------------------- -->
  <div class="learnit" *ngIf="selectedState === 'learn'">
     Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>My Theory Task.</b>
 
 <div class="heading">
-  <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+  <img width="67" height="66" src="assets/mricon.svg" class="attachment-large size-large" alt="">
   <h2>My Resources</h2>
 </div>
     <br>
@@ -267,7 +268,7 @@ Look at the video below
   </ol>
 </div>
 <div class="heading">
-  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
+  <img width="67" height="63" src="assets/mtticon.svg" class="attachment-large size-large" alt=""> 
 <h2>My Theory Task</h2>
 </div>
 <div class="mytheorytask">
@@ -301,7 +302,7 @@ Look at the video below
     <div class="option">
       <label>
         <input type="checkbox" [(ngModel)]="answersch.option3" (change)="checkAnswerch('option3')" class="checkbox">
-        <span class="statement">absence of disease doesnot being in state of good health.</span>
+        <span class="statement">absence of disease doesnot mean being in state of good health.</span>
       </label>
       <span *ngIf="feedback.option3" [ngClass]="{'correct': feedback.option3 === '✔️', 'incorrect': feedback.option3 === '❌'}">
         {{ feedback.option3 }}
@@ -418,12 +419,13 @@ Look at the video below
       </tr>
       <tr>
         <td>Practical</td>
-        <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">‘Practical Assessment Checklist’</a></td>
+        <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="assets/module1/m1s2_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
       </tr>
     </tbody>
   </table>
 </div>
 
+<button (click)="movetoDoIt('Do')">Mark the Section completed</button>
 
 
 </div><!--learnit completed-->
@@ -433,7 +435,7 @@ Look at the video below
 <div class="doit" *ngIf="selectedState === 'do'">
   <p>Almost done! Let's finish this goal with your practical.</p>
 <div class="heading">
-  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
+  <img width="67" height="63" src="assets/mpticon.svg" class="attachment-large size-large" alt=""> 
 <h2>My Practical Task</h2>
 </div>
 <p>
@@ -444,9 +446,9 @@ Look at the video below
   <iframe src="https://player.vimeo.com/video/465772772?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="1.2 Practical Task"></iframe>
 </div>
 
-<p>Assess yourself in the practical using <a href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">'Practical Assessment Checklist’</a></p>
+<p>Assess yourself in the practical using <a href="assets/module1/m1s2_practicalchecklist.pdf">'Practical Assessment Checklist’</a></p>
 <div class="heading">
-  <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+  <img width="64" height="66" src="assets/conicon.svg" class="attachment-large size-large" alt="">
   <h2>Conclusion</h2>
 </div>
 <div class="sideimg">
@@ -484,13 +486,17 @@ Look at the video below
       </tr>
       <tr>
         <td>Practical</td>
-        <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO2/1.2%20Practical%20Assessment%20Checklist%20Healthcare%20Delivery.pdf">‘Practical Assessment Checklist’</a></td>
+        <td colspan="3">Practical Activity: Chart and Presentation! <a target=”_blank” href="assets/module1/m1s2_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
       </tr>
     </tbody>
   </table>
 </div>
+<button (click)="MakeNextEnabled()" [disabled]="clicked">Mark this Submodule complete</button>
 
 </div><!--doit ends-->
+
+
+
 </div>
 
 

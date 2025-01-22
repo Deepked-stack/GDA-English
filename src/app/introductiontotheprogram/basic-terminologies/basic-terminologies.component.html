@@ -8,7 +8,7 @@
 <img src="assets/module1/m1s5_image1.jpg" alt="">
 </div>
 <div class="heading">
-  <img width="66" height="65" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/img2.png" class="attachment-large size-large" alt="">
+  <img width="66" height="65" src="assets/wiak.svg" class="attachment-large size-large" alt="">
 <h2>What I Know Already</h2>
 </div>
 <p>Before understanding basic terminologies, let's test your prior knowledge on it in '<b>What I know Already.</b>'!</p>
@@ -78,19 +78,20 @@
         </tr>
         <tr>
           <td>Practical</td>
-          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO4/1.4%20Practical%20Assessment%20Checklist%20English.pdf">‘Practical Assessment Checklist’</a></td>
+          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="assets/module1/m1s4_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
         </tr>
       </tbody>
     </table>
   </div>
-  
+  <button (click)="movetoLearnIt('learn')">Mark the Section Completed</button>
+
 </div><!--startit ends-->
 
 <div class="learnit" *ngIf="selectedState === 'learn'">
   <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.
   </p>
 <div class="heading">
-  <img width="67" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/09/Resouces-Icon.png" class="attachment-large size-large" alt="">
+  <img width="67" height="66" src="assets/mricon.svg" class="attachment-large size-large" alt="">
   <h2>My resources</h2>
 </div>
   <p>1. An efficient GDA is well aware of the variety of terms used in his/her day to day work. Let’s learn some of such terms here
@@ -159,7 +160,7 @@
 <p>Make sure to attempt ‘My Theory Task’ before moving on to Do It!
 </p>
 <div class="heading">
-  <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt="">
+  <img width="67" height="63" src="assets/mtticon.svg" class="attachment-large size-large" alt="">
 <h2>My Theory Task</h2>
 </div>
 
@@ -371,19 +372,21 @@
         </tr>
         <tr>
           <td>Practical</td>
-          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO4/1.4%20Practical%20Assessment%20Checklist%20English.pdf">‘Practical Assessment Checklist’</a></td>
+          <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="assets/module1/m1s4_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
         </tr>
       </tbody>
     </table>
   </div>
   
 </div>
+<button (click)="movetoDoIt('Do')">Mark the Section completed</button>
+
 </div><!--learnit ends-->
 
 <div class="doit" *ngIf="selectedState === 'do'" >
   <p>Almost done! Let's finish this goal with your practical.</p>
   <div class="heading">
-    <img width="67" height="63" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/Task-icon.png" class="attachment-large size-large" alt=""> 
+    <img width="67" height="63" src="assets/mpticon.svg" class="attachment-large size-large" alt=""> 
   <h2>My Practical Task</h2>
   </div>
   <p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.
@@ -391,10 +394,10 @@
   <div class="videodiv">
     <iframe src="https://player.vimeo.com/video/454708962?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="1.4 My Practical Task"></iframe>
   </div>
-  <p>Assess yourself in the practical using the <a href="https://kedskills.org/pdf/GDA_E/Unit1/LO4/1.4%20Practical%20Assessment%20Checklist%20English.pdf">‘Practical Assessment Checklist’</a>
+  <p>Assess yourself in the practical using the <a href="assets/module1/m1s4_practicalchecklist.pdf">‘Practical Assessment Checklist’</a>
   </p>
 <div class="heading">
-  <img width="64" height="66" src="https://www.kedskills.org/gda/gdae/wp-content/uploads/2020/10/conclusion-imag-1.png" class="attachment-large size-large" alt="">
+  <img width="64" height="66" src="assets/conicon.svg" class="attachment-large size-large" alt="">
   <h2>Conclusion</h2>
   </div>
   <div class="sideimg">
@@ -436,12 +439,14 @@
           </tr>
           <tr>
             <td>Practical</td>
-            <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="https://kedskills.org/pdf/GDA_E/Unit1/LO4/1.4%20Practical%20Assessment%20Checklist%20English.pdf">‘Practical Assessment Checklist’</a></td>
+            <td colspan="3">Practical Activity: Pocket Handbook! See the <a target=”_blank” href="assets/module1/m1s4_practicalchecklist.pdf">‘Practical Assessment Checklist’</a></td>
           </tr>
         </tbody>
       </table>
     </div>
     
+    <button (click)="MakeNextEnabled()" [disabled]="clicked">Mark this Submodule complete</button>
+
   </div><!--do it ends-->
 
 </div> <!--content ends-->

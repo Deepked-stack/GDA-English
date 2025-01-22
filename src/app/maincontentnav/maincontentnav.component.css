@@ -1,129 +1,162 @@
-.container {
-  display: flex;
-  width: 100%;
-  padding: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-  margin: 0;
-  height: 8vh; /* Allow height to adjust based on content */
-  justify-content: space-evenly;
-  align-items: center; /* Center items vertically */
-  font-family: 'Poppins', sans-serif;
-  box-sizing: border-box; /* Include padding and border in width/height calculations */
+.navcontainer{
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 1fr;
+  /* background-color: blueviolet; */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  background-color: rgb(240, 238, 238);
+  box-shadow: rgb(178, 177, 177) 2px 2px 2px;
+
 }
 
-ul {
+.left{
   display: flex;
-  list-style-type: none;
-  flex-wrap: wrap; /* Allow items to wrap if necessary */
-  padding: 0;
-  margin: 0;
   justify-content: center;
-  width: 100%; /* Ensure ul spans the container */
+  border: none;
+}
+.left button img{
+  height: 5vh;
+  mix-blend-mode: darken;
+
+}
+.left button{
+  border: none;
 }
 
-ul li {
-  margin: 0 1%; /* Use relative spacing */
+.right{
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-grow: 1; /* Allow items to grow equally */
-  text-align: center;
-}
-
-li img {
-  height: 40px;
-  max-height: 100%; /* Prevent image overflow */
-  object-fit: contain;
-}
-
-li h1 {
-  margin: 0;
-  font-size: 2rem;
-  text-align: center;
-  white-space: nowrap; /* Prevent text wrap */
-  flex-grow: 2; /* Allow title to take up more space */
-}
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-li p {
-  margin: 0;
   font-size: 1rem;
+  font-weight: 500;
 }
-
-.toggle-button {
-  display: none; /* Hidden by default */
-  background: none;
+.right button{
+  border-radius: 50%;
   border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+  margin-left: 1vw;
+}
+.right button img{
+  height: 4vh;
+  mix-blend-mode: darken;
+  border-radius: 50%;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: stretch;
-  }
-
-  ul {
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: center; /* Center items on smaller screens */
-  }
-
-  li h1 {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-
-  .toggle-button {
-    display: block; /* Show toggle button */
-    margin: 0 10px;
-  }
-
-  li img {
-    height: 30px; /* Adjust image size */
-  }
-}
-@media (max-width: 479px) {
-.container{
-  width: 100%;
+.center{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: poppins;
+  padding: 1%;
 }
-.container li p{
-  font-size: x-small;
+
+/* @media (min-width:320px) and (max-width:){
+ .navcontainer{
+  width: 100vh;
+ } 
+} */
+
+
+
+/* Profile Overlay Styling */
+.profile-overlay {
+  position: absolute;
+  top: 70px; /* Adjust according to your layout */
+  right: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 15px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
 }
-.container li img{
-  height: 15px;
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+
+.overlay-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.student-details p {
+  font-size: 14px;
+  color: #555;
+}
+
+.student-details p strong {
+  color: #000;
+}
+
+.close-btn {
+  padding: 8px 15px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 15px;
+}
+
+.close-btn:hover {
+  background-color: #d32f2f;
+}
+
+.logout{
+  border: #f44336 2px solid;
+  padding: 4px 10px;
+  color: #f44336;
+  background-color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
 
 }
 
+.logout:hover{
+  background-color: #d32f2f;
+  color: #fff;
+  font-weight: bold;
+}
 
-@media (max-width: 480px) {
-  .container {
-    padding: 0 5%; /* Add padding for small screens */
+@media screen and (max-width: 430px) {
+  .center{
+    font-size: 16px;
   }
 
-  ul {
-    flex-direction: row; /* Stack items */
-    align-items: center;
+  .navcontainer{
+    width: 103vw;
+    grid-template-columns: 19% 60% 22%;
+    overflow: hidden;
+    left: -5px;
+
   }
 
-  li {
-    width: auto; /* Make each item span full width */
-    margin: 10px 0; /* Add space between items */
+  .left img{
+ width: 100%;
+ height: 60%;
   }
 
-  li img {
+  .right{
+    font-size: xx-small;
+  }
+  
+  .right button img{
     height: 20px;
+    margin: 0;
+    border: 1PX SOLID black;
   }
-
-  li p {
-    font-size: 0.9rem; /* Further adjust font size */
-  }
-
+  
   
 }
