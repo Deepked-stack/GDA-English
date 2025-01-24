@@ -15,6 +15,7 @@ import { Console } from 'console';
 
 })
 export class HistoricalPerspectiveComponent implements OnInit {
+  @Input() selectedState: 1 | 2 | 3 | null =1;
 
   @Input() userId!: string; // Input property to receive userId
 
@@ -23,11 +24,16 @@ ngOnInit(): void {
   console.log(`Historical Perspective Component loaded with state: ${this.selectedState}`);
 
 }
- @Output() stateChanged =new EventEmitter<string>();
- movetoLearnIt(state:string){
-  this.selectedState='learn';
-  this.stateChanged.emit(this.selectedState);
+@Output() stateChanged =new EventEmitter<number>();
+@Output() scrollToTop = new EventEmitter<void>();
 
+// -------------------------------FOR TAB SECTION-----------------------------------------------------------
+ movetoLearnIt(state:string){
+  this.selectedState=2;
+  this.stateChanged.emit(this.selectedState);
+  this.scrollToTop.emit();
+
+  // this.stateGotFromStudyComponentTabs = 2;
   this.onUpdatetabletolearnit(this.userId);
 
  }
@@ -44,9 +50,11 @@ ngOnInit(): void {
 }
 movetoDoIt(state: string) {
   // Emit only if state is different from the current state
-  if (this.selectedState !== 'do') {
-    this.selectedState = 'do';
+  if (this.selectedState !== 3) {
+    this.selectedState = 3;
+    this.stateGotFromStudyComponentTabs = 3;
     this.stateChanged.emit(this.selectedState);
+    this.scrollToTop.emit();
 
     // Proceed with your API call
     this.onUpdatetabletodoit(this.userId);
@@ -65,6 +73,12 @@ onUpdatetabletodoit(userId: string) {
 }
 
 
+@Input() stateGotFromStudyComponentTabs:number= 1|2|3;
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------
 
  isnextEnabled:string='false';
  clicked:boolean=false;
@@ -93,7 +107,6 @@ this.updateSubModuleToInitial();
  }
 
 
-  @Input() selectedState: 'start' | 'learn' | 'do' | null = 'start';
 
   @Output() changedstate = new EventEmitter<void>(); 
   

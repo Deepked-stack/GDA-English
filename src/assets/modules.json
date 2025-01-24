@@ -5,11 +5,11 @@
       "name": "Introduction to the Program",
       "numberofsubmodules": 5,
       "subModules": [
-        "Introduction Video",
-        "Historical Perspective",
-        "Healthcare Delivery Systems",
-        "Hospitals",
-        "Basic Terminologies"
+        { "index": 1, "name": "Introduction Video", "selector": "app-introduction-video" },
+        { "index": 2, "name": "Historical Perspective", "selector": "app-historical-perspective" },
+        { "index": 3, "name": "Healthcare Delivery Systems", "selector": "app-healthcare-delivery-systems" },
+        { "index": 4, "name": "Hospitals", "selector": "app-hospitals" },
+        { "index": 5, "name": "Basic Terminologies", "selector": "app-basic-terminologies" }
       ]
     },
     {
@@ -17,10 +17,10 @@
       "name": "The GDA Profession",
       "numberofsubmodules": 4,
       "subModules": [
-        "General Duty Assistant Introduction",
-        "Health and Ill Health",
-        "Person-Centred Care",
-        "Effective Communication"
+        { "index": 1, "name": "General Duty Assistant Introduction", "selector": "app-gda-intro" },
+        { "index": 2, "name": "Health and Ill Health", "selector": "app-health-and-ill-health" },
+        { "index": 3, "name": "Person-Centred Care", "selector": "app-person-centered-care" },
+        { "index": 4, "name": "Effective Communication", "selector": "app-effective-communication" }
       ]
     },
     {
@@ -28,11 +28,11 @@
       "name": "Hygiene and Infection Prevention",
       "numberofsubmodules": 5,
       "subModules": [
-        "Microorganisms and Infections",
-        "Basic Hygiene Routines and Infection Control",
-        "Biomedical Waste Management",
-        "Sterilization and Disinfection",
-        "Aseptic Work and Cleaning Procedures"
+        { "index": 1, "name": "Microorganisms and Infections", "selector": "app-microorg-and-infec" },
+        { "index": 2, "name": "Basic Hygiene Routines and Infection Control", "selector": "app-basic-hygeine-and-infec-control" },
+        { "index": 3, "name": "Biomedical Waste Management", "selector": "app-biomedical-waste-mgmnt" },
+        { "index": 4, "name": "Sterilization and Disinfection", "selector": "app-sterlization-disinfection" },
+        { "index": 5, "name": "Aseptic Work and Cleaning Procedures", "selector": "app-aseptic-work" }
       ]
     },
     {
@@ -40,8 +40,8 @@
       "name": "Human Body Structure and Function",
       "numberofsubmodules": 2,
       "subModules": [
-        "Anatomy and Physiology",
-        "Medication Routes and Administration"
+        { "index": 1, "name": "Anatomy and Physiology", "selector": "app-anatomy-and-physio" },
+        { "index": 2, "name": "Medication Routes and Administration", "selector": "app-medication-routes-and-admn" }
       ]
     },
     {
@@ -49,9 +49,9 @@
       "name": "Positioning and Transferring of Patients",
       "numberofsubmodules": 3,
       "subModules": [
-        "Positioning and Transferring of Patients",
-        "Hospital Beds and Bed Making",
-        "Mobility of Patients"
+        { "index": 1, "name": "Positioning and Transferring of Patients", "selector": "app-pos-and-trans-of-patients" },
+        { "index": 2, "name": "Hospital Beds and Bed Making", "selector": "app-hospitalbeds-and-bedmaking" },
+        { "index": 3, "name": "Mobility of Patients", "selector": "app-mobility-of-patients" }
       ]
     },
     {
@@ -59,13 +59,13 @@
       "name": "Patient Basic Care",
       "numberofsubmodules": 7,
       "subModules": [
-        "Tools and Equipment",
-        "Grooming",
-        "Elimination",
-        "Nutrition, Diet, and Feeding Procedures",
-        "Pre and Post Operative Care",
-        "Vulnerable Patient Care",
-        "Daily Care Plan"
+        { "index": 1, "name": "Tools and Equipment", "selector": "app-tools-and-equipment" },
+        { "index": 2, "name": "Grooming", "selector": "app-grooming" },
+        { "index": 3, "name": "Elimination", "selector": "app-elimination" },
+        { "index": 4, "name": "Nutrition, Diet, and Feeding Procedures", "selector": "app-nutrition-diet-and-feeding" },
+        { "index": 5, "name": "Pre and Post Operative Care", "selector": "app-pre-and-post-operative-care" },
+        { "index": 6, "name": "Vulnerable Patient Care", "selector": "app-vulnerable-patient-care" },
+        { "index": 7, "name": "Daily Care Plan", "selector": "app-daily-care-plan" }
       ]
     },
     {
@@ -73,9 +73,9 @@
       "name": "Measuring Parameters",
       "numberofsubmodules": 3,
       "subModules": [
-        "Vital Signs",
-        "Special Procedures",
-        "Transporting Samples"
+        { "index": 1, "name": "Vital Signs", "selector": "app-vital-signs" },
+        { "index": 2, "name": "Special Procedures", "selector": "app-special-procedures" },
+        { "index": 3, "name": "Transporting Samples", "selector": "app-transporting-samples" }
       ]
     }
   ]

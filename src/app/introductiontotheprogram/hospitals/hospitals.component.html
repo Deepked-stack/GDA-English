@@ -1,6 +1,6 @@
 <!-- <app-study-nav></app-study-nav> -->
 <div class="content">
-  <div class="startit" *ngIf="selectedState === 'start'">
+  <div class="startit" *ngIf="selectedState === 1">
 <div class="container">
   <hr>
   <p>Welcome! let us start with our journey!</p>
@@ -146,7 +146,7 @@ You must have seen this place at least once, either in real life or on TV . Pati
  
 
  <br>
-<div class="learnit" *ngIf="selectedState === 'learn'">
+<div class="learnit" *ngIf="selectedState === 2">
 Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>'My Theory Task'</b><br>
 <br><div class="heading"><img width="67" height="66" src="assets/mricon.svg" class="attachment-large size-large" alt=""><h2>My Resources</h2></div><br>
     <p>Read The Definition given below and click on the correct statement.</p>
@@ -390,7 +390,7 @@ In your class, discuss the meaningof hospitals and what it does according to you
 <!--Do It-->
 
 
-<div class="doit" *ngIf="selectedState === 'do'">
+<div class="doit" *ngIf="selectedState === 3">
 Almost done! Let's finish this goal with your practical.<br>
 <div class="heading">
 <img width="67" height="63" src="assets/mpticon.svg" class="attachment-large size-large" alt=""> 

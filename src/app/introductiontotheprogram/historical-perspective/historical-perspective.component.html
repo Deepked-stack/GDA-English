@@ -1,5 +1,5 @@
 <div class="content">
-<div class="startit"  *ngIf="selectedState === 'start'">
+<div class="startit"  *ngIf="selectedState === 1">
   <p>Welcome! Let us start your journey!
   </p>
 <div class="carousel-container">
@@ -206,7 +206,7 @@ Can you identify and click on the images given below that relate to ancient prac
 <!-- -------------------------------------------------- -->
 </div><!--startit ends-->
 
-<div class="learnit" *ngIf="selectedState === 'learn'">
+<div class="learnit" *ngIf="selectedState === 2">
    
 <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the '<b>My Theory Task</b>'.</p>
 <div class="heading">
@@ -638,7 +638,7 @@ Can you identify and click on the images given below that relate to ancient prac
 
 </div><!--learnit ends-->
 
-<div  class="doit" *ngIf="selectedState === 'do'">
+<div  class="doit" *ngIf="selectedState === 3">
   <p> Almost done! Let's finish this goal with your practical.</p>
   
   <p>Time for your practical! What is your practical activity? What is the best way to do it? Explore it in the video below.</p>

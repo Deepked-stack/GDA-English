@@ -1,33 +1,80 @@
 <div class="content">
-  <div class="main-container">
-    <!-- Module Component (left side) -->
+  <div class="maincontainer">
+    <app-maincontentnav></app-maincontentnav>
 
-    <!-- <div class="module-overlay" *ngIf="isModuleOverlayVisible"> -->
-      <app-module *ngIf="isModuleVisible" (moduleSelected)="displayModuleName($event)" (selectedsubmodule)="selectedsubmodule"  (closeMenu)="handleCloseModule()"></app-module>
-      <!-- <button class="close-overlay" (click)="toggleModuleOverlay()">Close</button> -->
-    <!-- </div> -->
-  
-    <!-- Display the selected submodule -->
-    <div class="hide" *ngIf="selectedsubmodule">
-      <div class="sub">{{ selectedsubmodule }}</div>
+    <div class="study-area">
+      <app-study 
+        [moduleId]="selectedModuleId" 
+        [subModuleIndex]="selectedSubModuleIndex"
+        [componentSelector]="selectedSelector"
+        (scrollToTop)="scrollToTopInMainContent()"
+        [moduleIdUpdateFromNextButton]="newModuleId"
+        [subModuleIdUpdateFromNextButton]="newSubmoduleId"
+
+        [moduleAndSubModuleUpdatedforSubnext]="nextSubmoduleName"
+        [moduleAndSubModuleUpdatedforSubprev]="prevSubmoduleName"
+        [currentIndexesForSub]="currentSubmoduleName"
+        [userId]="userId"    
+
+        (nextStateEnabled)="handleNextButtonEnabling($event)"
+        (updatedmoduleIdNextbacktomain)="updateModuleIdFromChild($event)"
+        (updatedsubmoduleIdNextbacktomain)="updateSubModuleIdFromChild($event)">
+      </app-study>
+
+     <div class="navigationbuttonsdown" *ngIf="selectedModuleId==1 && selectedSubModuleIndex>1">
+      <button (click)="navigateBack()"  ><p>{{prevSubmoduleName}}</p>Previous</button>
+      <button (click)="navigateNext()" [disabled]=" !nextisenabled"><p>{{nextSubmoduleName}}</p>Next</button>
+      </div>
+
+
+      <div class="navigationbuttonsdown" *ngIf="selectedModuleId==1 && selectedSubModuleIndex===1">
+        <button (click)="navigateBack()"><p>{{prevSubmoduleName}}</p>Previous</button>
+        <button (click)="navigateNext()"><p>{{nextSubmoduleName}}</p>Next</button>
+        </div>
     </div>
-    <div class="hide" *ngIf="!selectedsubmodule">
+
+
+    <div class="hide" *ngIf="selectedSubModuleIndex">
+      <div class="sub">{{ selectedSubmoduleName }}</div>
+    </div>
+    <div class="hide" *ngIf="!selectedSubModuleIndex">
       <div class="sub">Select a Topic to Study.</div>
     </div>
 
-    <!-- Study Area (center area) -->
-    <div class="study-area">
-      <app-study (nextStateEnabled)="handleNextButtonEnabling($event)" [userId]="userId"></app-study>
-      <div class="navigationbuttonsdown" >
-        <button (click)="navigate('back')" [disabled]="isFirstSubmodule()"> <p>{{ getPreviousSubmoduleName() || 'None' }}</p><< Back </button>
-        <button (click)="navigate('next')" [disabled]="isLastSubmodule()">   <p>{{ getNextSubmoduleName() || 'None' }} </p> Next >> </button>
+    <div class="app-module">
+      <div class="module-container">
+        <div 
+          class="module-card" 
+          *ngFor="let module of modules" 
+          (click)="toggleSubModules(module)">
+          <div class="module-title">
+            <div class="modulename">
+              <p>Module: {{ module.id }}</p>
+              <h6>{{ module.name }}</h6>
+              <div class="progress">Completed: {{ module.completedSubModules }}/{{ module.numberOfSubModules }}</div>
+            </div>
+            <span class="arrow" [class.open]="module.showSubModules">&#9654;</span>
+          </div>
+          <div class="sub-modules" *ngIf="module.showSubModules">
+            <ul>
+              <li 
+                *ngFor="let subModule of module.subModules" 
+                (click)="selectSubmodule(module.id, subModule.index, subModule.name, subModule.numberOfSubModules)">
+                {{ subModule.name }}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- for disabling next button replace this with next button -->
-
+    <div class="submodule-info">
+      <div *ngIf="selectedSubmoduleName" class="selected-submodule">
+        {{ selectedSubmoduleName }}
+      </div>
+      <div *ngIf="!selectedSubmoduleName" class="no-submodule">
+        Select a Topic to Study.
+      </div>
+    </div>
   </div>
-
-  <app-maincontentnav  [userId]="userId"></app-maincontentnav>
-
 </div>

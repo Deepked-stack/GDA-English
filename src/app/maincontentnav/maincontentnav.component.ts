@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import { error } from 'console';
 
@@ -11,9 +11,11 @@ import { error } from 'console';
   styleUrl: './maincontentnav.component.css'
 })
 export class MaincontentnavComponent implements OnInit{
-  @Input() userId: string | null = null;
   studentData:any={};
+  userId: string | null = null;
+
 ngOnInit(): void {
+  this.userId = this.route.snapshot.paramMap.get('userId');
   if(this.userId){
  this.fetchStudentData();
   }
@@ -40,7 +42,7 @@ profileOverlayVisible = false;
 toggleProfileOverlay() {
   this.profileOverlayVisible = !this.profileOverlayVisible;
 }
-constructor(private router:Router,private apiservice: ApiService ){}
+constructor(private router:Router,private apiservice: ApiService, private route: ActivatedRoute ){}
 
 isModuleVisible = false;
 

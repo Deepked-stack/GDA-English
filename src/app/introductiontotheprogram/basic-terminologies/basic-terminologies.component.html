@@ -1,5 +1,5 @@
 <div class="content">
-  <div class="startit" *ngIf="selectedState === 'start'">
+  <div class="startit" *ngIf="selectedState === 1">
     <p>Welcome!</p>
 <div class="sideimg">
   <p>A General Duty Assistant needs to understand the basic terms that will be used in a medical setup – be it hospital, clinic, primary healthcare centre or even hospice care. These terms will help you better understand your job
@@ -87,7 +87,7 @@
 
 </div><!--startit ends-->
 
-<div class="learnit" *ngIf="selectedState === 'learn'">
+<div class="learnit" *ngIf="selectedState === 2">
   <p>Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>‘My Theory Task’</b>.
   </p>
 <div class="heading">
@@ -383,7 +383,7 @@
 
 </div><!--learnit ends-->
 
-<div class="doit" *ngIf="selectedState === 'do'" >
+<div class="doit" *ngIf="selectedState === 3" >
   <p>Almost done! Let's finish this goal with your practical.</p>
   <div class="heading">
     <img width="67" height="63" src="assets/mpticon.svg" class="attachment-large size-large" alt=""> 

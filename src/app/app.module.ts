@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+// import { LandingpageComponent } from './landingpage/landingpage.component';
+// import { MaincontentComponent } from './maincontent/maincontent.component';
+// import { ModuleComponent } from './module/module.component';
+// import { StudyComponent } from './study/study.component'
 import { LandingpageComponent } from './landingpage/landingpage.component';
-import { MaincontentComponent } from './maincontent/maincontent.component';
-import { ModuleComponent } from './module/module.component';
-import { StudyComponent } from './study/study.component'
+
 import { HttpClientModule } from '@angular/common/http';
 import { IntroductiontotheprogramModule } from './introductiontotheprogram/introductiontotheprogram.module';
 import { IntroductionVideoComponent } from './introductiontotheprogram/introduction-video/introduction-video.component';
@@ -39,6 +41,9 @@ import { PosAndTransOfPatientsComponent } from './module5/pos-and-trans-of-patie
 import { HospitalbedsAndBedmakingComponent } from './module5/hospitalbeds-and-bedmaking/hospitalbeds-and-bedmaking.component';
 import { MobilityOfPatientsComponent } from './module5/mobility-of-patients/mobility-of-patients.component';
 import { CommonModule } from '@angular/common';
+import { StudyComponent } from './study/study.component';
+import { MaincontentComponent } from './maincontent/maincontent.component';
+import { ModuleComponent } from './module/module.component';
 @NgModule({
   declarations: [
     AppComponent,

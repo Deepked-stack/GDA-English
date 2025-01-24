@@ -1,6 +1,7 @@
 import { Component, Input, Output,EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ApiService } from '../../api.service';
 
 @Component({
   selector: 'app-hospitals',
@@ -10,7 +11,6 @@ import { CommonModule } from '@angular/common';
   imports: [FormsModule, CommonModule],
 })
 export class HospitalsComponent {
-  @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
 
   isCorrect: boolean | null = null;
 
@@ -121,31 +121,104 @@ validateAnswer(value: string) {
     this.isTableVisible = !this.isTableVisible;
   }
 
-  isnextEnabled:string='false';
-  clicked:boolean=false;
+  @Input() selectedState: 1 | 2 | 3 | null =1;
+ 
+  @Input() userId!: string; // Input property to receive userId
 
-  @Output() nextStateChanged = new EventEmitter<boolean>();
+  constructor(private apiservice:ApiService){}
 
-  MakeNextEnabled(){
- this.isnextEnabled= 'true';
- this.nextStateChanged.emit(true);
- this.clicked=true;
+
+// -------------------------------FOR TAB SECTION-----------------------------------------------------------
+@Output() stateChanged =new EventEmitter<number>();
+
+movetoLearnIt(state:string){
+  this.selectedState=2;
+  this.stateChanged.emit(this.selectedState);
+
+  // this.stateGotFromStudyComponentTabs = 2;
+  this.onUpdatetabletolearnit(this.userId);
+
+ }
+
+ onUpdatetabletolearnit(userId: string) {
+  this.apiservice.updateSectionToLearnit(userId).subscribe(
+    (response) => {
+      console.log('Section updated successfully:', response);
+    },
+    (error) => {
+      console.error('Error updating section:', error);
+    }
+  );
+}
+movetoDoIt(state: string) {
+  // Emit only if state is different from the current state
+  if (this.selectedState !== 3) {
+    this.selectedState = 3;
+    this.stateGotFromStudyComponentTabs = 3;
+    this.stateChanged.emit(this.selectedState);
+
+
+    // Proceed with your API call
+    this.onUpdatetabletodoit(this.userId);
+  }
+}
+
+onUpdatetabletodoit(userId: string) {
+  this.apiservice.updateSectionToDoit(userId).subscribe(
+    (response) => {
+      console.log('Section updated successfully:', response);
+    },
+    (error) => {
+      console.error('Error updating section:', error);
+    }
+  );
+}
+
+
+@Input() stateGotFromStudyComponentTabs:number= 1|2|3;
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+
+ isnextEnabled:string='false';
+ clicked:boolean=false;
+
+ @Output() nextStateChanged = new EventEmitter<boolean>();
+
+ MakeNextEnabled(){
+this.isnextEnabled= 'true';
+this.nextStateChanged.emit(true);
+this.clicked=true;
+
+this.updateSubModuleToInitial();
+ }
+
+ updateSubModuleToInitial(){
+  this.apiservice.setSubModuleNumberToInitial(this.userId).subscribe(
+    (response)=>{
+      console.log('submodulenumber updated to 1 successfully');
+    },
+  
+    (error)=>{
+      console.error('Error updating submoduleno to 1');
+      
+    }
+  )
+ }
+
+
+
+  @Output() changedstate = new EventEmitter<void>(); 
+  
+  @Output() sectionComplete = new EventEmitter<void>();  // EventEmitter to notify parent when section is complete
+
+  markSectionComplete() {
+    // Emit an event to inform the parent that the section is complete
+    this.sectionComplete.emit();
   }
 
 
-  @Output() stateChanged =new EventEmitter<string>();
-  movetoLearnIt(state:string){
-   this.selectedState='learn';
-   this.stateChanged.emit(this.selectedState);
- 
-  }
- 
-  movetoDoIt(state:string){
-   this.selectedState='do';
-   this.stateChanged.emit(this.selectedState);
- 
-  }
- 
- 
 
 }

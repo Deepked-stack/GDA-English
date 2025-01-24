@@ -5,6 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MaincontentComponent } from './maincontent/maincontent.component';
 import { StudyComponent } from './study/study.component';
+// import { ModulelistComponent } from './modulelist/modulelist.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'main',component:MaincontentComponent},
   { path: 'main/:userId', component: MaincontentComponent },
   { path: 'study', component: StudyComponent },
+  // {path:'modulelist',component:ModulelistComponent},
   {
     path: 'intro', // Lazy load Introduction module
     loadChildren: () =>

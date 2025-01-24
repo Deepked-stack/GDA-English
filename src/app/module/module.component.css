@@ -155,7 +155,7 @@
   }
 
   .module-navbar {
-    display: none;  /* Hide module navbar on small screens */
+    /* display: none;  Hide module navbar on small screens */
   }
 
   .module-container {

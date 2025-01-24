@@ -1,6 +1,6 @@
 <!-- <app-study-nav></app-study-nav> -->
  <div class="content">
-  <div class="starit"  *ngIf="selectedState === 'start'">
+  <div class="starit"  *ngIf="selectedState === 1">
 <div class="container">
     <!-- Health is Wealth Section -->
     <div class="health-section">
@@ -117,7 +117,7 @@
  <button (click)="movetoLearnIt('learn')">Mark the Section Completed</button>
 
  <!-- ----------------------------------------------------------- -->
- <div class="learnit" *ngIf="selectedState === 'learn'">
+ <div class="learnit" *ngIf="selectedState === 2">
     Come, let us learn the theory of this learning outcome. Look at the resources below and then attempt the <b>My Theory Task.</b>
 
 <div class="heading">
@@ -432,7 +432,7 @@ Look at the video below
 
 </div>
 </div>
-<div class="doit" *ngIf="selectedState === 'do'">
+<div class="doit" *ngIf="selectedState === 3">
   <p>Almost done! Let's finish this goal with your practical.</p>
 <div class="heading">
   <img width="67" height="63" src="assets/mpticon.svg" class="attachment-large size-large" alt=""> 

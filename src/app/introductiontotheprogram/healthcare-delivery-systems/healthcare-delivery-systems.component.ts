@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { StudyNavComponent } from '../../study-nav/study-nav.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ApiService } from '../../api.service';
 @Component({
   selector: 'app-healthcare-delivery-systems',
   standalone: true,
@@ -147,35 +148,105 @@ export class HealthcareDeliverySystemsComponent {
     }
   }
  
-  @Input() selectedState: 'start' | 'learn' | 'do' | null = null;
+  @Input() selectedState: 1 | 2 | 3 | null =1;
+ 
+   @Input() userId!: string; // Input property to receive userId
+ 
+   constructor(private apiservice:ApiService){}
 
-// for next button
+ 
+ // -------------------------------FOR TAB SECTION-----------------------------------------------------------
+ @Output() stateChanged =new EventEmitter<number>();
+ 
+ movetoLearnIt(state:string){
+   this.selectedState=2;
+   this.stateChanged.emit(this.selectedState);
+
+   // this.stateGotFromStudyComponentTabs = 2;
+   this.onUpdatetabletolearnit(this.userId);
+ 
+  }
+ 
+  onUpdatetabletolearnit(userId: string) {
+   this.apiservice.updateSectionToLearnit(userId).subscribe(
+     (response) => {
+       console.log('Section updated successfully:', response);
+     },
+     (error) => {
+       console.error('Error updating section:', error);
+     }
+   );
+ }
+ movetoDoIt(state: string) {
+   // Emit only if state is different from the current state
+   if (this.selectedState !== 3) {
+     this.selectedState = 3;
+     this.stateGotFromStudyComponentTabs = 3;
+     this.stateChanged.emit(this.selectedState);
+
+ 
+     // Proceed with your API call
+     this.onUpdatetabletodoit(this.userId);
+   }
+ }
+ 
+ onUpdatetabletodoit(userId: string) {
+   this.apiservice.updateSectionToDoit(userId).subscribe(
+     (response) => {
+       console.log('Section updated successfully:', response);
+     },
+     (error) => {
+       console.error('Error updating section:', error);
+     }
+   );
+ }
+ 
+ 
+ @Input() stateGotFromStudyComponentTabs:number= 1|2|3;
+ 
+ 
+ 
+ 
+ // ------------------------------------------------------------------------------------------------------------------------------------
+ 
   isnextEnabled:string='false';
   clicked:boolean=false;
-
+ 
   @Output() nextStateChanged = new EventEmitter<boolean>();
-
+ 
   MakeNextEnabled(){
  this.isnextEnabled= 'true';
  this.nextStateChanged.emit(true);
  this.clicked=true;
-  }
-
-
-  @Output() stateChanged =new EventEmitter<string>();
-  movetoLearnIt(state:string){
-   this.selectedState='learn';
-   this.stateChanged.emit(this.selectedState);
  
+ this.updateSubModuleToInitial();
   }
  
-  movetoDoIt(state:string){
-   this.selectedState='do';
-   this.stateChanged.emit(this.selectedState);
- 
+  updateSubModuleToInitial(){
+   this.apiservice.setSubModuleNumberToInitial(this.userId).subscribe(
+     (response)=>{
+       console.log('submodulenumber updated to 1 successfully');
+     },
+   
+     (error)=>{
+       console.error('Error updating submoduleno to 1');
+       
+     }
+   )
   }
  
  
+ 
+   @Output() changedstate = new EventEmitter<void>(); 
+   
+   @Output() sectionComplete = new EventEmitter<void>();  // EventEmitter to notify parent when section is complete
+ 
+   markSectionComplete() {
+     // Emit an event to inform the parent that the section is complete
+     this.sectionComplete.emit();
+   }
 
+
+   
 }
 
